@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class RestartMed : MonoBehaviour {
+public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 	
-		Application.LoadLevel (3);
+		SceneManager.LoadScene(0);
 
 	}
 	
