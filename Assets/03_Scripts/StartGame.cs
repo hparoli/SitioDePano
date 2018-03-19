@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartGame : MonoBehaviour {
 
 
-    public GameController gameController;
+    public SequenciaController gameController;
 
     private void OnMouseDown()
     {

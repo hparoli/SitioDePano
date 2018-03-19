@@ -6,7 +6,7 @@ public class Buttons : MonoBehaviour {
 
     public int idButton;
 
-    public GameController gameController;
+    public SequenciaController gameController;
 
 
     private void OnMouseDown()

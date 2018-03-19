@@ -29,10 +29,11 @@ public class Score : MonoBehaviour {
 		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
 		acertos = PlayerPrefs.GetInt ("acertosTemp" + idTema.ToString ());
 
+		Debug.Log("Id Game: " + idTema + " Nota Final: " + notaFinal + " Acertos: " + acertos);
 		txtnota.text = notaFinal.ToString ();
-		txtInfotema.text = "Você acertou " + acertos.ToString () + " de 20 perguntas";
+		txtInfotema.text = "Você acertou " + acertos.ToString () + "vezes";
 
-		if (notaFinal == 10){
+		if (notaFinal >= 10){
 
 			star1.SetActive (true);
 			star2.SetActive (true);

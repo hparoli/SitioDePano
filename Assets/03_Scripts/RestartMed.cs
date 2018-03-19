@@ -7,7 +7,7 @@ public class RestartMed : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		SceneManager.LoadScene(3);
+		SceneManager.LoadScene(2);
 
 	}
 	

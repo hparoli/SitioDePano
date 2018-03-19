@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -12,7 +13,7 @@ public enum GameState
 }
 
 
-public class GameController : MonoBehaviour {
+public class SequenciaController : MonoBehaviour {
     public GameState gameState;
 
     public Text roundTxt, sequenceTxt;
@@ -22,15 +23,24 @@ public class GameController : MonoBehaviour {
     public GameObject startButton;
 
     public List<int> colors; //sequencia de cores 
-    public int idResp, qtdCores, rodada;
+    public int idResp, qtdCores, rodada, pontuacao;
 
     private AudioSource fonteAudio;
     public AudioClip[] sons;
 
+    private int notaFinal;
+    private float media;
+    private int idTema;
+
 	// Use this for initialization
 	void Start () {
         fonteAudio = GetComponent<AudioSource>();
+        gameState = GameState.NOVA;
         NovaRodada();
+        pontuacao = 0;
+        idTema = PlayerPrefs.GetInt ("idTema");
+
+        Debug.Log(idTema);
 	}
 
     public void StartGame()
@@ -94,6 +104,10 @@ public class GameController : MonoBehaviour {
         {
             gameState = GameState.NOVA;
             rodada++;
+            if(rodada > 6) pontuacao += 10;
+            else if(rodada > 3) pontuacao += 7;
+            else if(rodada <= 3) pontuacao += 5;
+            Debug.Log(pontuacao);
             yield return new WaitForSeconds(1f);
             NovaRodada();
         }
@@ -104,7 +118,7 @@ public class GameController : MonoBehaviour {
 
     IEnumerator GameOver()
     {
-        rodada = 0;
+       
         fonteAudio.PlayOneShot(sons[4]);
         yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < 3; i++)
@@ -134,7 +148,23 @@ public class GameController : MonoBehaviour {
             if(idB > 3) { idB = 0; }
         }
 
-        gameState = GameState.NOVA;
-        NovaRodada();
+        media = pontuacao * rodada;
+        Debug.Log("media: "+media);
+        notaFinal = Mathf.RoundToInt(media);
+
+        if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
+
+				PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
+				PlayerPrefs.SetInt ("acertos" + idTema.ToString (), (int) rodada);
+
+			}
+
+			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) rodada);
+            rodada = 0;
+            Debug.Log("nota final: " + notaFinal);
+            Debug.Log("nota final: " + PlayerPrefs.GetInt("notaFinalTemp"+idTema.ToString()));
+            Debug.Log("acertos: " + PlayerPrefs.GetInt("acertosTemp"+idTema.ToString()));
+			SceneManager.LoadScene("Score");
     }
 }
