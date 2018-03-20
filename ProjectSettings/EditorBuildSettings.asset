@@ -18,5 +18,8 @@ EditorBuildSettings:
     path: Assets/00_Scenes/SequenciaSonora.unity
     guid: 85d1f2c1d47ff254d971d7c83a9bbce4
   - enabled: 1
+    path: Assets/00_Scenes/Pique-Esconde.unity
+    guid: a346f6251129fa147881be99abd47524
+  - enabled: 1
     path: Assets/00_Scenes/Score.unity
     guid: 56836c9bae5bd2249b5bc0e847143b88

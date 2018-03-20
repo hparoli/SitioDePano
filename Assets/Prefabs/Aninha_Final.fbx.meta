@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 2ce5634b1d4367b40a5cda0d621ed6cf
+timeCreated: 1521553650
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: REF_Aninha:Aninha_Basemesh
+    100004: REF_Aninha:Cabelo_Base
+    100006: REF_Aninha:Cinto
+    100008: REF_Aninha:Cotovelo_Dir
+    100010: REF_Aninha:Cotovelo_Esq
+    100012: REF_Aninha:CTRL_Ground
+    100014: REF_Aninha:CTRL_L_Elbow
+    100016: REF_Aninha:CTRL_L_Foot
+    100018: REF_Aninha:CTRL_L_Hand
+    100020: REF_Aninha:CTRL_L_Shoulder
+    100022: REF_Aninha:CTRL_L_Wrist
+    100024: REF_Aninha:CTRL_Neck
+    100026: REF_Aninha:CTRL_R_Elbow
+    100028: REF_Aninha:CTRL_R_Foot
+    100030: REF_Aninha:CTRL_R_Hand
+    100032: REF_Aninha:CTRL_R_Shoulder
+    100034: REF_Aninha:CTRL_R_Wrist
+    100036: REF_Aninha:CTRL_Root
+    100038: REF_Aninha:CTRL_Spine
+    100040: REF_Aninha:CTRL_Spine1
+    100042: REF_Aninha:CTRL_Spine2
+    100044: REF_Aninha:CTRL_Spine3
+    100046: REF_Aninha:Head
+    100048: REF_Aninha:Joelho_Dir
+    100050: REF_Aninha:joint1
+    100052: REF_Aninha:joint2
+    100054: REF_Aninha:joint3
+    100056: REF_Aninha:joint4
+    100058: "REF_Aninha:La\xE7o_Dir"
+    100060: "REF_Aninha:La\xE7o_Esq"
+    100062: "REF_Aninha:M\xE3o_Dir"
+    100064: "REF_Aninha:M\xE3o_Esq"
+    100066: REF_Aninha:Neck
+    100068: REF_Aninha:Olho_Dir
+    100070: REF_Aninha:Olho_Esq
+    100072: REF_Aninha:Olho_Esq1
+    100074: REF_Aninha:Olho_Esq2
+    100076: REF_Aninha:Olho_Esq3
+    100078: REF_Aninha:Ombro_Dir
+    100080: REF_Aninha:Ombro_Esq
+    100082: REF_Aninha:pCube3
+    100084: REF_Aninha:polySurface1
+    100086: REF_Aninha:polySurface3
+    100088: "REF_Aninha:PontaP\xE9_Dir"
+    100090: REF_Aninha:Pulso_Dir
+    100092: REF_Aninha:Pulso_Esq
+    100094: "REF_Aninha:P\xE9_Dir"
+    100096: REF_Aninha:Quadril_Dir
+    100098: REF_Aninha:Quadril_Esq
+    100100: REF_Aninha:Root
+    100102: REF_Aninha:S1
+    100104: REF_Aninha:S2
+    100106: REF_Aninha:S3
+    100108: REF_Aninha:S4
+    100110: REF_Aninha:Saia
+    100112: REF_Aninha:Tornozelo_Dir
+    100114: REF_Aninha:Trancinhas_Dir
+    100116: REF_Aninha:Trancinhas_Esq
+    400000: //RootNode
+    400002: REF_Aninha:Aninha_Basemesh
+    400004: REF_Aninha:Cabelo_Base
+    400006: REF_Aninha:Cinto
+    400008: REF_Aninha:Cotovelo_Dir
+    400010: REF_Aninha:Cotovelo_Esq
+    400012: REF_Aninha:CTRL_Ground
+    400014: REF_Aninha:CTRL_L_Elbow
+    400016: REF_Aninha:CTRL_L_Foot
+    400018: REF_Aninha:CTRL_L_Hand
+    400020: REF_Aninha:CTRL_L_Shoulder
+    400022: REF_Aninha:CTRL_L_Wrist
+    400024: REF_Aninha:CTRL_Neck
+    400026: REF_Aninha:CTRL_R_Elbow
+    400028: REF_Aninha:CTRL_R_Foot
+    400030: REF_Aninha:CTRL_R_Hand
+    400032: REF_Aninha:CTRL_R_Shoulder
+    400034: REF_Aninha:CTRL_R_Wrist
+    400036: REF_Aninha:CTRL_Root
+    400038: REF_Aninha:CTRL_Spine
+    400040: REF_Aninha:CTRL_Spine1
+    400042: REF_Aninha:CTRL_Spine2
+    400044: REF_Aninha:CTRL_Spine3
+    400046: REF_Aninha:Head
+    400048: REF_Aninha:Joelho_Dir
+    400050: REF_Aninha:joint1
+    400052: REF_Aninha:joint2
+    400054: REF_Aninha:joint3
+    400056: REF_Aninha:joint4
+    400058: "REF_Aninha:La\xE7o_Dir"
+    400060: "REF_Aninha:La\xE7o_Esq"
+    400062: "REF_Aninha:M\xE3o_Dir"
+    400064: "REF_Aninha:M\xE3o_Esq"
+    400066: REF_Aninha:Neck
+    400068: REF_Aninha:Olho_Dir
+    400070: REF_Aninha:Olho_Esq
+    400072: REF_Aninha:Olho_Esq1
+    400074: REF_Aninha:Olho_Esq2
+    400076: REF_Aninha:Olho_Esq3
+    400078: REF_Aninha:Ombro_Dir
+    400080: REF_Aninha:Ombro_Esq
+    400082: REF_Aninha:pCube3
+    400084: REF_Aninha:polySurface1
+    400086: REF_Aninha:polySurface3
+    400088: "REF_Aninha:PontaP\xE9_Dir"
+    400090: REF_Aninha:Pulso_Dir
+    400092: REF_Aninha:Pulso_Esq
+    400094: "REF_Aninha:P\xE9_Dir"
+    400096: REF_Aninha:Quadril_Dir
+    400098: REF_Aninha:Quadril_Esq
+    400100: REF_Aninha:Root
+    400102: REF_Aninha:S1
+    400104: REF_Aninha:S2
+    400106: REF_Aninha:S3
+    400108: REF_Aninha:S4
+    400110: REF_Aninha:Saia
+    400112: REF_Aninha:Tornozelo_Dir
+    400114: REF_Aninha:Trancinhas_Dir
+    400116: REF_Aninha:Trancinhas_Esq
+    2100000: REF_Aninha_Aninha
+    2100002: REF_Aninha_lambert4
+    4300000: REF_Aninha:polySurface1
+    4300002: REF_Aninha:Olho_Esq
+    4300004: REF_Aninha:Olho_Dir
+    4300006: REF_Aninha:polySurface3
+    4300008: REF_Aninha:Olho_Esq1
+    4300010: REF_Aninha:Olho_Esq2
+    4300012: REF_Aninha:Olho_Esq3
+    4300014: REF_Aninha:Cinto
+    4300016: REF_Aninha:Saia
+    4300018: REF_Aninha:Trancinhas_Esq
+    4300020: "REF_Aninha:La\xE7o_Esq"
+    4300022: "REF_Aninha:La\xE7o_Dir"
+    4300024: REF_Aninha:Trancinhas_Dir
+    4300026: REF_Aninha:Cabelo_Base
+    4300028: REF_Aninha:pCube3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: REF_Aninha:Cabelo_Base
+    13700002: REF_Aninha:Cinto
+    13700004: "REF_Aninha:La\xE7o_Dir"
+    13700006: "REF_Aninha:La\xE7o_Esq"
+    13700008: REF_Aninha:Olho_Dir
+    13700010: REF_Aninha:Olho_Esq
+    13700012: REF_Aninha:Olho_Esq1
+    13700014: REF_Aninha:Olho_Esq2
+    13700016: REF_Aninha:Olho_Esq3
+    13700018: REF_Aninha:pCube3
+    13700020: REF_Aninha:polySurface1
+    13700022: REF_Aninha:polySurface3
+    13700024: REF_Aninha:Saia
+    13700026: REF_Aninha:Trancinhas_Dir
+    13700028: REF_Aninha:Trancinhas_Esq
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
