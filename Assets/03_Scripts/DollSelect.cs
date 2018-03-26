@@ -19,30 +19,33 @@ public class DollSelect : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Debug.Log("Mouse is down");
+		DollSelected ();
+	}
 
-			RaycastHit hitInfo = new RaycastHit();
-			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-			if (hit) 
-			{
-				Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-				if (hitInfo.transform.gameObject.tag == "Doll") 
-				{
-					acertos = 10;
+
+	void DollSelected(){
+
+		if (Input.GetMouseButtonDown (0)) {
+
+			Debug.Log ("Mouse");
+
+			RaycastHit Doll = new RaycastHit();
+			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out Doll);
+			if (hit) {
+
+				if (Doll.transform.gameObject.tag == "Doll") {
+					ToScore ();
 				}
 
 			}
 
-			ToScore ();
 		}
+
 	}
 
 	void ToScore(){
 
-
-
 		SceneManager.LoadScene ("Score");
 	}
 }
+

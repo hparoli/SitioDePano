@@ -19,7 +19,7 @@ public class Spawn : MonoBehaviour {
 	
 		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 		Instantiate (dollObj, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-		Debug.Log ("capeta");
+
 
 	}
 }
