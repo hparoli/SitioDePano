@@ -33,6 +33,7 @@ public class responder : MonoBehaviour {
 	void Start () {
 
 		idTema = PlayerPrefs.GetInt ("idTema");
+
 		idPergunta = 0;
 		questões = perguntas.Length;
 

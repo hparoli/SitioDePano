@@ -8,9 +8,9 @@ public class DollSelect : MonoBehaviour {
 
 	private int idTema;
 
-	private float acertos;
-	private float notaFinal;
-	private float media;
+	private int notaFinal;
+
+	private float tempo;
 
 
 	void Start(){
@@ -19,21 +19,21 @@ public class DollSelect : MonoBehaviour {
 
 	void Update()
 	{
+		Cronometro ();
 		DollSelected ();
 	}
-
 
 	void DollSelected(){
 
 		if (Input.GetMouseButtonDown (0)) {
 
-			Debug.Log ("Mouse");
 
 			RaycastHit Doll = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out Doll);
 			if (hit) {
 
 				if (Doll.transform.gameObject.tag == "Doll") {
+					
 					ToScore ();
 				}
 
@@ -43,9 +43,30 @@ public class DollSelect : MonoBehaviour {
 
 	}
 
+	void Cronometro(){
+
+		tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
+
+	}
+
 	void ToScore(){
 
+		if (tempo < 2f){
+
+			notaFinal = 10;
+
+		}
+
+		else if (tempo <= 10f) {
+
+			notaFinal = 5;
+		}
+
+
+		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		SceneManager.LoadScene ("Score");
+
 	}
 }
 
