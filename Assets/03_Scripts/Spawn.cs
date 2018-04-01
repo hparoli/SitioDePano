@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour {
 	//B: Random Spawn Point toda vez que rodar o jogo
 
 	public GameObject dollObj;                // prefab da boneca
-	public Transform[] spawnPoints;         // Array c/ Spawn Points
+	public Transform [] spawnPoints;         // Array c/ Spawn Points
 
 
 

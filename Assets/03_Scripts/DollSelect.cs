@@ -30,10 +30,12 @@ public class DollSelect : MonoBehaviour {
 
 			RaycastHit Doll = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out Doll);
+
 			if (hit) {
 
 				if (Doll.transform.gameObject.tag == "Doll") {
-					
+
+
 					ToScore ();
 				}
 
@@ -46,7 +48,7 @@ public class DollSelect : MonoBehaviour {
 	void Cronometro(){
 
 		tempo += 1 * Time.deltaTime;
-		Debug.Log (tempo);
+
 
 	}
 
