@@ -6,20 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/00_Scenes/Menu.unity
+    path: Assets/02_Scenes/Menu.unity
     guid: b7b63ef8e22e2904696f45282f7d700b
   - enabled: 1
-    path: Assets/00_Scenes/Ditados.unity
+    path: Assets/02_Scenes/Ditados.unity
     guid: 0951a8dc8635f3d45bc633ea88c804b4
   - enabled: 1
-    path: Assets/00_Scenes/Memoria.unity
+    path: Assets/02_Scenes/Memoria.unity
     guid: 7c75557e9bd2f8445ab1e114f5955a9d
   - enabled: 1
-    path: Assets/00_Scenes/SequenciaSonora.unity
+    path: Assets/02_Scenes/SequenciaSonora.unity
     guid: 85d1f2c1d47ff254d971d7c83a9bbce4
   - enabled: 1
-    path: Assets/00_Scenes/Pique-Esconde.unity
+    path: Assets/02_Scenes/Pique-Esconde.unity
     guid: a346f6251129fa147881be99abd47524
   - enabled: 1
-    path: Assets/00_Scenes/Score.unity
+    path: Assets/02_Scenes/Score.unity
     guid: 56836c9bae5bd2249b5bc0e847143b88
