@@ -35,8 +35,8 @@ public class DollSelect : MonoBehaviour {
 
 				if (Doll.transform.gameObject.tag == "Doll") {
 
-
-					ToScore ();
+					SoundManager.instance.Play ("Player", SoundManager.instance.clipList.DollClick);
+					Invoke ("ToScore", 0.2f);
 				}
 
 			}
