@@ -35,6 +35,7 @@ public class DollSelect : MonoBehaviour {
 
 				if (Doll.transform.gameObject.tag == "Doll") {
 
+					Debug.Log ("Mouse");
 					SoundManager.instance.Play ("Player", SoundManager.instance.clipList.DollClick);
 					Invoke ("ToScore", 0.2f);
 				}
