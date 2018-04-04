@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 	[SerializeField]
@@ -29,16 +30,19 @@ public class MenuController : MonoBehaviour {
 	private bool canPress;
 
 	[SerializeField]
-	private GameObject[] positions;
+	private Sprite[] sprites;
 
 	[SerializeField]
-	private Image selectedPosition;
+	private Image btnPlay;
+
+	[SerializeField]
+	private GameObject exitConfirmation, playConfirmation;
 
 	void Start () {
 		canPress = false;
 		StartCoroutine("ApareceInicio");
 		idGame = 0;
-		selectedPosition.GetComponent<RectTransform>().position = positions[idGame].GetComponent<RectTransform>().position;
+		btnPlay.sprite = sprites[idGame];
 	}
 	
 	void Update(){
@@ -52,23 +56,43 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void SelectRight(){
-		if(idGame == (positions.Length - 1)){
+		if(idGame == (sprites.Length - 1)){
 			idGame = 0;
 		} else {
 			idGame++;
 		}
-		selectedPosition.GetComponent<RectTransform>().position = positions[idGame].GetComponent<RectTransform>().position;
+		btnPlay.sprite = sprites[idGame];
 		minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);
 	}
 
 	public void SelectLeft(){
 		if(idGame == 0){
-			idGame = (positions.Length - 1);
+			idGame = (sprites.Length - 1);
 		} else {
 			idGame--;
 		}
-		selectedPosition.GetComponent<RectTransform>().position = positions[idGame].GetComponent<RectTransform>().position;
+		btnPlay.sprite = sprites[idGame];
 		minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);
+	}
+
+	public void Exit(){
+		Application.Quit();
+	}
+
+	public void ExitConfirmation(){
+		if(!exitConfirmation.activeSelf){
+			exitConfirmation.SetActive(true);
+		} else {
+			exitConfirmation.SetActive(false);
+		}
+	}
+	
+	public void PlayConfirmation(){
+		if(!playConfirmation.activeSelf){
+			playConfirmation.SetActive(true);
+		} else {
+			playConfirmation.SetActive(false);
+		}
 	}
 
 	private IEnumerator ApareceInicio(){
