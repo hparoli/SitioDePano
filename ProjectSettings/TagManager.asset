@@ -46,3 +46,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Frente
+    uniqueID: 1472563455
+    locked: 0
