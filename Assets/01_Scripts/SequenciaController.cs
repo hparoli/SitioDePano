@@ -34,6 +34,8 @@ public class SequenciaController : MonoBehaviour {
     private float media;
     private int idTema;
 
+	public GameObject tutorial;
+
 	// Use this for initialization
 	void Start () {
         fonteAudio = GetComponent<AudioSource>();
@@ -174,4 +176,8 @@ public class SequenciaController : MonoBehaviour {
             Debug.Log("acertos: " + PlayerPrefs.GetInt("acertosTemp"+idTema.ToString()));
 			SceneManager.LoadScene("Score");
     }
+
+	public void Comecar(){
+		tutorial.SetActive (false);
+	}
 }

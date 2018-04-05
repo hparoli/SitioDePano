@@ -27,6 +27,7 @@ public class responder : MonoBehaviour {
 	private float media;
 	private int notaFinal;
 
+	public GameObject tutorial;
 
 
 
@@ -108,6 +109,10 @@ public class responder : MonoBehaviour {
 			SceneManager.LoadScene("Score");
 		}
 
+	}
+
+	public void Comecar(){
+		tutorial.SetActive (false);
 	}
 
 }
