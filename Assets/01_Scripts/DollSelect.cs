@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+
 public class DollSelect : MonoBehaviour {
 
 	private int idTema;
@@ -27,31 +29,33 @@ public class DollSelect : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown (0)) {
 
-
-			RaycastHit Doll = new RaycastHit();
+            RaycastHit Doll = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out Doll);
 
 			if (hit) {
-
-				if (Doll.transform.gameObject.tag == "Doll") {
-
-					Debug.Log ("Mouse");
-					SoundManager.instance.Play ("Player", SoundManager.instance.clipList.DollClick);
-					Invoke ("ToScore", 0.2f);
-				}
-
-			}
-
-		}
-
+                if (Doll.transform.gameObject.tag == "Doll")
+                {
+                    Debug.Log("Mouse");
+                    SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
+                    Invoke("ToScore", 0.2f);
+                }
+                else {
+                    StartCoroutine ("MissClick");
+                }
+            }
+        }
 	}
+
+    private IEnumerator MissClick()
+    {
+        yield return new WaitForSeconds(1);
+        SoundManager.instance.Play("Player", SoundManager.instance.clipList.MissClick);
+    }
 
 	void Cronometro(){
 
 		tempo += 1 * Time.deltaTime;
-
-
-	}
+}
 
 	void ToScore(){
 

@@ -9,9 +9,7 @@ public class SoundManager : MonoBehaviour
 
 
 	public ClipList            clipList;
-
-
-	public AudioSource[]       playerSource;
+    public AudioSource[]       playerSource;
 
 
 	void Awake () 
@@ -69,5 +67,6 @@ public class ClipList
 {
 	
 	public AudioClip   DollClick;
+    public AudioClip   MissClick;
 
 }
