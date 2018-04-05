@@ -19,7 +19,9 @@ public class SequenciaController : MonoBehaviour {
     public Text roundTxt, sequenceTxt;
     
     public Color[] color;
-    public Image[] buttons;
+	public SpriteRenderer[] buttons;
+	public SpriteRenderer[] buttonsBack;
+
     public GameObject startButton;
 
     public List<int> colors; //sequencia de cores 
@@ -55,7 +57,7 @@ public class SequenciaController : MonoBehaviour {
         colors.Clear();
         startButton.SetActive(true);
 
-        foreach (Image img in buttons)
+		foreach (SpriteRenderer img in buttons)
         {
             img.color = color[0];
         }
@@ -71,13 +73,14 @@ public class SequenciaController : MonoBehaviour {
 
             int r = Random.Range(0, buttons.Length);
             buttons[r].color = color[1];
+			buttonsBack [r].color = color [0];
             fonteAudio.PlayOneShot(sons[r]);
 
             colors.Add(r);
 
             yield return new WaitForSeconds(0.5f);
             buttons[r].color = color[0];
-            
+			buttonsBack [r].color = color [1];
         }
         gameState = GameState.RESPONDER;
         idResp = 0;
@@ -87,7 +90,7 @@ public class SequenciaController : MonoBehaviour {
     IEnumerator Responder(int idBtn)
     {
         buttons[idBtn].color = color[1];
-       
+		buttonsBack[idBtn].color = color[0];
         if(colors[idResp] == idBtn)
         {
             fonteAudio.PlayOneShot(sons[idBtn]);
@@ -114,6 +117,7 @@ public class SequenciaController : MonoBehaviour {
 
         yield return new WaitForSeconds(0.3f);
         buttons[idBtn].color = color[0];
+		buttonsBack[idBtn].color = color[1];
     }
 
     IEnumerator GameOver()
@@ -123,18 +127,19 @@ public class SequenciaController : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < 3; i++)
         {
-            foreach (Image img in buttons)
+			for (int x = 0; i < buttons.Length; i++)
             {
-                img.color = color[1];
+				buttons[x].color = color[1];
+				buttonsBack [x].color = color [0];
             }
 
             yield return new WaitForSeconds(0.2f);
 
-            foreach (Image img in buttons)
-            {
-                img.color = color[0];
-            }
-
+			for (int x = 0; i < buttons.Length; i++)
+			{
+				buttons[x].color = color[1];
+				buttonsBack [x].color = color [0];
+			}
             yield return new WaitForSeconds(0.2f);
         }
 
@@ -142,8 +147,10 @@ public class SequenciaController : MonoBehaviour {
         for(int i = 0; i < 12; i++)
         {
             buttons[idB].color = color[1];
+			buttonsBack [idB].color = color [0];
             yield return new WaitForSeconds(0.1f);
             buttons[idB].color = color[0];
+			buttonsBack [idB].color = color [1];
             idB++; 
             if(idB > 3) { idB = 0; }
         }
