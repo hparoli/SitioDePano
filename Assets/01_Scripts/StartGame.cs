@@ -9,6 +9,6 @@ public class StartGame : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        gameController.StartGame();
+       StartCoroutine(gameController.StartGame());
     }
 }

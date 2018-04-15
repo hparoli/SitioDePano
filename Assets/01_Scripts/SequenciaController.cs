@@ -16,7 +16,7 @@ public enum GameState
 public class SequenciaController : MonoBehaviour {
     public GameState gameState;
 
-    public Text roundTxt, sequenceTxt;
+    public Text roundTxt;
     
     public Color[] color;
 	public SpriteRenderer[] buttons;
@@ -36,6 +36,9 @@ public class SequenciaController : MonoBehaviour {
 
 	public GameObject tutorial;
 
+    [SerializeField]
+	public Color standard;
+
 	// Use this for initialization
 	void Start () {
         fonteAudio = GetComponent<AudioSource>();
@@ -47,15 +50,54 @@ public class SequenciaController : MonoBehaviour {
         Debug.Log(idTema);
 	}
 
-    public void StartGame()
+    public IEnumerator StartGame()
     {
+        roundTxt.text = "Rodada: " + (rodada + 1).ToString();
+        yield return new WaitForSeconds(0.5f);
+        for (float f = 0f; f <= standard.a; f += 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.2f);
+        roundTxt.text = "Acerte as " + (qtdCores + rodada).ToString() + " notas dos passarinhos";
+        for (float f = 0f; f <= standard.a; f += 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine("Sequencia", qtdCores + rodada);
     }
 
     private void NovaRodada()
     {
-        roundTxt.text = "Rodada: " + (rodada + 1).ToString();
-        sequenceTxt.text = "Sequência: " + (qtdCores + rodada).ToString();
+       /* roundTxt.text = "Rodada: " + (rodada + 1).ToString();
+        sequenceTxt.text = "Sequência: " + (qtdCores + rodada).ToString();*/
         colors.Clear();
         startButton.SetActive(true);
 
