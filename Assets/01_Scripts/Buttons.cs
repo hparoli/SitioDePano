@@ -13,5 +13,7 @@ public class Buttons : MonoBehaviour {
     {
         if(gameController.gameState == GameState.RESPONDER)
             gameController.StartCoroutine("Responder", idButton);
+        if(gameController.gameState == GameState.TUTORIAL)
+            gameController.StartCoroutine("ResponderTutorial", idButton);
     }
 }

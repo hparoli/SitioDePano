@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class StartGame : MonoBehaviour {
 
-
     public SequenciaController gameController;
 
     private void OnMouseDown()
     {
-       StartCoroutine(gameController.StartGame());
+        StartCoroutine(gameController.StartGame());
+    }
+
+    public void StartTutorial(){
+            StartCoroutine(gameController.StartGameTutorial());
     }
 }

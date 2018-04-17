@@ -9,23 +9,25 @@ public enum GameState
     SEQUENCIA,
     RESPONDER,
     NOVA,
-    ERRO
+    ERRO,
+    TUTORIAL
 }
 
 
 public class SequenciaController : MonoBehaviour {
     public GameState gameState;
 
-    public Text roundTxt;
+    public Text roundTxt, tutorialTxt;
     
     public Color[] color;
-	public SpriteRenderer[] buttons;
-	public SpriteRenderer[] buttonsBack;
+	public SpriteRenderer[] buttons, btnTutorial;
+	public SpriteRenderer[] buttonsBack, btnBackTutorial;
 
-    public GameObject startButton;
+    public GameObject startButton, startTutorial;
 
     public List<int> colors; //sequencia de cores 
     public int idResp, qtdCores, rodada, pontuacao;
+    public int qtdTutorial, rodadaTutorial;
 
     private AudioSource fonteAudio;
     public AudioClip[] sons;
@@ -33,6 +35,7 @@ public class SequenciaController : MonoBehaviour {
     private int notaFinal;
     private float media;
     private int idTema;
+    public Button btnComecar;
 
 	public GameObject tutorial;
 
@@ -41,6 +44,7 @@ public class SequenciaController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        btnComecar.interactable = false;
         fonteAudio = GetComponent<AudioSource>();
         gameState = GameState.NOVA;
         NovaRodada();
@@ -94,6 +98,51 @@ public class SequenciaController : MonoBehaviour {
         StartCoroutine("Sequencia", qtdCores + rodada);
     }
 
+
+    public IEnumerator StartGameTutorial()
+    {
+        tutorialTxt.text = "Começando o Tutorial";
+        yield return new WaitForSeconds(0.5f);
+        for (float f = 0f; f <= standard.a; f += 0.01f)
+        {
+            Color c = tutorialTxt.color;
+			c.a = f;
+			tutorialTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = tutorialTxt.color;
+			c.a = f;
+			tutorialTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.2f);
+        tutorialTxt.text = "Aperte a sequência na ordem certa...";
+        for (float f = 0f; f <= standard.a; f += 0.01f)
+        {
+            Color c = tutorialTxt.color;
+			c.a = f;
+			tutorialTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = tutorialTxt.color;
+			c.a = f;
+			tutorialTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine("SequenciaTutorial", qtdTutorial);
+    }
+
     private void NovaRodada()
     {
        /* roundTxt.text = "Rodada: " + (rodada + 1).ToString();
@@ -130,6 +179,29 @@ public class SequenciaController : MonoBehaviour {
         idResp = 0;
     }
 
+IEnumerator SequenciaTutorial(int qtd)
+    {
+        startTutorial.SetActive(false);
+
+        for(int i = 0; i < qtd; i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            btnTutorial[i].color = color[1];
+			btnBackTutorial [i].color = color [0];
+            fonteAudio.PlayOneShot(sons[i]);
+
+            colors.Add(i);
+
+            yield return new WaitForSeconds(0.5f);
+            btnTutorial[i].color = color[0];
+			btnBackTutorial [i].color = color [1];
+        }
+        gameState = GameState.TUTORIAL;
+        idResp = 0;
+    }
+
+
 
     IEnumerator Responder(int idBtn)
     {
@@ -162,6 +234,45 @@ public class SequenciaController : MonoBehaviour {
         yield return new WaitForSeconds(0.3f);
         buttons[idBtn].color = color[0];
 		buttonsBack[idBtn].color = color[1];
+    }
+
+    IEnumerator ResponderTutorial(int idBtn)
+    {
+        btnTutorial[idBtn].color = color[1];
+		btnBackTutorial[idBtn].color = color[0];
+        if(colors[idResp] == idBtn)
+        {
+            fonteAudio.PlayOneShot(sons[idBtn]);
+        }
+        else
+        {
+            gameState = GameState.ERRO;
+            StartCoroutine("GameOver");
+        }
+
+        idResp++;
+
+        if(idResp >= colors.Count)
+        {
+            yield return new WaitForSeconds(1f);
+            gameState = GameState.NOVA;
+            NovaRodada();
+            tutorialTxt.text = "Parabéns! Agora aperte em COMEÇAR para iniciar o jogo!";
+            yield return new WaitForSeconds(0.5f);
+            for (float f = 0f; f <= standard.a; f += 0.5f)
+            {
+                Color c = tutorialTxt.color;
+		    	c.a = f;
+		    	tutorialTxt.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+           }
+           btnComecar.interactable = true;
+        }
+
+        yield return new WaitForSeconds(0.3f);
+        btnTutorial[idBtn].color = color[0];
+		btnBackTutorial[idBtn].color = color[1];
     }
 
     IEnumerator GameOver()
