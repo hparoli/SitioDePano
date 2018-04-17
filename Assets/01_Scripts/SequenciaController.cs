@@ -317,7 +317,7 @@ IEnumerator SequenciaTutorial(int qtd)
         if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
 
 				PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
-				PlayerPrefs.SetInt ("acertos" + idTema.ToString (), (int) rodada);
+			    PlayerPrefs.SetInt ("Sequencia" + idTema.ToString (), (int) rodada);
 
 			}
 

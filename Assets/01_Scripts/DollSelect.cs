@@ -16,6 +16,7 @@ public class DollSelect : MonoBehaviour {
 
 
 	void Start(){
+
 		idTema = PlayerPrefs.GetInt ("idTema");
 	}
 
@@ -59,7 +60,7 @@ public class DollSelect : MonoBehaviour {
 
 	void ToScore(){
 
-		if (tempo < 2f){
+		if (tempo < 3f){
 
 			notaFinal = 10;
 
@@ -72,6 +73,8 @@ public class DollSelect : MonoBehaviour {
 
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+		PlayerPrefs.SetInt ("PiqueTime" + idTema.ToString (), (int)tempo);
+
 		SceneManager.LoadScene ("Score");
 
 	}
