@@ -558,12 +558,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834947942}
-        m_MethodName: resposta
-        m_Mode: 5
+        m_MethodName: PromptAnswer
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: C
           m_BoolArgument: 0
@@ -1032,8 +1032,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834947942}
-        m_MethodName: resposta
-        m_Mode: 5
+        m_MethodName: PromptAnswer
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1154,12 +1154,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834947942}
-        m_MethodName: resposta
-        m_Mode: 5
+        m_MethodName: PromptAnswer
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: B
           m_BoolArgument: 0
@@ -1558,66 +1558,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pergunta: {fileID: 800514251}
-  respA: {fileID: 1668323848}
-  respB: {fileID: 1971123387}
-  respC: {fileID: 1734570506}
+  answerButtons:
+  - {fileID: 1114182003}
+  - {fileID: 1498708767}
+  - {fileID: 413933581}
+  answerTexts:
+  - {fileID: 1668323848}
+  - {fileID: 1971123387}
+  - {fileID: 1734570506}
   infoResposta: {fileID: 427790736}
-  perguntas:
-  - {fileID: 21300000, guid: 1f0ada4c1fa105c49bfa3992d9f0445f, type: 3}
-  - {fileID: 21300000, guid: dad1f6726e652e640b22633e78b95e5a, type: 3}
-  - {fileID: 21300000, guid: f648b40802c925349a9c3cc9e7f447b7, type: 3}
-  - {fileID: 21300000, guid: d4da814b10589784cbf1b4be56646b0d, type: 3}
-  - {fileID: 21300000, guid: 454102d8f04a29e4bb419755bc3c107b, type: 3}
-  - {fileID: 21300000, guid: d5137e46945918848b5667215af11453, type: 3}
-  - {fileID: 21300000, guid: 3495412b1e5c85541be89321c7f7fa84, type: 3}
-  - {fileID: 21300000, guid: 04a0de1d3ade98746b9aa140b4403d05, type: 3}
-  - {fileID: 21300000, guid: 600e21b61b8d078429be5d32d1305723, type: 3}
-  - {fileID: 21300000, guid: 5f5df25d402a5be40906bcf5664a4896, type: 3}
-  alternativaA:
-  - Fumo de cobra
-  - Troco pra pato
-  - Macacos me mordam!
-  - Resolver um abacaxi
-  - "Mam\xE3o a\xE7ucarado"
-  - "Corda de lingui\xE7a"
-  - "Abra\xE7o de tamandu\xE1"
-  - "Colocar a carro\xE7a na frente dos bois"
-  - Largando a torneira aberta
-  - "Fam\xEDlia de ovelhas"
-  alternativaB:
-  - Cobras fumam
-  - Pagando o pato
-  - "A brincar, a brincar, vai o macaco \xE0 banana"
-  - Brincando com abacaxi
-  - "Mam\xE3o com a\xE7ucar"
-  - Prender cachorro com comida
-  - "Falso abra\xE7o"
-  - "Carro\xE7a contr\xE1ria"
-  - "Tirando \xE1gua do joelho"
-  - Contando ovelhas
-  alternativaC:
-  - A cobra vai fumar
-  - Pagando mico
-  - Cada macaco no seu galho
-  - Descascando um abacaxi
-  - "Doce como mam\xE3o"
-  - "Do tempo em que se amarrava cachorro com lingui\xE7a"
-  - "Abra\xE7o de urso"
-  - Invertendo as coisas
-  - Joelho molhado
-  - "Ovelha negra da fam\xEDlia"
-  corretas:
-  - A cobra vai fumar
-  - Pagando o pato
-  - Cada macaco no seu galho
-  - Resolver um abacaxi
-  - "Mam\xE3o com a\xE7ucar"
-  - "Do tempo em que se amarrava cachorro com lingui\xE7a"
-  - "Abra\xE7o de tamandu\xE1"
-  - "Colocar a carro\xE7a na frente dos bois"
-  - "Tirando \xE1gua do joelho"
-  - "Ovelha negra da fam\xEDlia"
+  questions:
+  - question: ACobraVaiFumar
+    avatar: {fileID: 21300000, guid: 1f0ada4c1fa105c49bfa3992d9f0445f, type: 3}
+    answers:
+    - Fumo de cobra
+    - Cobras fumam
+    - A cobra vai fumar
+    correctAnswer: A cobra vai fumar
+  - question: PagandoPato
+    avatar: {fileID: 21300000, guid: dad1f6726e652e640b22633e78b95e5a, type: 3}
+    answers:
+    - Troco pra pato
+    - Pagando o pato
+    - Pagando mico
+    correctAnswer: Pagando o pato
+  - question: CadaMacaconoseuGalho
+    avatar: {fileID: 21300000, guid: f648b40802c925349a9c3cc9e7f447b7, type: 3}
+    answers:
+    - Macacos me mordam!
+    - "A brincar, a brincar, vai o macaco \xE0 banana"
+    - Cada macaco no seu galho
+    correctAnswer: Cada macaco no seu galho
+  - question: ReslvendoAbacaxi
+    avatar: {fileID: 21300000, guid: d4da814b10589784cbf1b4be56646b0d, type: 3}
+    answers:
+    - Resolver um abacaxi
+    - Brincando com abacaxi
+    - Descascando um abacaxi
+    correctAnswer: Resolver um abacaxi
+  - question: "Mam\xE3ocomA\xE7ucar"
+    avatar: {fileID: 21300000, guid: 454102d8f04a29e4bb419755bc3c107b, type: 3}
+    answers:
+    - "Mam\xE3o a\xE7ucarado"
+    - "Mam\xE3o com a\xE7ucar"
+    - "Doce como mam\xE3o"
+    correctAnswer: "Mam\xE3o com a\xE7ucar"
+  - question: "CachorroLingui\xE7a"
+    avatar: {fileID: 21300000, guid: d5137e46945918848b5667215af11453, type: 3}
+    answers:
+    - "Corda de lingui\xE7a"
+    - Prender cachorro com comida
+    - "Do tempo em que se amarrava cachorro com lingui\xE7a"
+    correctAnswer: "Do tempo em que se amarrava cachorro com lingui\xE7a"
+  - question: "Abra\xE7oTamandu\xE1"
+    avatar: {fileID: 21300000, guid: 3495412b1e5c85541be89321c7f7fa84, type: 3}
+    answers:
+    - "Abra\xE7o de tamandu\xE1"
+    - "Falso abra\xE7o"
+    - "Abra\xE7o de urso"
+    correctAnswer: "Abra\xE7o de tamandu\xE1"
+  - question: "Carro\xE7anafrentedosBois"
+    avatar: {fileID: 21300000, guid: 04a0de1d3ade98746b9aa140b4403d05, type: 3}
+    answers:
+    - "Colocar a carro\xE7a na frente dos bois"
+    - "Carro\xE7a contr\xE1ria"
+    - Invertendo as coisas
+    correctAnswer: "Colocar a carro\xE7a na frente dos bois"
+  - question: "Tirando\xC1guaJoelho"
+    avatar: {fileID: 21300000, guid: 600e21b61b8d078429be5d32d1305723, type: 3}
+    answers:
+    - Largando a torneira aberta
+    - "Tirando \xE1gua do joelho"
+    - Joelho molhado
+    correctAnswer: "Tirando \xE1gua do joelho"
+  - question: OvelhaNegra
+    avatar: {fileID: 21300000, guid: 5f5df25d402a5be40906bcf5664a4896, type: 3}
+    answers:
+    - "Fam\xEDlia de ovelhas"
+    - Contando ovelhas
+    - "Ovelha negra da fam\xEDlia"
+    correctAnswer: "Ovelha negra da fam\xEDlia"
   tutorial: {fileID: 352816628}
+  feedbackDuration: 1.52
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  incorrectColor: {r: 1, g: 0, b: 0, a: 1}
+  clip: {fileID: 0}
 --- !u!4 &1834947943
 Transform:
   m_ObjectHideFlags: 0

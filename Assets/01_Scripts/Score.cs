@@ -11,6 +11,7 @@ public class Score : MonoBehaviour {
 	public Text txtnota;
 	public Text txtInfotema;
 
+
 	public GameObject star1;
 	public GameObject star2;
 	public GameObject star3;
@@ -32,11 +33,11 @@ public class Score : MonoBehaviour {
 		piqueEsconde = PlayerPrefs.GetInt ("PiqueTime" + idTema.ToString ());
 		SequenciaSonora = PlayerPrefs.GetInt ("Sequencia" + idTema.ToString ());
 
-		Debug.Log("Id Game: " + idTema + " Nota Final: " + notaFinal + " Acertos: " + acertos);
+		//Debug.Log("Id Game: " + idTema + " Nota Final: " + notaFinal + " Acertos: " + acertos);
+
 		txtnota.text = notaFinal.ToString ();
-		txtInfotema.text = "Você acertou " + acertos.ToString () + "vezes";
-		txtInfotema.text = " Você levou " + piqueEsconde.ToString() + " segundo ";
-		txtInfotema.text = " Você acertou " + SequenciaSonora.ToString () + " sequencias ";
+		txtInfotema.text = " Parabéns você conseguiu :) ";
+
 
 		if (notaFinal >= 10){
 

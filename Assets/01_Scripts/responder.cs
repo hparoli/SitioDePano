@@ -8,95 +8,125 @@ public class responder : MonoBehaviour {
 
 	private int idTema;
 
-	public SpriteRenderer  pergunta;
-	public Text            respA;
-	public Text            respB;
-	public Text            respC;
-	public Text infoResposta;
+	[SerializeField]
+	SpriteRenderer pergunta;
+	[SerializeField]
+	Button[] answerButtons;
+	[SerializeField]
+	Text[] answerTexts;
+	[SerializeField]
+	Text infoResposta;
+	[SerializeField]
+	QuestionData[] questions;
+	[SerializeField]
+	GameObject tutorial;
 
-	public Sprite[] perguntas;
-	public string[] alternativaA;
-	public string[] alternativaB;
-	public string[] alternativaC;
-	public string[] corretas;
+	[Header("Feedback")]
+	[SerializeField, Range(0.0f, 5.0f)]
+	float feedbackDuration = 1.0f;
+	[SerializeField]
+	Color defaultColor = Color.white;
+	[SerializeField]
+	Color correctColor = Color.green;
+	[SerializeField]
+	Color incorrectColor = Color.red;
+	[SerializeField]
+	AudioClip clip;
 
-	private int idPergunta;
+	QuestionData[] shuffledQuestions;
+	int questionIndex;
 
-	private float acertos;
-	private float questões;
-	private float media;
-	private int notaFinal;
+	float acertos;
+	float media;
+	int notaFinal;
 
-	public GameObject tutorial;
-
+	Coroutine feedbackCorout;
 
 
-	void Start () {
+	int QuestionsAmount { get { return questions.Length; } }
+	QuestionData CurrentQuestion { get { return shuffledQuestions [questionIndex]; } } 
+
+	void Start () 
+	{
 
 		idTema = PlayerPrefs.GetInt ("idTema");
 
-		idPergunta = 0;
-		questões = perguntas.Length;
+		questionIndex = 0;
+		SetShuffledQuestions ();
+		UpdateQuestionOutput ();
 
-		pergunta.sprite = perguntas [idPergunta];
-		respA.text = alternativaA [idPergunta];
-		respB.text = alternativaB [idPergunta];
-		respC.text = alternativaC [idPergunta];
-
-		infoResposta.text = "Respondendo " + (idPergunta + 1).ToString() + " de " + questões.ToString() + " perguntas ";
+		infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 		
 	}
 
-	public void resposta(string alternativa)
+	void SetShuffledQuestions()
 	{
-		if (alternativa == "A") 
+		var questionsList = new List<QuestionData> ();
+
+		QuestionData question = questions [Random.Range (0, questions.Length)];
+		for (int i = 0; i < questions.Length; i++) 
 		{
-			if (alternativaA [idPergunta] == corretas [idPergunta]) 
+			while (questionsList.Contains (question)) 
 			{
-				acertos += 1;
+				question = questions [Random.Range (0, questions.Length)];
 			}
+
+			questionsList.Add (question);
+			
 		}
 
-		else if (alternativa == "B") 
-		{
-			if (alternativaB [idPergunta] == corretas [idPergunta]) 
-			{
-				acertos += 1;
-			}
-		}
+		shuffledQuestions = questionsList.ToArray ();
 
-		else if (alternativa == "C") 
-		{
-			if (alternativaC [idPergunta] == corretas [idPergunta]) 
-			{
-				acertos += 1;
-			}
-		}
-
-		proximaPergunta ();
 	}
 
-	void proximaPergunta()
+	void UpdateQuestionOutput(QuestionData question)
 	{
-		idPergunta += 1;
+		pergunta.sprite = question.avatar;
 
-		if (idPergunta <= (questões - 1))
+		for (int i = 0; i < answerTexts.Length && i < question.answers.Length; i++) 
+		{
+			answerTexts [i].text = question.answers [i];
+		}
+
+	}
+	void UpdateQuestionOutput()
+	{
+		UpdateQuestionOutput (CurrentQuestion);
+	}
+		
+	public void PromptAnswer(int index)
+	{
+		if (feedbackCorout != null)
+			return;
+
+		if(CurrentQuestion.answers [index] == CurrentQuestion.correctAnswer)
+		{
+			acertos++;
+		}
+
+		feedbackCorout = StartCoroutine (PromptAnswer_Routine (index));
+
+	}
+
+	void NextQuestion()
+	{
+		questionIndex++;
+
+		if (questionIndex < QuestionsAmount)
 		{
 
-			pergunta.sprite = perguntas [idPergunta];
-			respA.text = alternativaA [idPergunta];
-			respB.text = alternativaB [idPergunta];
-			respC.text = alternativaC [idPergunta];
+			UpdateQuestionOutput ();
+			infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 
-			infoResposta.text = "Respondendo " + (idPergunta + 1).ToString() + " de " + questões.ToString() + " perguntas ";
 		}
 
 		else 
 		{
-			media = 10 * (acertos / questões);
+			media = 10 * (acertos / QuestionsAmount);
 			notaFinal = Mathf.RoundToInt (media);
 
-			if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
+			if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
+			{
 
 				PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
 				PlayerPrefs.SetInt ("acertos" + idTema.ToString (), (int) acertos);
@@ -111,8 +141,36 @@ public class responder : MonoBehaviour {
 
 	}
 
-	public void Comecar(){
+	public void Comecar()
+	{
 		tutorial.SetActive (false);
 	}
 
+	IEnumerator PromptAnswer_Routine(int index)
+	{
+			
+		for (int i = 0; i < answerButtons.Length; i++) 
+		{
+			if (CurrentQuestion.answers [i] == CurrentQuestion.correctAnswer)
+				answerButtons [i].image.color = correctColor;
+			
+			else 
+			{
+				if (i == index)
+					answerButtons [i].image.color = incorrectColor;
+			}
+		}
+
+		yield return new WaitForSeconds (feedbackDuration);
+
+		for (int i = 0; i < answerButtons.Length; i++) 
+		{
+			answerButtons [i].image.color = defaultColor;
+		}
+
+		//Code feedback coroutine here
+		feedbackCorout = null;
+		NextQuestion ();
+	}
+		
 }
