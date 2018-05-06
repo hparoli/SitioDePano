@@ -38,6 +38,9 @@ public class MenuController : MonoBehaviour {
 	[SerializeField]
 	private GameObject exitConfirmation, playConfirmation;
 
+	[SerializeField]
+	public GameObject Maozinha;
+
 	void Start () {
 		canPress = false;
 		StartCoroutine("ApareceInicio");
@@ -48,6 +51,7 @@ public class MenuController : MonoBehaviour {
 	void Update(){
 		if(canPress){
 			if(Input.anyKeyDown){
+				Maozinha.SetActive (false);
 				inicio.SetActive(false);
 				mainMenu.SetActive(true);
 				minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);

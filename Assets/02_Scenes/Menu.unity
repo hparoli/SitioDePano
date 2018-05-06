@@ -3228,6 +3228,7 @@ MonoBehaviour:
   btnPlay: {fileID: 586139721}
   exitConfirmation: {fileID: 401904376}
   playConfirmation: {fileID: 433977171}
+  Maozinha: {fileID: 12618939}
 --- !u!4 &1405592711
 Transform:
   m_ObjectHideFlags: 0
