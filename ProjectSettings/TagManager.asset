@@ -7,6 +7,10 @@ TagManager:
   - Manager
   - Doll
   - Porteira
+  - ovelha
+  - cavalo
+  - galinha
+  - waypoints
   layers:
   - Default
   - TransparentFX
