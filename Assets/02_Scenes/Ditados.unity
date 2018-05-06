@@ -1639,7 +1639,7 @@ MonoBehaviour:
     - "Ovelha negra da fam\xEDlia"
     correctAnswer: "Ovelha negra da fam\xEDlia"
   tutorial: {fileID: 352816628}
-  feedbackDuration: 1.52
+  feedbackDuration: 2.5
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
