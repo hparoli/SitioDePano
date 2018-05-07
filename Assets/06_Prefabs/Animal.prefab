@@ -57,7 +57,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65277197168266624
 BoxCollider:
@@ -90,6 +90,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  waypointIndex: 0
+  porteiraIndex: 0
+  casasIndex: 0
   moveSpeed: 1
   porteirasWaypoints:
   - {fileID: 0}
@@ -100,6 +103,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   casasWaypoints: []
+  animal: 
+  aninha: {fileID: 0}
 --- !u!114 &114447376704483462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +120,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2680331c9c766d3438eca9418e5a70dd, type: 2}
   - {fileID: 11400000, guid: 8feea2cced6ece544b194e7de023095b, type: 2}
   - {fileID: 11400000, guid: c81cd006a95f0a8449aa2f6b057db3ca, type: 2}
+  - {fileID: 11400000, guid: 6c2594cfad9db8f4b9bdf9f9e7b51af5, type: 2}
   sprite: {fileID: 212644719258566634}
   anim: 
 --- !u!212 &212644719258566634

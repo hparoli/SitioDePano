@@ -162,7 +162,7 @@ public class SequenciaController : MonoBehaviour {
 
         for(int i = qtd; i > 0; i--)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
             int r = Random.Range(0, buttons.Length);
             buttons[r].color = color[1];
@@ -171,7 +171,7 @@ public class SequenciaController : MonoBehaviour {
 
             colors.Add(r);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             buttons[r].color = color[0];
 			buttonsBack [r].color = color [1];
         }
@@ -185,7 +185,7 @@ IEnumerator SequenciaTutorial(int qtd)
 
         for(int i = 0; i < qtd; i++)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
             btnTutorial[i].color = color[1];
 			btnBackTutorial [i].color = color [0];
@@ -193,7 +193,7 @@ IEnumerator SequenciaTutorial(int qtd)
 
             colors.Add(i);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             btnTutorial[i].color = color[0];
 			btnBackTutorial [i].color = color [1];
         }

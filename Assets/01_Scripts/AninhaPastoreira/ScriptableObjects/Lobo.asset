@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b7b57b09f53c594c8f3e94f8fbe4e15, type: 3}
-  m_Name: Porco
+  m_Name: Lobo
   m_EditorClassIdentifier: 
-  animal: porco
-  sprite: {fileID: 21300000, guid: dafc22afb34d81c4fb3f594825d08421, type: 3}
+  animal: lobo
+  sprite: {fileID: 21300000, guid: 18faf1e94f3265d499ddc93199b314ba, type: 3}

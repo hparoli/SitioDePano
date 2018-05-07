@@ -10,7 +10,7 @@ public class AnimalDisplay : MonoBehaviour {
 	public string anim;
 	// Use this for initialization
 	void Start () {
-		random = Random.Range(0,3);
+		random = Random.Range(0,4);
 		anim = animal[random].animal;
 		sprite.sprite = animal[random].sprite;
 	}
