@@ -215,6 +215,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: {fileID: 4605834166488440, guid: 0cd24eca94ba42545abbb0c89463bb94, type: 2}
   spawn: {fileID: 1680082427}
+  countSpawn: 0
+  idTema: 0
+  countDestroy: 0
+  pontuacao: 0
 --- !u!4 &166761381
 Transform:
   m_ObjectHideFlags: 0
@@ -834,7 +838,7 @@ GameObject:
   - component: {fileID: 923537274}
   - component: {fileID: 923537273}
   m_Layer: 0
-  m_Name: waypointGalinha
+  m_Name: waypointVaca
   m_TagString: waypoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
