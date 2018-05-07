@@ -11,6 +11,7 @@ public class GameManagerMed : MonoBehaviour {
 	public GameObject stopClick;
 
 	public AudioClip shuffleCards;
+	public AudioClip CardMatch;
 	private AudioSource source;
 
 	public Sprite[] cardFace;
@@ -100,8 +101,10 @@ public class GameManagerMed : MonoBehaviour {
 
 		if (cards [c [0]].GetComponent<CardMed> ().cardValue == cards [c [1]].GetComponent<CardMed> ().cardValue) {
 			x = 2;
+			source.PlayOneShot (CardMatch, 1);
 			_matches--;
 			matchText.text = "Pares Restantes : " + _matches;
+
 			if (_matches == 0) {
 				gameOver.SetActive (true);
 
