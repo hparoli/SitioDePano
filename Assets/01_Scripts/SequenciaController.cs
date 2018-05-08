@@ -17,6 +17,8 @@ public enum GameState
 public class SequenciaController : MonoBehaviour {
     public GameState gameState;
 
+	Animator anim;
+
     public Text roundTxt, tutorialTxt;
     
     public Color[] color;
@@ -50,13 +52,15 @@ public class SequenciaController : MonoBehaviour {
         NovaRodada();
         pontuacao = 0;
         idTema = PlayerPrefs.GetInt ("idTema");
+		anim = GetComponent<Animator> ();
 
         Debug.Log(idTema);
 	}
 
     public IEnumerator StartGame()
     {
-        roundTxt.text = "Rodada: " + (rodada + 1).ToString();
+		fonteAudio.PlayOneShot(sons[5]);
+		roundTxt.text = "Rodada: " + (rodada + 1).ToString();
         yield return new WaitForSeconds(0.5f);
         for (float f = 0f; f <= standard.a; f += 0.01f)
         {
@@ -101,6 +105,7 @@ public class SequenciaController : MonoBehaviour {
 
     public IEnumerator StartGameTutorial()
     {
+		
         tutorialTxt.text = "Começando o Tutorial";
         yield return new WaitForSeconds(0.5f);
         for (float f = 0f; f <= standard.a; f += 0.01f)
