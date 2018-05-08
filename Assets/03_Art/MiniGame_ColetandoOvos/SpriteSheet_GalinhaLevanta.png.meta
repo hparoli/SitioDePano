@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: f2e1e978c32c0ad4c84b38ac16cd747f
+guid: 5344540032183e14ba8127529b2847f8
 timeCreated: 1525744220
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_GalinhaLevanta_0
+    21300002: SpriteSheet_GalinhaLevanta_1
+    21300004: SpriteSheet_GalinhaLevanta_2
+    21300006: SpriteSheet_GalinhaLevanta_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +92,63 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_GalinhaLevanta_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 782
+        width: 135
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_GalinhaLevanta_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 543
+        width: 135
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_GalinhaLevanta_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 301
+        width: 135
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_GalinhaLevanta_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 59
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
