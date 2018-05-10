@@ -6,10 +6,14 @@ public class ColetaOvos : MonoBehaviour {
 
 	private int pegouOvos, erros;
 	public GameObject[] galinhas;
+
+	public AudioClip[] sons;
+	private AudioSource fonteAudio;
 	
 	public GameObject manager;
 	// Use this for initialization
 	void Start () {
+		fonteAudio = GetComponent<AudioSource> ();
 		pegouOvos = 0;
 		erros     = 0;
 		manager = GameObject.FindWithTag("Manager");
@@ -28,17 +32,19 @@ public class ColetaOvos : MonoBehaviour {
 								galinhas[i].GetComponent<ApareceOvo>().Desaparece();
 								//feedback positivo
 								Debug.Log("ACERTOU");
+								fonteAudio.PlayOneShot(sons[0]);
 							} else {
 								erros++;
 								//feedback negativo
 								Debug.Log("ERROU");
+								fonteAudio.PlayOneShot(sons[1]);
 							}
 						}
 					}
 				}
 			}
 
-			if(pegouOvos == 10){
+			if(pegouOvos == 3){
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
 			}
 	}
