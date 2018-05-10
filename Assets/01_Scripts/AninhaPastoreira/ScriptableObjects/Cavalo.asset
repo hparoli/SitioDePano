@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: cavalo
   sprite: {fileID: 21300000, guid: 78e51d40b7ab8444088dd4bbf9b9a252, type: 3}
-  animation: {fileID: 9100000, guid: 30c2bc5f1130b0c4e88fd4ca56633366, type: 2}
+  animation: 3

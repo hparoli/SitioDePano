@@ -94,7 +94,12 @@ public class MenuController : MonoBehaviour {
 		} else {
 			playConfirmation.SetActive(false);
 		}
-		minigame.GetComponent<GameSelect>().MiniGameSelected(game * idGame);
+		int j;
+		if(idGame == 1)
+		   j = game;
+		else 
+		   j = game + 4;
+		minigame.GetComponent<GameSelect>().MiniGameSelected(j);
 	}
 
 	public void MudaBotoes(int num){

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: lobo
   sprite: {fileID: 21300000, guid: a8ca55f4c0bffe34d90b5cfa9153308d, type: 3}
-  animation: {fileID: 9100000, guid: 833f9ce4e40ccc34ca1009ded6316f49, type: 2}
+  animation: 4

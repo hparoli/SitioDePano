@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: ovelha
   sprite: {fileID: 21300000, guid: 239e09a25740f494a961d3a12e7cbc54, type: 3}
-  animation: {fileID: 9100000, guid: 77f3a9b356e53d24b86365f0b1f9579f, type: 2}
+  animation: 1

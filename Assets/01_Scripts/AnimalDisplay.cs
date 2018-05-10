@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+
 
 public class AnimalDisplay : MonoBehaviour {
 
@@ -15,7 +15,7 @@ public class AnimalDisplay : MonoBehaviour {
 		random = Random.Range(0,4);
 		anim = animal[random].animal;
 		sprite.sprite = animal[random].sprite;
-		this.gameObject.GetComponent<Animator>().runtimeAnimatorController = animal[random].animation;
+		this.gameObject.GetComponent<Animator>().SetInteger("Animal",animal[random].animation);
 	}
 	
 }
