@@ -53,27 +53,33 @@ public class DollSelect : MonoBehaviour {
         SoundManager.instance.Play("Player", SoundManager.instance.clipList.MissClick);
     }
 
-	void Cronometro(){
+	void Cronometro()
+	{
 
 		tempo += 1 * Time.deltaTime;
-}
+	}
 
 	void ToScore(){
 
-		if (tempo < 3f){
-
+		if (tempo <= 3f)
+		{
 			notaFinal = 10;
-
+		}
+		else if (tempo <= 7f)
+		{
+			notaFinal = 7;
 		}
 
-		else if (tempo <= 10f) {
-
+		else if (tempo <= 10f) 
+		{
 			notaFinal = 5;
 		}
 
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-		PlayerPrefs.SetInt ("PiqueTime" + idTema.ToString (), (int)tempo);
+//		PlayerPrefs.SetInt ("PiqueTime" + idTema.ToString (), (int)tempo);
+
+		Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
 
 		SceneManager.LoadScene ("Score");
 

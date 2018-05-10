@@ -124,17 +124,9 @@ public class responder : MonoBehaviour {
 		{
 			media = 10 * (acertos / QuestionsAmount);
 			notaFinal = Mathf.RoundToInt (media);
-
-			if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
-			{
-
-				PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
-				PlayerPrefs.SetInt ("acertos" + idTema.ToString (), (int) acertos);
-
-			}
-
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
+			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
 
 			SceneManager.LoadScene("Score");
 		}

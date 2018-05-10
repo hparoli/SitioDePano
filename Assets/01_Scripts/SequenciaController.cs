@@ -46,13 +46,13 @@ public class SequenciaController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        btnComecar.interactable = false;
+		idTema = PlayerPrefs.GetInt ("idTema");
+		btnComecar.interactable = false;
         fonteAudio = GetComponent<AudioSource>();
         gameState = GameState.NOVA;
         NovaRodada();
         pontuacao = 0;
-        idTema = PlayerPrefs.GetInt ("idTema");
-		anim = GetComponent<Animator> ();
+        anim = GetComponent<Animator> ();
 
         Debug.Log(idTema);
 	}
@@ -315,24 +315,22 @@ IEnumerator SequenciaTutorial(int qtd)
             if(idB > 3) { idB = 0; }
         }
 
-        media = pontuacao * rodada;
-        Debug.Log("media: "+media);
-        notaFinal = Mathf.RoundToInt(media);
+		if (rodada >= 2)
+		{
+			notaFinal = 5;
+		}
+		if (rodada >= 3)
+		{
+			notaFinal = 7;
+		}
+		if (rodada >= 5)
+		{
+			notaFinal = 10;
+		}
 
-        if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
-
-				PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
-			    PlayerPrefs.SetInt ("Sequencia" + idTema.ToString (), (int) rodada);
-
-			}
-
-			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) rodada);
-            rodada = 0;
-            Debug.Log("nota final: " + notaFinal);
-            Debug.Log("nota final: " + PlayerPrefs.GetInt("notaFinalTemp"+idTema.ToString()));
-            Debug.Log("acertos: " + PlayerPrefs.GetInt("acertosTemp"+idTema.ToString()));
-			SceneManager.LoadScene("Score");
+		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+		Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
+		SceneManager.LoadScene ("Score");   
     }
 
 	public void Comecar(){
