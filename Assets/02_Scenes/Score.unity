@@ -254,8 +254,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289312459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110.66, y: 101.329994, z: 0}
-  m_LocalScale: {x: 10.018426, y: 10.018432, z: 10.018432}
+  m_LocalPosition: {x: 147, y: 104.090004, z: 0}
+  m_LocalScale: {x: 39, y: 39, z: 39}
   m_Children:
   - {fileID: 315292010}
   m_Father: {fileID: 1150103056}
@@ -284,8 +284,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 315292009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 289312461}
   m_RootOrder: 0
@@ -401,8 +401,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344049815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -105.36, y: 108, z: 0}
-  m_LocalScale: {x: 10.018426, y: 10.018432, z: 10.018432}
+  m_LocalPosition: {x: -141.7, y: 113, z: 0}
+  m_LocalScale: {x: 39, y: 39, z: 39}
   m_Children:
   - {fileID: 1326977407}
   m_Father: {fileID: 1150103056}
@@ -549,8 +549,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379873181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.576, y: 143.82999, z: 0}
-  m_LocalScale: {x: 10.018426, y: 10.018432, z: 10.018432}
+  m_LocalPosition: {x: 2.5511, y: 160.87001, z: 0}
+  m_LocalScale: {x: 39, y: 39, z: 39}
   m_Children:
   - {fileID: 507066769}
   m_Father: {fileID: 1150103056}
@@ -654,7 +654,7 @@ Transform:
   m_GameObject: {fileID: 507066768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 379873183}
   m_RootOrder: 0
@@ -729,7 +729,7 @@ RectTransform:
   m_GameObject: {fileID: 664849616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.73}
+  m_LocalScale: {x: 0.4464742, y: 0.44647408, z: 0.65185213}
   m_Children:
   - {fileID: 236442810}
   m_Father: {fileID: 1150103056}
@@ -737,7 +737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: -32}
+  m_AnchoredPosition: {x: 242, y: -44}
   m_SizeDelta: {x: 203, y: 203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664849618
@@ -948,7 +948,7 @@ Camera:
   m_GameObject: {fileID: 974915489}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1189,7 +1189,7 @@ Transform:
   m_GameObject: {fileID: 1326977406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 344049817}
   m_RootOrder: 0
@@ -1407,7 +1407,7 @@ RectTransform:
   m_GameObject: {fileID: 1825401327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.4859145}
+  m_LocalScale: {x: 0.5491069, y: 0.5491067, z: 0.5336379}
   m_Children:
   - {fileID: 1478492775}
   m_Father: {fileID: 1150103056}
@@ -1415,7 +1415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -105.57}
+  m_AnchoredPosition: {x: -0.24551, y: -124}
   m_SizeDelta: {x: 211, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825401329
