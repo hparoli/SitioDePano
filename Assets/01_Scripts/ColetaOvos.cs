@@ -38,7 +38,7 @@ public class ColetaOvos : MonoBehaviour {
 				}
 			}
 
-			if(pegouOvos == 15){
+			if(pegouOvos == 10){
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
 			}
 	}

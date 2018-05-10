@@ -10,7 +10,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		min = 5f;
-		max = 9f;
+		max = 7f;
 		delayGalinha = 2.5f;
 		StartCoroutine("Comportamento");
 	}
