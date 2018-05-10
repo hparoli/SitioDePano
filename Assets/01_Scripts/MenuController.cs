@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour {
 	private GameObject minigame;
 	
 	[SerializeField]
-	private int idGame;
+	private int idGame, idTema;
 	
 	[SerializeField]
 	private GameObject inicio;
@@ -30,10 +30,10 @@ public class MenuController : MonoBehaviour {
 	private bool canPress;
 
 	[SerializeField]
-	private Sprite[] sprites;
+	private string[] btnTexts;
 
 	[SerializeField]
-	private Image btnPlay;
+	private Button[] btnPlay;
 
 	[SerializeField]
 	private GameObject exitConfirmation, playConfirmation;
@@ -44,8 +44,8 @@ public class MenuController : MonoBehaviour {
 	void Start () {
 		canPress = false;
 		StartCoroutine("ApareceInicio");
-		idGame = 0;
-		btnPlay.sprite = sprites[idGame];
+		idGame = 1;
+		MudaBotoes(idGame);
 	}
 	
 	void Update(){
@@ -54,29 +54,26 @@ public class MenuController : MonoBehaviour {
 				Maozinha.SetActive (false);
 				inicio.SetActive(false);
 				mainMenu.SetActive(true);
-				minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);
 			}
 		}
 	}
 
 	public void SelectRight(){
-		if(idGame == (sprites.Length - 1)){
-			idGame = 0;
+		if(idGame == 2){
+			idGame --;
 		} else {
 			idGame++;
 		}
-		btnPlay.sprite = sprites[idGame];
-		minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);
+		MudaBotoes(idGame);
 	}
 
 	public void SelectLeft(){
-		if(idGame == 0){
-			idGame = (sprites.Length - 1);
+		if(idGame == 1){
+			idGame++;
 		} else {
 			idGame--;
 		}
-		btnPlay.sprite = sprites[idGame];
-		minigame.GetComponent<GameSelect>().MiniGameSelected(idGame + 1);
+		MudaBotoes(idGame);
 	}
 
 	public void Exit(){
@@ -91,14 +88,31 @@ public class MenuController : MonoBehaviour {
 		}
 	}
 	
-	public void PlayConfirmation(){
+	public void PlayConfirmation(int game){
 		if(!playConfirmation.activeSelf){
 			playConfirmation.SetActive(true);
 		} else {
 			playConfirmation.SetActive(false);
 		}
+		minigame.GetComponent<GameSelect>().MiniGameSelected(game * idGame);
 	}
 
+	public void MudaBotoes(int num){
+		for(int i = 0; i < btnPlay.Length; i++){
+			int j;
+			if(num == 1){
+				j = i;
+				btnPlay[i].interactable = true;
+			} else {
+				j = i + 4;
+				if(i > 1){
+					btnPlay[i].interactable = false;
+				}
+
+			}
+			btnPlay[i].GetComponentInChildren<Text>().text = btnTexts[j];
+		}
+	}
 	private IEnumerator ApareceInicio(){
 		yield return new WaitForSeconds(2f);
 		for (float f = 0f; f <= standard.a; f += 0.01f)
