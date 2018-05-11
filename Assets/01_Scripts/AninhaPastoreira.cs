@@ -9,8 +9,6 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	[SerializeField]
 	private int countSpawn, idTema, countDestroy;
-	
-	
 	public int pontuacao;
 
 	void Start () {
@@ -51,6 +49,7 @@ public class AninhaPastoreira : MonoBehaviour {
 			    
 		}
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), pontuacao);
+		Score.infoValue = string.Format ("Você marcou {0} pontos!", pontuacao);
 		SceneManager.LoadScene("Score");
 	}
 }

@@ -45,6 +45,7 @@ public class ColetaOvos : MonoBehaviour {
 			}
 
 			if(pegouOvos == 3){
+				Score.infoValue = string.Format ("Você errou {0} vezes!", erros);
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
 			}
 	}
