@@ -9,6 +9,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 	public Animator[] animator;
 	// Use this for initialization
 	void Start () {
+		
 		min = 1.5f;
 		max = 3.5f;
 		delayGalinha = 2.5f;

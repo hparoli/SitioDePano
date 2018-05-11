@@ -11,8 +11,14 @@ public class ColetaOvos : MonoBehaviour {
 	private AudioSource fonteAudio;
 	
 	public GameObject manager;
+
+	private int idTema;
+	private int notaFinal;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		idTema = PlayerPrefs.GetInt ("idTema");
 		fonteAudio = GetComponent<AudioSource> ();
 		pegouOvos = 0;
 		erros     = 0;
@@ -44,7 +50,22 @@ public class ColetaOvos : MonoBehaviour {
 				}
 			}
 
-			if(pegouOvos == 3){
+			if(pegouOvos == 10){
+
+			if (erros <= 3f)
+			{
+				notaFinal = 10;
+			}
+			else if (erros <= 7f)
+			{
+				notaFinal = 7;
+			}
+
+			else if (erros <= 10f) 
+			{
+				notaFinal = 5;
+			}
+				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				Score.infoValue = string.Format ("Você errou {0} vezes!", erros);
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
 			}

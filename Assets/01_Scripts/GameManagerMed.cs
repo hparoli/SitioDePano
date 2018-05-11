@@ -22,6 +22,15 @@ public class GameManagerMed : MonoBehaviour {
 	private bool _init = false;
 	private int _matches = 9;
 
+	private int idTema;
+	private int notaFinal;
+	private float tempo;
+
+	void Start ()
+	{
+		idTema = PlayerPrefs.GetInt ("idTema");
+
+	}
 
 	void Update () {
 
@@ -36,6 +45,8 @@ public class GameManagerMed : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			checkCards ();
 		}
+
+		Cronometro ();
 	}
 
 	void Awake () {
@@ -105,9 +116,25 @@ public class GameManagerMed : MonoBehaviour {
 			_matches--;
 			matchText.text = "Pares Restantes : " + _matches;
 
-			if (_matches == 0) {
-				gameOver.SetActive (true);
+			if (_matches == 0) 
+			{
+				if (tempo <= 45f)
+				{
+					notaFinal = 10;
+				}
+				else if (tempo <= 75f)
+				{
+					notaFinal = 7;
+				}
 
+				else if (tempo <= 105f) 
+				{
+					notaFinal = 5;
+				}
+
+				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+				Score.infoValue = string.Format ("Parabéns, levou {0} segundos e tirou nota {1}!", tempo.ToString ("0.0"), notaFinal);
+				SceneManager.LoadScene("Score");
 			}
 		}
 
@@ -115,6 +142,11 @@ public class GameManagerMed : MonoBehaviour {
 			cards [c [i]].GetComponent<CardMed> ().state = x;
 			cards [c [i]].GetComponent<CardMed> ().falseCheck ();
 		}
+	}
+
+	void Cronometro()
+	{
+		tempo += 1 * Time.deltaTime;
 	}
 
 
