@@ -9,11 +9,10 @@ using UnityEngine.SceneManagement;
 public class DollSelect : MonoBehaviour {
 
 	private int idTema;
-
 	private int notaFinal;
-
 	private float tempo;
 
+	public GameObject gameManager;
 
 	void Start(){
 
@@ -38,7 +37,8 @@ public class DollSelect : MonoBehaviour {
                 {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
-                    Invoke("ToScore", 0.2f);
+					Invoke ("ToScore", 0.5F);
+
                 }
                 else {
                     StartCoroutine ("MissClick");
@@ -61,7 +61,11 @@ public class DollSelect : MonoBehaviour {
 
 	void ToScore(){
 
-		if (tempo <= 3f)
+		if (tempo <= 2f) 
+		{
+			notaFinal = 20;
+		}
+		else if (tempo <= 3f)
 		{
 			notaFinal = 10;
 		}

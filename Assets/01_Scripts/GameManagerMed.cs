@@ -118,7 +118,12 @@ public class GameManagerMed : MonoBehaviour {
 
 			if (_matches == 0) 
 			{
-				if (tempo <= 45f)
+				if (tempo <= 35f)
+				{
+					notaFinal = 20;
+				}
+
+				else if (tempo <= 45f)
 				{
 					notaFinal = 10;
 				}

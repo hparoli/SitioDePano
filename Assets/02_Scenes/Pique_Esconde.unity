@@ -1419,6 +1419,7 @@ MonoBehaviour:
   - {fileID: 1871230195}
   - {fileID: 126240426}
   - {fileID: 520691035}
+  dollCont: 0
 --- !u!4 &1788257619
 Transform:
   m_ObjectHideFlags: 0

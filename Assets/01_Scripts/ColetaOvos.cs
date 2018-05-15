@@ -52,7 +52,11 @@ public class ColetaOvos : MonoBehaviour {
 
 			if(pegouOvos == 10){
 
-			if (erros <= 3f)
+			if (erros == 0) 
+			{
+				notaFinal = 20;
+			}
+			else if (erros <= 3f)
 			{
 				notaFinal = 10;
 			}
