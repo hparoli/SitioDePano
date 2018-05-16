@@ -127,7 +127,6 @@ public class responder : MonoBehaviour {
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
 			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
-
 			SceneManager.LoadScene("Score");
 		}
 

@@ -15,12 +15,14 @@ public class Score : MonoBehaviour {
 	public GameObject star1;
 	public GameObject star2;
 	public GameObject star3;
+	public GameObject star4;
+	public GameObject effect;
 
 	private int notaFinal;
 	private int acertos;
-	private int piqueEsconde;
-	private int SequenciaSonora;
 
+
+	public Animator[]    Stars;
 	public static string infoValue;
 
 	// Use this for initialization
@@ -29,15 +31,23 @@ public class Score : MonoBehaviour {
 		star1.SetActive (false);
 		star2.SetActive (false);
 		star3.SetActive (false);
+		star4.SetActive (false);
 
 		idTema = PlayerPrefs.GetInt ("idTema");
 		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
 		acertos = PlayerPrefs.GetInt ("acertosTemp" + idTema.ToString ());
 
+
 		txtInfotema.text = infoValue;
 
 
 
+		if (notaFinal >= 20) {
+
+			star4.SetActive (true);
+
+		
+		}
 
 		if (notaFinal >= 10){
 
@@ -60,16 +70,28 @@ public class Score : MonoBehaviour {
 			star2.SetActive (false);
 			star3.SetActive (false);
 		}
+		addEffect ();
 		
+	}
+	void Update () {
+
+	}
+
+	public void addEffect (){
+
+		GameObject.Instantiate (effect);
+
+	}
+
+	public void GoToMenu(){
+		SceneManager.LoadScene (0);
 	}
 
 	public void restart(){
 
 		SceneManager.LoadScene(idTema);
 	}
+}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+

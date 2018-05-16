@@ -319,13 +319,17 @@ IEnumerator SequenciaTutorial(int qtd)
 		{
 			notaFinal = 5;
 		}
-		if (rodada >= 3)
+		else if (rodada >= 3)
 		{
 			notaFinal = 7;
 		}
-		if (rodada >= 5)
+		else if (rodada >= 5)
 		{
 			notaFinal = 10;
+		}
+		else if (rodada >= 8)
+		{
+			notaFinal = 20;
 		}
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
