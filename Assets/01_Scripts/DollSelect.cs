@@ -12,16 +12,23 @@ public class DollSelect : MonoBehaviour {
 	private int notaFinal;
 	private float tempo;
 
-	public GameObject gameManager;
+	[SerializeField]
+	Spawn spawn;
+
 
 	void Start(){
 
-		idTema = PlayerPrefs.GetInt ("idTema");
+
+		spawn = /*.Find ("GameManager").GetComponent<Spawn> ();*/FindObjectOfType<Spawn> ();
+
+		//PASTE TO CREATE DOLLS
+		//spawn.CreateDolls ();
+		//
 	}
 
 	void Update()
 	{
-		Cronometro ();
+		
 		DollSelected ();
 	}
 
@@ -37,7 +44,8 @@ public class DollSelect : MonoBehaviour {
                 {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
-					Invoke ("ToScore", 0.5F);
+					Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
+					spawn.CreateDolls ();
 
                 }
                 else {
@@ -53,40 +61,8 @@ public class DollSelect : MonoBehaviour {
         SoundManager.instance.Play("Player", SoundManager.instance.clipList.MissClick);
     }
 
-	void Cronometro()
-	{
 
-		tempo += 1 * Time.deltaTime;
-	}
-
-	void ToScore(){
-
-		if (tempo <= 2f) 
-		{
-			notaFinal = 20;
-		}
-		else if (tempo <= 3f)
-		{
-			notaFinal = 10;
-		}
-		else if (tempo <= 7f)
-		{
-			notaFinal = 7;
-		}
-
-		else if (tempo <= 10f) 
-		{
-			notaFinal = 5;
-		}
-
-
-		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-//		PlayerPrefs.SetInt ("PiqueTime" + idTema.ToString (), (int)tempo);
-
-		Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
-
-		SceneManager.LoadScene ("Score");
-
-	}
 }
+
+
 

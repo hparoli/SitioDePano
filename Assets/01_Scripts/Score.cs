@@ -11,27 +11,34 @@ public class Score : MonoBehaviour {
 	public Text txtnota;
 	public Text txtInfotema;
 
+	[Header("Array Collections")]
+	public GameObject[] stars;
+	public Animator[] starAnims;
+	public int[] scoresTargets;
 
-	public GameObject star1;
-	public GameObject star2;
-	public GameObject star3;
-	public GameObject star4;
+	[Space(10)]
 	public GameObject effect;
 
 	private int notaFinal;
 	private int acertos;
 
+	[Header("Debug Values")]
+	[SerializeField]
+	int debug_score;
+	[SerializeField]
+	bool useDebug;
 
-	public Animator[]    Stars;
+
 	public static string infoValue;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 
-		star1.SetActive (false);
-		star2.SetActive (false);
-		star3.SetActive (false);
-		star4.SetActive (false);
+		for (int i = 0; i < stars.Length ; i++) 
+		{
+			stars [i].SetActive (false);
+		}
 
 		idTema = PlayerPrefs.GetInt ("idTema");
 		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
@@ -40,36 +47,36 @@ public class Score : MonoBehaviour {
 
 		txtInfotema.text = infoValue;
 
+		#if UNITY_EDITOR
+		if (useDebug)
+		notaFinal = debug_score;
+		#endif
 
+		for (int i = scoresTargets.Length - 1; i >= 0; i--) 
+		{
+			if (notaFinal >= scoresTargets [i]) 
+			{
+				if (i >= 3) 
+				{
+					stars [3].SetActive (true);
+					starAnims [3].SetBool ("Active", true);
+				} 
+				else 
+				{
+					stars [0].SetActive (i >= 0);
+					stars [1].SetActive (i >= 1);
+					stars [2].SetActive (i >= 2);
 
-		if (notaFinal >= 20) {
+					starAnims [0].SetBool ("Active", i >= 0);
+					starAnims [1].SetBool ("Active", i >= 1);
+					starAnims [2].SetBool ("Active", i >= 2);
+				}
 
-			star4.SetActive (true);
-
-		
+				break;
+			}
 		}
 
-		if (notaFinal >= 10){
-
-			star1.SetActive (true);
-			star2.SetActive (true);
-			star3.SetActive (true);
-	
-		}
-
-		else if (notaFinal >= 7){
-
-			star1.SetActive (true);
-			star2.SetActive (true);
-			star3.SetActive (false);
-		}
-
-		else if (notaFinal >= 5){
-
-			star1.SetActive (true);
-			star2.SetActive (false);
-			star3.SetActive (false);
-		}
+		//20,10,7,5
 		addEffect ();
 		
 	}

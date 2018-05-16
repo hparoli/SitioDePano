@@ -1363,34 +1363,75 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114344617526850996, guid: 7b0e79a0753ff1348827d0f7d92330c6, type: 2}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: txtnota
+      value: 
+      objectReference: {fileID: 778948966}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: txtInfotema
+      value: 
+      objectReference: {fileID: 1263810770}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: stars.Array.data[0]
+      value: 
+      objectReference: {fileID: 1326977406}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: stars.Array.data[1]
+      value: 
+      objectReference: {fileID: 507066768}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: stars.Array.data[2]
+      value: 
+      objectReference: {fileID: 315292009}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: stars.Array.data[3]
+      value: 
+      objectReference: {fileID: 2007122560}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: starAnims.Array.data[0]
+      value: 
+      objectReference: {fileID: 344049818}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: starAnims.Array.data[1]
+      value: 
+      objectReference: {fileID: 379873184}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: starAnims.Array.data[2]
+      value: 
+      objectReference: {fileID: 289312462}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: starAnims.Array.data[3]
+      value: 
+      objectReference: {fileID: 2007122562}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: debug_score
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: useDebug
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b0e79a0753ff1348827d0f7d92330c6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1383840885 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1235268610262662, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+--- !u!114 &1383840886 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
     type: 2}
   m_PrefabInternal: {fileID: 1383840883}
---- !u!114 &1383840886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383840885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92f8e7ed0863f3841b0f26bd4fc0a018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtnota: {fileID: 778948966}
-  txtInfotema: {fileID: 1263810770}
-  star1: {fileID: 1326977406}
-  star2: {fileID: 507066768}
-  star3: {fileID: 315292009}
-  star4: {fileID: 2007122560}
-  effect: {fileID: 1610061601869532, guid: 0560b258053585a48848310f2e65b5ee, type: 2}
-  Stars: []
 --- !u!1 &1478492774
 GameObject:
   m_ObjectHideFlags: 0
