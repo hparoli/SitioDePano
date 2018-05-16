@@ -29,13 +29,13 @@ public class DeOlhoNoLobo : MonoBehaviour {
 			time += Time.deltaTime;
 
 		if(time >= 20)
-			delay = 1.5f;
+			delay = 2.5f;
 		
 		if(time >= 30)
-			delay = 1f;
+			delay = 2f;
 		
 		if(time >= 40)
-			delay = 0.5f;
+			delay = 1.5f;
 		
 		if(ovelhas == 10)
 			StartCoroutine("GameOver");

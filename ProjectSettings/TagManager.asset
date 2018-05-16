@@ -12,6 +12,7 @@ TagManager:
   - galinha
   - waypoints
   - lobo
+  - spawn
   layers:
   - Default
   - TransparentFX
