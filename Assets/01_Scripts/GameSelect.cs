@@ -18,7 +18,7 @@ public class GameSelect : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		SceneManager.LoadScene(idTema);
+		LoadingScreenManager.LoadScene(idTema);
 	}
 	
 	// Update is called once per frame
