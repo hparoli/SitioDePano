@@ -33,6 +33,10 @@ public class responder : MonoBehaviour {
 	[SerializeField]
 	AudioClip clip;
 
+	public AudioClip C_Answer;
+	public AudioClip W_Answer;
+	private AudioSource source;
+
 	QuestionData[] shuffledQuestions;
 	int questionIndex;
 
@@ -50,6 +54,8 @@ public class responder : MonoBehaviour {
 	{
 
 		idTema = PlayerPrefs.GetInt ("idTema");
+
+		source = GetComponent<AudioSource> ();
 
 		questionIndex = 0;
 		SetShuffledQuestions ();
@@ -99,9 +105,11 @@ public class responder : MonoBehaviour {
 		if (feedbackCorout != null)
 			return;
 
-		if(CurrentQuestion.answers [index] == CurrentQuestion.correctAnswer)
-		{
+		if (CurrentQuestion.answers [index] == CurrentQuestion.correctAnswer) {
 			acertos++;
+			source.PlayOneShot (C_Answer, 1);
+		} else {
+			source.PlayOneShot(W_Answer, 1);
 		}
 
 		feedbackCorout = StartCoroutine (PromptAnswer_Routine (index));
@@ -142,13 +150,14 @@ public class responder : MonoBehaviour {
 			
 		for (int i = 0; i < answerButtons.Length; i++) 
 		{
-			if (CurrentQuestion.answers [i] == CurrentQuestion.correctAnswer)
+			if (CurrentQuestion.answers [i] == CurrentQuestion.correctAnswer) {
 				answerButtons [i].image.color = correctColor;
-			
+			}
 			else 
 			{
 				if (i == index)
 					answerButtons [i].image.color = incorrectColor;
+			
 			}
 		}
 

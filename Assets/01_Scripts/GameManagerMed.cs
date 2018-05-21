@@ -12,6 +12,7 @@ public class GameManagerMed : MonoBehaviour {
 
 	public AudioClip shuffleCards;
 	public AudioClip CardMatch;
+	public AudioClip WrongMatch;
 	private AudioSource source;
 
 	public Sprite[] cardFace;
@@ -102,7 +103,9 @@ public class GameManagerMed : MonoBehaviour {
 
 		if (c.Count == 2){
 			cardComparisson (c);
-			stopClick.SetActive (true);}
+			stopClick.SetActive (true);
+
+		}
 	}
 
 	void cardComparisson(List<int> c) {
@@ -116,31 +119,24 @@ public class GameManagerMed : MonoBehaviour {
 			_matches--;
 			matchText.text = "Pares Restantes : " + _matches;
 
-			if (_matches == 0) 
-			{
-				if (tempo <= 35f)
-				{
+			if (_matches == 0) {
+				
+				if (tempo <= 35f) {
 					notaFinal = 20;
-				}
-
-				else if (tempo <= 45f)
-				{
+				} else if (tempo <= 45f) {
 					notaFinal = 10;
-				}
-				else if (tempo <= 75f)
-				{
+				} else if (tempo <= 75f) {
 					notaFinal = 7;
-				}
-
-				else if (tempo <= 105f) 
-				{
+				} else if (tempo <= 105f) {
 					notaFinal = 5;
 				}
 
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				Score.infoValue = string.Format ("Parabéns, levou {0} segundos e tirou nota {1}!", tempo.ToString ("0.0"), notaFinal);
-				SceneManager.LoadScene("Score");
+				SceneManager.LoadScene ("Score");
 			}
+		} else {
+			source.PlayOneShot (WrongMatch, 1);
 		}
 
 		for (int i = 0; i < c.Count; i++) {
