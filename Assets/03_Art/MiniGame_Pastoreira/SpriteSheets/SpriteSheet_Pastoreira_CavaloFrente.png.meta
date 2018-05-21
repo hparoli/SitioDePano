@@ -3,7 +3,16 @@ guid: fe87ccf358f0c6340bb62c191fab3a5f
 timeCreated: 1526832840
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_CavaloFrente_0
+    21300002: SpriteSheet_Pastoreira_CavaloFrente_1
+    21300004: SpriteSheet_Pastoreira_CavaloFrente_2
+    21300006: SpriteSheet_Pastoreira_CavaloFrente_3
+    21300008: SpriteSheet_Pastoreira_CavaloFrente_4
+    21300010: SpriteSheet_Pastoreira_CavaloFrente_5
+    21300012: SpriteSheet_Pastoreira_CavaloFrente_6
+    21300014: SpriteSheet_Pastoreira_CavaloFrente_7
+    21300016: SpriteSheet_Pastoreira_CavaloFrente_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 732
+        width: 193
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_1
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 732
+        width: 200
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_2
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 732
+        width: 214
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 440
+        width: 199
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_4
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 440
+        width: 193
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_5
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 440
+        width: 193
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 148
+        width: 216
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 148
+        width: 228
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloFrente_8
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 148
+        width: 216
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

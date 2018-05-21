@@ -3,7 +3,16 @@ guid: 78586fe7f2b9abd46b5b7aa28e64b6a0
 timeCreated: 1526832839
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_CavaloCostas_0
+    21300002: SpriteSheet_Pastoreira_CavaloCostas_1
+    21300004: SpriteSheet_Pastoreira_CavaloCostas_2
+    21300006: SpriteSheet_Pastoreira_CavaloCostas_3
+    21300008: SpriteSheet_Pastoreira_CavaloCostas_4
+    21300010: SpriteSheet_Pastoreira_CavaloCostas_5
+    21300012: SpriteSheet_Pastoreira_CavaloCostas_6
+    21300014: SpriteSheet_Pastoreira_CavaloCostas_7
+    21300016: SpriteSheet_Pastoreira_CavaloCostas_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1720
+        width: 161
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_1
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1720
+        width: 164
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_2
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1720
+        width: 169
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1392
+        width: 166
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1392
+        width: 161
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1392
+        width: 170
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1064
+        width: 173
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_7
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1064
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloCostas_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1064
+        width: 171
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

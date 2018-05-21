@@ -3,7 +3,16 @@ guid: 09371a555bdaf1648839e12cea124f73
 timeCreated: 1526832837
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_VacaFrente_0
+    21300002: SpriteSheet_Pastoreira_VacaFrente_1
+    21300004: SpriteSheet_Pastoreira_VacaFrente_2
+    21300006: SpriteSheet_Pastoreira_VacaFrente_3
+    21300008: SpriteSheet_Pastoreira_VacaFrente_4
+    21300010: SpriteSheet_Pastoreira_VacaFrente_5
+    21300012: SpriteSheet_Pastoreira_VacaFrente_6
+    21300014: SpriteSheet_Pastoreira_VacaFrente_7
+    21300016: SpriteSheet_Pastoreira_VacaFrente_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 745
+        width: 210
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 745
+        width: 229
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_2
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 745
+        width: 258
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 466
+        width: 241
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_4
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 466
+        width: 216
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 464
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 187
+        width: 248
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 187
+        width: 236
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaFrente_8
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 187
+        width: 206
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

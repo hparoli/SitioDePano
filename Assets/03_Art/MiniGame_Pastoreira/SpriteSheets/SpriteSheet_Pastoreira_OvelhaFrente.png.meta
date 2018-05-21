@@ -3,7 +3,15 @@ guid: 6d6541977cf92994ba60dbe663654f05
 timeCreated: 1526832839
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_OvelhaFrente_0
+    21300002: SpriteSheet_Pastoreira_OvelhaFrente_1
+    21300004: SpriteSheet_Pastoreira_OvelhaFrente_2
+    21300006: SpriteSheet_Pastoreira_OvelhaFrente_3
+    21300008: SpriteSheet_Pastoreira_OvelhaFrente_4
+    21300010: SpriteSheet_Pastoreira_OvelhaFrente_5
+    21300012: SpriteSheet_Pastoreira_OvelhaFrente_6
+    21300014: SpriteSheet_Pastoreira_OvelhaFrente_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +96,119 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 754
+        width: 205
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 754
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 754
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 484
+        width: 207
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 484
+        width: 205
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 484
+        width: 208
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 214
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaFrente_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 214
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

@@ -3,7 +3,16 @@ guid: 3e2e66e764741464ea09b55559784272
 timeCreated: 1526832838
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_CavaloLado_0
+    21300002: SpriteSheet_Pastoreira_CavaloLado_1
+    21300004: SpriteSheet_Pastoreira_CavaloLado_2
+    21300006: SpriteSheet_Pastoreira_CavaloLado_3
+    21300008: SpriteSheet_Pastoreira_CavaloLado_4
+    21300010: SpriteSheet_Pastoreira_CavaloLado_5
+    21300012: SpriteSheet_Pastoreira_CavaloLado_6
+    21300014: SpriteSheet_Pastoreira_CavaloLado_7
+    21300016: SpriteSheet_Pastoreira_CavaloLado_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1692
+        width: 313
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_1
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1692
+        width: 328
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1336
+        width: 340
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1336
+        width: 352
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 980
+        width: 338
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_5
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 980
+        width: 324
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 624
+        width: 299
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_7
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 624
+        width: 309
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_CavaloLado_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 268
+        width: 311
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

@@ -3,7 +3,16 @@ guid: deaff2a557110444ea0b327b2407f133
 timeCreated: 1526832840
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_VacaLado_0
+    21300002: SpriteSheet_Pastoreira_VacaLado_1
+    21300004: SpriteSheet_Pastoreira_VacaLado_2
+    21300006: SpriteSheet_Pastoreira_VacaLado_3
+    21300008: SpriteSheet_Pastoreira_VacaLado_4
+    21300010: SpriteSheet_Pastoreira_VacaLado_5
+    21300012: SpriteSheet_Pastoreira_VacaLado_6
+    21300014: SpriteSheet_Pastoreira_VacaLado_7
+    21300016: SpriteSheet_Pastoreira_VacaLado_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1756
+        width: 311
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1756
+        width: 357
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1458
+        width: 372
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_3
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1458
+        width: 362
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1154
+        width: 350
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_5
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1164
+        width: 297
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 866
+        width: 290
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_7
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 866
+        width: 289
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaLado_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 564
+        width: 294
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

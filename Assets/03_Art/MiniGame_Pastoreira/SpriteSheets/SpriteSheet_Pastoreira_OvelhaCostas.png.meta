@@ -3,7 +3,14 @@ guid: 1dd5a300d633eaf4a8274fa7772d988e
 timeCreated: 1526832838
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_OvelhaCostas_0
+    21300002: SpriteSheet_Pastoreira_OvelhaCostas_1
+    21300004: SpriteSheet_Pastoreira_OvelhaCostas_2
+    21300006: SpriteSheet_Pastoreira_OvelhaCostas_3
+    21300008: SpriteSheet_Pastoreira_OvelhaCostas_4
+    21300010: SpriteSheet_Pastoreira_OvelhaCostas_5
+    21300012: SpriteSheet_Pastoreira_OvelhaCostas_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +95,105 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 731
+        width: 195
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 731
+        width: 201
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_2
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 731
+        width: 205
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 438
+        width: 201
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 439
+        width: 197
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_5
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 439
+        width: 200
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_OvelhaCostas_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 146
+        width: 197
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

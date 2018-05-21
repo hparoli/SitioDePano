@@ -3,7 +3,16 @@ guid: d4a01b10298b3fb4fa4cfba1208cc109
 timeCreated: 1526832839
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Pastoreira_VacaCostas_0
+    21300002: SpriteSheet_Pastoreira_VacaCostas_1
+    21300004: SpriteSheet_Pastoreira_VacaCostas_2
+    21300006: SpriteSheet_Pastoreira_VacaCostas_3
+    21300008: SpriteSheet_Pastoreira_VacaCostas_4
+    21300010: SpriteSheet_Pastoreira_VacaCostas_5
+    21300012: SpriteSheet_Pastoreira_VacaCostas_6
+    21300014: SpriteSheet_Pastoreira_VacaCostas_7
+    21300016: SpriteSheet_Pastoreira_VacaCostas_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +97,133 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 716
+        width: 166
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 716
+        width: 185
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_2
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 716
+        width: 201
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 410
+        width: 200
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 410
+        width: 182
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_5
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 411
+        width: 176
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 104
+        width: 186
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 104
+        width: 189
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Pastoreira_VacaCostas_8
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 103
+        width: 180
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
