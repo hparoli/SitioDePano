@@ -12,7 +12,7 @@ public class AnimalDisplay : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		random = Random.Range(0,4);
+		random = Random.Range(0,animal.Length);
 		anim = animal[random].animal;
 		sprite.sprite = animal[random].sprite;
 		this.gameObject.GetComponent<Animator>().SetInteger("Animal",animal[random].animation);

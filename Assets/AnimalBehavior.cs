@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class AnimalBehavior : MonoBehaviour {
 
+	[SerializeField]
+	private GameObject waypoint;
+
+	[SerializeField]
+	private float moveSpeed;
+
 	// Use this for initialization
 	void Start () {
 		
