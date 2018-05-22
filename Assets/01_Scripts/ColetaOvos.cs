@@ -11,6 +11,7 @@ public class ColetaOvos : MonoBehaviour {
 	private AudioSource fonteAudio;
 	
 	public GameObject manager;
+	public GameObject[] eggsCollected;
 
 	private int idTema;
 	private int notaFinal;
@@ -23,6 +24,11 @@ public class ColetaOvos : MonoBehaviour {
 		pegouOvos = 0;
 		erros     = 0;
 		manager = GameObject.FindWithTag("Manager");
+
+		for (int i = 0; i < eggsCollected.Length; i++) 
+		{
+			eggsCollected[i].SetActive (false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -35,6 +41,7 @@ public class ColetaOvos : MonoBehaviour {
 						if (galinhaClick.transform.gameObject.name == galinhas[i].name){
 							if(galinhas[i].GetComponent<ApareceOvo>().temOvo){
 								pegouOvos++;
+								eggFeedback ();
 								galinhas[i].GetComponent<ApareceOvo>().Desaparece();
 								//feedback positivo
 								Debug.Log("ACERTOU");
@@ -50,7 +57,8 @@ public class ColetaOvos : MonoBehaviour {
 				}
 			}
 
-			if(pegouOvos == 10){
+			if(pegouOvos == 3
+){
 
 			if (erros == 0) 
 			{
@@ -72,8 +80,20 @@ public class ColetaOvos : MonoBehaviour {
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				Score.infoValue = string.Format ("Você errou {0} vezes!", erros);
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
-			}
+		}
 	}
 
+	public void eggFeedback()
+	{
+			if (pegouOvos >= 1) {
+				eggsCollected [0].SetActive (true);
+			}
+			if (pegouOvos >= 2){
+				eggsCollected [1].SetActive (true);	
+			}
+			if (pegouOvos >= 3){
+				eggsCollected [2].SetActive (true);
 
+		}
+	}
 }

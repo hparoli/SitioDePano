@@ -1,6 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 
 public class Spawn : MonoBehaviour {
 
@@ -8,8 +11,13 @@ public class Spawn : MonoBehaviour {
 	//B: Random Spawn Point toda vez que rodar o jogo
 
 	int idTema;
-	public GameObject dollObj;                // prefab da boneca
-	public Transform[] spawnPoints;         // Array c/ Spawn Points
+	public GameObject dollObj; // prefab da boneca
+	public GameObject Tutorial;
+	public Transform[] spawnPoints; // Array c/ Spawn Points
+	public string [] txtTutorial;
+	public Text infoTutorial;
+
+
 	public int dollCount;
 	public int notaFinal;
 	public float tempo;
@@ -17,20 +25,33 @@ public class Spawn : MonoBehaviour {
 
 
 
+
 	void Start () 
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
-		Invoke ("CreateDolls", 0);
+		Invoke ("TakeTutorial", 0);
+		infoTutorial.text = txtTutorial.ToString();
+
 	}
 
 	void Update()
 	{
-
 		Cronometro();
 	}
 
-	public void CreateDolls() 
+	public void TakeTutorial(){
+		
+
+
+		Instantiate (dollObj, spawnPoints [2].position, spawnPoints [2].rotation);
+
+	}
+
+
+
+	public void StartGame() 
 	{
+		
 		if (dollCount < 3) 
 		{
 			dollCount++;

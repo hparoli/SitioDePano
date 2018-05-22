@@ -12,6 +12,6 @@ public class StartGame : MonoBehaviour {
     }
 
     public void StartTutorial(){
-            StartCoroutine(gameController.StartGameTutorial());
+        StartCoroutine(gameController.StartGameTutorial());
     }
 }

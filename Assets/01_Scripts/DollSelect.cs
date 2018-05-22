@@ -11,6 +11,7 @@ public class DollSelect : MonoBehaviour {
 	private int idTema;
 	private int notaFinal;
 	private float tempo;
+	private bool Tutorial = false;
 
 	[SerializeField]
 	Spawn spawn;
@@ -18,6 +19,9 @@ public class DollSelect : MonoBehaviour {
 
 	void Start(){
 
+		if (Tutorial) {
+			spawn.TakeTutorial ();
+		}
 
 		spawn = /*.Find ("GameManager").GetComponent<Spawn> ();*/FindObjectOfType<Spawn> ();
 
@@ -36,6 +40,7 @@ public class DollSelect : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown (0)) {
 
+		
             RaycastHit Doll = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out Doll);
 
@@ -45,15 +50,17 @@ public class DollSelect : MonoBehaviour {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
 					Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
-					spawn.CreateDolls ();
+					Tutorial = true;
 
                 }
                 else {
                     StartCoroutine ("MissClick");
                 }
             }
-        }
+		} 
 	}
+
+
 
     private IEnumerator MissClick()
     {
