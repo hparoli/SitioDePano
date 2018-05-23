@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ComportamentoGalinha : MonoBehaviour {
 
 	private float min,max,delayGalinha;
 	public Animator[] animator;
+	public GameObject Tutorial;
+
+	public string [] txtTutorial;
+	public Text infoTutorial;
+	int indexTutorial = 0;
+
+	[SerializeField]
+	ApareceOvo ApareceOvo;
 	// Use this for initialization
 	void Start () {
 		
 		min = 1.5f;
 		max = 3.5f;
 		delayGalinha = 2.5f;
-		StartCoroutine("Comportamento");
+		ApareceOvo = FindObjectOfType <ApareceOvo> ();
+		TutorialGame ();
 	}
 	
 	IEnumerator Comportamento(){
@@ -31,6 +41,8 @@ public class ComportamentoGalinha : MonoBehaviour {
 		StartCoroutine("Comportamento");
 	}
 
+
+
 	public void EndGame(){
 		for(int i = 0; i < animator.Length; i++){
 			animator[i].SetBool("Levantando",false);
@@ -38,6 +50,41 @@ public class ComportamentoGalinha : MonoBehaviour {
 			animator[i].enabled = false;
 			StartCoroutine("GameOver");
 		}
+	}
+
+	public void TutorialGame(){
+		StartCoroutine ("tutorialTextChanges");
+	}
+
+	public IEnumerator tutorialTextChanges(){
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 3){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 3){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 3){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 3){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+
+}
+
+	public void StartGame()
+	{
+		Tutorial.SetActive (false);
+		StartCoroutine("Comportamento");
+
 	}
 
 	IEnumerator GameOver(){

@@ -16,10 +16,13 @@ public class Spawn : MonoBehaviour {
 	public Transform[] spawnPoints; // Array c/ Spawn Points
 	public string [] txtTutorial;
 	public Text infoTutorial;
+
 	public int dollCount;
 	public int notaFinal;
 	public float tempo;
 	public bool StartTutorial = true;
+
+	int indexTutorial = 0;
 
 
 
@@ -47,10 +50,20 @@ public class Spawn : MonoBehaviour {
 	}
 
 	public IEnumerator tutorialTextChanges(){
-		infoTutorial.text = txtTutorial [0];
-		yield return new WaitForSeconds (1);
 
-	}
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 2){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 2){
+			indexTutorial++;
+
+		}
+		yield return new WaitForSeconds (2);
+}
 
 	public void StartGame(){
 			StartTutorial = false;
