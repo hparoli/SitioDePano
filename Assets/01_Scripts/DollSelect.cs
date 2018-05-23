@@ -10,8 +10,8 @@ public class DollSelect : MonoBehaviour {
 
 	private int idTema;
 	private int notaFinal;
-	private float tempo;
-	private bool Tutorial = false;
+
+
 
 	[SerializeField]
 	Spawn spawn;
@@ -19,11 +19,9 @@ public class DollSelect : MonoBehaviour {
 
 	void Start(){
 
-		if (Tutorial) {
-			spawn.TakeTutorial ();
-		}
 
-		spawn = /*.Find ("GameManager").GetComponent<Spawn> ();*/FindObjectOfType<Spawn> ();
+
+		spawn =  FindObjectOfType <Spawn> ();
 
 		//PASTE TO CREATE DOLLS
 		//spawn.CreateDolls ();
@@ -50,10 +48,17 @@ public class DollSelect : MonoBehaviour {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
 					Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
-					Tutorial = true;
+					if (spawn.StartTutorial == true) {
+						spawn.StartCoroutine ("tutorialTextChanges");
+						Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
 
+					} else {
+						spawn.CreatDoll ();
+						}
                 }
-                else {
+                
+				else 
+				{
                     StartCoroutine ("MissClick");
                 }
             }

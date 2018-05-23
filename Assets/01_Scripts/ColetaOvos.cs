@@ -32,7 +32,8 @@ public class ColetaOvos : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		RaycastHit galinhaClick = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out galinhaClick);
 			if (Input.GetMouseButtonDown (0)) {
