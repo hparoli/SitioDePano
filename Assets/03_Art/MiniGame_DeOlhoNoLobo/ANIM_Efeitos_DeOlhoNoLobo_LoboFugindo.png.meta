@@ -3,7 +3,27 @@ guid: 34e6aeebb8c95f747b4e6370a31ca81e
 timeCreated: 1526867603
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_0
+    21300002: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_1
+    21300004: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_2
+    21300006: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_3
+    21300008: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_4
+    21300010: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_5
+    21300012: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_6
+    21300014: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_7
+    21300016: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_8
+    21300018: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_9
+    21300020: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_10
+    21300022: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_11
+    21300024: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_12
+    21300026: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_13
+    21300028: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_14
+    21300030: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_15
+    21300032: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_16
+    21300034: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_17
+    21300036: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_18
+    21300038: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +60,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -88,7 +108,287 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1747
+        width: 221
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_1
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1723
+        width: 217
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1716
+        width: 249
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_3
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1696
+        width: 308
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_4
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1716
+        width: 328
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1309
+        width: 400
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_6
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1319
+        width: 362
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_7
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1316
+        width: 324
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_8
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1316
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_9
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1316
+        width: 352
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 957
+        width: 338
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_11
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 967
+        width: 335
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_12
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 950
+        width: 314
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_13
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 932
+        width: 349
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_14
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 929
+        width: 317
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 594
+        width: 294
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_16
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 591
+        width: 231
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_17
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 591
+        width: 300
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_18
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 601
+        width: 241
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboFugindo_19
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 632
+        width: 214
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

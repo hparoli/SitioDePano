@@ -3,7 +3,27 @@ guid: 5b3ab6c7e6f5fa34b919a08d5b1f4d2e
 timeCreated: 1526867603
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_0
+    21300002: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_1
+    21300004: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_2
+    21300006: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_3
+    21300008: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_4
+    21300010: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_5
+    21300012: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_6
+    21300014: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_7
+    21300016: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_8
+    21300018: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_9
+    21300020: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_10
+    21300022: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_11
+    21300024: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_12
+    21300026: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_13
+    21300028: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_14
+    21300030: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_15
+    21300032: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_16
+    21300034: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_17
+    21300036: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_18
+    21300038: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +60,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -88,7 +108,287 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1706
+        width: 242
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1709
+        width: 266
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_2
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1696
+        width: 262
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_3
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 1699
+        width: 290
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_4
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1696
+        width: 325
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1285
+        width: 349
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_6
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1295
+        width: 325
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_7
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1281
+        width: 349
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_8
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1292
+        width: 338
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_9
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 1281
+        width: 342
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 895
+        width: 359
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_11
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 898
+        width: 339
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_12
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 912
+        width: 321
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_13
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 891
+        width: 339
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_14
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 881
+        width: 311
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_15
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 515
+        width: 311
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_16
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 542
+        width: 252
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_17
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 549
+        width: 207
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_18
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 546
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_Efeitos_DeOlhoNoLobo_LoboPegaOvelha_19
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 549
+        width: 217
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

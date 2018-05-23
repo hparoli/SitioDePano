@@ -24,10 +24,10 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		time = 45f;
 		delay = 3f;
 		ovelhas = 0;
-		moveSpeed = 2.5f;
+		moveSpeed = 1.5f;
 		StartCoroutine("SpawnLobo");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if(time > 0){
@@ -38,18 +38,18 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		}
 
 		if(time <= 30){
-			delay = 2.5f;
-			moveSpeed = 3f;
+			delay = 2.75f;
+			moveSpeed = 2.0f;
 		}
 		
 		if(time <= 20){
-			delay = 2f;
-			moveSpeed = 3.5f;
+			delay = 2.5f;
+			moveSpeed = 2.3f;
 		}
 		
 		if(time <= 10){
-			delay = 1.5f;
-			moveSpeed = 4f;
+			delay = 2.25f;
+			moveSpeed = 2.7f;
 		}
 
 		
