@@ -16,11 +16,10 @@ public class Spawn : MonoBehaviour {
 	public Transform[] spawnPoints; // Array c/ Spawn Points
 	public string [] txtTutorial;
 	public Text infoTutorial;
-
-
 	public int dollCount;
 	public int notaFinal;
 	public float tempo;
+	public bool StartTutorial = true;
 
 
 
@@ -29,46 +28,54 @@ public class Spawn : MonoBehaviour {
 	void Start () 
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
-		Invoke ("TakeTutorial", 0);
-		infoTutorial.text = txtTutorial.ToString();
-
+		if (StartTutorial) {
+			TakeTutorial ();
+		}
 	}
 
 	void Update()
 	{
-		Cronometro();
+		
+		Cronometro ();
+
 	}
 
 	public void TakeTutorial(){
 		
-
-
+		StartCoroutine ("tutorialTextChanges");
 		Instantiate (dollObj, spawnPoints [2].position, spawnPoints [2].rotation);
+	}
+
+	public IEnumerator tutorialTextChanges(){
+		infoTutorial.text = txtTutorial [0];
+		yield return new WaitForSeconds (1);
 
 	}
 
-
-
-	public void StartGame() 
-	{
-		
-		if (dollCount < 3) 
-		{
-			dollCount++;
-			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-			Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
-
-		} 
-		else 
-		{
-			ToScore ();
+	public void StartGame(){
+			StartTutorial = false;
+			Tutorial.SetActive (false);
+			CreatDoll ();
 		}
 
-	}
+	public void CreatDoll() 
+	{
+		
+			if (dollCount < 3) {
+				dollCount++;
+				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+				Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+			}
+			else {
+				ToScore ();
+			}
+
+		} 
+	
 	void Cronometro()
 	{
-
 		tempo += 1 * Time.deltaTime;
+
 	}
 
 	void ToScore()
