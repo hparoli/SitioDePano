@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: ovelha
   sprite: {fileID: 21300000, guid: 239e09a25740f494a961d3a12e7cbc54, type: 3}
-  animation: 1
+  esquerda: 16
+  direita: 17
+  cima: 18
+  baixo: 19

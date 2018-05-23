@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: Cachorro
   m_EditorClassIdentifier: 
   animal: cachorro
-  sprite: {fileID: 21300018, guid: 7f449c3419d943c418c8d5ff5f2023cf, type: 3}
-  animation: 5
+  sprite: {fileID: 21300000, guid: 71ede72620790b64a818f65a09f7031b, type: 3}
+  esquerda: 0
+  direita: 1
+  cima: 2
+  baixo: 3

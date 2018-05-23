@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114380889325129834}
   - component: {fileID: 95526316706802850}
   - component: {fileID: 114996507703184478}
+  - component: {fileID: 65782617994511756}
+  - component: {fileID: 54967639691462070}
   m_Layer: 0
   m_Name: AnimalContandoBichos
   m_TagString: Untagged
@@ -43,6 +45,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54967639691462070
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898304526662182}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &65782617994511756
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898304526662182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.13, y: 2.97, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95526316706802850
 Animator:
   serializedVersion: 3
@@ -76,7 +105,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b7951546189dfc848b764fe682fe78be, type: 2}
   - {fileID: 11400000, guid: c81cd006a95f0a8449aa2f6b057db3ca, type: 2}
   - {fileID: 11400000, guid: d1d4d122903653041a48578bf08c0a9e, type: 2}
-  sprite: {fileID: 0}
+  sprite: {fileID: 212075827146561408}
   anim: 
 --- !u!114 &114996507703184478
 MonoBehaviour:
@@ -90,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
+  gm: {fileID: 0}
   moveSpeed: 0
 --- !u!212 &212075827146561408
 SpriteRenderer:

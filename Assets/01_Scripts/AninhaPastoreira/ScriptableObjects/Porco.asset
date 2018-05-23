@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: porco
   sprite: {fileID: 21300000, guid: 325e3ce415cb7a745bd7ea2540fa20ed, type: 3}
-  animation: 7
+  esquerda: 20
+  direita: 21
+  cima: 22
+  baixo: 23
