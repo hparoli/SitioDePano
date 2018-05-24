@@ -82,10 +82,10 @@ public class LoboBehavior : MonoBehaviour {
 		
 
 		if(col.tag == "waypoints"){
-			gm.GetComponent<DeOlhoNoLobo>().SetOvelhas();
 			//feedback lobo pegando ovelha
 			source.PlayOneShot (Feed_som);
 
+			gm.GetComponent<DeOlhoNoLobo>().SetOvelhas();
 			Destroy(gameObject, .5f);
 
 		}
