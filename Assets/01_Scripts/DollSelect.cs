@@ -47,14 +47,9 @@ public class DollSelect : MonoBehaviour {
                 {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
+					spawn.CreatDoll ();
 					Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
-					if (spawn.StartTutorial == true) {
-						spawn.StartCoroutine ("tutorialTextChanges");
-						Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
-
-					} else {
-						spawn.CreatDoll ();
-						}
+						
                 }
                 
 				else 

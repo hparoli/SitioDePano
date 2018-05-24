@@ -18,8 +18,7 @@ public class responder : MonoBehaviour {
 	Text infoResposta;
 	[SerializeField]
 	QuestionData[] questions;
-	[SerializeField]
-	GameObject tutorial;
+
 
 	[Header("Feedback")]
 	[SerializeField, Range(0.0f, 5.0f)]
@@ -44,6 +43,13 @@ public class responder : MonoBehaviour {
 	float media;
 	int notaFinal;
 
+	[Header("Tutorial")]
+	public string [] txtTutorial;
+	public Text infoTutorial;
+	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+
 	Coroutine feedbackCorout;
 
 
@@ -58,11 +64,45 @@ public class responder : MonoBehaviour {
 		source = GetComponent<AudioSource> ();
 
 		questionIndex = 0;
-		SetShuffledQuestions ();
-		UpdateQuestionOutput ();
-
+		StartTutorial ();
+		tutorial.SetActive (true);
 		infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 		
+	}
+
+	public void StartTutorial(){
+
+		StartCoroutine ("tutorialTextChanges");
+	
+	}
+
+	public IEnumerator tutorialTextChanges(){
+
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 2){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 2){
+			indexTutorial++;
+
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 2){
+			indexTutorial++;
+
+		}
+		yield return new WaitForSeconds (2);
+
+	}
+
+	public void StartGame(){
+		tutorial.SetActive (false);
+		SetShuffledQuestions ();
+		UpdateQuestionOutput ();
 	}
 
 	void SetShuffledQuestions()

@@ -12,8 +12,8 @@ public class Spawn : MonoBehaviour {
 
 	int idTema;
 	public GameObject dollObj; // prefab da boneca
-	public GameObject Tutorial;
 	public Transform[] spawnPoints; // Array c/ Spawn Points
+	public GameObject Tutorial;
 	public string [] txtTutorial;
 	public Text infoTutorial;
 
@@ -46,19 +46,25 @@ public class Spawn : MonoBehaviour {
 	public void TakeTutorial(){
 		
 		StartCoroutine ("tutorialTextChanges");
-		Instantiate (dollObj, spawnPoints [2].position, spawnPoints [2].rotation);
+
 	}
 
 	public IEnumerator tutorialTextChanges(){
 
 
 		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 2){
+		if (indexTutorial < 3){
 			indexTutorial++;
 		}
 		yield return new WaitForSeconds (2);
 		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 2){
+		if (indexTutorial < 3){
+			indexTutorial++;
+
+		}
+		yield return new WaitForSeconds (2);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 3){
 			indexTutorial++;
 
 		}
@@ -78,6 +84,7 @@ public class Spawn : MonoBehaviour {
 				dollCount++;
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 				Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+				
 			}
 			else {
 				ToScore ();
