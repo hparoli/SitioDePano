@@ -18,7 +18,6 @@ public class GameSelect : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		PlayerPrefs.SetInt ("MainMenu", 1);
 		LoadingScreenManager.LoadScene(idTema);
 	}
 	

@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour {
 	private GameObject minigame;
 	
 	[SerializeField]
-	private int idGame, idTema, menuInicio;
+	private int idGame, idTema;
 	
 	[SerializeField]
 	private GameObject inicio;
@@ -41,18 +41,9 @@ public class MenuController : MonoBehaviour {
 	[SerializeField]
 	public GameObject Maozinha;
 
-
 	void Start () {
-		
-		menuInicio = PlayerPrefs.GetInt ("MainMenu",0);
 		canPress = false;
-		if (menuInicio == 0) {
-			StartCoroutine ("ApareceInicio");
-		} else {
-			inicio.SetActive (false);
-			Maozinha.SetActive (false);
-			mainMenu.SetActive (true);
-		}
+		StartCoroutine("ApareceInicio");
 		idGame = 1;
 		MudaBotoes(idGame);
 	}
@@ -86,7 +77,6 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void Exit(){
-		PlayerPrefs.SetInt ("MainMenu", 0);
 		Application.Quit();
 	}
 
