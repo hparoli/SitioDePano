@@ -1719,6 +1719,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   clip: {fileID: 0}
   C_Answer: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
+<<<<<<< HEAD
   W_Answer: {fileID: 8300000, guid: e8b5ab97b437b8b4c9b5a926d3e8c0c0, type: 3}
   txtTutorial:
   - Bem vindo ao Quiz
@@ -1726,6 +1727,9 @@ MonoBehaviour:
   - "Agora aperte o bot\xE3o para come\xE7ar :)"
   infoTutorial: {fileID: 1014063298}
   tutorial: {fileID: 1840191127}
+=======
+  W_Answer: {fileID: 8300000, guid: 207af22a2a2bea641a169aebae14b73e, type: 3}
+>>>>>>> cdb7770788d63186743aa1e65896ffa79666c7bd
 --- !u!4 &1834947943
 Transform:
   m_ObjectHideFlags: 0

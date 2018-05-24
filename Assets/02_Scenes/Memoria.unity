@@ -7457,7 +7457,7 @@ MonoBehaviour:
   stopClick: {fileID: 103086518}
   shuffleCards: {fileID: 8300000, guid: 1bdf821592c60d148b2ca5d2b23e508b, type: 3}
   CardMatch: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  WrongMatch: {fileID: 8300000, guid: e8b5ab97b437b8b4c9b5a926d3e8c0c0, type: 3}
+  WrongMatch: {fileID: 8300000, guid: 207af22a2a2bea641a169aebae14b73e, type: 3}
   cardFace:
   - {fileID: 21300000, guid: 042f7cd18ad5a2f47ba90fd02e169961, type: 3}
   - {fileID: 21300000, guid: 9edda3f7b2c0e2d4f9a9d3c8256894a7, type: 3}

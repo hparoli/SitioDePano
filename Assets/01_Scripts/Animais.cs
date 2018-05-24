@@ -8,7 +8,7 @@ public class Animais : ScriptableObject {
 	public string animal;
 
 	public Sprite sprite;
-	public int esquerda,direita,cima,baixo;
+	public int anim;
 
 
 }
