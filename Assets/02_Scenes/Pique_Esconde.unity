@@ -1219,7 +1219,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1297,7 +1297,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 289748598}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1699,10 +1699,10 @@ RectTransform:
   m_Father: {fileID: 906800244}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.31738093, y: 0}
-  m_AnchorMax: {x: 0.6612382, y: 0.124561176}
-  m_AnchoredPosition: {x: 1.833313, y: 0.4000244}
-  m_SizeDelta: {x: 0.9700012, y: 0}
+  m_AnchorMin: {x: 0.37976184, y: 0}
+  m_AnchorMax: {x: 0.59400004, y: 0.12034175}
+  m_AnchoredPosition: {x: 0.6799927, y: 0.7000122}
+  m_SizeDelta: {x: 1.8600006, y: 0.59998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748410686
 MonoBehaviour:
@@ -1818,7 +1818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dollObj: {fileID: 1354295785629238, guid: 5b9484a3fb10ed9428ee2061bffcecf8, type: 2}
-  Tutorial: {fileID: 906800243}
   spawnPoints:
   - {fileID: 994726382}
   - {fileID: 624873471}
@@ -1830,6 +1829,7 @@ MonoBehaviour:
   - {fileID: 1871230195}
   - {fileID: 126240426}
   - {fileID: 520691035}
+  Tutorial: {fileID: 906800243}
   txtTutorial:
   - "Vamos come\xE7ar"
   - Ache a aninha para marcar pontos
