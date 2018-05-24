@@ -19,13 +19,23 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	private Text cronometro;
 
 	public int ovelhas;
+
+
+	public GameObject Tutorial;
+	public string [] txtTutorial;
+	public Text infoTutorial;
+	int indexTutorial = 0;
+
+
 	// Use this for initialization
 	void Start () {
 		time = 45f;
 		delay = 3f;
 		ovelhas = 0;
 		moveSpeed = 1.5f;
-		StartCoroutine("SpawnLobo");
+		StartTutorial ();
+		Tutorial.SetActive (true);
+
 	}
 
 	// Update is called once per frame
@@ -55,6 +65,45 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		
 		if(ovelhas == 10)
 			StartCoroutine("GameOver");
+	}
+
+	public void StartTutorial(){
+	
+		StartCoroutine("tutorialTextChanges");
+	}
+
+	public IEnumerator tutorialTextChanges(){
+
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 4){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (3);
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 4){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (3);
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 4){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (3);
+
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial < 4){
+			indexTutorial++;
+		}
+		yield return new WaitForSeconds (3);
+	}
+
+
+	public void StartGame(){
+		Tutorial.SetActive (false);
+		StartCoroutine("SpawnLobo");
 	}
 
 	IEnumerator SpawnLobo(){
