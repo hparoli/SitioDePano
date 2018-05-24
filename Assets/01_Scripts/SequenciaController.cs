@@ -80,7 +80,7 @@ public class SequenciaController : MonoBehaviour {
             yield return null;
         }
         yield return new WaitForSeconds(0.2f);
-		roundTxt.text = (qtdCores + rodada) + " notas";
+        roundTxt.text = qtdCores + " notas";
         for (float f = 0f; f <= standard.a; f += 0.01f)
         {
             Color c = roundTxt.color;
@@ -180,26 +180,6 @@ public class SequenciaController : MonoBehaviour {
             buttons[r].color = color[0];
 			buttonsBack [r].color = color [1];
         }
-
-		roundTxt.text = "Agora é sua vez!";
-		for (float f = 0f; f <= standard.a; f += 0.01f)
-		{
-			Color c = roundTxt.color;
-			c.a = f;
-			roundTxt.color = c;
-			new WaitForSeconds(.5f);
-			yield return null;
-		}
-		yield return new WaitForSeconds(1f);
-		for (float f = 1f; f >= 0; f -= 0.01f)
-		{
-			Color c = roundTxt.color;
-			c.a = f;
-			roundTxt.color = c;
-			new WaitForSeconds(.5f);
-			yield return null;
-		}
-		yield return new WaitForSeconds(0.5f);
         gameState = GameState.RESPONDER;
         idResp = 0;
     }

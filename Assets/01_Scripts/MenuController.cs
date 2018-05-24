@@ -110,7 +110,7 @@ public class MenuController : MonoBehaviour {
 				btnPlay[i].interactable = true;
 			} else {
 				j = i + 4;
-				if(i == 3){
+				if(i > 1){
 					btnPlay[i].interactable = false;
 				}
 

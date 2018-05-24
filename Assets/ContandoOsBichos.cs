@@ -142,7 +142,6 @@ public class ContandoOsBichos : MonoBehaviour {
 			contaCavalo = 0;
 			contaGato = 0;
 			contaCachorro = 0;
-			texto.text = contador.ToString("f0");
 			button.SetActive(true);
 		} else {
 			GameOver();

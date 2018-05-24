@@ -15,8 +15,7 @@ public class AnimalDisplay : MonoBehaviour {
 		random = Random.Range(0,animal.Length);
 		anim = animal[random].animal;
 		sprite.sprite = animal[random].sprite;
-		this.gameObject.GetComponent<Animator>().SetInteger("Animal",animal[random].anim);
-
+		this.gameObject.GetComponent<Animator>().SetInteger("Animal",animal[random].esquerda);
 	}
 	
 

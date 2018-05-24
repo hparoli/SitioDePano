@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1285177297656052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3171105, y: 0.10185, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.35050252, y: 0.35050252, z: 0.35050252}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   moveSpeed: 0
   gm: {fileID: 0}
   move: 0
-  Feed_som: {fileID: 8300000, guid: 207af22a2a2bea641a169aebae14b73e, type: 3}
+  Feed_som: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
   spawn: 
 --- !u!212 &212254629224271674
 SpriteRenderer:

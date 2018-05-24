@@ -48,7 +48,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		}
 		
 		if(time <= 10){
-			delay = 2f;
+			delay = 2.25f;
 			moveSpeed = 2.7f;
 		}
 
@@ -80,12 +80,10 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 	IEnumerator GameOver(){
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene(8);
+		SceneManager.LoadScene(7);
 	}
 
 	public void SetOvelhas(){
 		ovelhas++;
-		if(ovelhas == 10)
-			StartCoroutine("GameOver");
 	}
 }

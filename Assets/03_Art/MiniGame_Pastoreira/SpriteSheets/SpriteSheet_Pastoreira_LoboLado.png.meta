@@ -55,7 +55,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,12 +102,12 @@ TextureImporter:
       name: SpriteSheet_Pastoreira_LoboLado_0
       rect:
         serializedVersion: 2
-        x: 174
+        x: 172
         y: 1760
-        width: 360
+        width: 364
         height: 236
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -119,9 +119,9 @@ TextureImporter:
         x: 614
         y: 1760
         width: 350
-        height: 236
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,8 +134,8 @@ TextureImporter:
         y: 1472
         width: 361
         height: 237
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: SpriteSheet_Pastoreira_LoboLado_3
       rect:
         serializedVersion: 2
-        x: 598
+        x: 596
         y: 1472
-        width: 362
+        width: 364
         height: 238
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,10 +160,10 @@ TextureImporter:
         serializedVersion: 2
         x: 191
         y: 1184
-        width: 347
+        width: 349
         height: 232
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,9 +175,9 @@ TextureImporter:
         x: 606
         y: 1184
         width: 358
-        height: 236
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,12 +186,12 @@ TextureImporter:
       name: SpriteSheet_Pastoreira_LoboLado_6
       rect:
         serializedVersion: 2
-        x: 234
+        x: 232
         y: 896
-        width: 306
-        height: 231
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 308
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,8 +204,8 @@ TextureImporter:
         y: 896
         width: 314
         height: 229
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,9 +217,9 @@ TextureImporter:
         x: 652
         y: 608
         width: 312
-        height: 236
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
