@@ -133,7 +133,7 @@ public class MenuController : MonoBehaviour {
         }
 		yield return new WaitForSeconds(.5f);
 		text2.GetComponent<Animator>().enabled = true;
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(.2f);
 		canPress = true;
 	}
 }
