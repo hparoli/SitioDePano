@@ -19,11 +19,13 @@ public class ExitConfirmation : MonoBehaviour {
 
 	public void openExit(){
 		ExitGameObject.SetActive(true);
+        Time.timeScale = 0;
 	}
 	public void yesExit(){
 		Application.LoadLevel (0);
 	}
 	public void noExit(){
 		ExitGameObject.SetActive (false);
-	}
+        Time.timeScale = 1;
+    }
 }
