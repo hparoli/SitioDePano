@@ -4513,6 +4513,7 @@ MonoBehaviour:
   minigame: {fileID: 1326548912}
   idGame: 0
   idTema: 0
+  noJogo: 0
   inicio: {fileID: 1832200032}
   mainMenu: {fileID: 1584524330}
   text: {fileID: 282017692}
@@ -4944,7 +4945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1584524331
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5461,7 +5462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1832200033
 RectTransform:
   m_ObjectHideFlags: 0
