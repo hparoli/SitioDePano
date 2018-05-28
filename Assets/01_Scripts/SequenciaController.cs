@@ -22,9 +22,8 @@ public class SequenciaController : MonoBehaviour {
     public Text roundTxt, tutorialTxt;
     
     public Color[] color;
-	public SpriteRenderer[] buttons, btnTutorial;
-	public SpriteRenderer[] buttonsBack, btnBackTutorial;
-
+	public Animator[] buttons, btnTutorial;
+	
     public GameObject startButton, startTutorial;
 
     public List<int> colors; //sequencia de cores 
@@ -80,7 +79,7 @@ public class SequenciaController : MonoBehaviour {
             yield return null;
         }
         yield return new WaitForSeconds(0.2f);
-        roundTxt.text = qtdCores + " notas";
+        roundTxt.text = (qtdCores + rodada) + " notas";
         for (float f = 0f; f <= standard.a; f += 0.01f)
         {
             Color c = roundTxt.color;
@@ -155,9 +154,9 @@ public class SequenciaController : MonoBehaviour {
         colors.Clear();
         startButton.SetActive(true);
 
-		foreach (SpriteRenderer img in buttons)
+		foreach (Animator anim in buttons)
         {
-            img.color = color[0];
+            anim.SetBool("canta", false);
         }
     }
 
@@ -170,15 +169,34 @@ public class SequenciaController : MonoBehaviour {
             yield return new WaitForSeconds(1f);
 
             int r = Random.Range(0, buttons.Length);
-            buttons[r].color = color[1];
-			buttonsBack [r].color = color [0];
-            fonteAudio.PlayOneShot(sons[r]);
+            buttons[r].SetBool("canta", true);
+			fonteAudio.PlayOneShot(sons[r]);
 
             colors.Add(r);
 
             yield return new WaitForSeconds(1f);
-            buttons[r].color = color[0];
-			buttonsBack [r].color = color [1];
+            buttons[r].SetBool("canta", false);
+			
+        }
+
+        yield return new WaitForSeconds(0.2f);
+        roundTxt.text = "Agora é sua vez, acerte a sequência";
+        for (float f = 0f; f <= standard.a; f += 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(1f);
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.5f);
+            yield return null;
         }
         gameState = GameState.RESPONDER;
         idResp = 0;
@@ -192,15 +210,13 @@ IEnumerator SequenciaTutorial(int qtd)
         {
             yield return new WaitForSeconds(1f);
 
-            btnTutorial[i].color = color[1];
-			btnBackTutorial [i].color = color [0];
+            buttons[i].SetBool("canta", true);
             fonteAudio.PlayOneShot(sons[i]);
 
             colors.Add(i);
 
             yield return new WaitForSeconds(1f);
-            btnTutorial[i].color = color[0];
-			btnBackTutorial [i].color = color [1];
+            buttons[i].SetBool("canta", false);
         }
         gameState = GameState.TUTORIAL;
         idResp = 0;
@@ -210,8 +226,8 @@ IEnumerator SequenciaTutorial(int qtd)
 
     IEnumerator Responder(int idBtn)
     {
-        buttons[idBtn].color = color[1];
-		buttonsBack[idBtn].color = color[0];
+        buttons[idBtn].SetBool("canta", true);
+        
         if(colors[idResp] == idBtn)
         {
             fonteAudio.PlayOneShot(sons[idBtn]);
@@ -224,27 +240,64 @@ IEnumerator SequenciaTutorial(int qtd)
 
         idResp++;
 
-        if(idResp >= colors.Count)
+        if(idResp >= colors.Count )
         {
+            
+            yield return new WaitForSeconds(1f);
+            roundTxt.text = "Muito bem!";
+            for (float f = 0f; f <= standard.a; f += 0.01f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.5f);
+                yield return null;
+            }
+            yield return new WaitForSeconds(1f);
+            for (float f = 1f; f >= 0; f -= 0.01f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.5f);
+                yield return null;
+            }
+            roundTxt.text = "Aperte o sino novamente para iniciar a nova sequência";
+            for (float f = 0f; f <= standard.a; f += 0.01f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.5f);
+                yield return null;
+            }
+            yield return new WaitForSeconds(1f);
+            for (float f = 1f; f >= 0; f -= 0.01f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.5f);
+                yield return null;
+            }
             gameState = GameState.NOVA;
             rodada++;
             if(rodada > 6) pontuacao += 10;
             else if(rodada > 3) pontuacao += 7;
             else if(rodada <= 3) pontuacao += 5;
-            Debug.Log(pontuacao);
+            //Debug.Log(pontuacao);
             yield return new WaitForSeconds(1f);
             NovaRodada();
+        
         }
 
         yield return new WaitForSeconds(0.3f);
-        buttons[idBtn].color = color[0];
-		buttonsBack[idBtn].color = color[1];
+        buttons[idBtn].SetBool("canta", false);
     }
 
     IEnumerator ResponderTutorial(int idBtn)
     {
-        btnTutorial[idBtn].color = color[1];
-		btnBackTutorial[idBtn].color = color[0];
+        buttons[idBtn].SetBool("canta", true);
         if(colors[idResp] == idBtn)
         {
             fonteAudio.PlayOneShot(sons[idBtn]);
@@ -276,8 +329,7 @@ IEnumerator SequenciaTutorial(int qtd)
         }
 
         yield return new WaitForSeconds(0.3f);
-        btnTutorial[idBtn].color = color[0];
-		btnBackTutorial[idBtn].color = color[1];
+        buttons[idBtn].SetBool("canta", false);
     }
 
     IEnumerator GameOver()
@@ -289,16 +341,14 @@ IEnumerator SequenciaTutorial(int qtd)
         {
 			for (int x = 0; i < buttons.Length; i++)
             {
-				buttons[x].color = color[1];
-				buttonsBack [x].color = color [0];
+				buttons[x].SetBool("canta", true);
             }
 
             yield return new WaitForSeconds(0.2f);
 
 			for (int x = 0; i < buttons.Length; i++)
 			{
-				buttons[x].color = color[1];
-				buttonsBack [x].color = color [0];
+				buttons[x].SetBool("canta", true);
 			}
             yield return new WaitForSeconds(0.2f);
         }
@@ -306,11 +356,9 @@ IEnumerator SequenciaTutorial(int qtd)
         int idB = 0;
         for(int i = 0; i < 12; i++)
         {
-            buttons[idB].color = color[1];
-			buttonsBack [idB].color = color [0];
+            buttons[idB].SetBool("canta", true);
             yield return new WaitForSeconds(0.1f);
-            buttons[idB].color = color[0];
-			buttonsBack [idB].color = color [1];
+            buttons[idB].SetBool("canta", false);
             idB++; 
             if(idB > 3) { idB = 0; }
         }
