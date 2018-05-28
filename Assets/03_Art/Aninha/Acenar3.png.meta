@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: 93cb6dc210ab72e489bd05ebf5d125b8
+timeCreated: 1527464103
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Acenar3_0
+    21300002: Acenar3_1
+    21300004: Acenar3_2
+    21300006: Acenar3_3
+    21300008: Acenar3_4
+    21300010: Acenar3_5
+    21300012: Acenar3_6
+    21300014: Acenar3_7
+    21300016: Acenar3_8
+    21300018: Acenar3_9
+    21300020: Acenar3_10
+    21300022: Acenar3_11
+    21300024: Acenar3_12
+    21300026: Acenar3_13
+    21300028: Acenar3_14
+    21300030: Acenar3_15
+    21300032: Acenar3_16
+    21300034: Acenar3_17
+    21300036: Acenar3_18
+    21300038: Acenar3_19
+    21300040: Acenar3_20
+    21300042: Acenar3_21
+    21300044: Acenar3_22
+    21300046: Acenar3_23
+    21300048: Acenar3_24
+    21300050: Acenar3_25
+    21300052: Acenar3_26
+    21300054: Acenar3_27
+    21300056: Acenar3_28
+    21300058: Acenar3_29
+    21300060: Acenar3_30
+    21300062: Acenar3_31
+    21300064: Acenar3_32
+    21300066: Acenar3_33
+    21300068: Acenar3_34
+    21300070: Acenar3_35
+    21300072: Acenar3_36
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Acenar3_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 7166
+        width: 632
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 7166
+        width: 720
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_2
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 7166
+        width: 672
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_3
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 7166
+        width: 647
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_4
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 7166
+        width: 632
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 6143
+        width: 632
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_6
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 6144
+        width: 632
+        height: 1006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_7
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 6146
+        width: 632
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_8
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 6143
+        width: 631
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_9
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 6143
+        width: 632
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 5126
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_11
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 5126
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_12
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 5126
+        width: 640
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_13
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 5126
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_14
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 5126
+        width: 636
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_15
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 4106
+        width: 660
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_16
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 4106
+        width: 636
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_17
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4106
+        width: 630
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_18
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 4106
+        width: 631
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_19
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 4106
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_20
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 3086
+        width: 640
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_21
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 3086
+        width: 684
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_22
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 3086
+        width: 632
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_23
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 3086
+        width: 624
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_24
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 3086
+        width: 624
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2063
+        width: 624
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_26
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 2064
+        width: 636
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_27
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 2066
+        width: 680
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_28
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 2063
+        width: 639
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_29
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 2063
+        width: 628
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_30
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1046
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_31
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1046
+        width: 624
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_32
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1046
+        width: 636
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_33
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 1046
+        width: 680
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_34
+      rect:
+        serializedVersion: 2
+        x: 3007
+        y: 1046
+        width: 739
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_35
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 26
+        width: 700
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Acenar3_36
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 26
+        width: 632
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
