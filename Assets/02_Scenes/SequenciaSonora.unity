@@ -618,6 +618,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1609801399097056, guid: 656e787d249d8d54782e9783e4420b49, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 656e787d249d8d54782e9783e4420b49, type: 2}
   m_IsPrefabParent: 0
@@ -1192,6 +1196,7 @@ GameObject:
   - component: {fileID: 545676350}
   - component: {fileID: 545676349}
   - component: {fileID: 545676348}
+  - component: {fileID: 545676352}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1229,7 +1234,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.8277016, y: 4.573972, z: 0.2}
-  m_Center: {x: 0.0000012127235, y: 0.1477479, z: 0}
+  m_Center: {x: 0.0000012127235, y: -3.72, z: 0}
 --- !u!212 &545676350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1264,7 +1269,7 @@ SpriteRenderer:
   m_SortingLayerID: 1299416717
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bfae6fa26872a36409162157c05b6d11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb30f323f82a9a54d9adaf9a548e1f7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1281,12 +1286,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 545676347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5999784, y: 103.448456, z: 0}
+  m_LocalPosition: {x: 6.5999784, y: 141.3, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 15}
   m_Children: []
   m_Father: {fileID: 100083425}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &545676352
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545676347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ab182fd5e42b8a4db390013668fb0b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &563408814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221782272}
   - component: {fileID: 1221782273}
+  - component: {fileID: 1221782274}
   m_Layer: 5
   m_Name: sino
   m_TagString: Untagged
@@ -1871,7 +1894,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221782271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 103.4, z: 0}
+  m_LocalPosition: {x: 6.7, y: 141.4, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 100083425}
@@ -1911,7 +1934,7 @@ SpriteRenderer:
   m_SortingLayerID: 1299416717
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bfae6fa26872a36409162157c05b6d11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb30f323f82a9a54d9adaf9a548e1f7a, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1921,6 +1944,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1221782274
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221782271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ab182fd5e42b8a4db390013668fb0b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1307036847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,6 +2959,7 @@ MonoBehaviour:
   - {fileID: 0}
   startButton: {fileID: 545676347}
   startTutorial: {fileID: 1921419161}
+  sino: {fileID: 1221782271}
   colors: 
   idResp: 0
   qtdCores: 3

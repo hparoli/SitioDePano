@@ -16,6 +16,18 @@ TextureImporter:
     21300018: Sino_SpriteSheet_15
     21300020: Sino_SpriteSheet_18
     21300022: Sino_SpriteSheet_20
+    21300024: Sino_SpriteSheet_4
+    21300026: Sino_SpriteSheet_6
+    21300028: Sino_SpriteSheet_8
+    21300030: Sino_SpriteSheet_9
+    21300032: Sino_SpriteSheet_12
+    21300034: Sino_SpriteSheet_13
+    21300036: Sino_SpriteSheet_16
+    21300038: Sino_SpriteSheet_17
+    21300040: Sino_SpriteSheet_19
+    21300042: Sino_SpriteSheet_21
+    21300044: Sino_SpriteSheet_22
+    21300046: Sino_SpriteSheet_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -109,8 +121,8 @@ TextureImporter:
         y: 7152
         width: 580
         height: 834
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9598046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,8 +135,8 @@ TextureImporter:
         y: 7152
         width: 583
         height: 837
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.6022229, y: 0.95549875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,8 +149,8 @@ TextureImporter:
         y: 5898
         width: 614
         height: 839
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.70625657, y: 0.9378463}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,8 +163,8 @@ TextureImporter:
         y: 5984
         width: 674
         height: 754
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.8315803, y: 0.93578}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +173,12 @@ TextureImporter:
       name: Sino_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 88
-        y: 4516
-        width: 776
-        height: 962
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 92
+        y: 4531
+        width: 722
+        height: 946
+      alignment: 9
+      pivot: {x: 0.787533, y: 0.95536613}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +187,12 @@ TextureImporter:
       name: Sino_SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 1647
-        y: 4485
-        width: 716
-        height: 989
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 1673
+        y: 4482
+        width: 663
+        height: 992
+      alignment: 9
+      pivot: {x: 0.69569993, y: 0.94060826}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +201,12 @@ TextureImporter:
       name: Sino_SpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 350
-        y: 3206
-        width: 588
-        height: 1033
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 351
+        y: 3211
+        width: 623
+        height: 1003
+      alignment: 9
+      pivot: {x: 0.5215118, y: 0.9614404}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +215,12 @@ TextureImporter:
       name: Sino_SpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 1933
-        y: 3345
-        width: 611
-        height: 869
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 1952
+        y: 3392
+        width: 592
+        height: 822
+      alignment: 9
+      pivot: {x: 0.3487623, y: 0.9419088}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,8 +233,8 @@ TextureImporter:
         y: 2175
         width: 636
         height: 786
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.24660555, y: 0.93924844}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -232,11 +244,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2075
-        y: 2038
-        width: 846
-        height: 924
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 2047
+        width: 821
+        height: 915
+      alignment: 9
+      pivot: {x: 0.12921908, y: 0.9478134}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,11 +258,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 544
-        y: 683
-        width: 894
-        height: 1019
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 734
+        width: 788
+        height: 968
+      alignment: 9
+      pivot: {x: 0.16671419, y: 0.95683694}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,11 +272,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1982
-        y: 583
-        width: 866
-        height: 1115
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 656
+        width: 729
+        height: 1042
+      alignment: 9
+      pivot: {x: 0.24618082, y: 0.9599021}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

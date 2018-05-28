@@ -24,7 +24,7 @@ public class SequenciaController : MonoBehaviour {
     public Color[] color;
 	public Animator[] buttons, btnTutorial;
 	
-    public GameObject startButton, startTutorial;
+    public GameObject startButton, startTutorial, sino;
 
     public List<int> colors; //sequencia de cores 
     public int idResp, qtdCores, rodada, pontuacao;
@@ -58,6 +58,8 @@ public class SequenciaController : MonoBehaviour {
 
     public IEnumerator StartGame()
     {
+        startButton.GetComponent<Animator>().SetTrigger("toca");
+        sino.GetComponent<Animator>().SetTrigger("toca");
 		fonteAudio.PlayOneShot(sons[5]);
 		roundTxt.text = "Rodada: " + (rodada + 1).ToString();
         yield return new WaitForSeconds(0.2f);
@@ -253,7 +255,7 @@ IEnumerator SequenciaTutorial(int qtd)
                 new WaitForSeconds(.5f);
                 yield return null;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.75f);
             for (float f = 1f; f >= 0; f -= 0.01f)
             {
                 Color c = roundTxt.color;
@@ -271,7 +273,7 @@ IEnumerator SequenciaTutorial(int qtd)
                 new WaitForSeconds(.5f);
                 yield return null;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.75f);
             for (float f = 1f; f >= 0; f -= 0.01f)
             {
                 Color c = roundTxt.color;
