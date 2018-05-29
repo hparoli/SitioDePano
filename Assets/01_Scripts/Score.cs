@@ -8,8 +8,8 @@ public class Score : MonoBehaviour {
 
 	private int idTema;
 
-	public Text txtnota;
-	public Text txtInfotema;
+//	public Text txtnota;
+//	public Text txtInfotema;
 
 	[Header("Array Collections")]
 	public GameObject[] stars;
@@ -45,7 +45,7 @@ public class Score : MonoBehaviour {
 		acertos = PlayerPrefs.GetInt ("acertosTemp" + idTema.ToString ());
 
 
-		txtInfotema.text = infoValue;
+//		txtInfotema.text = infoValue;
 
 		#if UNITY_EDITOR
 		if (useDebug)
@@ -58,18 +58,19 @@ public class Score : MonoBehaviour {
 			{
 				if (i >= 3) 
 				{
-					stars [3].SetActive (true);
-					starAnims [3].SetBool ("Active", true);
+					stars [0].SetActive (true);
+					starAnims [0].SetBool ("MasterPoint", true);
+					starAnims [1].SetBool ("MasterPoint", true);
+					starAnims [2].SetBool ("MasterPoint", true);
+					starAnims [3].SetBool ("MasterPoint", true);
 				} 
 				else 
 				{
-					stars [0].SetActive (i >= 0);
-					stars [1].SetActive (i >= 1);
-					stars [2].SetActive (i >= 2);
-
-					starAnims [0].SetBool ("Active", i >= 0);
-					starAnims [1].SetBool ("Active", i >= 1);
-					starAnims [2].SetBool ("Active", i >= 2);
+					
+					stars [0].SetActive (false);
+					starAnims [0].SetBool ("NormalPoint", i >= 0);
+					starAnims [1].SetBool ("NormalPoint", i >= 1);
+					starAnims [2].SetBool ("NormalPoint", i >= 2);
 				}
 
 				break;
