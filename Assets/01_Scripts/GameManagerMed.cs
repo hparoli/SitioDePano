@@ -27,6 +27,10 @@ public class GameManagerMed : MonoBehaviour {
 	private int notaFinal;
 	private float tempo;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
 	void Start ()
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
@@ -133,7 +137,9 @@ public class GameManagerMed : MonoBehaviour {
 
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				Score.infoValue = string.Format ("Parabéns, levou {0} segundos e tirou nota {1}!", tempo.ToString ("0.0"), notaFinal);
-				SceneManager.LoadScene ("Score");
+				BarnAnin ();
+				StartCoroutine ("StartGameOver");
+
 			}
 		} else {
 			source.PlayOneShot (WrongMatch, 1);
@@ -143,6 +149,18 @@ public class GameManagerMed : MonoBehaviour {
 			cards [c [i]].GetComponent<CardMed> ().state = x;
 			cards [c [i]].GetComponent<CardMed> ().falseCheck ();
 		}
+	}
+
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
+	public IEnumerator StartGameOver(){
+		yield return new WaitForSeconds (1);
+		SceneManager.LoadScene ("Score");
 	}
 
 	void Cronometro()

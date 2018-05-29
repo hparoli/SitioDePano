@@ -18,14 +18,19 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	public int pontuacao;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
 	void Start () {
 		pontuacao = 0;
-		countSpawn = 20;
-		countDestroy = 20;
+		countSpawn = 3;
+		countDestroy = 3;
 
 		idTema = PlayerPrefs.GetInt ("idTema");
 		tutorialPanel.SetActive (true);
 		StartTutorial ();
+
 	}
 	
 	void Update(){
@@ -89,14 +94,24 @@ public class AninhaPastoreira : MonoBehaviour {
 		countDestroy--;
 	}
 
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
 	public IEnumerator FimJogo(){
-		yield return new WaitForSeconds(3f);
+
+		yield return new WaitForSeconds(1f);
 		if (pontuacao > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
 			PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), pontuacao);
 			    
 		}
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), pontuacao);
-		Score.infoValue = string.Format ("Você marcou {0} pontos!", pontuacao);
+//		Score.infoValue = string.Format ("Você marcou {0} pontos!", pontuacao);
+		BarnAnin ();
+		yield return new WaitForSeconds (1f);
 		SceneManager.LoadScene("Score");
 	}
 }

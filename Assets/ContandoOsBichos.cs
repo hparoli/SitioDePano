@@ -21,6 +21,10 @@ public class ContandoOsBichos : MonoBehaviour {
 	
 	private string tipoAnimal, animalContado;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
 	// Use this for initialization
 	void Start () {
 		contador = 0;
@@ -148,7 +152,20 @@ public class ContandoOsBichos : MonoBehaviour {
 		}
 	}
 
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
 	void GameOver(){
-		SceneManager.LoadScene ("Score");
+		BarnAnin ();
+		StartCoroutine ("WaitGameOver");
+	}
+
+	public IEnumerator WaitGameOver(){
+		yield return new WaitForSeconds (1);
+		SceneManager.LoadScene ("Score");	
 	}
 }

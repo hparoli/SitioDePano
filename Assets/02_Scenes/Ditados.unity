@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 11533980}
   - component: {fileID: 11533979}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Statick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,6 +473,7 @@ RectTransform:
   - {fileID: 413933580}
   - {fileID: 427790738}
   - {fileID: 48539959}
+  - {fileID: 1341933166}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1399,6 +1400,75 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1114182001}
+--- !u!1001 &1341933165
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 329144049}
+    m_Modifications:
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -402.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -222.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.9305495
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.9305496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.9305496
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 09d610752f7f79648ac9f70e0ae1c4b9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1341933166 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4964802422201644, guid: 09d610752f7f79648ac9f70e0ae1c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1341933165}
+--- !u!95 &1341933167 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95822317826610608, guid: 09d610752f7f79648ac9f70e0ae1c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1341933165}
+--- !u!95 &1341933168 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95009206383676914, guid: 09d610752f7f79648ac9f70e0ae1c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1341933165}
 --- !u!1001 &1453644191
 Prefab:
   m_ObjectHideFlags: 0
@@ -1743,6 +1813,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1593028665 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1632581034423124, guid: b235ff69737180b4ea1eb03132aa8a48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1453644191}
 --- !u!1 &1668323845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +2081,7 @@ MonoBehaviour:
     - Contando ovelhas
     - "Ovelha negra da fam\xEDlia"
     correctAnswer: "Ovelha negra da fam\xEDlia"
-  feedbackDuration: 1.5
+  feedbackDuration: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
@@ -2019,6 +2094,11 @@ MonoBehaviour:
   - "Agora aperte o bot\xE3o para come\xE7ar :)"
   infoTutorial: {fileID: 1014063298}
   tutorial: {fileID: 1840191127}
+  barnAnims:
+  - {fileID: 1341933168}
+  - {fileID: 1341933167}
+  ExitBoard: {fileID: 1593028665}
+  statickText: {fileID: 11533979}
 --- !u!4 &1834947943
 Transform:
   m_ObjectHideFlags: 0

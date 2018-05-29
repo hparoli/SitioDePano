@@ -16,6 +16,11 @@ public class ComportamentoGalinha : MonoBehaviour {
 
 	[SerializeField]
 	ApareceOvo ApareceOvo;
+
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -48,6 +53,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 			animator[i].SetBool("Levantando",false);
 			animator[i].SetBool("Sentando",false);
 			animator[i].enabled = false;
+			BarnAnin ();
 			StartCoroutine("GameOver");
 		}
 	}
@@ -87,8 +93,17 @@ public class ComportamentoGalinha : MonoBehaviour {
 
 	}
 
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
+
 	IEnumerator GameOver(){
-		yield return new WaitForSeconds(2);
+		
+		yield return new WaitForSeconds(1);
 		SceneManager.LoadScene("Score");
 	}
 

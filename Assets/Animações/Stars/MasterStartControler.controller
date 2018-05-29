@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: MasterStartControler
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Active
+  - m_Name: MasterPoint
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

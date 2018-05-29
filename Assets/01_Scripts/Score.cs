@@ -8,6 +8,9 @@ public class Score : MonoBehaviour {
 
 	private int idTema;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+
 //	public Text txtnota;
 //	public Text txtInfotema;
 
@@ -43,15 +46,29 @@ public class Score : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
 		acertos = PlayerPrefs.GetInt ("acertosTemp" + idTema.ToString ());
-
-
 //		txtInfotema.text = infoValue;
-
 		#if UNITY_EDITOR
 		if (useDebug)
 		notaFinal = debug_score;
 		#endif
 
+		addEffect ();
+		BarnAnin ();
+		Punctuation ();
+	}
+
+	void Update () {
+
+	}
+
+
+	public void Punctuation (){
+		StartCoroutine ("SetPunctuation");
+	}
+
+	public IEnumerator SetPunctuation ()
+	{
+		yield return new WaitForSeconds (2);
 		for (int i = scoresTargets.Length - 1; i >= 0; i--) 
 		{
 			if (notaFinal >= scoresTargets [i]) 
@@ -66,7 +83,7 @@ public class Score : MonoBehaviour {
 				} 
 				else 
 				{
-					
+
 					stars [0].SetActive (false);
 					starAnims [0].SetBool ("NormalPoint", i >= 0);
 					starAnims [1].SetBool ("NormalPoint", i >= 1);
@@ -75,20 +92,19 @@ public class Score : MonoBehaviour {
 
 				break;
 			}
+
 		}
-
-		//20,10,7,5
-		addEffect ();
-		
 	}
-	void Update () {
 
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
 	}
 
 	public void addEffect (){
 
 		GameObject.Instantiate (effect);
-
 	}
 
 	public void GoToMenu(){

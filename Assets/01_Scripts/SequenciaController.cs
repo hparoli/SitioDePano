@@ -43,6 +43,13 @@ public class SequenciaController : MonoBehaviour {
     [SerializeField]
 	public Color standard;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
+
+
+
 	// Use this for initialization
 	void Start () {
 		idTema = PlayerPrefs.GetInt ("idTema");
@@ -334,6 +341,14 @@ IEnumerator SequenciaTutorial(int qtd)
         buttons[idBtn].SetBool("canta", false);
     }
 
+	public void BarnAnin(){
+
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
     IEnumerator GameOver()
     {
        
@@ -382,6 +397,8 @@ IEnumerator SequenciaTutorial(int qtd)
 			notaFinal = 20;
 		}
 
+		BarnAnin ();
+		yield return new WaitForSeconds (1);
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
 		SceneManager.LoadScene ("Score");   

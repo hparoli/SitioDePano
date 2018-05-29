@@ -50,6 +50,13 @@ public class responder : MonoBehaviour {
 	[SerializeField]
 	GameObject tutorial;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+	public Text statickText;
+
+
+
 	Coroutine feedbackCorout;
 
 
@@ -183,10 +190,29 @@ public class responder : MonoBehaviour {
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
 			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
-			SceneManager.LoadScene("Score");
+			BarnAnin ();
+			StartCoroutine ("StartScore");
 		}
 
 	}
+
+	public IEnumerator StartScore(){
+		yield return new WaitForSeconds (1);
+		SceneManager.LoadScene("Score");
+	}
+
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+		for (int i = 0; i < answerButtons.Length ; i++) {
+			answerButtons [i].gameObject.SetActive (false);
+		}
+		statickText.text = "";
+		infoResposta.text = "";
+	}
+
 
 	public void Comecar()
 	{

@@ -24,8 +24,9 @@ public class Spawn : MonoBehaviour {
 
 	int indexTutorial = 0;
 
-
-
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
 
 
 	void Start () 
@@ -87,7 +88,8 @@ public class Spawn : MonoBehaviour {
 				
 			}
 			else {
-				ToScore ();
+			BarnAnin ();
+			StartCoroutine ("StartGameOver");
 			}
 
 		} 
@@ -95,6 +97,20 @@ public class Spawn : MonoBehaviour {
 	void Cronometro()
 	{
 		tempo += 1 * Time.deltaTime;
+
+	}
+
+	public void BarnAnin(){
+
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
+	}
+
+	public IEnumerator StartGameOver(){
+		yield return new WaitForSeconds (1);
+		ToScore ();
 
 	}
 
