@@ -128,11 +128,19 @@ public class responder : MonoBehaviour {
 	void UpdateQuestionOutput(QuestionData question)
 	{
 		pergunta.sprite = question.avatar;
-
+		
 		for (int i = 0; i < answerTexts.Length && i < question.answers.Length; i++) 
 		{
 			answerTexts [i].text = question.answers [i];
 		}
+		
+		for (int t = 0; t < answerTexts.Length; t++ )
+        {
+            string tmp = answerTexts[t].text;
+            int r = Random.Range(t, question.answers.Length);
+            answerTexts[t].text = answerTexts[r].text;
+            answerTexts[r].text = tmp;
+        }
 
 	}
 	void UpdateQuestionOutput()
@@ -145,7 +153,7 @@ public class responder : MonoBehaviour {
 		if (feedbackCorout != null)
 			return;
 
-		if (CurrentQuestion.answers [index] == CurrentQuestion.correctAnswer) {
+		if (answerTexts [index].text == CurrentQuestion.correctAnswer) {
 			acertos++;
 			source.PlayOneShot (C_Answer, 1);
 		} else {
@@ -190,7 +198,7 @@ public class responder : MonoBehaviour {
 			
 		for (int i = 0; i < answerButtons.Length; i++) 
 		{
-			if (CurrentQuestion.answers [i] == CurrentQuestion.correctAnswer) {
+			if (answerTexts [i].text == CurrentQuestion.correctAnswer) {
 				answerButtons [i].image.color = correctColor;
 			}
 			else 
