@@ -159,7 +159,7 @@ public class GameManagerMed : MonoBehaviour {
 	}
 
 	public IEnumerator StartGameOver(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene ("Score");
 	}
 

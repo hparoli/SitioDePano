@@ -103,7 +103,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 
 	IEnumerator GameOver(){
 		
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(2);
 		SceneManager.LoadScene("Score");
 	}
 

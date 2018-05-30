@@ -197,7 +197,7 @@ public class responder : MonoBehaviour {
 	}
 
 	public IEnumerator StartScore(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene("Score");
 	}
 

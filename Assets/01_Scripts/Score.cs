@@ -20,8 +20,6 @@ public class Score : MonoBehaviour {
 	public int[] scoresTargets;
 
 	[Space(10)]
-	public GameObject effect;
-
 	private int notaFinal;
 	private int acertos;
 
@@ -51,8 +49,6 @@ public class Score : MonoBehaviour {
 		if (useDebug)
 		notaFinal = debug_score;
 		#endif
-
-		addEffect ();
 		BarnAnin ();
 		Punctuation ();
 	}
@@ -98,13 +94,8 @@ public class Score : MonoBehaviour {
 
 	public void BarnAnin(){
 		for (int i = 0; i < barnAnims.Length; i++) {
-			barnAnims [i].SetBool ("Active", true);
+			barnAnims [i].SetBool ("Open", true);
 		}
-	}
-
-	public void addEffect (){
-
-		GameObject.Instantiate (effect);
 	}
 
 	public void GoToMenu(){

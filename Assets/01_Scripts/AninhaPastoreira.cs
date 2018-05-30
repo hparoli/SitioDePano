@@ -111,7 +111,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), pontuacao);
 //		Score.infoValue = string.Format ("Você marcou {0} pontos!", pontuacao);
 		BarnAnin ();
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (2f);
 		SceneManager.LoadScene("Score");
 	}
 }

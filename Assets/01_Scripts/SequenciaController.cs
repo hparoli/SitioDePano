@@ -398,7 +398,7 @@ IEnumerator SequenciaTutorial(int qtd)
 		}
 
 		BarnAnin ();
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
 		SceneManager.LoadScene ("Score");   

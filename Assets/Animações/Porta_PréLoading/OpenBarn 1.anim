@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: "Porta_Pr\xE9Loading2"
+  m_Name: OpenBarn 1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,13 +19,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -14.45, y: -1.22, z: -1.421875}
+        value: {x: -2.94, y: -1.150193, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: {x: -3.65, y: -1.22, z: -1.421875}
+        value: {x: -12.99, y: -1.150193, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -77,13 +77,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -14.45
+        value: -2.94
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 1
-        value: -3.65
+        value: -12.99
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -99,13 +99,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -1.22
+        value: -1.150193
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 1
-        value: -1.22
+        value: -1.150193
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -121,13 +121,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -1.421875
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 1
-        value: -1.421875
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136

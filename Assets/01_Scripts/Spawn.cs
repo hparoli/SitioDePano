@@ -109,7 +109,7 @@ public class Spawn : MonoBehaviour {
 	}
 
 	public IEnumerator StartGameOver(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
 		ToScore ();
 
 	}
