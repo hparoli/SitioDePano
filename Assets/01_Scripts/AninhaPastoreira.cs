@@ -22,6 +22,8 @@ public class AninhaPastoreira : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
+
+
 	void Start () {
 		pontuacao = 0;
 		countSpawn = 3;
@@ -30,6 +32,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		tutorialPanel.SetActive (true);
 		StartTutorial ();
+
 
 	}
 	

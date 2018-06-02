@@ -25,6 +25,8 @@ public class FollowWaypoints : MonoBehaviour {
 	public AudioClip[] sons;
 	private AudioSource AudioSRC;
 
+
+
 	// Use this for initialization
 	void Start () {
 		AudioSRC = GetComponent<AudioSource> ();
@@ -60,6 +62,11 @@ public class FollowWaypoints : MonoBehaviour {
 		
 		animal = this.gameObject.GetComponent<AnimalDisplay>().anim;
 		aninha = GameObject.Find("GameManager");
+
+
+	
+
+
 	}
 	
 	// Update is called once per frame
@@ -108,19 +115,20 @@ public class FollowWaypoints : MonoBehaviour {
 	void VerificaWayPoint(){
 		if((animal == "ovelha" && casasIndex == 0) || (animal == "vaca" && casasIndex == 1) ||
 		  (animal == "cavalo" && casasIndex == 2) || animal == "lobo" &&  casasIndex == 3){
-			  aninha.GetComponent<AninhaPastoreira>().Pontua(10);
-			  aninha.GetComponent<AninhaPastoreira>().Conta();
+			    aninha.GetComponent<AninhaPastoreira>().Pontua(10);
+			    aninha.GetComponent<AninhaPastoreira>().Conta();
 				
 			  //som de acerto
-			AudioSRC.PlayOneShot(sons[0]);
-			  Debug.Log(aninha.GetComponent<AninhaPastoreira>().pontuacao);
-			  Destroy(this.gameObject, 1f);
+				AudioSRC.PlayOneShot(sons[0]);
+			    Debug.Log(aninha.GetComponent<AninhaPastoreira>().pontuacao);
+			    Destroy(this.gameObject, 1f);
 		} else if((animal == "vaca" || animal == "ovelha" || animal == "cavalo") && casasIndex == 3){
 			//som de erro
 			AudioSRC.PlayOneShot(sons[1]);
 			aninha.GetComponent<AninhaPastoreira>().Pontua(-5);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().pontuacao);
+
 			Destroy(this.gameObject, 1f);
 		} else if (animal == "lobo" && (casasIndex == 0 || casasIndex == 1 || casasIndex == 2)){
 			//som de erro
@@ -128,6 +136,7 @@ public class FollowWaypoints : MonoBehaviour {
 			aninha.GetComponent<AninhaPastoreira>().Pontua(-10);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().pontuacao);
+
 			Destroy(this.gameObject, 1f);
 		} else if(((animal == "ovelha" && casasIndex != 0) || (animal == "vaca" && casasIndex != 1) || 
 		         (animal == "cavalo" && casasIndex != 2)) && casasIndex != 4){
@@ -135,6 +144,7 @@ public class FollowWaypoints : MonoBehaviour {
 			AudioSRC.PlayOneShot(sons[1]);
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().pontuacao);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
+
 			Destroy(this.gameObject, 1f);
  		}
 	}
