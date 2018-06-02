@@ -14,9 +14,10 @@ public class Score : MonoBehaviour {
 //	public Text txtnota;
 //	public Text txtInfotema;
 
-	[Header("Array Collections")]
+	[Header("Array Collections and Aninha")]
 	public GameObject[] stars;
 	public Animator[] starAnims;
+	public Animator aninha;
 	public int[] scoresTargets;
 
 	[Space(10)]
@@ -64,10 +65,12 @@ public class Score : MonoBehaviour {
 
 	public IEnumerator SetPunctuation ()
 	{
-		yield return new WaitForSeconds (2);
+		aninha.SetBool ("Active", true);
+		yield return new WaitForSeconds (1);
+
 		for (int i = scoresTargets.Length - 1; i >= 0; i--) 
 		{
-			if (notaFinal >= scoresTargets [i]) 
+			if (notaFinal == scoresTargets [i]) 
 			{
 				if (i >= 3) 
 				{

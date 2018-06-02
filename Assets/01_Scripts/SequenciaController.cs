@@ -23,6 +23,7 @@ public class SequenciaController : MonoBehaviour {
     
     public Color[] color;
 	public Animator[] buttons, btnTutorial;
+	public GameObject[] birds;
 	
     public GameObject startButton, startTutorial, sino;
 
@@ -39,6 +40,8 @@ public class SequenciaController : MonoBehaviour {
     public Button btnComecar;
 
 	public GameObject tutorial;
+
+	public GameObject[] FeedbackEffect;
 
     [SerializeField]
 	public Color standard;
@@ -236,13 +239,19 @@ IEnumerator SequenciaTutorial(int qtd)
     IEnumerator Responder(int idBtn)
     {
         buttons[idBtn].SetBool("canta", true);
+
         
         if(colors[idResp] == idBtn)
         {
+			
+			Instantiate (FeedbackEffect [0]);
+			Destroy (GameObject.Find ("BirdCorrect(Clone)"), 0.5f);
             fonteAudio.PlayOneShot(sons[idBtn]);
         }
         else
         {
+			Instantiate (FeedbackEffect [1]);
+			Destroy (GameObject.Find ("BirdLose(Clone)"), 0.5f);
             gameState = GameState.ERRO;
             StartCoroutine("GameOver");
         }
@@ -303,6 +312,8 @@ IEnumerator SequenciaTutorial(int qtd)
         yield return new WaitForSeconds(0.3f);
         buttons[idBtn].SetBool("canta", false);
     }
+
+
 
     IEnumerator ResponderTutorial(int idBtn)
     {
@@ -400,7 +411,7 @@ IEnumerator SequenciaTutorial(int qtd)
 		BarnAnin ();
 		yield return new WaitForSeconds (2);
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-		Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
+		//Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
 		SceneManager.LoadScene ("Score");   
     }
 

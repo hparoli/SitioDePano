@@ -1745,7 +1745,7 @@ Prefab:
     - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
         type: 2}
       propertyPath: useDebug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
         type: 2}
@@ -1757,6 +1757,11 @@ Prefab:
       propertyPath: barnAnims.Array.data[1]
       value: 
       objectReference: {fileID: 187442689}
+    - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
+        type: 2}
+      propertyPath: aninha
+      value: 
+      objectReference: {fileID: 61385627}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b0e79a0753ff1348827d0f7d92330c6, type: 2}
   m_IsPrefabParent: 0
