@@ -3,7 +3,12 @@ guid: 4a19dbd998cef504f8071a66dc49ea3a
 timeCreated: 1527430712
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_PortinhaPastoreira_0
+    21300002: SpriteSheet_PortinhaPastoreira_1
+    21300004: SpriteSheet_PortinhaPastoreira_2
+    21300006: SpriteSheet_PortinhaPastoreira_3
+    21300008: SpriteSheet_PortinhaPastoreira_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +93,77 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_PortinhaPastoreira_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 855
+        width: 176
+        height: 121
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_PortinhaPastoreira_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 855
+        width: 176
+        height: 121
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_PortinhaPastoreira_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 473
+        width: 136
+        height: 203
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_PortinhaPastoreira_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 428
+        width: 30
+        height: 248
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_PortinhaPastoreira_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 130
+        width: 30
+        height: 248
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
