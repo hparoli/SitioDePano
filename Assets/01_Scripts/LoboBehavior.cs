@@ -18,19 +18,23 @@ public class LoboBehavior : MonoBehaviour {
 	[SerializeField]
 	private bool move;
 
+	[SerializeField]
 	private AudioSource source;
 	public AudioClip Feed_som;
 
 	private Animator anim;
 
 	[SerializeField]
+	private GameObject fumaca;
+
+	[SerializeField]
 	private string spawn;
 
 	// Use this for initialization
 	void Start () {
-		source = GetComponent<AudioSource> ();
 		anim = this.gameObject.GetComponent<Animator>();
 		gm = GameObject.Find("GameManager");
+		source = gm.GetComponent<AudioSource> ();
 		delaySpawn = 3;
 		move = false;
 		waypoints = new GameObject[4];
@@ -54,6 +58,7 @@ public class LoboBehavior : MonoBehaviour {
 			if(hit){
 				if(click.transform.gameObject.tag == "lobo" && click.transform.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()){
 					source.PlayOneShot (Feed_som);
+					Instantiate (fumaca, this.transform.position, this.transform.rotation);
 					Destroy(this.gameObject);
 					//feedback pegando lobo
 				}
@@ -86,7 +91,7 @@ public class LoboBehavior : MonoBehaviour {
 			//feedback lobo pegando ovelha
 			source.PlayOneShot (Feed_som);
 
-			Destroy(gameObject, .5f);
+			Destroy(gameObject);
 
 		}
 	}

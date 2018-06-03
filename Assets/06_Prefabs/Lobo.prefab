@@ -186,7 +186,10 @@ MonoBehaviour:
   moveSpeed: 0
   gm: {fileID: 0}
   move: 0
+  source: {fileID: 0}
   Feed_som: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
+  fumaca: {fileID: 1068592977901256, guid: 5441021e1b57c364b9fb78c99783abc3, type: 2}
+  fumOvelha: {fileID: 1042958209019556, guid: 4d3a2a6f45f9506418f5a0834d15cdc6, type: 2}
   spawn: 
 --- !u!212 &212254629224271674
 SpriteRenderer:
