@@ -22,7 +22,8 @@ public class AninhaPastoreira : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
-
+	[Header("Feedback")]
+	public GameObject[] AninhaFeedback;
 
 	void Start () {
 		pontuacao = 0;
@@ -32,6 +33,10 @@ public class AninhaPastoreira : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		tutorialPanel.SetActive (true);
 		StartTutorial ();
+
+		for (int i = 0; i < AninhaFeedback.Length; i++) {
+			AninhaFeedback [i].SetActive (false);
+		}
 
 
 	}

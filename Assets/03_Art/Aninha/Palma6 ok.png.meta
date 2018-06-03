@@ -3,7 +3,31 @@ guid: b5426fc23e566a044a03b59f5ec89028
 timeCreated: 1527464197
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Palma6 ok_0
+    21300002: Palma6 ok_1
+    21300004: Palma6 ok_2
+    21300006: Palma6 ok_3
+    21300008: Palma6 ok_4
+    21300010: Palma6 ok_5
+    21300012: Palma6 ok_6
+    21300014: Palma6 ok_7
+    21300016: Palma6 ok_8
+    21300018: Palma6 ok_9
+    21300020: Palma6 ok_10
+    21300022: Palma6 ok_11
+    21300024: Palma6 ok_12
+    21300026: Palma6 ok_13
+    21300028: Palma6 ok_14
+    21300030: Palma6 ok_15
+    21300032: Palma6 ok_16
+    21300034: Palma6 ok_17
+    21300036: Palma6 ok_18
+    21300038: Palma6 ok_19
+    21300040: Palma6 ok_20
+    21300042: Palma6 ok_21
+    21300044: Palma6 ok_22
+    21300046: Palma6 ok_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +112,343 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Palma6 ok_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 7151
+        width: 631
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_1
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 7152
+        width: 624
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_2
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 7151
+        width: 624
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_3
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 7152
+        width: 636
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_4
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 7151
+        width: 616
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 6118
+        width: 620
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_6
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 6118
+        width: 640
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_7
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 6118
+        width: 660
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_8
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 6118
+        width: 640
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_9
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 6118
+        width: 620
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 5082
+        width: 619
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_11
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 5082
+        width: 632
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_12
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 5082
+        width: 618
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_13
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 5082
+        width: 624
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_14
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 5082
+        width: 640
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 4046
+        width: 660
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_16
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 4046
+        width: 640
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_17
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 4046
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_18
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 4046
+        width: 620
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_19
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 4046
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3012
+        width: 628
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_21
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 3008
+        width: 624
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_22
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 3012
+        width: 628
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Palma6 ok_23
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 3008
+        width: 632
+        height: 1006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
