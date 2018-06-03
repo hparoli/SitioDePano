@@ -49,6 +49,9 @@ public class responder : MonoBehaviour {
 	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
+	[SerializeField]
+	GameObject[] itensTutorial;
+
 
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
@@ -71,41 +74,36 @@ public class responder : MonoBehaviour {
 		source = GetComponent<AudioSource> ();
 
 		questionIndex = 0;
-		StartTutorial ();
+		ChangeTextTutorial ();
+
 		tutorial.SetActive (true);
 		infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 		
 	}
 
-	public void StartTutorial(){
-
-		StartCoroutine ("tutorialTextChanges");
-	
-	}
-
-	public IEnumerator tutorialTextChanges(){
+	public void ChangeTextTutorial(){
 
 
 		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 2){
-			indexTutorial++;
+		indexTutorial++;
+		itensTutorial [0].SetActive (true);
+		itensTutorial [1].SetActive (false);
+		itensTutorial [2].SetActive (false);
+		itensTutorial [3].SetActive (false);
+
+		if (indexTutorial >= 2){
+			itensTutorial [2].SetActive (true);
 		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 2){
-			indexTutorial++;
+
+		if (indexTutorial >= 3) {
+			itensTutorial [0].SetActive (false);
+			itensTutorial [1].SetActive (true);
+			itensTutorial [3].SetActive (true);
 
 		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 2){
-			indexTutorial++;
-
-		}
-		yield return new WaitForSeconds (2);
 
 	}
-
+		
 	public void StartGame(){
 		tutorial.SetActive (false);
 		SetShuffledQuestions ();
