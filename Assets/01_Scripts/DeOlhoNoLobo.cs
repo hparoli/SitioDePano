@@ -136,7 +136,8 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	}
 
 	public void SetOvelhas(){
-		Instantiate (fumOvelha, this.transform.position, this.transform.rotation);
+		Vector3 pos = new Vector3 (this.transform.position.x + 0.4f, this.transform.position.y + 1, this.transform.position.z);
+		Instantiate (fumOvelha, pos, this.transform.rotation);
 		Destroy (ovelhaCena [ovelhas]);
 		ovelhas++;
 	}
