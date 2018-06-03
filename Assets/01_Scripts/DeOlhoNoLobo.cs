@@ -129,7 +129,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 	IEnumerator GameOver(){
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene(7);
+		SceneManager.LoadScene(8);
 	}
 
 	public void SetOvelhas(){

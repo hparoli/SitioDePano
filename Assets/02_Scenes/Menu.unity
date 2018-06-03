@@ -393,8 +393,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1299416717
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b875ec54be28d6b459eb411f50f86a5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -413,8 +413,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 28451373}
   m_LocalRotation: {x: -0, y: -0, z: -0.06404188, w: 0.9979472}
-  m_LocalPosition: {x: 234.13611, y: -332.74344, z: 3.6021767}
-  m_LocalScale: {x: 22.513088, y: 36.020943, z: 45.026176}
+  m_LocalPosition: {x: 234.1361, y: -332.74344, z: 3.6020577}
+  m_LocalScale: {x: 22.513084, y: 36.020943, z: 45.026173}
   m_Children: []
   m_Father: {fileID: 1584524331}
   m_RootOrder: 10
@@ -4603,6 +4603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ef56fc176855e49acf9ee5e26d1826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuController: {fileID: 1405592708}
 --- !u!1 &1373796991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,8 +5374,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1405592710}
-        m_MethodName: PlayConfirmation
-        m_Mode: 3
+        m_MethodName: ExitConfirmation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitConfirmation : MonoBehaviour {
 
@@ -19,10 +20,12 @@ public class ExitConfirmation : MonoBehaviour {
 
 	public void openExit(){
 		ExitGameObject.SetActive(true);
-        Time.timeScale = 0;
+		Time.timeScale = 0;
 	}
 	public void yesExit(){
-		Application.LoadLevel (0);
+		ExitGameObject.SetActive (false);
+		Time.timeScale = 1;
+		SceneManager.LoadScene(0);
 	}
 	public void noExit(){
 		ExitGameObject.SetActive (false);
