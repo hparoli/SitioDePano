@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameSelect : MonoBehaviour {
 
 	private int  idTema;
+	public GameObject menuController;
 
 	void Start () {
 		idTema = 0;
@@ -18,6 +19,7 @@ public class GameSelect : MonoBehaviour {
 	}
 
 	public void StartGame(){
+		menuController.GetComponent<MenuController> ().playConfirmation.SetActive (false);
 		LoadingScreenManager.LoadScene(idTema);
 		PlayerPrefs.SetInt ("NoJogo", 1);
 	}

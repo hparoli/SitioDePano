@@ -36,7 +36,7 @@ public class MenuController : MonoBehaviour {
 	private Button[] btnPlay;
 
 	[SerializeField]
-	private GameObject exitConfirmation, playConfirmation;
+	public GameObject exitConfirmation, playConfirmation;
 
 	[SerializeField]
 	public GameObject Maozinha;

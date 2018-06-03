@@ -10,15 +10,16 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	private GameObject[] spawns, arbustos;
 
 	[SerializeField]
-	private GameObject lobo;
+	private GameObject lobo,fumOvelha;
 
 	[SerializeField]
 	private float delay, time, moveSpeed;
 
 	[SerializeField]
 	private Text cronometro;
-
+	public GameObject[] ovelhaCena;
 	public int ovelhas;
+	public bool comeca;
 
 
 	public GameObject Tutorial;
@@ -35,34 +36,35 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		moveSpeed = 1.5f;
 		StartTutorial ();
 		Tutorial.SetActive (true);
-
+		comeca = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(time > 0){
-			time -= Time.deltaTime;
-			cronometro.text = time.ToString("f0");
-		} else {
-			time = 0;
-		}
+		if (comeca) {
+			if (time > 0) {
+				time -= Time.deltaTime;
+				cronometro.text = time.ToString ("f0");
+			} else {
+				time = 0;
+			}
 
-		if(time <= 30){
-			delay = 2.75f;
-			moveSpeed = 2.0f;
-		}
+			if (time <= 30) {
+				delay = 2.75f;
+				moveSpeed = 2.0f;
+			}
 		
-		if(time <= 20){
-			delay = 2.5f;
-			moveSpeed = 2.3f;
-		}
+			if (time <= 20) {
+				delay = 2.5f;
+				moveSpeed = 2.3f;
+			}
 		
-		if(time <= 10){
-			delay = 2.25f;
-			moveSpeed = 2.7f;
-		}
+			if (time <= 10) {
+				delay = 2.25f;
+				moveSpeed = 2.7f;
+			}
 
-		
+		}
 		if(ovelhas == 10)
 			StartCoroutine("GameOver");
 	}
@@ -102,6 +104,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 
 	public void StartGame(){
+		comeca = true;
 		Tutorial.SetActive (false);
 		StartCoroutine("SpawnLobo");
 	}
@@ -129,10 +132,12 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 	IEnumerator GameOver(){
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene(7);
+		SceneManager.LoadScene(8);
 	}
 
 	public void SetOvelhas(){
+		Instantiate (fumOvelha, this.transform.position, this.transform.rotation);
+		Destroy (ovelhaCena [ovelhas]);
 		ovelhas++;
 	}
 }
