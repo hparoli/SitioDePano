@@ -50,8 +50,9 @@ public class responder : MonoBehaviour {
 	[SerializeField]
 	GameObject tutorial;
 	[SerializeField]
-	GameObject[] itensTutorial;
-
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
 
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
@@ -72,36 +73,42 @@ public class responder : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 
 		source = GetComponent<AudioSource> ();
-
 		questionIndex = 0;
-		ChangeTextTutorial ();
-
+		infoTutorial.text = txtTutorial [indexTutorial];
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		imagesTutorial [0].SetActive (false);imagesTutorial [1].SetActive (false);
 		tutorial.SetActive (true);
 		infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 		
 	}
 
-	public void ChangeTextTutorial(){
-
-
-		infoTutorial.text = txtTutorial [indexTutorial];
+	public void ChangeTextTutorialForward(){
 		indexTutorial++;
-		itensTutorial [0].SetActive (true);
-		itensTutorial [1].SetActive (false);
-		itensTutorial [2].SetActive (false);
-		itensTutorial [3].SetActive (false);
+		infoTutorial.text = txtTutorial [indexTutorial];
 
-		if (indexTutorial >= 2){
-			itensTutorial [2].SetActive (true);
+		if (indexTutorial >= 1){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
 		}
 
-		if (indexTutorial >= 3) {
-			itensTutorial [0].SetActive (false);
-			itensTutorial [1].SetActive (true);
-			itensTutorial [3].SetActive (true);
+		if (indexTutorial >= 2) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);imagesTutorial [1].SetActive (true);
+		}
+	}
 
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial >= 1){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
 		}
 
+		if (indexTutorial >= 2) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);imagesTutorial [1].SetActive (true);
+		}
 	}
 		
 	public void StartGame(){
