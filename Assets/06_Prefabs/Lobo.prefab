@@ -186,7 +186,7 @@ MonoBehaviour:
   moveSpeed: 0
   gm: {fileID: 0}
   move: 0
-  Feed_som: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
+  Feed_som: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
   spawn: 
 --- !u!212 &212254629224271674
 SpriteRenderer:

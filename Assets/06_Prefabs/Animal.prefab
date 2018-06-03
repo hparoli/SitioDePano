@@ -206,10 +206,7 @@ MonoBehaviour:
   aninha: {fileID: 0}
   sons:
   - {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  - {fileID: 8300000, guid: e8b5ab97b437b8b4c9b5a926d3e8c0c0, type: 3}
-  feedBackAninha:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
 --- !u!114 &114447376704483462
 MonoBehaviour:
   m_ObjectHideFlags: 1

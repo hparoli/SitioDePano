@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   - {fileID: 436006486}
   sons:
   - {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  - {fileID: 8300000, guid: e8b5ab97b437b8b4c9b5a926d3e8c0c0, type: 3}
+  - {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
   manager: {fileID: 63721251}
   eggsCollected:
   - {fileID: 1827038664}
@@ -446,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21374828, y: 0.7685612}
   m_AnchorMax: {x: 0.78625184, y: 0.97941357}
-  m_AnchoredPosition: {x: -0.5, y: 1.0473328}
+  m_AnchoredPosition: {x: -0.5, y: 1.0473633}
   m_SizeDelta: {x: 0.7400055, y: -4.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90213792
