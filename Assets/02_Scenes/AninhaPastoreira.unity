@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -830,6 +830,46 @@ Prefab:
     - target: {fileID: 1993988359709264, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
       propertyPath: m_Name
       value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185580988684408, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.040000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185580988684408, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.030000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890299837885230, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.040000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890299837885230, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.030000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315771288153692, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.030000009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315771288153692, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176481712685314, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176481712685314, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131315476706544, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.040000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131315476706544, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.030000016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64a56b9d6cd89d4448f650cc9ae74a1e, type: 2}
