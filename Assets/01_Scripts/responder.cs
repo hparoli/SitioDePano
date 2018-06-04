@@ -100,6 +100,7 @@ public class responder : MonoBehaviour {
 	public void ChangeTextTutorialBack(){
 		indexTutorial--;
 		infoTutorial.text = txtTutorial [indexTutorial];
+
 		if (indexTutorial >= 1){
 			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);

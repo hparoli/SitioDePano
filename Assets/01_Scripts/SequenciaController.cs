@@ -37,7 +37,7 @@ public class SequenciaController : MonoBehaviour {
     private int notaFinal;
     private float media;
     private int idTema;
-    public Button btnComecar;
+    
 
 	public GameObject tutorial;
 
@@ -56,7 +56,7 @@ public class SequenciaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		idTema = PlayerPrefs.GetInt ("idTema");
-		btnComecar.interactable = false;
+
         fonteAudio = GetComponent<AudioSource>();
         gameState = GameState.NOVA;
         NovaRodada();
@@ -315,42 +315,42 @@ IEnumerator SequenciaTutorial(int qtd)
 
 
 
-    IEnumerator ResponderTutorial(int idBtn)
-    {
-        buttons[idBtn].SetBool("canta", true);
-        if(colors[idResp] == idBtn)
-        {
-            fonteAudio.PlayOneShot(sons[idBtn]);
-        }
-        else
-        {
-            gameState = GameState.ERRO;
-            StartCoroutine("GameOver");
-        }
-
-        idResp++;
-
-        if(idResp >= colors.Count)
-        {
-            yield return new WaitForSeconds(1f);
-            gameState = GameState.NOVA;
-            NovaRodada();
-            tutorialTxt.text = "Parabéns! Agora aperte em COMEÇAR para iniciar o jogo!";
-            yield return new WaitForSeconds(0.5f);
-            for (float f = 0f; f <= standard.a; f += 0.5f)
-            {
-                Color c = tutorialTxt.color;
-		    	c.a = f;
-		    	tutorialTxt.color = c;
-		    	new WaitForSeconds(.5f);
-                yield return null;
-           }
-           btnComecar.interactable = true;
-        }
-
-        yield return new WaitForSeconds(0.3f);
-        buttons[idBtn].SetBool("canta", false);
-    }
+//    IEnumerator ResponderTutorial(int idBtn)
+//    {
+//        buttons[idBtn].SetBool("canta", true);
+//        if(colors[idResp] == idBtn)
+//        {
+//            fonteAudio.PlayOneShot(sons[idBtn]);
+//        }
+//        else
+//        {
+//            gameState = GameState.ERRO;
+//            StartCoroutine("GameOver");
+//        }
+//
+//        idResp++;
+//
+//        if(idResp >= colors.Count)
+//        {
+//            yield return new WaitForSeconds(1f);
+//            gameState = GameState.NOVA;
+//            NovaRodada();
+//            tutorialTxt.text = "Parabéns! Agora aperte em COMEÇAR para iniciar o jogo!";
+//            yield return new WaitForSeconds(0.5f);
+//            for (float f = 0f; f <= standard.a; f += 0.5f)
+//            {
+//                Color c = tutorialTxt.color;
+//		    	c.a = f;
+//		    	tutorialTxt.color = c;
+//		    	new WaitForSeconds(.5f);
+//                yield return null;
+//           }
+//           btnComecar.interactable = true;
+//        }
+//
+//        yield return new WaitForSeconds(0.3f);
+//        buttons[idBtn].SetBool("canta", false);
+//    }
 
 	public void BarnAnin(){
 

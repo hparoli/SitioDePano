@@ -13,69 +13,82 @@ public class Spawn : MonoBehaviour {
 	int idTema;
 	public GameObject dollObj; // prefab da boneca
 	public Transform[] spawnPoints; // Array c/ Spawn Points
-	public GameObject Tutorial;
-	public string [] txtTutorial;
-	public Text infoTutorial;
+
 
 	public int dollCount;
 	public int notaFinal;
 	public float tempo;
-	public bool StartTutorial = true;
 
+	[Header("Tutorial")]
+	public string [] txtTutorial;
+	public Text infoTutorial;
 	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+	[SerializeField]
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
+
 
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
 
+
 	void Start () 
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
-		if (StartTutorial) {
-			TakeTutorial ();
-		}
+		Time.timeScale = 0;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+
 	}
+
+
 
 	void Update()
 	{
 		
 		Cronometro ();
 
-	}
-
-	public void TakeTutorial(){
-		
-		StartCoroutine ("tutorialTextChanges");
 
 	}
-
-	public IEnumerator tutorialTextChanges(){
-
-
+	public void ChangeTextTutorialForward(){
+		indexTutorial++;
 		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
 
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
 
+		if (indexTutorial >= 2) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
 		}
-		yield return new WaitForSeconds (2);
-}
+
+
+	}
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
+
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		}
+		if (indexTutorial >= 2) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+		}
+
+
+	}
+
+
 
 	public void StartGame(){
-			StartTutorial = false;
-			Tutorial.SetActive (false);
+			tutorial.SetActive (false);
 			CreatDoll ();
+			Time.timeScale = 1;
 		}
 
 	public void CreatDoll() 
@@ -97,6 +110,7 @@ public class Spawn : MonoBehaviour {
 	void Cronometro()
 	{
 		tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 
 	}
 
