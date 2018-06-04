@@ -10,12 +10,6 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	[SerializeField]
 	private int countSpawn, idTema, countDestroy;
-
-	public GameObject tutorialPanel;
-	public Text infoTutorial; 
-	public string[] txtTutorial;
-	int indexTutorial = 0;
-
 	public int pontuacao;
 
 	[Header("Celeiro")]
@@ -25,14 +19,29 @@ public class AninhaPastoreira : MonoBehaviour {
 	[Header("Feedback")]
 	public GameObject[] AninhaFeedback;
 
+	[Header("Tutorial")]
+	[SerializeField]
+	string [] txtTutorial;
+	[SerializeField]
+	Text infoTutorial;
+	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+	[SerializeField]
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
+
 	void Start () {
 		pontuacao = 0;
 		countSpawn = 3;
 		countDestroy = 3;
 
 		idTema = PlayerPrefs.GetInt ("idTema");
-		tutorialPanel.SetActive (true);
-		StartTutorial ();
+		infoTutorial.text = txtTutorial [indexTutorial];
+		tutorial.SetActive (true);
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);imagesTutorial [4].SetActive (false);
 
 		for (int i = 0; i < AninhaFeedback.Length; i++) {
 			AninhaFeedback [i].SetActive (false);
@@ -47,41 +56,132 @@ public class AninhaPastoreira : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator tutorialTextChanges(){
+	public void ChangeTextTutorialForward(){
+		indexTutorial++;
 		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 5){
-			indexTutorial++;
+
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+
+		
 		}
-		yield return new WaitForSeconds (3);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 5){
-			indexTutorial++;
+		if (indexTutorial == 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+
 		}
-		yield return new WaitForSeconds (3);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 5){
-			indexTutorial++;
+		if (indexTutorial == 2) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+			
+
 		}
-		yield return new WaitForSeconds (3);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 5){
-			indexTutorial++;
+		if (indexTutorial == 3) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
+			imagesTutorial [4].SetActive (false);
+
 		}
-		yield return new WaitForSeconds (3);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 5){
-			indexTutorial++;
+		if (indexTutorial == 4) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (true);
+
 		}
-		yield return new WaitForSeconds (3);
+		if (indexTutorial == 5) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+		}
 
 	}
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
 
-	public void StartTutorial(){
-		StartCoroutine ("tutorialTextChanges");
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+
+
+		}
+		if (indexTutorial == 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+
+		}
+		if (indexTutorial == 2) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+
+
+		}
+		if (indexTutorial == 3) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
+			imagesTutorial [4].SetActive (false);
+
+		}
+		if (indexTutorial == 4) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (true);
+
+		}
+		if (indexTutorial == 5) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+			imagesTutorial [4].SetActive (false);
+		}
+
+
 	}
 
 	public void StartGame(){
-		tutorialPanel.SetActive (false);
+		tutorial.SetActive (false);
 		StartCoroutine("AnimalSpawn");
 	}
 
