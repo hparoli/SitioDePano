@@ -20,7 +20,8 @@ public class LoboBehavior : MonoBehaviour {
 
 	[SerializeField]
 	private AudioSource source;
-	public AudioClip Feed_som;
+	public AudioClip Feed_som_erro;
+	public AudioClip Feed_som_acerto;
 
 	private Animator anim;
 
@@ -57,7 +58,7 @@ public class LoboBehavior : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			if(hit){
 				if(click.transform.gameObject.tag == "lobo" && click.transform.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()){
-					source.PlayOneShot (Feed_som);
+					source.PlayOneShot (Feed_som_acerto);
 					Instantiate (fumaca, this.transform.position, this.transform.rotation);
 					Destroy(this.gameObject);
 					//feedback pegando lobo
@@ -89,7 +90,7 @@ public class LoboBehavior : MonoBehaviour {
 		if(col.tag == "waypoints"){
 			gm.GetComponent<DeOlhoNoLobo>().SetOvelhas();
 			//feedback lobo pegando ovelha
-			source.PlayOneShot (Feed_som);
+			source.PlayOneShot (Feed_som_erro);
 
 			Destroy(gameObject);
 
