@@ -43,7 +43,7 @@ public class Spawn : MonoBehaviour {
 		Time.timeScale = 0;
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
 	}
 
 
@@ -61,10 +61,25 @@ public class Spawn : MonoBehaviour {
 
 		if (indexTutorial == 0) {
 			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial >= 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
 		}
 
 		if (indexTutorial >= 2) {
 			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
 		}
 
 
@@ -73,12 +88,30 @@ public class Spawn : MonoBehaviour {
 		indexTutorial--;
 		infoTutorial.text = txtTutorial [indexTutorial];
 
+
 		if (indexTutorial == 0) {
 			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
 		}
+		if (indexTutorial >= 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
+		}
+
 		if (indexTutorial >= 2) {
 			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
 		}
+
 
 
 	}
