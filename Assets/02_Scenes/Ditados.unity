@@ -2623,9 +2623,12 @@ MonoBehaviour:
   C_Answer: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
   W_Answer: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
   txtTutorial:
-  - Bem vindo ao Quiz
-  - Responda as perguntas de acordo com as imagens a esquerda
-  - "Agora aperte o bot\xE3o para come\xE7ar :)"
+  - "Bem vindo ao Jogo de ditados e express\xF5es"
+  - "Nesse jogo devemos observar a figura que est\xE1 do lado esquerdo da tela, essa
+    figura remete a algum ditado ou express\xE3o popular"
+  - "Ap\xF3s analisar a imagem, voc\xEA poder\xE1 escolher entre tr\xEAs op\xE7\xF5es
+    de resposta. Para selecionar a resposta, basta tocar na op\xE7\xE3o desejada.
+    Vamos come\xE7ar? "
   infoTutorial: {fileID: 1014063298}
   tutorial: {fileID: 1840191127}
   boardsTutorial:
