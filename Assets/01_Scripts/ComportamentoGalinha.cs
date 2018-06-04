@@ -8,11 +8,6 @@ public class ComportamentoGalinha : MonoBehaviour {
 
 	private float min,max,delayGalinha;
 	public Animator[] animator;
-	public GameObject Tutorial;
-
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 
 	[SerializeField]
 	ApareceOvo ApareceOvo;
@@ -21,14 +16,85 @@ public class ComportamentoGalinha : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
+	[Header("Tutorial")]
+	public string [] txtTutorial;
+	public Text infoTutorial;
+	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+	[SerializeField]
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
+
 	// Use this for initialization
 	void Start () {
-		
+		Time.timeScale = 0;
 		min = 1.5f;
 		max = 3.5f;
 		delayGalinha = 2.5f;
 		ApareceOvo = FindObjectOfType <ApareceOvo> ();
-		TutorialGame ();
+		tutorial.SetActive (true);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
+	}
+
+	public void ChangeTextTutorialForward(){
+		indexTutorial++;
+		infoTutorial.text = txtTutorial [indexTutorial];
+
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+
+		}
+		if (indexTutorial == 2) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (true);
+		}
+
+	}
+
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
+
+		if (indexTutorial == 0) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 1) {
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+
+		}
+		if (indexTutorial == 2) {
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (true);
+		}
 	}
 	
 	IEnumerator Comportamento(){
@@ -58,37 +124,11 @@ public class ComportamentoGalinha : MonoBehaviour {
 		}
 	}
 
-	public void TutorialGame(){
-		StartCoroutine ("tutorialTextChanges");
-	}
-
-	public IEnumerator tutorialTextChanges(){
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (2);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 3){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (2);
-
-}
 
 	public void StartGame()
 	{
-		Tutorial.SetActive (false);
+		tutorial.SetActive (false);
+		Time.timeScale = 1;
 		StartCoroutine("Comportamento");
 
 	}
