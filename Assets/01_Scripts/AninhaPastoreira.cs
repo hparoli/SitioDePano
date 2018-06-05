@@ -34,7 +34,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	void Start () {
 		pontuacao = 0;
-		countSpawn = 3;
+		countSpawn = 20;
 		countDestroy = 3;
 
 		idTema = PlayerPrefs.GetInt ("idTema");
