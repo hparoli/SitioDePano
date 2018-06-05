@@ -132,7 +132,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 		}
 		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (false);
 			imagesTutorial [1].SetActive (true);
 			imagesTutorial [2].SetActive (false);
@@ -141,7 +141,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 		}
 		if (indexTutorial == 2) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (false);
 			imagesTutorial [1].SetActive (false);
 			imagesTutorial [2].SetActive (true);
@@ -151,7 +151,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 		}
 		if (indexTutorial == 3) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (false);
 			imagesTutorial [1].SetActive (false);
 			imagesTutorial [2].SetActive (false);
@@ -160,7 +160,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 		}
 		if (indexTutorial == 4) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (false);
 			imagesTutorial [1].SetActive (false);
 			imagesTutorial [2].SetActive (false);
