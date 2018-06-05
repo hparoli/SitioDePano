@@ -22,10 +22,16 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	public bool comeca;
 
 
-	public GameObject Tutorial;
+	[Header("Tutorial")]
 	public string [] txtTutorial;
 	public Text infoTutorial;
 	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+	[SerializeField]
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
 
 
 	// Use this for initialization
@@ -34,13 +40,76 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		delay = 3f;
 		ovelhas = 0;
 		moveSpeed = 1.5f;
-		StartTutorial ();
-		Tutorial.SetActive (true);
 		comeca = false;
+		tutorial.SetActive (true);
+		infoTutorial.text = txtTutorial [indexTutorial];
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);
 	}
+
+	public void ChangeTextTutorialForward(){
+		indexTutorial++;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if(indexTutorial == 0){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+		}
+		if(indexTutorial == 1){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+		}
+		if(indexTutorial == 2){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+		}
+		if(indexTutorial == 3){
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+		}
+	}
+
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if(indexTutorial == 0){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+		}
+		if(indexTutorial == 1){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+		}
+		if(indexTutorial == 2){
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+		}
+		if(indexTutorial == 3){
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+		}
+
+	}
+
 
 	// Update is called once per frame
 	void Update () {
+		
 		if (comeca) {
 			if (time > 0) {
 				time -= Time.deltaTime;
@@ -69,43 +138,12 @@ public class DeOlhoNoLobo : MonoBehaviour {
 			StartCoroutine("GameOver");
 	}
 
-	public void StartTutorial(){
-	
-		StartCoroutine("tutorialTextChanges");
-	}
 
-	public IEnumerator tutorialTextChanges(){
-
-
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 4){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (3);
-
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 4){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (3);
-
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 4){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (3);
-
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial < 4){
-			indexTutorial++;
-		}
-		yield return new WaitForSeconds (3);
-	}
 
 
 	public void StartGame(){
 		comeca = true;
-		Tutorial.SetActive (false);
+		tutorial.SetActive (false);
 		StartCoroutine("SpawnLobo");
 	}
 

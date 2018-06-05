@@ -61,9 +61,7 @@ public class SequenciaController : MonoBehaviour {
 
 	}
 
-
-
-    public IEnumerator StartGame()
+	public IEnumerator StartGame()
     {
         startButton.GetComponent<Animator>().SetTrigger("toca");
         sino.GetComponent<Animator>().SetTrigger("toca");
