@@ -1060,9 +1060,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 2070146776}
   txtTutorial:
-  - "Ol\xE1, seja Bem-vindo ao jogo da Sequ\xEAncia Sonora"
   - 'Para iniciar o jogo toque o Sino na parte superior da tela. '
   - "Ap\xF3s tocar o sino, os p\xE1ssaros v\xE3o cantar em uma determinada sequ\xEAncia"
+  - "Depois \xE9 sua vez de reproduzir a sequ\xEAncia na mesma ordem. Toque nos p\xE1ssaros
+    para eles cantarem . Vamos come\xE7ar?  "
   infoTutorial: {fileID: 450087882}
   tutorial: {fileID: 450087883}
   boardsTutorial:
@@ -1479,8 +1480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.16075, y: 0.82043886}
   m_AnchorMax: {x: 0.83412683, y: 0.9536614}
-  m_AnchoredPosition: {x: 2.8100004, y: -0.7000122}
-  m_SizeDelta: {x: -24.119999, y: 6.3999996}
+  m_AnchoredPosition: {x: 2.820001, y: -2.9899902}
+  m_SizeDelta: {x: -24.100002, y: 17.480003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &977631801
 GameObject:
