@@ -37,7 +37,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 		tutorial.SetActive (true);
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -48,23 +48,12 @@ public class ComportamentoGalinha : MonoBehaviour {
 			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (true);
 			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
 		}
 		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-
-		}
-		if (indexTutorial == 2) {
 			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
 			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
+			imagesTutorial [1].SetActive (true);
+
 		}
 
 	}
@@ -77,23 +66,13 @@ public class ComportamentoGalinha : MonoBehaviour {
 			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 			imagesTutorial [0].SetActive (true);
 			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-		}
-		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
 
 		}
-		if (indexTutorial == 2) {
+		if (indexTutorial == 1) {
 			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
 			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
+			imagesTutorial [1].SetActive (true);
+
 		}
 	}
 	
