@@ -37,11 +37,7 @@ public class SequenciaController : MonoBehaviour {
     private int notaFinal;
     private float media;
     private int idTema;
-    
-
-	public GameObject tutorial;
-
-	public GameObject[] FeedbackEffect;
+    public GameObject[] FeedbackEffect;
 
     [SerializeField]
 	public Color standard;
@@ -63,8 +59,9 @@ public class SequenciaController : MonoBehaviour {
         pontuacao = 0;
         anim = GetComponent<Animator> ();
 
-        Debug.Log(idTema);
 	}
+
+
 
     public IEnumerator StartGame()
     {
@@ -415,7 +412,5 @@ IEnumerator SequenciaTutorial(int qtd)
 		SceneManager.LoadScene ("Score");   
     }
 
-	public void Comecar(){
-		tutorial.SetActive (false);
-	}
+
 }
