@@ -187,8 +187,8 @@ MonoBehaviour:
   gm: {fileID: 0}
   move: 0
   source: {fileID: 0}
-  Feed_som_erro: {fileID: 8300000, guid: 1855a5c867ceee3419a23559d742c684, type: 3}
-  Feed_som_acerto: {fileID: 8300000, guid: c08f88eebc3fdd842bc88ab087ace821, type: 3}
+  Feed_som_erro: {fileID: 8300000, guid: 609d0521beac4de45ac100a824495282, type: 3}
+  Feed_som_acerto: {fileID: 8300000, guid: c64defa19d384d64ca5505cfeec2241d, type: 3}
   fumaca: {fileID: 1068592977901256, guid: 5441021e1b57c364b9fb78c99783abc3, type: 2}
   spawn: 
 --- !u!212 &212254629224271674
