@@ -2139,7 +2139,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Come\xE7a\n"
+  m_Text: "Come\xE7ar"
 --- !u!222 &1637181643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2619,11 +2619,9 @@ MonoBehaviour:
   W_Answer: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
   txtTutorial:
   - "Bem vindo ao Jogo de ditados e express\xF5es"
-  - "Nesse jogo devemos observar a figura que est\xE1 do lado esquerdo da tela, essa
-    figura remete a algum ditado ou express\xE3o popular"
-  - "Ap\xF3s analisar a imagem, voc\xEA poder\xE1 escolher entre tr\xEAs op\xE7\xF5es
-    de resposta. Para selecionar a resposta, basta tocar na op\xE7\xE3o desejada.
-    Vamos come\xE7ar? "
+  - "Nesse jogo devemos observar a figura que est\xE1 do lado esquerdo da tela"
+  - "Ap\xF3s analisar a imagem, voc\xEA deve  selecionar uma resposta. Para selecionar
+    a resposta, basta tocar na op\xE7\xE3o desejada. Vamos come\xE7ar? "
   infoTutorial: {fileID: 1014063298}
   tutorial: {fileID: 1840191127}
   boardsTutorial:
@@ -2774,7 +2772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.022058845, g: 0.022058845, b: 0.022058845, a: 0.928}
+  m_Color: {r: 0.050980393, g: 0.050980393, b: 0.050980393, a: 0.8666667}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
