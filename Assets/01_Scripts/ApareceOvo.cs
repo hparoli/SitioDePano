@@ -20,16 +20,18 @@ public class ApareceOvo : MonoBehaviour {
 	public void Aparece()
 	{
 		int random = Random.Range(0,11);
-		Debug.Log(random);
-			if(random < 4){
+
+			if(random < 8){
+			
 				ovo.SetActive(true);
 				temOvo = true;
-			} else if(random < 7){
+			} 
+			 else if(random < 10){
+			Debug.Log ("Pinto");
 				pintinho.SetActive(true);
 			} 
-		}
 
-
+	}
 
 	public void Desaparece(){
 		ovo.SetActive(false);
