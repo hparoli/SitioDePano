@@ -59,7 +59,8 @@ public class LoboBehavior : MonoBehaviour {
 			if(hit){
 				if(click.transform.gameObject.tag == "lobo" && click.transform.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()){
 					source.PlayOneShot (Feed_som_acerto);
-					Instantiate (fumaca, this.transform.position, this.transform.rotation);
+					Vector3 pos = new Vector3(this.transform.position.x,this.transform.position.y+0.5f,this.transform.position.z);
+					Instantiate (fumaca, pos, this.transform.rotation);
 					Destroy(this.gameObject);
 					//feedback pegando lobo
 				}

@@ -7,6 +7,8 @@ public class ColetaOvos : MonoBehaviour {
 	private int pegouOvos, erros;
 	public GameObject[] galinhas;
 
+	public static bool work;
+
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
 	
@@ -19,6 +21,7 @@ public class ColetaOvos : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		work = false;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		fonteAudio = GetComponent<AudioSource> ();
 		pegouOvos = 0;
@@ -34,7 +37,8 @@ public class ColetaOvos : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		RaycastHit galinhaClick = new RaycastHit();
+		if(work){
+			RaycastHit galinhaClick = new RaycastHit();
 			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out galinhaClick);
 			if (Input.GetMouseButtonDown (0)) {
 				if (hit) {
@@ -57,9 +61,9 @@ public class ColetaOvos : MonoBehaviour {
 					}
 				}
 			}
+		}
 
-			if(pegouOvos == 3
-){
+		if(pegouOvos == 3){
 
 			if (erros == 0) 
 			{

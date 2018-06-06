@@ -108,6 +108,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 	{
 		tutorial.SetActive (false);
 		Time.timeScale = 1;
+		ColetaOvos.work = true;
 		StartCoroutine("Comportamento");
 
 	}
