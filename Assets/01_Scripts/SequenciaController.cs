@@ -177,6 +177,9 @@ public class SequenciaController : MonoBehaviour {
 
             int r = Random.Range(0, buttons.Length);
             buttons[r].SetBool("canta", true);
+			Vector3 posBird = new Vector3 (birds[r].position.x, birds[r].position.y + 1, birds[r].position.z);
+			Instantiate (FeedbackEffect [0],posBird, birds [r].rotation);
+			Destroy (GameObject.Find ("BirdCorrect(Clone)"), 0.5f);
 			fonteAudio.PlayOneShot(sons[r]);
 
             colors.Add(r);
@@ -245,7 +248,7 @@ IEnumerator SequenciaTutorial(int qtd)
         }
         else
         {
-			Instantiate (FeedbackEffect [1],birds[idBtn].position,birds[idBtn].rotation);
+			Instantiate (FeedbackEffect [1],posBird,birds[idBtn].rotation);
 			Destroy (GameObject.Find ("BirdLose(Clone)"), 0.5f);
             gameState = GameState.ERRO;
             StartCoroutine("GameOver");
