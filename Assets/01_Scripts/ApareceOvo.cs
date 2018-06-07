@@ -27,7 +27,7 @@ public class ApareceOvo : MonoBehaviour {
 				temOvo = true;
 			} 
 			 else if(random < 10){
-			Debug.Log ("Pinto");
+			
 				pintinho.SetActive(true);
 			} 
 
