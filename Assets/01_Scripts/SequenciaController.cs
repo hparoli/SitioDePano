@@ -179,7 +179,7 @@ public class SequenciaController : MonoBehaviour {
             buttons[r].SetBool("canta", true);
 			Vector3 posBird = new Vector3 (birds[r].position.x, birds[r].position.y + 1, birds[r].position.z);
 			Instantiate (FeedbackEffect [0],posBird, birds [r].rotation);
-			Destroy (GameObject.Find ("BirdCorrect(Clone)"), 0.5f);
+			Destroy (GameObject.Find ("BirdCorrect(Clone)"), 0.4f);
 			fonteAudio.PlayOneShot(sons[r]);
 
             colors.Add(r);
@@ -199,7 +199,7 @@ public class SequenciaController : MonoBehaviour {
 			new WaitForSeconds(.5f);
             yield return null;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         for (float f = 1f; f >= 0; f -= 0.01f)
         {
             Color c = roundTxt.color;
@@ -242,13 +242,13 @@ IEnumerator SequenciaTutorial(int qtd)
         if(colors[idResp] == idBtn)
         {
 			
-			Instantiate (FeedbackEffect [0],posBird,birds[idBtn].rotation);
+			//Instantiate (FeedbackEffect [0],posBird,birds[idBtn].rotation);
 			Destroy (GameObject.Find ("BirdCorrect(Clone)"), 0.5f);
             fonteAudio.PlayOneShot(sons[idBtn]);
         }
         else
         {
-			Instantiate (FeedbackEffect [1],posBird,birds[idBtn].rotation);
+			//Instantiate (FeedbackEffect [1],posBird,birds[idBtn].rotation);
 			Destroy (GameObject.Find ("BirdLose(Clone)"), 0.5f);
             gameState = GameState.ERRO;
             StartCoroutine("GameOver");
@@ -259,7 +259,7 @@ IEnumerator SequenciaTutorial(int qtd)
         if(idResp >= colors.Count )
         {
             
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.5f);
             roundTxt.text = "Muito bem!";
             for (float f = 0f; f <= standard.a; f += 0.01f)
             {
@@ -269,7 +269,7 @@ IEnumerator SequenciaTutorial(int qtd)
                 new WaitForSeconds(.5f);
                 yield return null;
             }
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(0.5f);
             for (float f = 1f; f >= 0; f -= 0.01f)
             {
                 Color c = roundTxt.color;
@@ -287,7 +287,7 @@ IEnumerator SequenciaTutorial(int qtd)
                 new WaitForSeconds(.5f);
                 yield return null;
             }
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(0.5f);
             for (float f = 1f; f >= 0; f -= 0.01f)
             {
                 Color c = roundTxt.color;
