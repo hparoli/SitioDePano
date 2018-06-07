@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/02_Scenes/DeOlhoNosLobos.unity
     guid: 9e46515b0ec6e3244a69b31d04f1ab7e
   - enabled: 1
+    path: Assets/02_Scenes/ContandoOsBichos.unity
+    guid: aa09258a38ad38845bd2d3b58abd2717
+  - enabled: 1
     path: Assets/02_Scenes/Score.unity
     guid: 56836c9bae5bd2249b5bc0e847143b88
   - enabled: 1

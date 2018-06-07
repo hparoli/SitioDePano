@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class ContandoOsBichos : MonoBehaviour {
 
-	public Transform  spawn;
+	public Transform[]  spawn;
 
-	public GameObject animal;
+	public GameObject[] waypoints;
 
-	private int countSpawn, idTema, countDestroy, contador, contaCavalo, contaGato, contaCachorro, contaPorco, indexEtapa, acertouEtapas;
+	private int countSpawn, idTema, countDestroy, contador, contaCavalo, contaGato, contaCachorro, contaPorco, indexEtapa, acertouEtapas, speed;
 
 	private int[] etapa = {15, 20, 30};
 	
 	[SerializeField]
-	private Text texto, mensagem;
+	private Text mensagem, resposta;
 
-	public GameObject button;
+	public GameObject button, btnConta, btnConfirma, animal, texto;
 	
 	private string tipoAnimal, animalContado;
 
@@ -30,21 +30,20 @@ public class ContandoOsBichos : MonoBehaviour {
 		contador = 0;
 		indexEtapa = 0;
 		acertouEtapas = 0;
-		contador = 0;
 		contaPorco = 0;
 		contaCavalo = 0;
 		contaGato = 0;
 		contaCachorro = 0;
 		countSpawn = etapa[indexEtapa];
 		countDestroy = etapa[indexEtapa];
+		texto.GetComponent<Text>().text = "";
 		idTema = PlayerPrefs.GetInt ("idTema");
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(countDestroy == 0){
-			Reseta();
+		if(countDestroy <= 0 && countSpawn == 0){
+			StartCoroutine("Responde");
 		}
 	}
 
@@ -55,27 +54,37 @@ public class ContandoOsBichos : MonoBehaviour {
 	}
 
 	public IEnumerator AnimalSpawn(){
-		GameObject iAnimal = Instantiate(animal, spawn.position, spawn.rotation) as GameObject;
-		yield return new WaitForSeconds(2f);
+		int time = Random.Range(1,4);
+		yield return new WaitForSeconds(time);
+		int idx = Random.Range(0,3);
+		GameObject iAnimal = Instantiate(animal, spawn[idx].position, spawn[idx].rotation) as GameObject;
+		
+		if(idx == 0)	  speed = 2;
+		else if(idx == 1) speed = 4;
+		else if(idx == 2) speed = 6;
+
+		yield return new WaitForSeconds(0.5f);
 		tipoAnimal = iAnimal.GetComponent<AnimalDisplay>().anim;
-		Debug.Log(tipoAnimal);
+		iAnimal.GetComponent<AnimalBehavior>().SetAnimal(waypoints[idx], speed);
+		
 		if(tipoAnimal == "porco"){
 			contaPorco++;
-			Debug.Log(contaPorco);
+		//	Debug.Log(contaPorco);
 		}
 		if(tipoAnimal == "cavalo"){
 			contaCavalo++;
-			Debug.Log(contaCavalo);
+		//	Debug.Log(contaCavalo);
 		}
 		if(tipoAnimal == "gato"){
 			contaGato++;
-			Debug.Log(contaGato);
+		//	Debug.Log(contaGato);
 		}
 		if(tipoAnimal == "cachorro"){
 			contaCachorro++;	
-			Debug.Log(contaCachorro);
+		//	Debug.Log(contaCachorro);
 		}				
 		countSpawn--;
+		Debug.Log(countDestroy + ", " + countSpawn);
 		if(countSpawn > 0){
 			StartCoroutine("AnimalSpawn");
 		} 
@@ -85,11 +94,31 @@ public class ContandoOsBichos : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		int i = Random.Range(0,3);
 		
-		if(i == 0) animalContado = "porcos";
-		if(i == 1) animalContado = "cavalos";
-		if(i == 2) animalContado = "gatos";
-		if(i == 3) animalContado = "cachorros";
+		if(i == 0) animalContado = "PORCOS";
+		if(i == 1) animalContado = "CAVALOS";
+		if(i == 2) animalContado = "GATOS";
+		if(i == 3) animalContado = "CACHORROS";
 		
+		mensagem.text = "Rodada " + (indexEtapa+1);
+		
+		for (float f = 0f; f <= 1; f += 0.01f){
+                Color c = mensagem.color;
+		    	c.a = f;
+		    	mensagem.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+        }
+		
+		yield return new WaitForSeconds(2f);
+
+		for (float f = 1f; f > 0; f -= 0.01f){
+                Color c = mensagem.color;
+		    	c.a = f;
+		    	mensagem.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+        }
+
 		mensagem.text = "Conte os " + animalContado + " que passarem pelo caminho";
 		
 		for (float f = 0f; f <= 1; f += 0.01f){
@@ -119,24 +148,62 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	public void SomaAnimal(){
 		contador++;
-		texto.text = contador.ToString("f0");
+		texto.GetComponent<Text>().text = contador.ToString("f0");
+	//	Debug.Log("Contador = " + contador);
 	}
 
 	public void SubtraiAnimal(){
 		if(contador > 0)
 			contador--;
-		texto.text = contador.ToString("f0");
+		texto.GetComponent<Text>().text = contador.ToString("f0");
+
+	}
+
+
+	IEnumerator MostraResultado(){
+		yield return new WaitForSeconds(1.5f);
+		for(int i = 0; i < 4; i++){
+			for (float f = 0f; f <= 1; f += 0.01f){
+					Color c = resposta.color;
+					c.a = f;
+					resposta.color = c;
+					//new WaitForSeconds(.2f);
+					yield return null;
+			}
+			for (float f = 1f; f > 0; f -= 0.01f){
+					Color c = resposta.color;
+					c.a = f;
+					resposta.color = c;
+					//new WaitForSeconds(.2f);
+					yield return null;
+			}
+		}
+		
+		//Debug.Log("Animal: " + animalContado + " Porco: " + contaPorco + " Cavalo: " + contaCavalo + " Cachorro: " + contaCachorro + " Gato: " + contaGato);
+
+		if(animalContado == "PORCOS") resposta.text = contaPorco.ToString("f0");
+		if(animalContado == "CAVALOS") resposta.text = contaCavalo.ToString("f0"); 
+		if(animalContado == "GATOS") resposta.text = contaGato.ToString("f0");
+		if(animalContado == "CACHORROS") resposta.text = contaCachorro.ToString("f0");
+		
+
+		if((animalContado == "PORCOS" && contaPorco == contador) ||
+		   (animalContado == "CAVALOS" && contaCavalo == contador) || 
+		   (animalContado == "GATOS" && contaGato == contador) ||
+		   (animalContado == "CACHORROS"  && contaCachorro == contador)){
+			   acertouEtapas++;
+			   resposta.color = Color.green;
+			   //feedback de acertou
+		} else {
+			resposta.color = Color.red;
+			//feedback de errou
+		}
+		yield return new WaitForSeconds(2f);
+		Reseta();
 	}
 
 	public void Reseta(){
-		if(indexEtapa < 2){
-			if((animalContado == "porcos" && contaPorco == contador) ||
-			   (animalContado == "cavalos" && contaCavalo == contador) || 
-			   (animalContado == "gatos" && contaGato == contador) ||
-			   (animalContado == "cachorros"  && contaCachorro == contador)){
-				   acertouEtapas++;
-				   Debug.Log(acertouEtapas);
-			   }
+		//if(indexEtapa < 2){
 			countSpawn--;
 			indexEtapa++;
 			countSpawn = etapa[indexEtapa];
@@ -146,10 +213,47 @@ public class ContandoOsBichos : MonoBehaviour {
 			contaCavalo = 0;
 			contaGato = 0;
 			contaCachorro = 0;
-			button.SetActive(true);
-		} else {
+			resposta.color = new Color(0,0,0,0);
+			resposta.text = "0";
+			texto.GetComponent<Text>().text = "";
+		/*	button.SetActive(true);
+			btnConta.SetActive(false);
+			btnConfirma.SetActive(false);*/
+	//	} else {
 			GameOver();
-		}
+	//	}
+	}
+
+	IEnumerator Responde(){
+		mensagem.text = "Agora marque quantos " + animalContado + " você viu passar";
+		
+		for (float f = 0f; f <= 1; f += 0.01f){
+                Color c = mensagem.color;
+		    	c.a = f;
+		    	mensagem.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+        }
+		
+		yield return new WaitForSeconds(2f);
+
+		for (float f = 1f; f > 0; f -= 0.01f){
+                Color c = mensagem.color;
+		    	c.a = f;
+		    	mensagem.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+        }
+		
+		mensagem.text = "";
+		texto.GetComponent<Text>().text = contador.ToString("f0");
+		btnConta.SetActive(true);
+		btnConfirma.SetActive(true);
+	}
+
+	public void ConfirmaConta(){
+		texto.GetComponent<Animator>().SetBool("Anima", true);
+		StartCoroutine("MostraResultado");
 	}
 
 	public void BarnAnin(){

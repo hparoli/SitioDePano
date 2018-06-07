@@ -115,12 +115,12 @@ public class MenuController : MonoBehaviour {
 			int j;
 			if(num == 1){
 				j = i;
-				btnPlay[i].interactable = true;
+				//btnPlay[i].interactable = true;
 			} else {
 				j = i + 4;
-				if(i == 3){
+			/*	if(i == 3){
 					btnPlay[i].interactable = false;
-				}
+				}*/
 
 			}
 			btnPlay[i].GetComponentInChildren<Text>().text = btnTexts[j];
