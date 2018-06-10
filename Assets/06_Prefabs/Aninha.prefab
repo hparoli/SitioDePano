@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212085352742585638}
   - component: {fileID: 114425932237537908}
   - component: {fileID: 65743456213720004}
+  - component: {fileID: 95815753036459456}
+  - component: {fileID: 114552228068691782}
   m_Layer: 0
   m_Name: Aninha
   m_TagString: Doll
@@ -54,6 +56,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.1288314, y: 10.001183, z: 0.2}
   m_Center: {x: -0.03705941, y: 0.074117094, z: 0}
+--- !u!95 &95815753036459456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354295785629238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6573b2567362acb43a25d46ba33c19de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114425932237537908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,6 +85,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 0}
+--- !u!114 &114552228068691782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354295785629238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9090e1d5cac6a3846865e1b9354a6884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212085352742585638
 SpriteRenderer:
   m_ObjectHideFlags: 1
