@@ -1,9 +1,33 @@
 fileFormatVersion: 2
-guid: e1bb12cb06fac05459d186f5ff58fcd0
-timeCreated: 1527464262
+guid: 341114b82d6a971479bf955cb921d38e
+timeCreated: 1528666994
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Rir3_0
+    21300002: Rir3_1
+    21300004: Rir3_2
+    21300006: Rir3_3
+    21300008: Rir3_4
+    21300010: Rir3_5
+    21300012: Rir3_6
+    21300014: Rir3_7
+    21300016: Rir3_8
+    21300018: Rir3_9
+    21300020: Rir3_10
+    21300022: Rir3_11
+    21300024: Rir3_12
+    21300026: Rir3_13
+    21300028: Rir3_14
+    21300030: Rir3_15
+    21300032: Rir3_16
+    21300034: Rir3_17
+    21300036: Rir3_18
+    21300038: Rir3_19
+    21300040: Rir3_20
+    21300042: Rir3_21
+    21300044: Rir3_22
+    21300046: Rir3_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +112,343 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Rir3_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 7136
+        width: 631
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_1
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 7136
+        width: 635
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_2
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 7143
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_3
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 7143
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_4
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 7136
+        width: 676
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 6096
+        width: 632
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_6
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 6095
+        width: 680
+        height: 995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_7
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 6096
+        width: 632
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_8
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 6102
+        width: 678
+        height: 988
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_9
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 6095
+        width: 640
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5055
+        width: 676
+        height: 993
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_11
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5055
+        width: 641
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_12
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 5055
+        width: 676
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_13
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 5056
+        width: 632
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_14
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 5055
+        width: 682
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 4014
+        width: 641
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 4014
+        width: 682
+        height: 995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_17
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 4014
+        width: 632
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_18
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 4014
+        width: 679
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_19
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 4014
+        width: 640
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2971
+        width: 686
+        height: 987
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_21
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2971
+        width: 639
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_22
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 2971
+        width: 676
+        height: 987
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rir3_23
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 2971
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

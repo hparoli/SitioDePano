@@ -14,7 +14,7 @@ public class Spawn : MonoBehaviour {
 	public GameObject dollObj; // prefab da boneca
 	public Transform[] spawnPoints; // Array c/ Spawn Points
 
-
+	private int spawnAnterior;
 	public int dollCount;
 	public int notaFinal;
 	public float tempo;
@@ -39,6 +39,7 @@ public class Spawn : MonoBehaviour {
 
 	void Start () 
 	{
+		spawnAnterior = 99;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
 		infoTutorial.text = txtTutorial [indexTutorial];
@@ -109,7 +110,11 @@ public class Spawn : MonoBehaviour {
 			if (dollCount < 3) {
 				dollCount++;
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-				Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+				if(spawnAnterior == spawnPointIndex){
+					spawnPointIndex++;	
+				}
+				Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);	
+				spawnAnterior = spawnPointIndex;
 				
 			}
 			else {

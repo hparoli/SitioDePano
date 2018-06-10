@@ -1,9 +1,33 @@
 fileFormatVersion: 2
-guid: e4252457931b7a648a635b57bdd2a4a7
-timeCreated: 1527464167
+guid: 927530ebb2447c94b98383b14cd94979
+timeCreated: 1528666995
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Idle ok melhorar_0
+    21300002: Idle ok melhorar_1
+    21300004: Idle ok melhorar_2
+    21300006: Idle ok melhorar_3
+    21300008: Idle ok melhorar_4
+    21300010: Idle ok melhorar_5
+    21300012: Idle ok melhorar_6
+    21300014: Idle ok melhorar_7
+    21300016: Idle ok melhorar_8
+    21300018: Idle ok melhorar_9
+    21300020: Idle ok melhorar_10
+    21300022: Idle ok melhorar_11
+    21300024: Idle ok melhorar_12
+    21300026: Idle ok melhorar_13
+    21300028: Idle ok melhorar_14
+    21300030: Idle ok melhorar_15
+    21300032: Idle ok melhorar_16
+    21300034: Idle ok melhorar_17
+    21300036: Idle ok melhorar_18
+    21300038: Idle ok melhorar_19
+    21300040: Idle ok melhorar_20
+    21300042: Idle ok melhorar_21
+    21300044: Idle ok melhorar_22
+    21300046: Idle ok melhorar_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -32,7 +56,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
     wrapU: 1
     wrapV: 1
@@ -88,7 +112,343 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Idle ok melhorar_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 7143
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_1
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 7143
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_2
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 7143
+        width: 647
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_3
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 7136
+        width: 640
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_4
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 7136
+        width: 658
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 6096
+        width: 666
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_6
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 6096
+        width: 676
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_7
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 6095
+        width: 672
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_8
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 6095
+        width: 687
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_9
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 6096
+        width: 690
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_10
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 5056
+        width: 684
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_11
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 5056
+        width: 688
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_12
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 5055
+        width: 688
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_13
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 5066
+        width: 641
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_14
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 5055
+        width: 641
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 4014
+        width: 632
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_16
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 4014
+        width: 632
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_17
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 4014
+        width: 634
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_18
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 4014
+        width: 642
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_19
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4014
+        width: 641
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_20
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 2971
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_21
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 2971
+        width: 632
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_22
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2971
+        width: 641
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle ok melhorar_23
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 2971
+        width: 639
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
