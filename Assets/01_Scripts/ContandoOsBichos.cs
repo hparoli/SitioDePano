@@ -17,7 +17,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	[SerializeField]
 	private Text mensagem, resposta;
 
-	public GameObject button, btnConta, btnConfirma, animal, texto, btnSubtrai;
+	public GameObject button, btnConta, btnConfirma, animal, texto;
 	
 	private string tipoAnimal, animalContado;
 
@@ -173,7 +173,23 @@ public class ContandoOsBichos : MonoBehaviour {
 
 
 	IEnumerator MostraResultado(){
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(1.5f);
+		for(int i = 0; i < 4; i++){
+			for (float f = 0f; f <= 1; f += 0.02f){
+					Color c = resposta.color;
+					c.a = f;
+					resposta.color = c;
+					//new WaitForSeconds(.2f);
+					yield return null;
+			}
+			for (float f = 1f; f > 0; f -= 0.02f){
+					Color c = resposta.color;
+					c.a = f;
+					resposta.color = c;
+					//new WaitForSeconds(.2f);
+					yield return null;
+			}
+		}
 		
 		//Debug.Log("Animal: " + animalContado + " Porco: " + contaPorco + " Cavalo: " + contaCavalo + " Cachorro: " + contaCachorro + " Gato: " + contaGato);
 
@@ -216,7 +232,6 @@ public class ContandoOsBichos : MonoBehaviour {
 			button.SetActive(true);
 			btnConta.SetActive(false);
 			btnConfirma.SetActive(false);
-			btnSubtrai.SetActive(false);
 		} else {
 			GameOver();
 		}
@@ -246,7 +261,6 @@ public class ContandoOsBichos : MonoBehaviour {
 		mensagem.text = "";
 		texto.GetComponent<Text>().text = contador.ToString("f0");
 		btnConta.SetActive(true);
-		btnSubtrai.SetActive(true);
 		btnConfirma.SetActive(true);
 	}
 
