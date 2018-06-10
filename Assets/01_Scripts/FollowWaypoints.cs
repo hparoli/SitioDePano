@@ -115,7 +115,7 @@ public class FollowWaypoints : MonoBehaviour {
 	void VerificaWayPoint(){
 		if((animal == "ovelha" && casasIndex == 0) || (animal == "vaca" && casasIndex == 1) ||
 		  (animal == "cavalo" && casasIndex == 2) || animal == "lobo" &&  casasIndex == 3){
-			    aninha.GetComponent<AninhaPastoreira>().Pontua(10);
+			    aninha.GetComponent<AninhaPastoreira>().Pontua(1);
 			    aninha.GetComponent<AninhaPastoreira>().Conta();
 				aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (true);
 				aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (false);
@@ -126,7 +126,7 @@ public class FollowWaypoints : MonoBehaviour {
 		} else if((animal == "vaca" || animal == "ovelha" || animal == "cavalo") && casasIndex == 3){
 			//som de erro
 			AudioSRC.PlayOneShot(sons[1]);
-			aninha.GetComponent<AninhaPastoreira>().Pontua(-5);
+			aninha.GetComponent<AninhaPastoreira>().Pontua(0);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
 			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (false);
 			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (true);
@@ -136,7 +136,7 @@ public class FollowWaypoints : MonoBehaviour {
 		} else if (animal == "lobo" && (casasIndex == 0 || casasIndex == 1 || casasIndex == 2)){
 			//som de erro
 			AudioSRC.PlayOneShot(sons[1]);
-			aninha.GetComponent<AninhaPastoreira>().Pontua(-10);
+			aninha.GetComponent<AninhaPastoreira>().Pontua(0);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
 			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (false);
 			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (true);

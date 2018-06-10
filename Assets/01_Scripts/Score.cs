@@ -91,7 +91,6 @@ public class Score : MonoBehaviour {
 
 				break;
 			}
-
 		}
 	}
 

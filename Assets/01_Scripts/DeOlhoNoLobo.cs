@@ -33,9 +33,18 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	[SerializeField]
 	GameObject[] imagesTutorial;
 
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard;
+
+	[Space(10)]
+	int notaFinal;
+	int idTema;
+
 
 	// Use this for initialization
 	void Start () {
+		idTema = PlayerPrefs.GetInt ("idTema");
 		time = 45f;
 		delay = 3f;
 		ovelhas = 0;
@@ -45,6 +54,49 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
+	
+	}
+
+	// Update is called once per frame
+	void Update () {
+
+		if (comeca) 
+		{
+			if (time > 0) {
+				time -= Time.deltaTime;
+				cronometro.text = time.ToString ("f0");
+			} 
+			else 
+			{
+				time = 0;
+			}
+
+			if (time <= 30) {
+				delay = 2.75f;
+				moveSpeed = 2.0f;
+			}
+
+			if (time <= 20) {
+				delay = 2.5f;
+				moveSpeed = 2.3f;
+			}
+
+			if (time <= 10) {
+				delay = 2.25f;
+				moveSpeed = 2.7f;
+			}
+
+		}
+
+		if(ovelhas == 10)
+			StartCoroutine("GameOver");
+	}
+
+	public void BarnAnin(){
+		for (int i = 0; i < barnAnims.Length; i++) {
+			barnAnims [i].SetBool ("Active", true);
+		}
+		ExitBoard.SetActive (false);
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -85,44 +137,10 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 	}
 
-
-	// Update is called once per frame
-	void Update () {
-		
-		if (comeca) {
-			if (time > 0) {
-				time -= Time.deltaTime;
-				cronometro.text = time.ToString ("f0");
-			} else {
-				time = 0;
-			}
-
-			if (time <= 30) {
-				delay = 2.75f;
-				moveSpeed = 2.0f;
-			}
-		
-			if (time <= 20) {
-				delay = 2.5f;
-				moveSpeed = 2.3f;
-			}
-		
-			if (time <= 10) {
-				delay = 2.25f;
-				moveSpeed = 2.7f;
-			}
-
-		}
-		if(ovelhas == 10)
-			StartCoroutine("GameOver");
-	}
-
-
-
-
-	public void StartGame(){
+ public void StartGame(){
 		comeca = true;
 		tutorial.SetActive (false);
+		Time.timeScale = 1;
 		StartCoroutine("SpawnLobo");
 	}
 
@@ -137,6 +155,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		if(time > 0){
 			StartCoroutine("SpawnLobo");
 		} else{
+			
 			StartCoroutine("GameOver");
 		}
 	}
@@ -148,8 +167,26 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	}
 
 	IEnumerator GameOver(){
+		if (ovelhas == 0) {
+			notaFinal = 20;
+		} 
+		else if (ovelhas == 1) {
+			notaFinal = 10;
+		}
+		else if (ovelhas >= 3) {
+			notaFinal = 7;
+		}
+		else if (ovelhas >= 5) {
+			notaFinal = 5;
+		}
+		else if (ovelhas >= 10) {
+			notaFinal = 0;
+		}
+		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+		StopCoroutine ("SpawnLobo");
+		BarnAnin ();
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene(8);
+		SceneManager.LoadScene("Score");
 	}
 
 	public void SetOvelhas(){
@@ -157,5 +194,6 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		Instantiate (fumOvelha, pos, this.transform.rotation);
 		Destroy (ovelhaCena [ovelhas]);
 		ovelhas++;
+		Debug.Log (ovelhas);
 	}
 }

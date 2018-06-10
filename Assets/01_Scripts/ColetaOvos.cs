@@ -83,7 +83,7 @@ public class ColetaOvos : MonoBehaviour {
 				notaFinal = 5;
 			}
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-				Score.infoValue = string.Format ("Você errou {0} vezes!", erros);
+//				Score.infoValue = string.Format ("Você errou {0} vezes!", erros);
 				manager.GetComponent<ComportamentoGalinha>().EndGame();
 		}
 	}

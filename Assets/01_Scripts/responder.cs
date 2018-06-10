@@ -196,11 +196,27 @@ public class responder : MonoBehaviour {
 
 		else 
 		{
-			media = 10 * (acertos / QuestionsAmount);
-			notaFinal = Mathf.RoundToInt (media);
+//			media = 10 * (acertos / QuestionsAmount);
+//			notaFinal = Mathf.RoundToInt (media);
+			if (acertos == 10)
+			{
+				notaFinal = 20;
+			} 
+			else if (acertos == 9)
+			{
+				notaFinal = 10;
+			}
+			else if (acertos == 7)
+			{
+				notaFinal = 7;
+			}
+			else if (acertos == 4)
+			{
+				notaFinal = 5;
+			}
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
-			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
+//			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
+//			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
 			BarnAnin ();
 			StartCoroutine ("StartScore");
 		}
