@@ -20,6 +20,7 @@ public class ExitConfirmation : MonoBehaviour {
 
 	public void openExit(){
 		ExitGameObject.SetActive(true);
+		ColetaOvos.work = false;
 		Time.timeScale = 0;
 	}
 	public void yesExit(){
@@ -29,6 +30,7 @@ public class ExitConfirmation : MonoBehaviour {
 	}
 	public void noExit(){
 		ExitGameObject.SetActive (false);
+		ColetaOvos.work = true;
         Time.timeScale = 1;
     }
 }
