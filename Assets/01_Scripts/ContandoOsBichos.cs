@@ -25,6 +25,10 @@ public class ContandoOsBichos : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
+	[Space(10)]
+	int notaFinal;
+
+
 	// Use this for initialization
 	void Start () {
 		contador = 0;
@@ -181,8 +185,6 @@ public class ContandoOsBichos : MonoBehaviour {
 		if(animalContado == "CAVALOS") resposta.text = contaCavalo.ToString("f0"); 
 		if(animalContado == "GATOS") resposta.text = contaGato.ToString("f0");
 		if(animalContado == "CACHORROS") resposta.text = contaCachorro.ToString("f0");
-		
-
 		if((animalContado == "PORCOS" && contaPorco == contador) ||
 		   (animalContado == "CAVALOS" && contaCavalo == contador) || 
 		   (animalContado == "GATOS" && contaGato == contador) ||
@@ -194,8 +196,12 @@ public class ContandoOsBichos : MonoBehaviour {
 			resposta.color = Color.red;
 			//feedback de errou
 		}
-		yield return new WaitForSeconds(2f);
-		Reseta();
+		yield return new WaitForSeconds(1f);
+		if (acertouEtapas >= 1) {
+			notaFinal = 20;
+		}
+		GameOver();
+//		Reseta();
 	}
 
 	public void Reseta(){
@@ -265,11 +271,12 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	void GameOver(){
 		BarnAnin ();
+		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		StartCoroutine ("WaitGameOver");
 	}
 
 	public IEnumerator WaitGameOver(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene ("Score");	
 	}
 }

@@ -143,20 +143,20 @@ public class Spawn : MonoBehaviour {
 	void ToScore()
 	{
 
-		if (tempo <= 2f) 
+		if (tempo <= 5f) 
 		{
 			notaFinal = 20;
 		}
-		else if (tempo <= 3f)
+		else if (tempo <= 7f)
 		{
 			notaFinal = 10;
 		}
-		else if (tempo <= 7f)
+		else if (tempo <= 10f)
 		{
 			notaFinal = 7;
 		}
 
-		else if (tempo <= 10f) 
+		else if (tempo <= 15f) 
 		{
 			notaFinal = 5;
 		}
