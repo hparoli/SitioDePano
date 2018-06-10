@@ -44,6 +44,8 @@ public class ContandoOsBichos : MonoBehaviour {
 	void Update () {
 		if(countDestroy <= 0 && countSpawn == 0){
 			StartCoroutine("Responde");
+			countDestroy = 99;
+			countSpawn = 99;
 		}
 	}
 
@@ -54,14 +56,23 @@ public class ContandoOsBichos : MonoBehaviour {
 	}
 
 	public IEnumerator AnimalSpawn(){
-		int time = Random.Range(1,4);
+		int time = Random.Range(1,3);
 		yield return new WaitForSeconds(time);
 		int idx = Random.Range(0,3);
 		GameObject iAnimal = Instantiate(animal, spawn[idx].position, spawn[idx].rotation) as GameObject;
 		
-		if(idx == 0)	  speed = 2;
-		else if(idx == 1) speed = 4;
-		else if(idx == 2) speed = 6;
+		if(idx == 0){
+			speed = 3;
+			iAnimal.GetComponent<SpriteRenderer>().sortingOrder = 4;
+		}
+		else if(idx == 1){
+			speed = 4;
+			iAnimal.GetComponent<SpriteRenderer>().sortingOrder = 3;
+		} 
+		else if(idx == 2){
+			speed = 6;
+			iAnimal.GetComponent<SpriteRenderer>().sortingOrder = 2;
+		} 
 
 		yield return new WaitForSeconds(0.5f);
 		tipoAnimal = iAnimal.GetComponent<AnimalDisplay>().anim;
@@ -101,7 +112,7 @@ public class ContandoOsBichos : MonoBehaviour {
 		
 		mensagem.text = "Rodada " + (indexEtapa+1);
 		
-		for (float f = 0f; f <= 1; f += 0.01f){
+		for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
 		    	mensagem.color = c;
@@ -109,9 +120,9 @@ public class ContandoOsBichos : MonoBehaviour {
                 yield return null;
         }
 		
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 
-		for (float f = 1f; f > 0; f -= 0.01f){
+		for (float f = 1f; f > 0; f -= 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
 		    	mensagem.color = c;
@@ -121,7 +132,7 @@ public class ContandoOsBichos : MonoBehaviour {
 
 		mensagem.text = "Conte os " + animalContado + " que passarem pelo caminho";
 		
-		for (float f = 0f; f <= 1; f += 0.01f){
+		for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
 		    	mensagem.color = c;
@@ -129,9 +140,9 @@ public class ContandoOsBichos : MonoBehaviour {
                 yield return null;
         }
 		
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 
-		for (float f = 1f; f > 0; f -= 0.01f){
+		for (float f = 1f; f > 0; f -= 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
 		    	mensagem.color = c;
@@ -144,6 +155,7 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	public void Conta(){
 		countDestroy--;
+		Debug.Log(countDestroy);
 	}
 
 	public void SomaAnimal(){
@@ -163,14 +175,14 @@ public class ContandoOsBichos : MonoBehaviour {
 	IEnumerator MostraResultado(){
 		yield return new WaitForSeconds(1.5f);
 		for(int i = 0; i < 4; i++){
-			for (float f = 0f; f <= 1; f += 0.01f){
+			for (float f = 0f; f <= 1; f += 0.02f){
 					Color c = resposta.color;
 					c.a = f;
 					resposta.color = c;
 					//new WaitForSeconds(.2f);
 					yield return null;
 			}
-			for (float f = 1f; f > 0; f -= 0.01f){
+			for (float f = 1f; f > 0; f -= 0.02f){
 					Color c = resposta.color;
 					c.a = f;
 					resposta.color = c;
@@ -203,7 +215,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	}
 
 	public void Reseta(){
-		//if(indexEtapa < 2){
+		if(indexEtapa < 2){
 			countSpawn--;
 			indexEtapa++;
 			countSpawn = etapa[indexEtapa];
@@ -216,12 +228,13 @@ public class ContandoOsBichos : MonoBehaviour {
 			resposta.color = new Color(0,0,0,0);
 			resposta.text = "0";
 			texto.GetComponent<Text>().text = "";
-		/*	button.SetActive(true);
+			texto.GetComponent<Animator>().SetBool("Anima", false);
+			button.SetActive(true);
 			btnConta.SetActive(false);
-			btnConfirma.SetActive(false);*/
-	//	} else {
+			btnConfirma.SetActive(false);
+		} else {
 			GameOver();
-	//	}
+		}
 	}
 
 	IEnumerator Responde(){
@@ -254,6 +267,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	public void ConfirmaConta(){
 		texto.GetComponent<Animator>().SetBool("Anima", true);
 		StartCoroutine("MostraResultado");
+		btnConfirma.SetActive(false);
 	}
 
 	public void BarnAnin(){
