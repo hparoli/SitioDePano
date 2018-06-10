@@ -28,11 +28,6 @@ public class AnimalBehavior : MonoBehaviour {
 		this.transform.position = Vector2.MoveTowards(transform.position, waypoint.transform.position, moveSpeed * Time.deltaTime);
 	}
 
-	void OnTriggerEnter(Collider col){
-		gm.GetComponent<ContandoOsBichos>().Conta();
-		Destroy(this.gameObject);
-	}
-
 	public void SetAnimal(GameObject wp, int speed){
 		if(moveSpeed == 0 && waypoint == null){
 			waypoint = wp;
