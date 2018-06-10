@@ -53,6 +53,7 @@ public class ColetaOvos : MonoBehaviour {
 								fonteAudio.PlayOneShot(sons[0]);
 							} else {
 								erros++;
+								galinhas[i].GetComponent<Animator>().SetTrigger("Erro");
 								//feedback negativo
 								Debug.Log("ERROU");
 								fonteAudio.PlayOneShot(sons[1]);

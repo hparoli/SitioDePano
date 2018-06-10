@@ -3,7 +3,21 @@ guid: 560094c3b14d32d4995646dc40f836d0
 timeCreated: 1527893641
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: "SpriteSheet_Galinha_Puta\xE7a_0"
+    21300002: "SpriteSheet_Galinha_Puta\xE7a_1"
+    21300004: "SpriteSheet_Galinha_Puta\xE7a_2"
+    21300006: "SpriteSheet_Galinha_Puta\xE7a_3"
+    21300008: "SpriteSheet_Galinha_Puta\xE7a_4"
+    21300010: "SpriteSheet_Galinha_Puta\xE7a_5"
+    21300012: "SpriteSheet_Galinha_Puta\xE7a_6"
+    21300014: "SpriteSheet_Galinha_Puta\xE7a_7"
+    21300016: "SpriteSheet_Galinha_Puta\xE7a_8"
+    21300018: "SpriteSheet_Galinha_Puta\xE7a_9"
+    21300020: "SpriteSheet_Galinha_Puta\xE7a_10"
+    21300022: "SpriteSheet_Galinha_Puta\xE7a_11"
+    21300024: "SpriteSheet_Galinha_Puta\xE7a_12"
+    21300026: "SpriteSheet_Galinha_Puta\xE7a_13"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +102,161 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_0"
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 785
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_1"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 785
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_2"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 785
+        width: 139
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_3"
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 785
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_4"
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 785
+        width: 138
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_5"
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 546
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_6"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 546
+        width: 137
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_7"
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 546
+        width: 135
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_9"
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 546
+        width: 138
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_11"
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 546
+        width: 142
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "SpriteSheet_Galinha_Puta\xE7a_13"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 307
+        width: 143
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
