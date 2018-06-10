@@ -28,6 +28,18 @@ public class ContandoOsBichos : MonoBehaviour {
 	[Space(10)]
 	int notaFinal;
 
+	[Space(10)]
+	[Header("Tutorial")]
+	public string [] txtTutorial;
+	public Text infoTutorial;
+	int indexTutorial = 0;
+	[SerializeField]
+	GameObject tutorial;
+	[SerializeField]
+	GameObject[] boardsTutorial;
+	[SerializeField]
+	GameObject[] imagesTutorial;
+
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +54,9 @@ public class ContandoOsBichos : MonoBehaviour {
 		countDestroy = etapa[indexEtapa];
 		texto.GetComponent<Text>().text = "";
 		idTema = PlayerPrefs.GetInt ("idTema");
+		infoTutorial.text = txtTutorial [indexTutorial];
+		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -52,9 +67,89 @@ public class ContandoOsBichos : MonoBehaviour {
 			countSpawn = 99;
 		}
 	}
+	public void ChangeTextTutorialForward(){
+		indexTutorial++;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial == 0)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+
+		}
+		if (indexTutorial == 1)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 2)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 3)
+		{
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
+		}
+	}
+
+	public void ChangeTextTutorialBack(){
+		indexTutorial--;
+		infoTutorial.text = txtTutorial [indexTutorial];
+		if (indexTutorial == 0)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (true);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+
+		}
+		if (indexTutorial == 1)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (true);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 2)
+		{
+			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (true);
+			imagesTutorial [3].SetActive (false);
+		}
+		if (indexTutorial == 3)
+		{
+			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
+			imagesTutorial [0].SetActive (false);
+			imagesTutorial [1].SetActive (false);
+			imagesTutorial [2].SetActive (false);
+			imagesTutorial [3].SetActive (true);
+		}
+	
+	}
+
+
+
 
 
 	public void StartGame(){
+		tutorial.SetActive (false);
 		StartCoroutine("ConteOAnimal");
 		button.SetActive(false);
 	}
