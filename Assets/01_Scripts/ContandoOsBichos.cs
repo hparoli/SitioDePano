@@ -151,7 +151,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	public void StartGame(){
 		tutorial.SetActive (false);
 		StartCoroutine("ConteOAnimal");
-		button.SetActive(false);
+
 	}
 
 	public IEnumerator AnimalSpawn(){
