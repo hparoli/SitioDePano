@@ -151,6 +151,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	public void StartGame(){
 		tutorial.SetActive (false);
 		StartCoroutine("ConteOAnimal");
+		button.SetActive (false);
 
 	}
 
@@ -292,11 +293,17 @@ public class ContandoOsBichos : MonoBehaviour {
 			//feedback de errou
 		}
 		yield return new WaitForSeconds(1f);
+		Reseta();
+
 		if (acertouEtapas >= 1) {
+			notaFinal = 7;
+		}
+		if (acertouEtapas >= 2) {
+			notaFinal = 10;
+		}
+		if (acertouEtapas >= 3) {
 			notaFinal = 20;
 		}
-		GameOver();
-//		Reseta();
 	}
 
 	public void Reseta(){
