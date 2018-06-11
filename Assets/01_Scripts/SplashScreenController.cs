@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SplashScreenController : MonoBehaviour {
-	[SerializeField]
-	GameObject menu;
+	
 	void Start () {
 		
 	}
@@ -17,6 +16,9 @@ public class SplashScreenController : MonoBehaviour {
 	}
 	public void StartGame(){
 		SceneManager.LoadScene ("Menu");
+	}
 
+	public void gotoPreMenu(){
+		SceneManager.LoadScene("PreMenu");
 	}
 }
