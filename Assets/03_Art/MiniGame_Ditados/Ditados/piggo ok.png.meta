@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 0b6c41bd0cab3d94bb111182965350de
+timeCreated: 1528669559
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: piggo ok_0
+    21300002: piggo ok_1
+    21300004: piggo ok_2
+    21300006: piggo ok_3
+    21300008: piggo ok_4
+    21300010: piggo ok_5
+    21300012: piggo ok_6
+    21300014: piggo ok_7
+    21300016: piggo ok_8
+    21300018: piggo ok_9
+    21300020: piggo ok_10
+    21300022: piggo ok_11
+    21300024: piggo ok_12
+    21300026: piggo ok_13
+    21300028: piggo ok_14
+    21300030: piggo ok_15
+    21300032: piggo ok_16
+    21300034: piggo ok_17
+    21300036: piggo ok_18
+    21300038: piggo ok_19
+    21300040: piggo ok_20
+    21300042: piggo ok_21
+    21300044: piggo ok_22
+    21300046: piggo ok_23
+    21300048: piggo ok_24
+    21300050: piggo ok_25
+    21300052: piggo ok_26
+    21300054: piggo ok_27
+    21300056: piggo ok_28
+    21300058: piggo ok_29
+    21300060: piggo ok_30
+    21300062: piggo ok_31
+    21300064: piggo ok_32
+    21300066: piggo ok_33
+    21300068: piggo ok_34
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: piggo ok_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 7516
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_1
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 7516
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_2
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 7519
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_3
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 7519
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_4
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 7516
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 6838
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_6
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 6843
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_7
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 6846
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_8
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 6846
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_9
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 6843
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 6173
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_11
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 6173
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_12
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 6170
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_13
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 6170
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_14
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 6170
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 5497
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_16
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 5497
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_17
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 5500
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_18
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 5497
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_19
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 5497
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 4821
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_21
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 4821
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_22
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 4821
+        width: 728
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_23
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 4824
+        width: 728
+        height: 552
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.46688977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_24
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 4821
+        width: 728
+        height: 560
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.46736276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_25
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 4154
+        width: 728
+        height: 584
+      alignment: 9
+      pivot: {x: 0.4937236, y: 0.43740803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_26
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 4151
+        width: 728
+        height: 590
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43804455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_27
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 4153
+        width: 728
+        height: 599
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.43897545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_28
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 4150
+        width: 728
+        height: 607
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45483437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_29
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 4148
+        width: 728
+        height: 642
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42882806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_30
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 3477
+        width: 728
+        height: 640
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.41432723}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_31
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 3477
+        width: 728
+        height: 670
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39770436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_32
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 3477
+        width: 728
+        height: 670
+      alignment: 9
+      pivot: {x: 0.4937236, y: 0.38406456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_33
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 3477
+        width: 728
+        height: 670
+      alignment: 9
+      pivot: {x: 0.50627625, y: 0.37724426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piggo ok_34
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 3479
+        width: 728
+        height: 670
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.3840649}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

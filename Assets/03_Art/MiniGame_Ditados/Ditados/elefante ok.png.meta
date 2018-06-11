@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 2f6f693aa8cc05743b71343f6715f166
+timeCreated: 1528669561
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: elefante ok_0
+    21300002: elefante ok_1
+    21300004: elefante ok_2
+    21300006: elefante ok_4
+    21300008: elefante ok_6
+    21300010: elefante ok_8
+    21300012: elefante ok_17
+    21300014: elefante ok_20
+    21300016: elefante ok_21
+    21300018: elefante ok_22
+    21300020: elefante ok_23
+    21300022: elefante ok_25
+    21300024: elefante ok_34
+    21300026: elefante ok_35
+    21300028: elefante ok_36
+    21300030: elefante ok_37
+    21300032: elefante ok_39
+    21300034: elefante ok_40
+    21300036: elefante ok_45
+    21300038: elefante ok_47
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elefante ok_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 3263
+        width: 534
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3263
+        width: 539
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_2
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 3263
+        width: 547
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3263
+        width: 547
+        height: 519
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_6
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 3263
+        width: 545
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_8
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 3263
+        width: 545
+        height: 546
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_17
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 2429
+        width: 553
+        height: 590
+      alignment: 9
+      pivot: {x: 0.5639622, y: 0.45004013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_20
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2429
+        width: 545
+        height: 543
+      alignment: 9
+      pivot: {x: 0.521634, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_21
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 2429
+        width: 556
+        height: 545
+      alignment: 9
+      pivot: {x: 0.55301464, y: 0.47836557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_22
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 2429
+        width: 554
+        height: 590
+      alignment: 9
+      pivot: {x: 0.56384695, y: 0.45004013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_23
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 2429
+        width: 546
+        height: 592
+      alignment: 9
+      pivot: {x: 0.52159435, y: 0.45020932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_25
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 2429
+        width: 546
+        height: 831
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33683443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_34
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1591
+        width: 561
+        height: 834
+      alignment: 9
+      pivot: {x: 0.52101696, y: 0.330353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_35
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 1591
+        width: 571
+        height: 833
+      alignment: 9
+      pivot: {x: 0.5309734, y: 0.32307205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1591
+        width: 545
+        height: 834
+      alignment: 9
+      pivot: {x: 0.510817, y: 0.31621596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_37
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1591
+        width: 547
+        height: 834
+      alignment: 9
+      pivot: {x: 0.51077735, y: 0.330353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_39
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1591
+        width: 574
+        height: 834
+      alignment: 9
+      pivot: {x: 0.54108196, y: 0.3162158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_40
+      rect:
+        serializedVersion: 2
+        x: 3143
+        y: 1591
+        width: 572
+        height: 833
+      alignment: 9
+      pivot: {x: 0.5412252, y: 0.32554615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_45
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 757
+        width: 553
+        height: 831
+      alignment: 9
+      pivot: {x: 0.5319816, y: 0.31923553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante ok_47
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 757
+        width: 554
+        height: 831
+      alignment: 9
+      pivot: {x: 0.5212827, y: 0.31923553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
