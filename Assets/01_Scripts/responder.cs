@@ -274,5 +274,4 @@ public class responder : MonoBehaviour {
 		feedbackCorout = null;
 		NextQuestion ();
 	}
-		
 }
