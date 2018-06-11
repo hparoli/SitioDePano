@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ContandoOsBichos : MonoBehaviour {
 
+	public GameObject Placa;
+
 	public Transform[]  spawn;
 
 	public GameObject[] waypoints;
@@ -43,6 +45,7 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Placa.SetActive (false);
 		contador = 0;
 		indexEtapa = 0;
 		acertouEtapas = 0;
@@ -277,6 +280,8 @@ public class ContandoOsBichos : MonoBehaviour {
 		
 		//Debug.Log("Animal: " + animalContado + " Porco: " + contaPorco + " Cavalo: " + contaCavalo + " Cachorro: " + contaCachorro + " Gato: " + contaGato);
 
+		Placa.SetActive (true);
+
 		if(animalContado == "PORCOS") resposta.text = contaPorco.ToString("f0");
 		if(animalContado == "CAVALOS") resposta.text = contaCavalo.ToString("f0"); 
 		if(animalContado == "GATOS") resposta.text = contaGato.ToString("f0");
@@ -325,6 +330,7 @@ public class ContandoOsBichos : MonoBehaviour {
 			btnConta.SetActive(false);
 			btnConfirma.SetActive(false);
 			btnSubtrai.SetActive(false);
+			Placa.SetActive (false);
 		} else {
 			GameOver();
 		}
