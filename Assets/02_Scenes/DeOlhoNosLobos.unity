@@ -2130,7 +2130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.16075, y: 0.82043886}
   m_AnchorMax: {x: 0.83412683, y: 0.9536614}
-  m_AnchoredPosition: {x: -4.9300003, y: -0.40999603}
+  m_AnchoredPosition: {x: -4.9300003, y: -0.41000366}
   m_SizeDelta: {x: 7.4799995, y: 11.500011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &766001437
@@ -4123,7 +4123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1504437388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6137,7 +6137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1299416717
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 66d1875aa0c4e0e4291160e1e2c68689, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
