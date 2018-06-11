@@ -20,6 +20,7 @@ public class responder : MonoBehaviour {
 	QuestionData[] questions;
 
 
+
 	[Header("Feedback")]
 	[SerializeField, Range(0.0f, 5.0f)]
 	float feedbackDuration = 1.0f;
@@ -145,8 +146,8 @@ public class responder : MonoBehaviour {
 
 	void UpdateQuestionOutput(QuestionData question)
 	{
-		pergunta.sprite = question.avatar;
 		
+		pergunta.sprite = question.avatar;
 		for (int i = 0; i < answerTexts.Length && i < question.answers.Length; i++) 
 		{
 			answerTexts [i].text = question.answers [i];

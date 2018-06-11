@@ -336,6 +336,35 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
     type: 2}
   m_PrefabInternal: {fileID: 48539957}
+--- !u!1 &53773063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 53773064}
+  m_Layer: 0
+  m_Name: ImagemQuizControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53773064
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53773063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.32123, y: 1.5719514, z: -2.9257812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 800514250}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74152279
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,11 +703,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: -1.2657
       objectReference: {fileID: 0}
     - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.81
+      value: 1.8735
       objectReference: {fileID: 0}
     - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -702,7 +731,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0870956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0870957
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579906630683544, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0870957
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8023d34f54c32c04ba331d938cb2ec8c, type: 2}
@@ -801,7 +842,7 @@ RectTransform:
   - {fileID: 1840191130}
   - {fileID: 427790738}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1166,7 +1207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621224169
 GameObject:
@@ -1323,6 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800514250}
   - component: {fileID: 800514251}
+  - component: {fileID: 800514252}
   m_Layer: 0
   m_Name: ImagemQuiz
   m_TagString: Untagged
@@ -1337,11 +1379,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800514249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5827637, y: 0.157341, z: 20.342632}
+  m_LocalPosition: {x: -2.2615337, y: -1.4146104, z: 23.268414}
   m_LocalScale: {x: 1.0033257, y: 1.018062, z: 0.93277824}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 53773064}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &800514251
 SpriteRenderer:
@@ -1387,6 +1429,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &800514252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800514249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1014063298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,7 +1864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4191401566929498, guid: a5cb13bedb1629949ab80abdf04606f6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5cb13bedb1629949ab80abdf04606f6, type: 2}
@@ -2211,7 +2270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593028665 stripped
 GameObject:
@@ -2690,13 +2749,14 @@ MonoBehaviour:
   - {fileID: 1734570506}
   infoResposta: {fileID: 427790736}
   questions:
-  - question: ACobraVaiFumar
+  - question: Cobra vai fuma
     avatar: {fileID: 21300000, guid: 1f0ada4c1fa105c49bfa3992d9f0445f, type: 3}
     answers:
     - Fumo de cobra
     - Cobras fumam
     - A cobra vai fumar
     correctAnswer: A cobra vai fumar
+    anins: {fileID: 800514252}
   - question: PagandoPato
     avatar: {fileID: 21300000, guid: dad1f6726e652e640b22633e78b95e5a, type: 3}
     answers:
@@ -2704,6 +2764,7 @@ MonoBehaviour:
     - Pagando o pato
     - Pagando mico
     correctAnswer: Pagando o pato
+    anins: {fileID: 0}
   - question: CadaMacaconoseuGalho
     avatar: {fileID: 21300000, guid: f648b40802c925349a9c3cc9e7f447b7, type: 3}
     answers:
@@ -2711,6 +2772,7 @@ MonoBehaviour:
     - "A brincar, a brincar, vai o macaco \xE0 banana"
     - Cada macaco no seu galho
     correctAnswer: Cada macaco no seu galho
+    anins: {fileID: 0}
   - question: ReslvendoAbacaxi
     avatar: {fileID: 21300000, guid: d4da814b10589784cbf1b4be56646b0d, type: 3}
     answers:
@@ -2718,6 +2780,7 @@ MonoBehaviour:
     - Brincando com abacaxi
     - Descascando um abacaxi
     correctAnswer: Resolver um abacaxi
+    anins: {fileID: 0}
   - question: "Mam\xE3ocomA\xE7ucar"
     avatar: {fileID: 21300000, guid: 454102d8f04a29e4bb419755bc3c107b, type: 3}
     answers:
@@ -2725,6 +2788,7 @@ MonoBehaviour:
     - "Mam\xE3o com a\xE7ucar"
     - "Doce como mam\xE3o"
     correctAnswer: "Mam\xE3o com a\xE7ucar"
+    anins: {fileID: 0}
   - question: "CachorroLingui\xE7a"
     avatar: {fileID: 21300000, guid: d5137e46945918848b5667215af11453, type: 3}
     answers:
@@ -2732,6 +2796,7 @@ MonoBehaviour:
     - Prender cachorro com comida
     - "Do tempo em que se amarrava cachorro com lingui\xE7a"
     correctAnswer: "Do tempo em que se amarrava cachorro com lingui\xE7a"
+    anins: {fileID: 0}
   - question: "Abra\xE7oTamandu\xE1"
     avatar: {fileID: 21300000, guid: 3495412b1e5c85541be89321c7f7fa84, type: 3}
     answers:
@@ -2739,6 +2804,7 @@ MonoBehaviour:
     - "Falso abra\xE7o"
     - "Abra\xE7o de urso"
     correctAnswer: "Abra\xE7o de tamandu\xE1"
+    anins: {fileID: 0}
   - question: "Carro\xE7anafrentedosBois"
     avatar: {fileID: 21300000, guid: 04a0de1d3ade98746b9aa140b4403d05, type: 3}
     answers:
@@ -2746,6 +2812,7 @@ MonoBehaviour:
     - "Carro\xE7a contr\xE1ria"
     - Invertendo as coisas
     correctAnswer: "Colocar a carro\xE7a na frente dos bois"
+    anins: {fileID: 0}
   - question: "Tirando\xC1guaJoelho"
     avatar: {fileID: 21300000, guid: 600e21b61b8d078429be5d32d1305723, type: 3}
     answers:
@@ -2753,6 +2820,7 @@ MonoBehaviour:
     - "Tirando \xE1gua do joelho"
     - Joelho molhado
     correctAnswer: "Tirando \xE1gua do joelho"
+    anins: {fileID: 0}
   - question: OvelhaNegra
     avatar: {fileID: 21300000, guid: 5f5df25d402a5be40906bcf5664a4896, type: 3}
     answers:
@@ -2760,6 +2828,7 @@ MonoBehaviour:
     - Contando ovelhas
     - "Ovelha negra da fam\xEDlia"
     correctAnswer: "Ovelha negra da fam\xEDlia"
+    anins: {fileID: 0}
   feedbackDuration: 2.5
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
@@ -2797,7 +2866,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1834947944
 AudioSource:
@@ -2908,7 +2977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1840191128
 MonoBehaviour:
   m_ObjectHideFlags: 0
