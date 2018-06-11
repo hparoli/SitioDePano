@@ -26,7 +26,7 @@ public class ExitConfirmation : MonoBehaviour {
 	public void yesExit(){
 		ExitGameObject.SetActive (false);
 		Time.timeScale = 1;
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene("Menu");
 	}
 	public void noExit(){
 		ExitGameObject.SetActive (false);

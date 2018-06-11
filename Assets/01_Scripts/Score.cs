@@ -101,7 +101,7 @@ public class Score : MonoBehaviour {
 	}
 
 	public void GoToMenu(){
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene ("Menu");
 	}
 
 	public void restart(){

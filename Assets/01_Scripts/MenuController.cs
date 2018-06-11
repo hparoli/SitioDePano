@@ -5,14 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
+
+
+
 	[SerializeField]
 	private GameObject minigame;
 	
 	[SerializeField]
 	private int idGame, idTema, noJogo;
 	
-	[SerializeField]
-	private GameObject inicio;
+//	[SerializeField]
+//	private GameObject inicio;
 	
 	[SerializeField]
 	private GameObject mainMenu;
@@ -37,9 +40,11 @@ public class MenuController : MonoBehaviour {
 
 	[SerializeField]
 	public GameObject exitConfirmation, playConfirmation;
+//
+//	[SerializeField]
+//	public GameObject Maozinha;
 
-	[SerializeField]
-	public GameObject Maozinha;
+
 
 	void Start () {
 		noJogo = PlayerPrefs.GetInt ("NoJogo", 0);
@@ -48,18 +53,19 @@ public class MenuController : MonoBehaviour {
 		if(noJogo == 0){
 			StartCoroutine("ApareceInicio");
 		} else {
-			inicio.SetActive(false);
+//			inicio.SetActive(false);
 			mainMenu.SetActive(true);
-			Maozinha.SetActive(false);
+//			Maozinha.SetActive(false);
 		}
 		MudaBotoes(idGame);
 	}
 	
 	void Update(){
+		
 		if(canPress){
 			if(Input.anyKeyDown){
-				Maozinha.SetActive (false);
-				inicio.SetActive(false);
+//				Maozinha.SetActive (false);
+//				inicio.SetActive(false);
 				mainMenu.SetActive(true);
 			}
 		}
@@ -126,22 +132,22 @@ public class MenuController : MonoBehaviour {
 			btnPlay[i].GetComponentInChildren<Text>().text = btnTexts[j];
 		}
 	}
-	private IEnumerator ApareceInicio(){
-		yield return new WaitForSeconds(2f);
-		for (float f = 0f; f <= standard.a; f += 0.01f)
-        {
-            Color c = text.color;
-			Color d = text2.color;
-            c.a = f;
-			d.a = f;
-            text.color = c;
-			text2.color = d;
-            new WaitForSeconds(.5f);
-            yield return null;
-        }
-		yield return new WaitForSeconds(.5f);
-		text2.GetComponent<Animator>().enabled = true;
-		yield return new WaitForSeconds(.2f);
-		canPress = true;
-	}
+//	private IEnumerator ApareceInicio(){
+//		yield return new WaitForSeconds(2f);
+//		for (float f = 0f; f <= standard.a; f += 0.01f)
+//        {
+//            Color c = text.color;
+//			Color d = text2.color;
+//            c.a = f;
+//			d.a = f;
+//            text.color = c;
+//			text2.color = d;
+//            new WaitForSeconds(.5f);
+//            yield return null;
+//        }
+//		yield return new WaitForSeconds(.5f);
+//		text2.GetComponent<Animator>().enabled = true;
+//		yield return new WaitForSeconds(.2f);
+//		canPress = true;
+//	}
 }
