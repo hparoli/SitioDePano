@@ -13,5 +13,5 @@ public class QuestionData
 	public Sprite avatar;
 	public string[] answers;
 	public string correctAnswer;
-	public Animator anins;
+	public int anim;
 }
