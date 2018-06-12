@@ -15,7 +15,8 @@ public class GameManagerMed : MonoBehaviour {
 	public AudioClip WrongMatch;
 	private AudioSource source;
 
-	public Sprite[] cardFace;
+	public string[] cardAnim;
+	public Sprite cardFace;
 	public Sprite cardBack;
 	public GameObject[] cards;
 	public Text matchText;
@@ -197,8 +198,12 @@ public class GameManagerMed : MonoBehaviour {
 		return cardBack;
 	}
 
-	public Sprite getCardFace(int i){
-		return cardFace [i - 1];
+	public Sprite getCardFace(){
+		return cardFace;
+	}
+
+	public string getCardAnim(int i){
+		return cardAnim[i - 1];
 	}
 
 

@@ -19,6 +19,8 @@ public class CardMed : MonoBehaviour {
 	private Sprite _cardBack;
 	private Sprite _cardFace;
 
+	private string _cardAnim;
+
 	private GameObject _Manager;
 
 	void Start(){
@@ -30,8 +32,8 @@ public class CardMed : MonoBehaviour {
 
 	public void SetupGraphics() {
 		_cardBack = _Manager.GetComponent<GameManagerMed> ().getCardBack ();
-		_cardFace = _Manager.GetComponent<GameManagerMed> ().getCardFace(_cardvalue);
-
+		_cardFace = _Manager.GetComponent<GameManagerMed> ().getCardFace();
+		_cardAnim = _Manager.GetComponent<GameManagerMed> ().getCardAnim(_cardvalue);
 	}
 
 	public void flipCard() {
@@ -46,9 +48,11 @@ public class CardMed : MonoBehaviour {
 		if (_state == 0 && !DO_NOT) {
 			source.PlayOneShot (shuffleCards, 1);
 			GetComponent<Image> ().sprite = _cardBack;
+			GetComponentInChildren<Animator>().SetTrigger("Zera");
 		} else if (_state == 1 && !DO_NOT) {
 			source.PlayOneShot (shuffleCards, 1);
 			GetComponent<Image> ().sprite = _cardFace;
+			GetComponentInChildren<Animator>().SetTrigger(_cardAnim);
 		}
 	}
 
@@ -74,10 +78,14 @@ public class CardMed : MonoBehaviour {
 
 	IEnumerator pause(){
 		yield return new WaitForSeconds (1);
-		if (_state == 0)
+		if (_state == 0){
 			GetComponent<Image> ().sprite = _cardBack;
-		else if (_state == 1)
+			GetComponentInChildren<Animator>().SetTrigger("Zera");
+		}
+		else if (_state == 1){
 			GetComponent<Image> ().sprite = _cardFace;
+			GetComponentInChildren<Animator>().SetTrigger(_cardAnim);
+		}
 		DO_NOT = false;
 	}
 
