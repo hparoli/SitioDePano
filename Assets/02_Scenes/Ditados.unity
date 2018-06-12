@@ -2752,84 +2752,84 @@ MonoBehaviour:
   - question: MacacoGalho
     avatar: {fileID: 21300000, guid: bae1f711538466b40ab5260bdb6e3443, type: 3}
     answers:
-    - Fumo de cobra
-    - Cobras fumam
-    - A cobra vai fumar
-    correctAnswer: A cobra vai fumar
+    - Cada macaco no seu galho
+    - "A brincar, a brincar, vai o macaco \xE0 banana"
+    - Fazendo Macaquices
+    correctAnswer: Cada macaco no seu galho
     anim: 1
   - question: "Carro\xE7aBois"
     avatar: {fileID: 21300000, guid: 15ce1248b7aa1e74e8736f3e9ae320d1, type: 3}
     answers:
-    - Troco pra pato
-    - Pagando o pato
-    - Pagando mico
-    correctAnswer: Pagando o pato
+    - "Colocando a carro\xE7a na frente dos bois"
+    - "Invertendo a carro\xE7a"
+    - "Carro\xE7a de boi"
+    correctAnswer: "Colocando a carro\xE7a na frente dos bois"
     anim: 2
   - question: noiteGatos
     avatar: {fileID: 21300000, guid: 85e0f35098f938343a2bc067e3656a99, type: 3}
     answers:
     - Macacos me mordam!
-    - "A brincar, a brincar, vai o macaco \xE0 banana"
-    - Cada macaco no seu galho
-    correctAnswer: Cada macaco no seu galho
+    - "A noite todos os gatos s\xE3o pardos"
+    - Gato de beco
+    correctAnswer: "A noite todos os gatos s\xE3o pardos"
     anim: 3
   - question: Doggo
     avatar: {fileID: 21300000, guid: b2b485e64ebfcde4094a101a9cd4e212, type: 3}
     answers:
-    - Resolver um abacaxi
-    - Brincando com abacaxi
-    - Descascando um abacaxi
-    correctAnswer: Resolver um abacaxi
+    - Cachorro se amarra com comida
+    - "Corda de lingui\xE7a"
+    - "Do tempo em que se amarrava cachorro com lingui\xE7a"
+    correctAnswer: "Do tempo em que se amarrava cachorro com lingui\xE7a"
     anim: 4
   - question: Elefante
     avatar: {fileID: 21300000, guid: 2f6f693aa8cc05743b71343f6715f166, type: 3}
     answers:
-    - "Mam\xE3o a\xE7ucarado"
-    - "Mam\xE3o com a\xE7ucar"
-    - "Doce como mam\xE3o"
-    correctAnswer: "Mam\xE3o com a\xE7ucar"
+    - "Mem\xF3ria de Elefante"
+    - Rachando a cuca
+    - Incomodo de Elefante
+    correctAnswer: "Mem\xF3ria de Elefante"
     anim: 5
   - question: Espirito Porco
     avatar: {fileID: 21300000, guid: f87fc0c43f8d473458fa539df172829a, type: 3}
     answers:
-    - "Corda de lingui\xE7a"
-    - Prender cachorro com comida
-    - "Do tempo em que se amarrava cachorro com lingui\xE7a"
-    correctAnswer: "Do tempo em que se amarrava cachorro com lingui\xE7a"
+    - O rico e o porco depois de morto
+    - "Esp\xEDrito de Porco"
+    - "Sonhar com porcos \xE9 morte certa"
+    correctAnswer: "Esp\xEDrito de Porco"
     anim: 6
   - question: Pagando Pato
     avatar: {fileID: 21300000, guid: 084acb70c04ae454dad8e96e8c2e99ef, type: 3}
     answers:
-    - "Abra\xE7o de tamandu\xE1"
-    - "Falso abra\xE7o"
-    - "Abra\xE7o de urso"
-    correctAnswer: "Abra\xE7o de tamandu\xE1"
+    - Pagando Mico
+    - "D\xEDvida se paga aos patos"
+    - Pagando o pato
+    correctAnswer: Pagando o pato
     anim: 7
   - question: Lobo Cordeiro
     avatar: {fileID: 21300000, guid: d743afe6e73159546a571aa993497c6f, type: 3}
     answers:
-    - "Colocar a carro\xE7a na frente dos bois"
-    - "Carro\xE7a contr\xE1ria"
-    - Invertendo as coisas
-    correctAnswer: "Colocar a carro\xE7a na frente dos bois"
+    - O lobo pode mudar a pela, mas nunca muda
+    - Lobo em pele de cordeiro
+    - Quem poupa o lobo sacrifica a ovelha
+    correctAnswer: Lobo em pele de cordeiro
     anim: 8
   - question: Porco Tomada
     avatar: {fileID: 21300000, guid: 0b6c41bd0cab3d94bb111182965350de, type: 3}
     answers:
-    - Largando a torneira aberta
-    - "Tirando \xE1gua do joelho"
-    - Joelho molhado
-    correctAnswer: "Tirando \xE1gua do joelho"
+    - "Tomada n\xE3o \xE9 pra porco"
+    - "Porco que \xE9 esperto tem medo de tomada"
+    - "Fucinho de Porco n\xE3o \xE9 tomada"
+    correctAnswer: "Fucinho de Porco n\xE3o \xE9 tomada"
     anim: 9
   - question: TV Dog
     avatar: {fileID: 21300000, guid: 99d60ac3db5d4c54d8969275e323f4de, type: 3}
     answers:
-    - "Fam\xEDlia de ovelhas"
-    - Contando ovelhas
-    - "Ovelha negra da fam\xEDlia"
-    correctAnswer: "Ovelha negra da fam\xEDlia"
+    - "Televis\xE3o de cachorro"
+    - Passatempo de vira-lata
+    - "Reuni\xE3o de frangos"
+    correctAnswer: "Televis\xE3o de cachorro"
     anim: 10
-  feedbackDuration: 1
+  feedbackDuration: 2.5
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
