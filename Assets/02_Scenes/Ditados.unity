@@ -1419,7 +1419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 99d60ac3db5d4c54d8969275e323f4de, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1427,7 +1427,7 @@ SpriteRenderer:
   m_Size: {x: 4.61, y: 5.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!95 &800514252
 Animator:
@@ -2749,87 +2749,87 @@ MonoBehaviour:
   - {fileID: 1734570506}
   infoResposta: {fileID: 427790736}
   questions:
-  - question: Cobra vai fuma
-    avatar: {fileID: 21300000, guid: 1f0ada4c1fa105c49bfa3992d9f0445f, type: 3}
+  - question: MacacoGalho
+    avatar: {fileID: 21300000, guid: bae1f711538466b40ab5260bdb6e3443, type: 3}
     answers:
     - Fumo de cobra
     - Cobras fumam
     - A cobra vai fumar
     correctAnswer: A cobra vai fumar
     anim: 1
-  - question: PagandoPato
-    avatar: {fileID: 21300000, guid: dad1f6726e652e640b22633e78b95e5a, type: 3}
+  - question: "Carro\xE7aBois"
+    avatar: {fileID: 21300000, guid: 15ce1248b7aa1e74e8736f3e9ae320d1, type: 3}
     answers:
     - Troco pra pato
     - Pagando o pato
     - Pagando mico
     correctAnswer: Pagando o pato
     anim: 2
-  - question: CadaMacaconoseuGalho
-    avatar: {fileID: 21300000, guid: f648b40802c925349a9c3cc9e7f447b7, type: 3}
+  - question: noiteGatos
+    avatar: {fileID: 21300000, guid: 85e0f35098f938343a2bc067e3656a99, type: 3}
     answers:
     - Macacos me mordam!
     - "A brincar, a brincar, vai o macaco \xE0 banana"
     - Cada macaco no seu galho
     correctAnswer: Cada macaco no seu galho
     anim: 3
-  - question: ReslvendoAbacaxi
-    avatar: {fileID: 21300000, guid: d4da814b10589784cbf1b4be56646b0d, type: 3}
+  - question: Doggo
+    avatar: {fileID: 21300000, guid: b2b485e64ebfcde4094a101a9cd4e212, type: 3}
     answers:
     - Resolver um abacaxi
     - Brincando com abacaxi
     - Descascando um abacaxi
     correctAnswer: Resolver um abacaxi
-    anim: 0
-  - question: "Mam\xE3ocomA\xE7ucar"
-    avatar: {fileID: 21300000, guid: 454102d8f04a29e4bb419755bc3c107b, type: 3}
+    anim: 4
+  - question: Elefante
+    avatar: {fileID: 21300000, guid: 2f6f693aa8cc05743b71343f6715f166, type: 3}
     answers:
     - "Mam\xE3o a\xE7ucarado"
     - "Mam\xE3o com a\xE7ucar"
     - "Doce como mam\xE3o"
     correctAnswer: "Mam\xE3o com a\xE7ucar"
-    anim: 0
-  - question: "CachorroLingui\xE7a"
-    avatar: {fileID: 21300000, guid: d5137e46945918848b5667215af11453, type: 3}
+    anim: 5
+  - question: Espirito Porco
+    avatar: {fileID: 21300000, guid: f87fc0c43f8d473458fa539df172829a, type: 3}
     answers:
     - "Corda de lingui\xE7a"
     - Prender cachorro com comida
     - "Do tempo em que se amarrava cachorro com lingui\xE7a"
     correctAnswer: "Do tempo em que se amarrava cachorro com lingui\xE7a"
-    anim: 0
-  - question: "Abra\xE7oTamandu\xE1"
-    avatar: {fileID: 21300000, guid: 3495412b1e5c85541be89321c7f7fa84, type: 3}
+    anim: 6
+  - question: Pagando Pato
+    avatar: {fileID: 21300000, guid: 084acb70c04ae454dad8e96e8c2e99ef, type: 3}
     answers:
     - "Abra\xE7o de tamandu\xE1"
     - "Falso abra\xE7o"
     - "Abra\xE7o de urso"
     correctAnswer: "Abra\xE7o de tamandu\xE1"
-    anim: 0
-  - question: "Carro\xE7anafrentedosBois"
-    avatar: {fileID: 21300000, guid: 04a0de1d3ade98746b9aa140b4403d05, type: 3}
+    anim: 7
+  - question: Lobo Cordeiro
+    avatar: {fileID: 21300000, guid: d743afe6e73159546a571aa993497c6f, type: 3}
     answers:
     - "Colocar a carro\xE7a na frente dos bois"
     - "Carro\xE7a contr\xE1ria"
     - Invertendo as coisas
     correctAnswer: "Colocar a carro\xE7a na frente dos bois"
-    anim: 0
-  - question: "Tirando\xC1guaJoelho"
-    avatar: {fileID: 21300000, guid: 600e21b61b8d078429be5d32d1305723, type: 3}
+    anim: 8
+  - question: Porco Tomada
+    avatar: {fileID: 21300000, guid: 0b6c41bd0cab3d94bb111182965350de, type: 3}
     answers:
     - Largando a torneira aberta
     - "Tirando \xE1gua do joelho"
     - Joelho molhado
     correctAnswer: "Tirando \xE1gua do joelho"
-    anim: 0
-  - question: OvelhaNegra
-    avatar: {fileID: 21300000, guid: 5f5df25d402a5be40906bcf5664a4896, type: 3}
+    anim: 9
+  - question: TV Dog
+    avatar: {fileID: 21300000, guid: 99d60ac3db5d4c54d8969275e323f4de, type: 3}
     answers:
     - "Fam\xEDlia de ovelhas"
     - Contando ovelhas
     - "Ovelha negra da fam\xEDlia"
     correctAnswer: "Ovelha negra da fam\xEDlia"
-    anim: 0
-  feedbackDuration: 2.16
+    anim: 10
+  feedbackDuration: 1
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}

@@ -148,9 +148,11 @@ public class responder : MonoBehaviour {
 	{
 		
 		pergunta.sprite = question.avatar;
+		pergunta.GetComponent<Animator> ().SetInteger("setAnim", question.anim);
 		for (int i = 0; i < answerTexts.Length && i < question.answers.Length; i++) 
 		{
 			answerTexts [i].text = question.answers [i];
+
 		}
 		
 		for (int t = 0; t < answerTexts.Length; t++ )
@@ -163,7 +165,8 @@ public class responder : MonoBehaviour {
 
 	}
 	void UpdateQuestionOutput()
-	{
+	{	
+		
 		UpdateQuestionOutput (CurrentQuestion);
 	}
 		
@@ -174,8 +177,10 @@ public class responder : MonoBehaviour {
 
 		if (answerTexts [index].text == CurrentQuestion.correctAnswer) {
 			acertos++;
+			pergunta.GetComponent<Animator> ().SetInteger("setAnim", 0);
 			source.PlayOneShot (C_Answer, 1);
 		} else {
+			pergunta.GetComponent<Animator> ().SetInteger("setAnim", 0);
 			source.PlayOneShot(W_Answer, 1);
 		}
 
@@ -189,7 +194,7 @@ public class responder : MonoBehaviour {
 
 		if (questionIndex < QuestionsAmount)
 		{
-
+			
 			UpdateQuestionOutput ();
 			infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 
