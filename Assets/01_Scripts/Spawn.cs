@@ -110,16 +110,21 @@ public class Spawn : MonoBehaviour {
 			if (dollCount < 3) {
 				dollCount++;
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-				if(spawnAnterior == spawnPointIndex){
+				if(spawnAnterior == spawnPointIndex)
+				{
 					spawnPointIndex++;	
 				}
-				Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);	
+				
+				GameObject aninha = Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation) as GameObject;	
+				aninha.transform.parent = spawnPoints [spawnPointIndex].transform;	
 				spawnAnterior = spawnPointIndex;
 				
 			}
-			else {
-			BarnAnin ();
-			StartCoroutine ("StartGameOver");
+
+			else 
+			{
+				BarnAnin ();
+				StartCoroutine ("StartGameOver");
 			}
 
 		} 
