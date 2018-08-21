@@ -13,7 +13,8 @@ public class GameSelect : MonoBehaviour {
 		idTema = 0;
 	}
 
-	public void MiniGameSelected(int i){
+	public void MiniGameSelected(int i)
+	{
 		idTema = i;
 		PlayerPrefs.SetInt ("idTema", idTema);
 	}
