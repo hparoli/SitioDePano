@@ -10,6 +10,8 @@ public class newMenuControl : MonoBehaviour {
 	[SerializeField]
 	GameObject ButtonsMovimentControl;
 	[SerializeField]
+	GameObject[] ButtonsCotrol;
+	[SerializeField]
 	GameObject[] miniGameButtons;
 	[SerializeField]
 	GameObject FadeControl;
@@ -63,15 +65,20 @@ public class newMenuControl : MonoBehaviour {
 		
 		if (gameNumber == 0)
 		{
-			miniGameButtons[0].transform.position = centerPosition;
-			miniGameButtons[1].transform.position = startPosition;
+			ButtonsCotrol[0].transform.position = centerPosition;
+			ButtonsCotrol[1].transform.position = startPosition;
 		}	
 
 		if (gameNumber == 1)
 		{
-			miniGameButtons[0].transform.position = startPosition;
-			miniGameButtons[1].transform.position = centerPosition;
+			ButtonsCotrol[0].transform.position = startPosition;
+			ButtonsCotrol[1].transform.position = centerPosition;
 		}		
+	}
+
+	public void StartGame(int gameValue)
+	{
+		LoadingScreenManager.LoadScene(gameValue);
 	}
 	
 }

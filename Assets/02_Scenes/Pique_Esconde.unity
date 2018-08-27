@@ -3111,6 +3111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swipeControl: {fileID: 422672659}
   background: {fileID: 1990050624}
+  SwipeCheck: Hide
 --- !u!1 &2062933839
 GameObject:
   m_ObjectHideFlags: 0
