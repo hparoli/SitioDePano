@@ -13,6 +13,7 @@ TagManager:
   - waypoints
   - lobo
   - spawn
+  - mSelected
   layers:
   - Default
   - TransparentFX
