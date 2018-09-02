@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AcertaSequenciaController : MonoBehaviour {
 
+
 	[SerializeField]
 	private Formas[] formas;
 
@@ -18,7 +19,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private Transform pos, posR;
 
 	[SerializeField]
-	private int level,ind;
+	private int level,ind,qtdFormas,tipos,qtdExtra;
 
 	[SerializeField]
 	private Color standard;
@@ -26,12 +27,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[SerializeField]
 	private Text Txt;
 
-	[SerializeField]
-	private Image[] cortinas;
+	
 
 	void Start () {
-		level = 3;
-		formasPergunta = new GameObject[level];
+		level = 1;
 		StartGame();
 	}
 	
@@ -40,6 +39,29 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 
 	public void StartGame(){
+		if (level == 1){
+			qtdFormas = 6;
+			tipos = 4;
+			qtdExtra = 2;
+		} else if(level == 2){
+			qtdFormas = 4;
+			tipos = 3;
+		} else if(level == 3){
+			qtdFormas = 4;
+			tipos = 4;
+		} else if (level == 4){
+			qtdFormas = 5;
+			tipos = 4;
+		} else if(level == 5){
+			qtdFormas = 5;
+			tipos = 4;
+			qtdExtra = 2;
+		} else if(level == 6){
+			qtdFormas = 6;
+			tipos = 4;
+			qtdExtra = 2;
+		}
+		formasPergunta = new GameObject[qtdFormas];
 		StartCoroutine("MostraSequencia");
 	}
 
@@ -65,60 +87,49 @@ public class AcertaSequenciaController : MonoBehaviour {
         }
 		yield return new WaitForSeconds(1f);
 		int index = -1;
-		for(int i = 0; i < level; i++){
-			formasPergunta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
-			//primeiro level
-			if(level == 3) {
-				Debug.Log(index);
-				if(index < 0) index = Random.Range(0,4);
-				formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
+		for(int i = 0; i < qtdFormas; i++){
+			formasPergunta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
+			if(index < 0) index = Random.Range(0,4);
+			formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
+			formasPergunta[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
+			if(i < formas.Length-1){
 				if(index < 3) index++;
 				else index = 0;
+			} else {
+				index = Random.Range(0,4);
 			}
 		}
-		Embaralha("P");
-
-		//abre cortina
-		for (float f = 1f; f >= 0; f -= 0.01f)
-        {
-            cortinas[0].fillAmount = f;
-            cortinas[1].fillAmount = f;
-			new WaitForSeconds(.1f);
-            yield return null;
-        }
+		//Embaralha("P");
 		yield return new WaitForSeconds(5f);
-		for (float f = 0f; f <= 1; f += 0.01f)
-        {
-            cortinas[0].fillAmount = f;
-            cortinas[1].fillAmount = f;
-			new WaitForSeconds(.1f);
-            yield return null;
-        }
+		for(int i = 0; i < formasPergunta.Length; i++){
+			formasPergunta[i].GetComponent<SpriteRenderer>().enabled = false;
+		}
 		StartCoroutine("Responde");
+
 	}
 
 	private void Embaralha(string param)
 	{
-		var formaList = new List<Sprite> ();
+		var formaList = new List<int> ();
 
 		if(param == "P"){
-			Sprite form = formasPergunta [Random.Range (0, formasPergunta.Length)].GetComponent<SpriteRenderer>().sprite;
+			int form = formasPergunta [Random.Range (0, formasPergunta.Length)].GetComponent<FormasInfos>().GetIndex();
 			
 			for (int i = 0; i < formasPergunta.Length; i++) 
 			{
 				while (formaList.Contains (form)) 
 				{
-					form = formasPergunta [Random.Range (0, formasPergunta.Length)].GetComponent<SpriteRenderer>().sprite;
+					form = formasPergunta [Random.Range (0, formasPergunta.Length)].GetComponent<FormasInfos>().GetIndex();
 				}
 				formaList.Add (form);
 			}
 			for(int i = 0; i < formaList.Count; i++){
-			formasPergunta [i].GetComponent<SpriteRenderer>().sprite = formaList[i];
-			formasPergunta [i].GetComponent<FormasInfos>().SetValues(formaList[i].name, i);
+			formasPergunta [i].GetComponent<SpriteRenderer>().sprite = formasPergunta [formaList[i]].GetComponent<FormasInfos>().GetSprite();
+			formasPergunta [i].GetComponent<FormasInfos>().SetValues(formasPergunta [formaList[i]].GetComponent<FormasInfos>().GetForma(),i);
 			}
 		}
 
-		if(param == "R"){
+		/*if(param == "R"){
 			Sprite form = formasResposta [Random.Range (0, formasResposta.Length)].GetComponent<SpriteRenderer>().sprite;
 			
 			for (int i = 0; i < formasResposta.Length; i++) 
@@ -133,7 +144,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			formasResposta [i].GetComponent<SpriteRenderer>().sprite = formaList[i];
 			formasResposta [i].GetComponent<FormasInfos>().SetValues(formaList[i].name, i);
 			}
-		}
+		}*/
 	}
 
 	private IEnumerator Responde(){
@@ -159,13 +170,19 @@ public class AcertaSequenciaController : MonoBehaviour {
         }	
 		yield return new WaitForSeconds(1f);
 
-		if(level == 3){
-			formasResposta = new GameObject[formasPergunta.Length];
-			for(int i = 0; i < formasResposta.Length; i++){
-				formasResposta[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x + (i*2), posR.position.y, posR.position.z) ,posR.rotation);
+		formasResposta = new GameObject[formasPergunta.Length + qtdExtra];
+		int index = 0;
+		for(int i = 0; i < formasPergunta.Length + qtdExtra; i++){
+			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
+			if(i < formasPergunta.Length-1){
 				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
+			} else{
+				index = Random.Range(0,4);
+				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 			}
 		}
-		Embaralha("R");
+		
+		//Embaralha("R");
 	}
+
 }
