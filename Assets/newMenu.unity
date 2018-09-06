@@ -4066,6 +4066,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 1405592708}
+--- !u!114 &1326548914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326548912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2b7d324f6e6d44c9f6c1b13db045d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchEffect: {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a,
+    type: 2}
 --- !u!1 &1373796991
 GameObject:
   m_ObjectHideFlags: 0
