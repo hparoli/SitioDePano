@@ -18,7 +18,7 @@ public class EffectControl : MonoBehaviour {
 	}
 	private void AddEffect ()
 	{
-		Vector3 mousPos =  Input.mousePosition;
+		Vector3 mousPos =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		if (Input.GetButtonDown("Fire1"))
 		{
 			Debug.Log(mousPos);
