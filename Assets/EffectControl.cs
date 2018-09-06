@@ -22,7 +22,8 @@ public class EffectControl : MonoBehaviour {
 		if (Input.GetButtonDown("Fire1"))
 		{
 			Debug.Log(mousPos);
-			Instantiate(touchEffect, mousPos, transform.rotation);
+			GameObject copy =  Instantiate(touchEffect, mousPos, transform.rotation) as GameObject;
+			Destroy(copy, 1f);
 
 		}
 	}
