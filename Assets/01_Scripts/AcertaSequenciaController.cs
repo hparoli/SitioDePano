@@ -10,7 +10,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private Formas[] formas;
 
 	[SerializeField]
-	private GameObject[] formasPergunta,formasResposta;
+	private GameObject[] formasPergunta,formasResposta,formasEscolha;
 
 	[SerializeField]
 	private GameObject forma; 
@@ -35,7 +35,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+		EscolherForma();
 	}
 
 	public void StartGame(){
@@ -62,6 +62,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			qtdExtra = 2;
 		}
 		formasPergunta = new GameObject[qtdFormas];
+		formasResposta = new GameObject[qtdFormas];
 		StartCoroutine("MostraSequencia");
 	}
 
@@ -89,15 +90,19 @@ public class AcertaSequenciaController : MonoBehaviour {
 		int index = -1;
 		for(int i = 0; i < qtdFormas; i++){
 			formasPergunta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
+			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
 			if(index < 0) index = Random.Range(0,4);
 			formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 			formasPergunta[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
+			formasResposta[i].GetComponent<FormasInfos>().SetValues("",i);
 			if(i < formas.Length-1){
 				if(index < 3) index++;
 				else index = 0;
 			} else {
 				index = Random.Range(0,4);
 			}
+			formasPergunta [i].gameObject.tag = "Pergunta";
+			formasResposta [i].gameObject.tag = "Resposta";
 		}
 		//Embaralha("P");
 		yield return new WaitForSeconds(5f);
@@ -170,19 +175,74 @@ public class AcertaSequenciaController : MonoBehaviour {
         }	
 		yield return new WaitForSeconds(1f);
 
-		formasResposta = new GameObject[formasPergunta.Length + qtdExtra];
+		formasEscolha = new GameObject[formasPergunta.Length + qtdExtra];
 		int index = 0;
 		for(int i = 0; i < formasPergunta.Length + qtdExtra; i++){
-			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
+			if(i < 5)
+				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
+			else
+				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x + 1.8f, posR.position.y - ((i-5)*2), posR.position.z) ,posR.rotation);
 			if(i < formasPergunta.Length-1){
-				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
+				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
+				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formasPergunta[i].GetComponent<FormasInfos>().GetForma(),i);
 			} else{
 				index = Random.Range(0,4);
-				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
+				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
+				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
 			}
+			formasEscolha [i].gameObject.tag = "Escolha";
 		}
 		
 		//Embaralha("R");
+	}
+
+	void EscolherForma(){
+		RaycastHit formaClick = new RaycastHit();
+		bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out formaClick);
+		if (Input.GetMouseButtonDown (0)) {
+			Debug.Log ("1");
+			if (hit) {
+				Debug.Log("2");
+				if (formaClick.transform.tag == "Escolha") {
+					for (int i = 0; i < formasEscolha.Length; i++) {
+						if (formaClick.transform.gameObject.GetComponent<FormasInfos> ().GetIndex ()
+						   == formasEscolha [i].GetComponent<FormasInfos> ().GetIndex ()) {
+							for (int j = 0; j < formasResposta.Length; j++) {
+								if (formasResposta [j].GetComponent<FormasInfos> ().GetForma () == "") {
+									formasResposta [j].GetComponent<FormasInfos> ().SetValues (formasEscolha [i].GetComponent<FormasInfos> ().GetForma ()
+									, formasResposta [j].GetComponent<FormasInfos> ().GetIndex ());
+									formasResposta [j].GetComponent<SpriteRenderer> ().sprite = formasEscolha [i].GetComponent<SpriteRenderer> ().sprite;
+									formasEscolha [i].GetComponent<FormasInfos> ().SetValues ("", formasEscolha [i].GetComponent<FormasInfos> ().GetIndex ());
+									formasEscolha [i].GetComponent<SpriteRenderer> ().sprite = null;
+									break;
+								}
+
+							}
+							Debug.Log (formasEscolha [i].GetComponent<FormasInfos> ().GetIndex ());
+						}
+					}
+				}
+				if (formaClick.transform.tag == "Resposta") {
+					for (int i = 0; i < formasResposta.Length; i++) {
+						if (formaClick.transform.gameObject.GetComponent<FormasInfos> ().GetIndex ()
+						   == formasResposta [i].GetComponent<FormasInfos> ().GetIndex ()) {
+							for (int j = 0; j < formasEscolha.Length; j++) {
+								if (formasEscolha [j].GetComponent<FormasInfos> ().GetForma () == "") {
+									formasEscolha [j].GetComponent<FormasInfos> ().SetValues (formasResposta [i].GetComponent<FormasInfos> ().GetForma ()
+									, formasEscolha [j].GetComponent<FormasInfos> ().GetIndex ());
+									formasEscolha [j].GetComponent<SpriteRenderer> ().sprite = formasResposta [i].GetComponent<SpriteRenderer> ().sprite;
+									formasResposta [i].GetComponent<FormasInfos> ().SetValues ("", formasResposta [i].GetComponent<FormasInfos> ().GetIndex ());
+									formasResposta [i].GetComponent<SpriteRenderer> ().sprite = null;
+									break;
+								}
+
+							}
+							Debug.Log (formasEscolha [i].GetComponent<FormasInfos> ().GetIndex ());
+						}
+					}
+				}
+			}
+		}
 	}
 
 }

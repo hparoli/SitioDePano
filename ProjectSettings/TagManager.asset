@@ -14,6 +14,9 @@ TagManager:
   - lobo
   - spawn
   - mSelected
+  - Pergunta
+  - Resposta
+  - Escolha
   layers:
   - Default
   - TransparentFX

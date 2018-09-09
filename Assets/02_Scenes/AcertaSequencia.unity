@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -371,6 +371,7 @@ MonoBehaviour:
     forma: xis
   formasPergunta: []
   formasResposta: []
+  formasEscolha: []
   forma: {fileID: 1066968202022028, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
   pos: {fileID: 2126944192}
   posR: {fileID: 265159920}
@@ -657,11 +658,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.19
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.z
