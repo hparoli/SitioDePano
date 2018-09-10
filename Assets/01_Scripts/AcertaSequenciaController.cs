@@ -44,9 +44,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	public void StartGame(){
 		if (level == 1){
-			qtdFormas = 6;
-			tipos = 4;
-			qtdExtra = 2;
+			qtdFormas = 3;
+			tipos = 3;
 		} else if(level == 2){
 			qtdFormas = 4;
 			tipos = 3;
@@ -96,12 +95,12 @@ public class AcertaSequenciaController : MonoBehaviour {
 		for(int i = 0; i < qtdFormas; i++){
 			formasPergunta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
 			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
-			if(index < 0) index = UnityEngine.Random.Range(0,4);
+			if(index < 0) index = UnityEngine.Random.Range(0,tipos);
 			formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 			formasPergunta[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
 			formasResposta[i].GetComponent<FormasInfos>().SetValues("",i);
 			if(i < formas.Length-1){
-				if(index < 3) index++;
+				if(index < tipos-1) index++;
 				else index = 0;
 			} else {
 				index = UnityEngine.Random.Range(0,4);
@@ -192,7 +191,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
 				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formasPergunta[i].GetComponent<FormasInfos>().GetForma(),i);
 			} else{
-				index = UnityEngine.Random.Range(0,4);
+				index = UnityEngine.Random.Range(0,tipos);
 				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
 			}
