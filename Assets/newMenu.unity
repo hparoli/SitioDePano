@@ -4103,12 +4103,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4392787952351482, guid: c2d7b6c6dd24a64418199c84a9f9b8bf, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114904439460129470, guid: c2d7b6c6dd24a64418199c84a9f9b8bf,
         type: 2}
       propertyPath: gameEffectID
-      value: 
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d7b6c6dd24a64418199c84a9f9b8bf, type: 2}
@@ -4229,7 +4229,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479631916
 GameObject:
@@ -5274,7 +5274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2102202253
 GameObject:

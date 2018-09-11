@@ -45,8 +45,6 @@ public class AninhaPastoreira : MonoBehaviour {
 		for (int i = 0; i < AninhaFeedback.Length; i++) {
 			AninhaFeedback [i].SetActive (false);
 		}
-
-
 	}
 	
 	void Update(){

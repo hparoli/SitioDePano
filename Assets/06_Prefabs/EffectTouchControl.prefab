@@ -53,16 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEffectID: 
   touchEffect:
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
-  - {fileID: 1788025073374348, guid: 814a1e9f6574ee54abe5408a9a93412a, type: 2}
+  - {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e, type: 2}
+  - {fileID: 1272514664162930, guid: 6facccbd822c4724eb0b89a439ce2baf, type: 2}
+  - {fileID: 1574609832419900, guid: 62d53d627ffb7fa499698c27660d44d3, type: 2}
+  - {fileID: 1677239711317126, guid: d6943918cccd9764db9053787336d27a, type: 2}
+  - {fileID: 1961499017604760, guid: 48faf7de65bb577428d3afdacd21fe35, type: 2}

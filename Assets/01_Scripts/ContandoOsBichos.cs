@@ -44,7 +44,8 @@ public class ContandoOsBichos : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		Placa.SetActive (false);
 		contador = 0;
 		indexEtapa = 0;
@@ -60,6 +61,8 @@ public class ContandoOsBichos : MonoBehaviour {
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
+
+		
 	}
 	
 	// Update is called once per frame
