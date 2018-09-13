@@ -601,6 +601,7 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1031227373
 Prefab:
   m_ObjectHideFlags: 0
@@ -772,6 +773,8 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627302675}
 >>>>>>> 652894b35f58098c9b6896bd0ba8b857ab5bceea
+=======
+>>>>>>> parent of cf70333... Jogo do Bolo Feito
 =======
 >>>>>>> parent of cf70333... Jogo do Bolo Feito
 --- !u!1 &1133696538
