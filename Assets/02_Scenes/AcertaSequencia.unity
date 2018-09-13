@@ -476,7 +476,6 @@ MonoBehaviour:
     forma: xis
   formasPergunta: []
   formasResposta: []
-  formasEscolha: []
   forma: {fileID: 1066968202022028, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
   pos: {fileID: 2126944192}
   posR: {fileID: 265159920}
@@ -602,6 +601,9 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 --- !u!1001 &1031227373
 Prefab:
   m_ObjectHideFlags: 0
@@ -649,6 +651,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d7b6c6dd24a64418199c84a9f9b8bf, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 =======
 --- !u!1 &627302675
 GameObject:
@@ -777,6 +780,8 @@ CanvasRenderer:
 >>>>>>> parent of cf70333... Jogo do Bolo Feito
 =======
 >>>>>>> parent of cf70333... Jogo do Bolo Feito
+=======
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 --- !u!1 &1133696538
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,11 +946,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -7.19
       objectReference: {fileID: 0}
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4550009550646034, guid: c9cec168fffc05248b60d075f5d05aea, type: 2}
       propertyPath: m_LocalPosition.z

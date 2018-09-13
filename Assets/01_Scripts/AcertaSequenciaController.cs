@@ -10,7 +10,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private Formas[] formas;
 
 	[SerializeField]
-	private GameObject[] formasPergunta,formasResposta,formasEscolha;
+	private GameObject[] formasPergunta,formasResposta;
 
 	[SerializeField]
 	private GameObject forma; 
@@ -35,7 +35,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	
 	void Update () {
-		EscolherForma();
+		
 	}
 
 	public void StartGame(){
@@ -62,7 +62,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 			qtdExtra = 2;
 		}
 		formasPergunta = new GameObject[qtdFormas];
+<<<<<<< HEAD
 		formasResposta = new GameObject[qtdFormas];
+=======
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 		StartCoroutine("MostraSequencia");
 	}
 
@@ -90,19 +93,19 @@ public class AcertaSequenciaController : MonoBehaviour {
 		int index = -1;
 		for(int i = 0; i < qtdFormas; i++){
 			formasPergunta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
+<<<<<<< HEAD
 			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(pos.position.x - qtdFormas + (i*2),pos.position.y,pos.position.z) ,pos.rotation);
+=======
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 			if(index < 0) index = Random.Range(0,4);
 			formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 			formasPergunta[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
-			formasResposta[i].GetComponent<FormasInfos>().SetValues("",i);
 			if(i < formas.Length-1){
 				if(index < 3) index++;
 				else index = 0;
 			} else {
 				index = Random.Range(0,4);
 			}
-			formasPergunta [i].gameObject.tag = "Pergunta";
-			formasResposta [i].gameObject.tag = "Resposta";
 		}
 		//Embaralha("P");
 		yield return new WaitForSeconds(5f);
@@ -175,9 +178,10 @@ public class AcertaSequenciaController : MonoBehaviour {
         }	
 		yield return new WaitForSeconds(1f);
 
-		formasEscolha = new GameObject[formasPergunta.Length + qtdExtra];
+		formasResposta = new GameObject[formasPergunta.Length + qtdExtra];
 		int index = 0;
 		for(int i = 0; i < formasPergunta.Length + qtdExtra; i++){
+<<<<<<< HEAD
 			if(i < 5)
 				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
 			else
@@ -189,13 +193,21 @@ public class AcertaSequenciaController : MonoBehaviour {
 				index = Random.Range(0,4);
 				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
 				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
+=======
+			formasResposta[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
+			if(i < formasPergunta.Length-1){
+				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
+			} else{
+				index = Random.Range(0,4);
+				formasResposta[i].GetComponent<SpriteRenderer>().sprite = formas[index].imagem;
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 			}
-			formasEscolha [i].gameObject.tag = "Escolha";
 		}
 		
 		//Embaralha("R");
 	}
 
+<<<<<<< HEAD
 	void EscolherForma(){
 		RaycastHit formaClick = new RaycastHit();
 		bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out formaClick);
@@ -245,4 +257,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 		}
 	}
 
+=======
+>>>>>>> parent of eb82fe7... Merge branch 'master' of https://github.com/hparoli/SitioDePano
 }
