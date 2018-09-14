@@ -51,10 +51,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2b7d324f6e6d44c9f6c1b13db045d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEffectID: 
-  touchEffect:
-  - {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e, type: 2}
-  - {fileID: 1272514664162930, guid: 6facccbd822c4724eb0b89a439ce2baf, type: 2}
-  - {fileID: 1574609832419900, guid: 62d53d627ffb7fa499698c27660d44d3, type: 2}
-  - {fileID: 1677239711317126, guid: d6943918cccd9764db9053787336d27a, type: 2}
-  - {fileID: 1961499017604760, guid: 48faf7de65bb577428d3afdacd21fe35, type: 2}
+  gameEffectID: Menu
+  touchEffects:
+  - particleName: Menu
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: Ditados
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: Memoria
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: SequenciaSonora
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: Pique_Esconde
+    particleObj: {fileID: 1272514664162930, guid: 6facccbd822c4724eb0b89a439ce2baf,
+      type: 2}
+  - particleName: AninhaPastoreia
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: ColetandoOvos
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: DeOlhoNosLobos
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}
+  - particleName: ContandoOsBichos
+    particleObj: {fileID: 1409275533352164, guid: 11c29d73f8a7fe84095f219d4e66554e,
+      type: 2}

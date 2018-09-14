@@ -6,8 +6,9 @@ public class EffectControl : MonoBehaviour {
 	
 	[SerializeField]
 	string gameEffectID;
+	
 	[SerializeField]
-	GameObject[] touchEffect; 
+	ParticleControl[] touchEffects;
 
     
 	// Use this for initialization
@@ -27,60 +28,14 @@ public class EffectControl : MonoBehaviour {
 		Vector3 mousPos =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		if (Input.GetButtonDown("Fire1"))
 		{
-			if (gameEffectID == "Menu")
+			for (int i = 0; i < touchEffects.Length; i++)
 			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}
-			if (gameEffectID == "Pastoreia")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}
-			if (gameEffectID == "Coletando Ovos")
-			{
-				GameObject copy =  Instantiate(touchEffect[2], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Contando Bichos")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Olho nos Lobos")
-			{
-				GameObject copy =  Instantiate(touchEffect[4], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Ditados")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Memoria")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Pique Esconde")
-			{
-				GameObject copy =  Instantiate(touchEffect[1], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Sequencia Sonora")
-			{
-				GameObject copy =  Instantiate(touchEffect[3], mousPos, transform.rotation) as GameObject;
-				
-			}if (gameEffectID == "Acerta Sequencia")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Hide")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Hide")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
-			}if (gameEffectID == "Hide")
-			{
-				GameObject copy =  Instantiate(touchEffect[0], mousPos, transform.rotation) as GameObject;
-				Destroy(copy, 5f);
+				if (touchEffects[i].particleName == gameEffectID)
+				{
+					GameObject copy =  Instantiate(touchEffects[i].particleObj, mousPos, transform.rotation) as GameObject;
+					Destroy(copy, 5f);
+				}
+
 			}
 
 		}

@@ -98,11 +98,12 @@ public class Spawn : MonoBehaviour {
 
 
 
-	public void StartGame(){
+	public void StartGame()
+	{
 			tutorial.SetActive (false);
 			CreatDoll ();
 			Time.timeScale = 1;
-		}
+	}
 
 	public void CreatDoll() 
 	{
@@ -133,19 +134,21 @@ public class Spawn : MonoBehaviour {
 	{
 		tempo += 1 * Time.deltaTime;
 		Debug.Log (tempo);
-
-	}
+}
 
 	public void BarnAnin(){
 
-		for (int i = 0; i < barnAnims.Length; i++) {
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
 			barnAnims [i].SetBool ("Active", true);
 		}
 		ExitBoard.SetActive (false);
 	}
 
-	public IEnumerator StartGameOver(){
+	public IEnumerator StartGameOver()
+	{
 		yield return new WaitForSeconds (2);
+		AnaliticsControl.playTime += tempo;
 		ToScore ();
 
 	}
@@ -170,7 +173,6 @@ public class Spawn : MonoBehaviour {
 		{
 			notaFinal = 5;
 		}
-
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
