@@ -17,6 +17,8 @@ public class AnaliticsPanel : MonoBehaviour
 
 		timeOutput.text = string.Format("{0}:{1}", minutes.ToString("00"), seconds.ToString("00"));
 	}
+
+	
 	
 	// Update is called once per frame
 	void Update () 
