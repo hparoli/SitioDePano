@@ -36,6 +36,7 @@ public class SequenciaController : MonoBehaviour {
 
     private int notaFinal;
     private float media;
+    float tempo;
     private int idTema;
     public GameObject[] FeedbackEffect;
 
@@ -50,7 +51,8 @@ public class SequenciaController : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 		idTema = PlayerPrefs.GetInt ("idTema");
 
         fonteAudio = GetComponent<AudioSource>();
@@ -59,6 +61,17 @@ public class SequenciaController : MonoBehaviour {
         pontuacao = 0;
         anim = GetComponent<Animator> ();
 
+	}
+
+    private void Update() 
+    {
+        Cronometro();
+    }
+
+    void Cronometro()
+	{
+	    tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 	}
 
 	public IEnumerator StartGame()
@@ -367,7 +380,7 @@ IEnumerator SequenciaTutorial(int qtd)
 		{
 			notaFinal = 20;
 		}
-
+        AnaliticsControl.sequenciaTime = tempo;
 		BarnAnin ();
 		yield return new WaitForSeconds (2);
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);

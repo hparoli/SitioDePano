@@ -270,6 +270,8 @@ public class GameManagerMed : MonoBehaviour {
 	}
 
 	public IEnumerator StartGameOver(){
+
+		AnaliticsControl.memoriaTime = tempo;
 		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene ("Score");
 	}
