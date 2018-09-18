@@ -41,9 +41,13 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	int notaFinal;
 	int idTema;
 
+	float tempo;
+
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		Time.timeScale = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		time = 45f;
 		delay = 3f;
@@ -58,8 +62,9 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
+		Cronometro();
 		if (comeca) 
 		{
 			if (time > 0) {
@@ -137,11 +142,18 @@ public class DeOlhoNoLobo : MonoBehaviour {
 
 	}
 
- public void StartGame(){
+ public void StartGame()
+ 	{
 		comeca = true;
 		tutorial.SetActive (false);
 		Time.timeScale = 1;
 		StartCoroutine("SpawnLobo");
+	}
+
+	void Cronometro()
+	{
+	    tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 	}
 
 	IEnumerator SpawnLobo(){
@@ -182,6 +194,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		else if (ovelhas >= 10) {
 			notaFinal = 0;
 		}
+		AnaliticsControl.lobosTime = tempo;
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		StopCoroutine ("SpawnLobo");
 		BarnAnin ();

@@ -220,7 +220,7 @@ public class AninhaPastoreira : MonoBehaviour {
 	}
 
 	public IEnumerator FimJogo(){
-
+		AnaliticsControl.pastoreiraTime = tempo;
 		yield return new WaitForSeconds(1f);
 		if (pontuacao > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
 		{

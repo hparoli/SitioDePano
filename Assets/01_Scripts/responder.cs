@@ -42,6 +42,7 @@ public class responder : MonoBehaviour {
 
 	float acertos;
 	float media;
+	float tempo;
 	int notaFinal;
 
 	[Header("Tutorial")]
@@ -70,7 +71,7 @@ public class responder : MonoBehaviour {
 
 	void Start () 
 	{
-
+		Time.timeScale = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 
 		source = GetComponent<AudioSource> ();
@@ -81,6 +82,16 @@ public class responder : MonoBehaviour {
 		tutorial.SetActive (true);
 		infoResposta.text = string.Format ("Respondendo {0} de {1} perguntas ", questionIndex + 1, QuestionsAmount);
 		
+	}
+
+	 void Update() 
+	 {
+		 Cronometro();
+	 }
+	 void Cronometro()
+	{
+	    tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -118,7 +129,9 @@ public class responder : MonoBehaviour {
 		}
 	}
 		
-	public void StartGame(){
+	public void StartGame()
+	{
+		Time.timeScale = 1;
 		tutorial.SetActive (false);
 		SetShuffledQuestions ();
 		UpdateQuestionOutput ();
@@ -220,6 +233,7 @@ public class responder : MonoBehaviour {
 			{
 				notaFinal = 5;
 			}
+			AnaliticsControl.ditadosTime = tempo;
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 //			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
 //			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);

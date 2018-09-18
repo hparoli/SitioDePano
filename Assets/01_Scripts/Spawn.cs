@@ -130,7 +130,7 @@ public class Spawn : MonoBehaviour {
 	void Cronometro()
 	{
 		tempo += 1 * Time.deltaTime;
-		Debug.Log (tempo);
+		
 	}
 
 	public void BarnAnin(){

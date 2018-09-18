@@ -42,10 +42,13 @@ public class ContandoOsBichos : MonoBehaviour {
 	[SerializeField]
 	GameObject[] imagesTutorial;
 
+	float tempo;
+
 
 	// Use this for initialization
 	void Start () 
 	{
+		Time.timeScale = 0;
 		Placa.SetActive (false);
 		contador = 0;
 		indexEtapa = 0;
@@ -66,7 +69,9 @@ public class ContandoOsBichos : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		Cronometro();
 		if(countDestroy <= 0 && countSpawn == 0){
 			StartCoroutine("Responde");
 			countDestroy = 99;
@@ -149,17 +154,21 @@ public class ContandoOsBichos : MonoBehaviour {
 		}
 	
 	}
-
-
-
-
-
-	public void StartGame(){
+	
+	public void StartGame()
+	{
 		tutorial.SetActive (false);
+		Time.timeScale = 1;
 		StartCoroutine("ConteOAnimal");
 		button.SetActive (false);
 
 	}
+	void Cronometro()
+	{
+	    tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
+	}
+
 
 	public IEnumerator AnimalSpawn(){
 		int time = Random.Range(1,3);
@@ -382,6 +391,7 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	void GameOver(){
 		BarnAnin ();
+		AnaliticsControl.bichosTime = tempo;
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 		StartCoroutine ("WaitGameOver");
 	}

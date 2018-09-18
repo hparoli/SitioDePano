@@ -27,8 +27,11 @@ public class ComportamentoGalinha : MonoBehaviour {
 	[SerializeField]
 	GameObject[] imagesTutorial;
 
+	float tempo;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		Time.timeScale = 0;
 		min = 1.5f;
 		max = 3.5f;
@@ -38,6 +41,10 @@ public class ComportamentoGalinha : MonoBehaviour {
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
+	}
+    void Update() 
+	{
+		Cronometro();	
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -110,7 +117,14 @@ public class ComportamentoGalinha : MonoBehaviour {
 		Time.timeScale = 1;
 		ColetaOvos.work = true;
 		StartCoroutine("Comportamento");
+		
 
+	}
+
+	void Cronometro()
+	{
+	    tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 	}
 
 	public void BarnAnin(){
@@ -121,8 +135,9 @@ public class ComportamentoGalinha : MonoBehaviour {
 	}
 
 
-	IEnumerator GameOver(){
-		
+	IEnumerator GameOver()
+	{
+		AnaliticsControl.ovosTime = tempo;
 		yield return new WaitForSeconds(2);
 		SceneManager.LoadScene("Score");
 	}
