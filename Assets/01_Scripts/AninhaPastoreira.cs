@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class AninhaPastoreira : MonoBehaviour {
 
 	public Transform animal, spawn;
+	float tempo;
 
 	[SerializeField]
 	private int countSpawn, idTema, countDestroy;
@@ -37,6 +38,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		countSpawn = 20;
 		countDestroy = 20;
 		idTema = PlayerPrefs.GetInt ("idTema");
+		Time.timeScale = 0;
 		infoTutorial.text = txtTutorial [indexTutorial];
 		tutorial.SetActive (true);
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
@@ -47,10 +49,19 @@ public class AninhaPastoreira : MonoBehaviour {
 		}
 	}
 	
-	void Update(){
-		if(countDestroy == 0){
+	void Update()
+	{
+		if(countDestroy == 0)
+		{
 			StartCoroutine("FimJogo");
 		}
+		 Cronometro();
+	}
+
+	void Cronometro()
+	{
+	   tempo += 1 * Time.deltaTime;
+		Debug.Log (tempo);
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -177,8 +188,10 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	}
 
-	public void StartGame(){
+	public void StartGame()
+	{
 		tutorial.SetActive (false);
+		Time.timeScale = 1;
 		StartCoroutine("AnimalSpawn");
 	}
 
@@ -209,13 +222,15 @@ public class AninhaPastoreira : MonoBehaviour {
 	public IEnumerator FimJogo(){
 
 		yield return new WaitForSeconds(1f);
-		if (pontuacao > PlayerPrefs.GetInt("notaFinal" + idTema.ToString())){
+		if (pontuacao > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
+		{
 			PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), pontuacao);
 			    
 		}
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), pontuacao);
 //		Score.infoValue = string.Format ("Você marcou {0} pontos!", pontuacao);
 		BarnAnin ();
+		
 		yield return new WaitForSeconds (2f);
 		SceneManager.LoadScene("Score");
 	}

@@ -51,10 +51,7 @@ public class Spawn : MonoBehaviour {
 
 	void Update()
 	{
-		
 		Cronometro ();
-
-
 	}
 	public void ChangeTextTutorialForward(){
 		indexTutorial++;
@@ -134,7 +131,7 @@ public class Spawn : MonoBehaviour {
 	{
 		tempo += 1 * Time.deltaTime;
 		Debug.Log (tempo);
-}
+	}
 
 	public void BarnAnin(){
 
