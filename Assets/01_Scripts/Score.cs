@@ -54,12 +54,14 @@ public class Score : MonoBehaviour {
 		Punctuation ();
 	}
 
-	void Update () {
+	void Update () 
+	{
 
 	}
 
 
-	public void Punctuation (){
+	public void Punctuation ()
+	{
 		StartCoroutine ("SetPunctuation");
 	}
 
@@ -100,11 +102,17 @@ public class Score : MonoBehaviour {
 		}
 	}
 
-	public void GoToMenu(){
+	public void GoToMenu()
+	{
 		SceneManager.LoadScene ("Menu");
 	}
+	public void Analitics()
+	{
+		SceneManager.LoadScene ("Analitics");
+	}
 
-	public void restart(){
+	public void restart()
+	{
 
 		SceneManager.LoadScene(idTema);
 	}
