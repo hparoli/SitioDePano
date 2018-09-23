@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -679,7 +679,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &180309408
 SpriteRenderer:
@@ -1147,7 +1147,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &398670256
 SpriteRenderer:
@@ -1341,7 +1341,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &436006490
 SpriteRenderer:
@@ -2551,7 +2551,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &842612698
 SpriteRenderer:
@@ -3005,7 +3005,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1010401192
 SpriteRenderer:
@@ -3525,7 +3525,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1112123369
 SpriteRenderer:
@@ -5488,7 +5488,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1896027286
 SpriteRenderer:
@@ -5609,7 +5609,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1920282342
 SpriteRenderer:
@@ -6102,7 +6102,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &2097990090
 SpriteRenderer:
@@ -6223,7 +6223,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.64, y: 1.99, z: 0.2}
+  m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &2119682940
 SpriteRenderer:

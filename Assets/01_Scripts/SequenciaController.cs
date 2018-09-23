@@ -81,43 +81,43 @@ public class SequenciaController : MonoBehaviour {
 		fonteAudio.PlayOneShot(sons[5]);
 		roundTxt.text = "Rodada: " + (rodada + 1).ToString();
         yield return new WaitForSeconds(0.2f);
-        for (float f = 0f; f <= standard.a; f += 0.01f)
+        for (float f = 0f; f <= standard.a; f += 0.02f)
         {
             Color c = roundTxt.color;
 			c.a = f;
 			roundTxt.color = c;
-			new WaitForSeconds(.2f);
+			new WaitForSeconds(.1f);
             yield return null;
         }
-        yield return new WaitForSeconds(.5f);
-        for (float f = 1f; f >= 0; f -= 0.01f)
+        yield return new WaitForSeconds(.3f);
+        for (float f = 1f; f >= 0; f -= 0.02f)
         {
             Color c = roundTxt.color;
 			c.a = f;
 			roundTxt.color = c;
-			new WaitForSeconds(.2f);
+			new WaitForSeconds(.1f);
             yield return null;
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         roundTxt.text = (qtdCores + rodada) + " notas";
-        for (float f = 0f; f <= standard.a; f += 0.01f)
+        for (float f = 0f; f <= standard.a; f += 0.02f)
         {
             Color c = roundTxt.color;
 			c.a = f;
 			roundTxt.color = c;
-			new WaitForSeconds(.5f);
+			new WaitForSeconds(.1f);
             yield return null;
         }
-        yield return new WaitForSeconds(1f);
-        for (float f = 1f; f >= 0; f -= 0.01f)
+        yield return new WaitForSeconds(.7f);
+        for (float f = 1f; f >= 0; f -= 0.02f)
         {
             Color c = roundTxt.color;
 			c.a = f;
 			roundTxt.color = c;
-			new WaitForSeconds(.5f);
+			new WaitForSeconds(.2f);
             yield return null;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         StartCoroutine("Sequencia", qtdCores + rodada);
     }
 
@@ -202,27 +202,28 @@ public class SequenciaController : MonoBehaviour {
 			
         }
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         roundTxt.text = "Agora é sua vez, acerte a sequência";
-        for (float f = 0f; f <= standard.a; f += 0.01f)
+        for (float f = 0f; f <= standard.a; f += 0.02f)
         {
             Color c = roundTxt.color;
 			c.a = f;
 			roundTxt.color = c;
-			new WaitForSeconds(.5f);
-            yield return null;
-        }
-        yield return new WaitForSeconds(.5f);
-        for (float f = 1f; f >= 0; f -= 0.01f)
-        {
-            Color c = roundTxt.color;
-			c.a = f;
-			roundTxt.color = c;
-			new WaitForSeconds(.5f);
+			new WaitForSeconds(.2f);
             yield return null;
         }
         gameState = GameState.RESPONDER;
         idResp = 0;
+        yield return new WaitForSeconds(.2f);
+        for (float f = 1f; f >= 0; f -= 0.02f)
+        {
+            Color c = roundTxt.color;
+			c.a = f;
+			roundTxt.color = c;
+			new WaitForSeconds(.2f);
+            yield return null;
+        }
+       
     }
 
 IEnumerator SequenciaTutorial(int qtd)
@@ -231,7 +232,7 @@ IEnumerator SequenciaTutorial(int qtd)
 
         for(int i = 0; i < qtd; i++)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.8f);
 
             buttons[i].SetBool("canta", true);
             fonteAudio.PlayOneShot(sons[i]);
@@ -272,55 +273,55 @@ IEnumerator SequenciaTutorial(int qtd)
         if(idResp >= colors.Count )
         {
             
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.3f);
             roundTxt.text = "Muito bem!";
-            for (float f = 0f; f <= standard.a; f += 0.01f)
+            for (float f = 0f; f <= standard.a; f += 0.02f)
             {
                 Color c = roundTxt.color;
                 c.a = f;
                 roundTxt.color = c;
-                new WaitForSeconds(.5f);
+                new WaitForSeconds(.2f);
                 yield return null;
             }
-            yield return new WaitForSeconds(0.5f);
-            for (float f = 1f; f >= 0; f -= 0.01f)
+            yield return new WaitForSeconds(0.2f);
+            for (float f = 1f; f >= 0; f -= 0.02f)
             {
                 Color c = roundTxt.color;
                 c.a = f;
                 roundTxt.color = c;
-                new WaitForSeconds(.5f);
+                new WaitForSeconds(.2f);
                 yield return null;
             }
             roundTxt.text = "Aperte o sino novamente para iniciar a nova sequência";
-            for (float f = 0f; f <= standard.a; f += 0.01f)
-            {
-                Color c = roundTxt.color;
-                c.a = f;
-                roundTxt.color = c;
-                new WaitForSeconds(.5f);
-                yield return null;
-            }
-            yield return new WaitForSeconds(0.5f);
-            for (float f = 1f; f >= 0; f -= 0.01f)
-            {
-                Color c = roundTxt.color;
-                c.a = f;
-                roundTxt.color = c;
-                new WaitForSeconds(.5f);
-                yield return null;
-            }
             gameState = GameState.NOVA;
             rodada++;
             if(rodada > 6) pontuacao += 10;
             else if(rodada > 3) pontuacao += 7;
             else if(rodada <= 3) pontuacao += 5;
             //Debug.Log(pontuacao);
-            yield return new WaitForSeconds(1f);
             NovaRodada();
+            for (float f = 0f; f <= standard.a; f += 0.02f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.2f);
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.1f);
+            for (float f = 1f; f >= 0; f -= 0.02f)
+            {
+                Color c = roundTxt.color;
+                c.a = f;
+                roundTxt.color = c;
+                new WaitForSeconds(.2f);
+                yield return null;
+            }
+            
         
         }
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         buttons[idBtn].SetBool("canta", false);
     }
 
@@ -337,7 +338,7 @@ IEnumerator SequenciaTutorial(int qtd)
     {
        
         fonteAudio.PlayOneShot(sons[4]);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         for (int i = 0; i < 3; i++)
         {
 			for (int x = 0; i < buttons.Length; i++)
