@@ -20,6 +20,12 @@ public class AnaliticsPanel : MonoBehaviour
 		lobosTime();
 		bichosTime();
 	}
+
+	public void GoToMenu()
+	{
+		Application.LoadLevel(2);
+	}
+
 	void ditadosTime()
 	{
 		int seconds = (int)AnaliticsControl.ditadosTime;
