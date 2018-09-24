@@ -382,8 +382,13 @@ MonoBehaviour:
   level: 0
   resp: 0
   seta: {fileID: 1672777223288186, guid: 4b497ecb55bddf34cbf934ccf9b956fb, type: 2}
+  btn: {fileID: 1851199364514688, guid: f0e70186abe38804ca62ac3ba83f0bbf, type: 2}
   setas: []
+  botoes: []
   pos: {fileID: 1681032305}
+  img: {fileID: 21300000, guid: d77a0d0b0b49502498eb7529d52a9b75, type: 3}
+  marg: 0
+  tam: {x: 0, y: 0, z: 0}
 --- !u!114 &1332464061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +435,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681032304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.66, y: 3.15, z: -0.15234375}
+  m_LocalPosition: {x: 4.92, y: 3.86, z: -0.15234375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
