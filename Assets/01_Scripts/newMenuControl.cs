@@ -5,80 +5,65 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class newMenuControl : MonoBehaviour {
+public class newMenuControl : MonoBehaviour 
+{
+	[SerializeField]
+	public Image fade;
+	[SerializeField]
+	GameObject StartPos;
+	
+
+	float duration = 2.5f;
 
 	[SerializeField]
-	GameObject ButtonsMovimentControl;
-	[SerializeField]
-	GameObject[] ButtonsCotrol;
-	[SerializeField]
-	GameObject[] miniGameButtons;
-	[SerializeField]
-	GameObject FadeControl;
-	[SerializeField]
-	Animator FadeAnim;
+	MenuManagerScripti[] menuManagerScripti;
 
-	Vector3 centerPosition = new Vector3 (0,0,0);
-	Vector3 startPosition = new Vector3 (15,0,0);
-
-
-
-	// Use this for initialization
-	void Start ()
+	 void Start() 
 	 {
-		 FadeControl.SetActive(false);
-
+		 if (fade != null)
+		 {
+			 fade.color = Color.black;
+			 StartCoroutine ("Fade");
+		 }
 		
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
+	 }
 
-	public void ButtonsMoviment(string Control)
-	{
-		Vector3 axisButtons = Vector3.up;
-		if (Control == "Up")
-		{
-		ButtonsMovimentControl.transform.position = Vector3.MoveTowards(ButtonsMovimentControl.transform.position, axisButtons * 500, 7f * Time.deltaTime);
+	 void Update() 
+	 {
+		 
+	 }
+
+	 public void DoFade()
+	 {	
+		 fade.color = Color.black;
+		 StartCoroutine ("Fade");
+	 }
+
+	 IEnumerator Fade()
+	 {
+		 float count = 0;
+		 while (fade.color.a > 0)
+		 {
+			 count += Time.deltaTime;
+			 float value = count / duration;
+			 Color color = Color.Lerp(Color.black, Color.clear, value);
+			 fade.color = color;
+			 yield return null;
 		}
-		if (Control == "Down")
+		fade.color = Color.clear;
+	 }
+
+	 public void InstanceRoom(string RoomName)
+	 {
+		for (int i = 0; i < menuManagerScripti.Length; i++)
 		{
-		ButtonsMovimentControl.transform.position = Vector3.MoveTowards(ButtonsMovimentControl.transform.position, -axisButtons * 500, 7f * Time.deltaTime);
+			if (menuManagerScripti[i].roonId == RoomName)
+			{
+				GameObject copy = Instantiate (menuManagerScripti[i].roonPrefab, StartPos.transform.position, StartPos.transform.rotation) as GameObject;
+				copy.transform.parent = StartPos.transform;
+			}
 		}
-	}
-	IEnumerator ControlMoviment()
-{	
-	
-	FadeControl.SetActive(true);
-	FadeAnim.SetBool("doFade", true);
-	yield return new WaitForSeconds (1f);
-	FadeControl.SetActive(false);
-	yield return new WaitForSeconds (1f);
-}
-   public void sceneMoviment(int gameNumber)
-	{
+	 }
 
-		StartCoroutine("ControlMoviment");
-		
-		if (gameNumber == 0)
-		{
-			ButtonsCotrol[0].transform.position = centerPosition;
-			ButtonsCotrol[1].transform.position = startPosition;
-		}	
 
-		if (gameNumber == 1)
-		{
-			ButtonsCotrol[0].transform.position = startPosition;
-			ButtonsCotrol[1].transform.position = centerPosition;
-		}		
-	}
-
-	public void StartGame(int gameValue)
-	{
-		LoadingScreenManager.LoadScene(gameValue);
-	}
-	
 }
