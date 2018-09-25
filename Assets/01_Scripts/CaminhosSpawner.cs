@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CaminhosSpawner : MonoBehaviour {
 
@@ -25,8 +27,14 @@ public class CaminhosSpawner : MonoBehaviour {
 	[SerializeField]
 	private Vector3 tam;
 
+	[SerializeField]
+	private Text texto;
+
+	[SerializeField]
+	private Color standard;
+
 	void Start(){
-		level = 8;
+		//level = 1;
 		InicializaLevel(level);
 	}
 
@@ -34,32 +42,32 @@ public class CaminhosSpawner : MonoBehaviour {
 		if (lvl == 1){
 			numColunas = 4;
 			numLinhas = 4;
-			marg = 2;
+			marg = 1.5f;
 		}
 		else if (lvl == 2){
 			numColunas = 4;
 			numLinhas = 4;
-			marg = 2;
+			marg = 1.5f;
 		}
 		else if (lvl == 3){
 			numColunas = 4;
 			numLinhas = 4;
-			marg = 2;
+			marg = 1.5f;
 		}
 		else if (lvl == 4){
 			numColunas = 4;
 			numLinhas = 4;
-			marg = 2;
+			marg = 1.5f;
 		}
 		else if (lvl == 5){
 			numColunas = 4;
 			numLinhas = 5;
-			marg = 2;
+			marg = 1.5f;
 		} 
 		else if (lvl == 6){
 			numColunas = 4;
 			numLinhas = 6;
-			marg = 2;
+			marg = 1.5f;
 		} 
 		else if (lvl == 7){
 			numColunas = 4;
@@ -83,9 +91,6 @@ public class CaminhosSpawner : MonoBehaviour {
 				setas[index].GetComponent<SetaBehavior>().dir = 0;
 				setas[index].GetComponent<SetaBehavior>().cor = Color.white;
 				setas[index].GetComponent<SetaBehavior>().tipoSeta = "normal";
-				if(j == 0){
-					botoes.Add(GameObject.Instantiate(btn, new Vector3(pos.position.x + (marg), pos.position.y - (i*marg), pos.position.z) ,pos.rotation));
-				}
 				index++;
 			}
 		}
@@ -216,7 +221,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[17].transform.rotation = new Quaternion(setas[17].transform.rotation.x,setas[17].transform.rotation.y,180,setas[17].transform.rotation.w);
 			setas[17].GetComponent<SpriteRenderer>().color = Color.blue;
 			setas[18].transform.rotation = new Quaternion(setas[18].transform.rotation.x,setas[18].transform.rotation.y,180,setas[18].transform.rotation.w);
-			setas[19].transform.rotation = new Quaternion(setas[19].transform.rotation.x,setas[19].transform.rotation.y,180,setas[19].transform.rotation.w);
+			setas[19].transform.rotation = new Quaternion(setas[19].transform.rotation.x,setas[19].transform.rotation.y,1,setas[19].transform.rotation.w);
 			setas[19].GetComponent<SpriteRenderer>().color = Color.yellow;
 			resp = 3;
 		} 
@@ -347,5 +352,59 @@ public class CaminhosSpawner : MonoBehaviour {
 			
 			resp = 0;
 		}
+	}
+
+	public void Responde(int resposta){
+		if(resp == resposta){
+			texto.text = "Parabéns! Você acertou!";
+		} 
+		else{
+			texto.text = "Que pena, você errou!";
+		}
+
+		StartCoroutine("FeedBack");
+	}
+
+	public IEnumerator FeedBack(){
+		yield return new WaitForSeconds(0.5f);
+		for (float f = 0f; f <= standard.a; f += 0.01f)
+			{
+				Color c = texto.color;
+				c.a = f;
+				texto.color = c;
+				new WaitForSeconds(.2f);
+				yield return null;
+			}
+			yield return new WaitForSeconds(.5f);
+			for (float f = 1f; f >= 0; f -= 0.01f)
+			{
+				Color c = texto.color;
+				c.a = f;
+				texto.color = c;
+				new WaitForSeconds(.2f);
+				yield return null;
+			}
+			if(level == 1 || level == 3 || level == 5 || level == 7){
+				level++;
+				Clear();
+				InicializaLevel(level);
+			} 
+			else{
+				new WaitForSeconds(.2f);
+				GameOver();
+			} 
+	}
+
+	public void Clear(){
+		for (int i = 0; i < setas.Count; i++)
+		{
+			Destroy(setas[i]);
+		}
+		setas.Clear();
+		resp = -1;
+	}
+
+	public void GameOver(){
+		SceneManager.LoadScene("Score");
 	}
 }
