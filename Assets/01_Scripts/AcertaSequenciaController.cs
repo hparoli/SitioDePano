@@ -33,7 +33,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private Button btn;
 
 	void Start () {
-		level = 3;
+		level = 5;
 		ind = 1;
 		StartGame();
 	}
