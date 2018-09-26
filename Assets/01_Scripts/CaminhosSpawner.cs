@@ -34,7 +34,7 @@ public class CaminhosSpawner : MonoBehaviour {
 	private Color standard;
 
 	void Start(){
-		//level = 1;
+		level = 1;
 		InicializaLevel(level);
 	}
 
@@ -361,7 +361,7 @@ public class CaminhosSpawner : MonoBehaviour {
 		else{
 			texto.text = "Que pena, você errou!";
 		}
-
+		//som de click do botão
 		StartCoroutine("FeedBack");
 	}
 
@@ -384,7 +384,7 @@ public class CaminhosSpawner : MonoBehaviour {
 				new WaitForSeconds(.2f);
 				yield return null;
 			}
-			if(level == 1 || level == 3 || level == 5 || level == 7){
+			if(/*level == 1 || level == 3 || level == 5 || level == 7*/level > 6){
 				level++;
 				Clear();
 				InicializaLevel(level);
