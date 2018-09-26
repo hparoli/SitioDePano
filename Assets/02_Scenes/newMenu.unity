@@ -2274,6 +2274,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1644743531}
     m_Modifications:
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4012929302405148, guid: f8793e83537c7474682ef7020a5fc544, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2309,6 +2314,36 @@ Prefab:
     - target: {fileID: 1551937443140072, guid: f8793e83537c7474682ef7020a5fc544, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1405592709}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134490231959130, guid: f8793e83537c7474682ef7020a5fc544,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8793e83537c7474682ef7020a5fc544, type: 2}
