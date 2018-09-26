@@ -33,7 +33,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private Button btn;
 
 	void Start () {
-		level = 5;
+		level = 1;
 		ind = 1;
 		StartGame();
 	}
@@ -66,7 +66,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		}
 		formasPergunta = new GameObject[qtdFormas];
 		formasResposta = new GameObject[qtdFormas];
-		btn.enabled = false;
+		btn.gameObject.SetActive(false);
 		StartCoroutine("MostraSequencia");
 	}
 
@@ -184,7 +184,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		int index = 0;
 		for(int i = 0; i < formasPergunta.Length + qtdExtra; i++){
 			if(i < 5)
-				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2), posR.position.z) ,posR.rotation);
+				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*1.8f), posR.position.z) ,posR.rotation);
 			else
 				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x + 1.8f, posR.position.y - ((i-5)*2), posR.position.z) ,posR.rotation);
 			if(i < formasPergunta.Length){
@@ -197,7 +197,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			}
 			formasEscolha [i].gameObject.tag = "Escolha";
 		}
-		btn.enabled = true;
+		btn.gameObject.SetActive(true);
 		//Embaralha("R");
 	}
 
@@ -208,6 +208,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			Debug.Log ("1");
 			if (hit) {
 				Debug.Log("2");
+				//som de click no ingrediente
 				if (formaClick.transform.tag == "Escolha") {
 					for (int i = 0; i < formasEscolha.Length; i++) {
 						if (formaClick.transform.gameObject.GetComponent<FormasInfos> ().GetIndex ()
@@ -252,6 +253,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	public IEnumerator C_Compara(){
 		int count = 0;
+		//som de click no botão
 		for(int i = 0; i < formasPergunta.Length; i++){
 			yield return new WaitForSeconds(0.5f);
 			formasPergunta[i].GetComponent<SpriteRenderer>().enabled = true;
@@ -283,9 +285,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 			new WaitForSeconds(.2f);
             yield return null;
         }
-		if(count == formasPergunta.Length){
-			if(ind == 1) {
-				Txt.text = "Agora vamos para a segunda sequência!";
+		/*if(count == formasPergunta.Length){
+			if(ind == 1) {*/
+			if(level < 6){
+				Txt.text = "Agora vamos para a próxima receita!";
 			}
 			else {
 				Txt.text = "Parabéns! Você completou o nível.";
@@ -308,8 +311,9 @@ public class AcertaSequenciaController : MonoBehaviour {
 				new WaitForSeconds(.2f);
 				yield return null;
 			}
-			if(ind == 1) {
-				ind++;
+			/*if(ind == 1) {
+				ind++;*/
+			if(level < 6){
 				level++;
 				yield return new WaitForSeconds(2f);
 				Clear();
@@ -319,17 +323,15 @@ public class AcertaSequenciaController : MonoBehaviour {
 				yield return new WaitForSeconds(2f);
 				SceneManager.LoadScene ("Score");
 			}
-		} else{
+		/*} else{
 				yield return new WaitForSeconds(2f);
 				SceneManager.LoadScene ("AcertaSequencia");
-		}
-
-
+		}*/
 	}
 
 	public void Compara(){
 		StartCoroutine("C_Compara");
-		btn.enabled = false;
+		btn.gameObject.SetActive(false);
 	}
 
 	private void Clear(){
@@ -343,6 +345,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 		Array.Clear(formasPergunta,0,formasPergunta.Length);
 		Array.Clear(formasResposta,0,formasResposta.Length);
 		Array.Clear(formasEscolha,0,formasEscolha.Length);
-		btn.enabled = true;
+		btn.gameObject.SetActive(true);
 	}
 }
