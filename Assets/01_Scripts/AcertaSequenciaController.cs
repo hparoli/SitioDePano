@@ -159,7 +159,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private IEnumerator Responde(){
 		StopCoroutine("GameStart");	
-		Txt.text = "Agora coloque as peças na sequência correta";
+		Txt.text = "Coloque os ingredientes na ordem";
         yield return new WaitForSeconds(0.2f);
         for (float f = 0f; f <= standard.a; f += 0.01f)
         {
@@ -263,9 +263,9 @@ public class AcertaSequenciaController : MonoBehaviour {
 		}
 		yield return new WaitForSeconds(1f);
 		if(count == formasPergunta.Length){
-			Txt.text = "Parabéns! Você conseguiu fazer o Bolo!";
+			Txt.text = "Parabéns! Você acertou! ";
 		} else {
-			Txt.text = "Que pena! Algo deu errado... Tente novamente";
+			Txt.text = "Ahh... que pena";
 		}
 		yield return new WaitForSeconds(0.2f);
         for (float f = 0f; f <= standard.a; f += 0.01f)
@@ -288,7 +288,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		/*if(count == formasPergunta.Length){
 			if(ind == 1) {*/
 			if(level < 6){
-				Txt.text = "Agora vamos para a próxima receita!";
+				Txt.text = "Vamos para a próxima receita!";
 			}
 			else {
 				Txt.text = "Parabéns! Você completou o nível.";
