@@ -10,6 +10,8 @@ public class newMenuControl : MonoBehaviour
 	[SerializeField]
 	public Image fade;
 	[SerializeField]
+	int prafabsScale;
+	[SerializeField]
 	GameObject StartPos;
 	
 
@@ -25,6 +27,8 @@ public class newMenuControl : MonoBehaviour
 			 fade.color = Color.black;
 			 StartCoroutine ("Fade");
 		 }
+
+		menuManagerScripti[0].roonPrefab.SetActive(true);
 		
 	 }
 
@@ -59,10 +63,15 @@ public class newMenuControl : MonoBehaviour
 		{
 			if (menuManagerScripti[i].roonId == RoomName)
 			{
-				GameObject copy = Instantiate (menuManagerScripti[i].roonPrefab, StartPos.transform.position, StartPos.transform.rotation) as GameObject;
-				copy.transform.parent = StartPos.transform;
+				menuManagerScripti[i].roonPrefab.SetActive(true);
+				
 			}
 		}
+	 }
+
+	 public void playGame(int gameValue)
+	 {
+		 SceneManager.LoadScene (gameValue);	
 	 }
 
 
