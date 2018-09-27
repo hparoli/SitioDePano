@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/02_Scenes/PreMenu.unity
     guid: be2a74f471e5ce24e8251758b32f41ce
   - enabled: 1
-    path: Assets/02_Scenes/Menu.unity
-    guid: b7b63ef8e22e2904696f45282f7d700b
+    path: Assets/02_Scenes/newMenu.unity
+    guid: ca6343be8d38c764bb2c5c7cc5b79ce8
   - enabled: 1
     path: Assets/02_Scenes/Ditados.unity
     guid: 0951a8dc8635f3d45bc633ea88c804b4
