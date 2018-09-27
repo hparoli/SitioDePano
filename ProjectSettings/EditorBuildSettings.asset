@@ -47,3 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/02_Scenes/Analitics.unity
     guid: e8520a5c3078226459b0d74301bcb7fb
+  - enabled: 1
+    path: Assets/02_Scenes/JogoDosCaminhos.unity
+    guid: 88292bd47eea92a4e8774fa9029db6fb
+  - enabled: 1
+    path: Assets/02_Scenes/JogoDosBolos.unity
+    guid: cae2ac0224824a144a5be3f065238c1f
