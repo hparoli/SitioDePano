@@ -32,6 +32,12 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[SerializeField]
 	private Button btn;
 
+	[SerializeField]
+	private SpriteRenderer bolo;
+
+	[SerializeField]
+	private Sprite[] bolosBons,bolosRuins;
+
 	void Start () {
 		level = 1;
 		ind = 1;
@@ -107,9 +113,9 @@ public class AcertaSequenciaController : MonoBehaviour {
 			}
 			formasPergunta [i].gameObject.tag = "Pergunta";
 			formasResposta [i].gameObject.tag = "Resposta";
-			GameObject.Instantiate(destaque, formasPergunta[i].transform);
+			GameObject.Instantiate(destaque, formasResposta[i].transform);
 		}
-		//Embaralha("P");
+		Embaralha("P");
 		yield return new WaitForSeconds(5f);
 		for(int i = 0; i < formasPergunta.Length; i++){
 			formasPergunta[i].GetComponent<SpriteRenderer>().enabled = false;
@@ -121,41 +127,33 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private void Embaralha(string param)
 	{
-		var formaList = new List<int> ();
-
 		if(param == "P"){
-			int form = formasPergunta [UnityEngine.Random.Range (0, formasPergunta.Length)].GetComponent<FormasInfos>().GetIndex();
-			
 			for (int i = 0; i < formasPergunta.Length; i++) 
 			{
-				while (formaList.Contains (form)) 
-				{
-					form = formasPergunta [UnityEngine.Random.Range (0, formasPergunta.Length)].GetComponent<FormasInfos>().GetIndex();
-				}
-				formaList.Add (form);
-			}
-			for(int i = 0; i < formaList.Count; i++){
-			formasPergunta [i].GetComponent<SpriteRenderer>().sprite = formasPergunta [formaList[i]].GetComponent<FormasInfos>().GetSprite();
-			formasPergunta [i].GetComponent<FormasInfos>().SetValues(formasPergunta [formaList[i]].GetComponent<FormasInfos>().GetForma(),i);
+				string tmp = formasPergunta[i].GetComponent<FormasInfos>().GetForma();
+				int idx = formasPergunta[i].GetComponent<FormasInfos>().GetIndex();
+				Sprite spt = formasPergunta[i].GetComponent<SpriteRenderer>().sprite;
+				int r = UnityEngine.Random.Range (0, formasPergunta.Length);
+				formasPergunta[i].GetComponent<FormasInfos>().SetValues(formasPergunta[r].GetComponent<FormasInfos>().GetForma(),formasPergunta[r].GetComponent<FormasInfos>().GetIndex());
+				formasPergunta[i].GetComponent<SpriteRenderer>().sprite = formasPergunta[r].GetComponent<SpriteRenderer>().sprite;
+				formasPergunta[r].GetComponent<FormasInfos>().SetValues(tmp,idx);
+				formasPergunta[r].GetComponent<SpriteRenderer>().sprite = spt;
 			}
 		}
 
-		/*if(param == "R"){
-			Sprite form = formasResposta [UnityEngine.Random.Range (0, formasResposta.Length)].GetComponent<SpriteRenderer>().sprite;
-			
-			for (int i = 0; i < formasResposta.Length; i++) 
+		if(param == "R"){
+			for (int i = 0; i < formasEscolha.Length; i++) 
 			{
-				while (formaList.Contains (form)) 
-				{
-					form = formasResposta [UnityEngine.Random.Range (0, formasResposta.Length)].GetComponent<SpriteRenderer>().sprite;
-				}
-				formaList.Add (form);
+				string tmp = formasEscolha[i].GetComponent<FormasInfos>().GetForma();
+				int idx = formasEscolha[i].GetComponent<FormasInfos>().GetIndex();
+				Sprite spt = formasEscolha[i].GetComponent<SpriteRenderer>().sprite;
+				int r = UnityEngine.Random.Range (0, formasEscolha.Length);
+				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formasEscolha[r].GetComponent<FormasInfos>().GetForma(),formasEscolha[r].GetComponent<FormasInfos>().GetIndex());
+				formasEscolha[i].GetComponent<SpriteRenderer>().sprite = formasEscolha[r].GetComponent<SpriteRenderer>().sprite;
+				formasEscolha[r].GetComponent<FormasInfos>().SetValues(tmp,idx);
+				formasEscolha[r].GetComponent<SpriteRenderer>().sprite = spt;
 			}
-			for(int i = 0; i < formaList.Count; i++){
-			formasResposta [i].GetComponent<SpriteRenderer>().sprite = formaList[i];
-			formasResposta [i].GetComponent<FormasInfos>().SetValues(formaList[i].name, i);
-			}
-		}*/
+		}
 	}
 
 	private IEnumerator Responde(){
@@ -185,7 +183,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		int index = 0;
 		for(int i = 0; i < formasPergunta.Length + qtdExtra; i++){
 			if(i < 5)
-				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*1.8f), posR.position.z) ,posR.rotation);
+				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x, posR.position.y - (i*2f), posR.position.z) ,posR.rotation);
 			else
 				formasEscolha[i] = GameObject.Instantiate(forma, new Vector3(posR.position.x + 1.8f, posR.position.y - ((i-5)*2), posR.position.z) ,posR.rotation);
 			if(i < formasPergunta.Length){
@@ -197,9 +195,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 				formasEscolha[i].GetComponent<FormasInfos>().SetValues(formas[index].forma,i);
 			}
 			formasEscolha [i].gameObject.tag = "Escolha";
+			GameObject.Instantiate(destaque, formasEscolha[i].transform);
 		}
 		btn.gameObject.SetActive(true);
-		//Embaralha("R");
+		Embaralha("R");
 	}
 
 	void EscolherForma(){
@@ -244,7 +243,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 								}
 
 							}
-							Debug.Log (formasEscolha [i].GetComponent<FormasInfos> ().GetIndex ());
 						}
 					}
 				}
@@ -264,11 +262,17 @@ public class AcertaSequenciaController : MonoBehaviour {
 		}
 		yield return new WaitForSeconds(1f);
 		if(count == formasPergunta.Length){
-			Txt.text = "Parabéns! Você acertou! ";
+			Txt.text = "Parabéns! Você acertou!";
+			bolo.sprite = bolosBons[level-1];
+			//acerto
 		} else {
 			Txt.text = "Ahh... que pena";
+			bolo.sprite = bolosRuins[level-1];
+			//erro
 		}
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.5f);
+		Clear();
+		bolo.enabled = true;
         for (float f = 0f; f <= standard.a; f += 0.01f)
         {
             Color c = Txt.color;
@@ -288,6 +292,9 @@ public class AcertaSequenciaController : MonoBehaviour {
         }
 		/*if(count == formasPergunta.Length){
 			if(ind == 1) {*/
+		yield return new WaitForSeconds(.5f);
+		bolo.enabled = false;
+
 			if(level < 6){
 				Txt.text = "Vamos para a próxima receita!";
 			}
@@ -317,7 +324,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 			if(level < 6){
 				level++;
 				yield return new WaitForSeconds(2f);
-				Clear();
 				StartGame();
 				StopCoroutine("C_Compara");
 			} else {
@@ -346,6 +352,5 @@ public class AcertaSequenciaController : MonoBehaviour {
 		Array.Clear(formasPergunta,0,formasPergunta.Length);
 		Array.Clear(formasResposta,0,formasResposta.Length);
 		Array.Clear(formasEscolha,0,formasEscolha.Length);
-		btn.gameObject.SetActive(true);
 	}
 }
