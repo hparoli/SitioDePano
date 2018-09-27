@@ -109,6 +109,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[6].transform.rotation = new Quaternion(setas[6].transform.rotation.x,setas[6].transform.rotation.y,-1,setas[6].transform.rotation.w);
 			setas[7].transform.rotation = new Quaternion(setas[7].transform.rotation.x,setas[7].transform.rotation.y,0,setas[7].transform.rotation.w);
 			setas[7].GetComponent<SpriteRenderer>().sprite = img;
+			setas[7].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[8].transform.rotation = new Quaternion(setas[8].transform.rotation.x,setas[8].transform.rotation.y,180,setas[8].transform.rotation.w);
 			setas[9].transform.rotation = new Quaternion(setas[9].transform.rotation.x,setas[9].transform.rotation.y,1,setas[9].transform.rotation.w);
 			setas[10].transform.rotation = new Quaternion(setas[10].transform.rotation.x,setas[10].transform.rotation.y,180,setas[10].transform.rotation.w);
@@ -139,6 +140,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[14].transform.rotation = new Quaternion(setas[14].transform.rotation.x,setas[14].transform.rotation.y,180,setas[14].transform.rotation.w);
 			setas[15].transform.rotation = new Quaternion(setas[15].transform.rotation.x,setas[15].transform.rotation.y,0,setas[15].transform.rotation.w);
 			setas[15].GetComponent<SpriteRenderer>().sprite = img;
+			setas[15].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			resp = 0;
 		}
 		else if (lvl == 3){
@@ -158,6 +160,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[10].transform.rotation = new Quaternion(setas[10].transform.rotation.x,setas[10].transform.rotation.y,180,setas[10].transform.rotation.w);
 			setas[11].transform.rotation = new Quaternion(setas[11].transform.rotation.x,setas[11].transform.rotation.y,0,setas[11].transform.rotation.w);
 			setas[11].GetComponent<SpriteRenderer>().sprite = img;
+			setas[11].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[12].transform.rotation = new Quaternion(setas[12].transform.rotation.x,setas[12].transform.rotation.y,180,setas[12].transform.rotation.w);
 			setas[13].transform.rotation = new Quaternion(setas[13].transform.rotation.x,setas[13].transform.rotation.y,180,setas[13].transform.rotation.w);
 			setas[14].transform.rotation = new Quaternion(setas[14].transform.rotation.x,setas[14].transform.rotation.y,-1,setas[14].transform.rotation.w);
@@ -172,6 +175,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[2].GetComponent<SpriteRenderer>().color = Color.yellow;
 			setas[3].transform.rotation = new Quaternion(setas[3].transform.rotation.x,setas[3].transform.rotation.y,0,setas[3].transform.rotation.w);
 			setas[3].GetComponent<SpriteRenderer>().sprite = img;
+			setas[3].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[4].transform.rotation = new Quaternion(setas[4].transform.rotation.x,setas[4].transform.rotation.y,1,setas[4].transform.rotation.w);
 			setas[5].transform.rotation = new Quaternion(setas[5].transform.rotation.x,setas[5].transform.rotation.y,180,setas[5].transform.rotation.w);
 			setas[6].transform.rotation = new Quaternion(setas[6].transform.rotation.x,setas[6].transform.rotation.y,0,setas[6].transform.rotation.w);
@@ -207,6 +211,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[8].transform.rotation = new Quaternion(setas[8].transform.rotation.x,setas[8].transform.rotation.y,1,setas[8].transform.rotation.w);
 			setas[9].transform.rotation = new Quaternion(setas[9].transform.rotation.x,setas[9].transform.rotation.y,0,setas[9].transform.rotation.w);
 			setas[9].GetComponent<SpriteRenderer>().sprite = img;
+			setas[9].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[10].transform.rotation = new Quaternion(setas[10].transform.rotation.x,setas[10].transform.rotation.y,0,setas[10].transform.rotation.w);
 			setas[10].GetComponent<SpriteRenderer>().color = Color.blue;
 			setas[11].transform.rotation = new Quaternion(setas[11].transform.rotation.x,setas[11].transform.rotation.y,0,setas[11].transform.rotation.w);
@@ -253,6 +258,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[16].transform.rotation = new Quaternion(setas[16].transform.rotation.x,setas[16].transform.rotation.y,180,setas[16].transform.rotation.w);
 			setas[17].transform.rotation = new Quaternion(setas[17].transform.rotation.x,setas[17].transform.rotation.y,0,setas[17].transform.rotation.w);
 			setas[17].GetComponent<SpriteRenderer>().sprite = img;
+			setas[17].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[18].transform.rotation = new Quaternion(setas[18].transform.rotation.x,setas[18].transform.rotation.y,180,setas[18].transform.rotation.w);
 			setas[19].transform.rotation = new Quaternion(setas[19].transform.rotation.x,setas[19].transform.rotation.y,180,setas[19].transform.rotation.w);
 			setas[19].GetComponent<SpriteRenderer>().color = Color.blue;
@@ -302,6 +308,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[25].transform.rotation = new Quaternion(setas[25].transform.rotation.x,setas[25].transform.rotation.y,1,setas[25].transform.rotation.w);
 			setas[26].transform.rotation = new Quaternion(setas[26].transform.rotation.x,setas[26].transform.rotation.y,0,setas[26].transform.rotation.w);
 			setas[26].GetComponent<SpriteRenderer>().sprite = img;
+			setas[26].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[27].transform.rotation = new Quaternion(setas[27].transform.rotation.x,setas[27].transform.rotation.y,180,setas[27].transform.rotation.w);
 			setas[27].GetComponent<SpriteRenderer>().color = Color.yellow;
 			resp = 2;
@@ -340,6 +347,7 @@ public class CaminhosSpawner : MonoBehaviour {
 			setas[22].transform.rotation = new Quaternion(setas[22].transform.rotation.x,setas[22].transform.rotation.y,1,setas[22].transform.rotation.w);
 			setas[23].transform.rotation = new Quaternion(setas[23].transform.rotation.x,setas[23].transform.rotation.y,0,setas[23].transform.rotation.w);
 			setas[23].GetComponent<SpriteRenderer>().sprite = img;
+			setas[23].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
 			setas[24].transform.rotation = new Quaternion(setas[24].transform.rotation.x,setas[24].transform.rotation.y,180,setas[24].transform.rotation.w);
 			setas[25].transform.rotation = new Quaternion(setas[25].transform.rotation.x,setas[25].transform.rotation.y,180,setas[25].transform.rotation.w);
 			setas[26].transform.rotation = new Quaternion(setas[26].transform.rotation.x,setas[26].transform.rotation.y,180,setas[26].transform.rotation.w);
@@ -384,7 +392,7 @@ public class CaminhosSpawner : MonoBehaviour {
 				new WaitForSeconds(.2f);
 				yield return null;
 			}
-			if(/*level == 1 || level == 3 || level == 5 || level == 7*/level > 6){
+			if(/*level == 1 || level == 3 || level == 5 || level == 7*/level < 6){
 				level++;
 				Clear();
 				InicializaLevel(level);
