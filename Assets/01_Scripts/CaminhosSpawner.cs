@@ -30,12 +30,16 @@ public class CaminhosSpawner : MonoBehaviour {
 	[SerializeField]
 	private Text texto;
 
+	public AudioClip[] sons;
+	private AudioSource fonteAudio;
+
 	[SerializeField]
 	private Color standard;
 
 	void Start(){
 		level = 1;
 		InicializaLevel(level);
+		fonteAudio = GetComponent<AudioSource> ();
 	}
 
 	private void InicializaLevel(int lvl){
@@ -365,9 +369,11 @@ public class CaminhosSpawner : MonoBehaviour {
 	public void Responde(int resposta){
 		if(resp == resposta){
 			texto.text = "Parabéns! Você acertou!";
+			fonteAudio.PlayOneShot(sons[0]);
 		} 
 		else{
 			texto.text = "Que pena, você errou!";
+			fonteAudio.PlayOneShot(sons[1]);
 		}
 		//som de click do botão
 		StartCoroutine("FeedBack");
