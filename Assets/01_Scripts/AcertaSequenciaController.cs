@@ -38,10 +38,14 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[SerializeField]
 	private Sprite[] bolosBons,bolosRuins;
 
+	public AudioClip[] sons;
+	private AudioSource fonteAudio;
+
 	void Start () {
 		level = 1;
 		ind = 1;
 		StartGame();
+		fonteAudio = GetComponent<AudioSource> ();
 	}
 	
 	void Update () {
@@ -265,10 +269,12 @@ public class AcertaSequenciaController : MonoBehaviour {
 			Txt.text = "Parabéns! Você acertou!";
 			bolo.sprite = bolosBons[level-1];
 			//acerto
+			fonteAudio.PlayOneShot(sons[0]);
 		} else {
 			Txt.text = "Ahh... que pena";
 			bolo.sprite = bolosRuins[level-1];
 			//erro
+			fonteAudio.PlayOneShot(sons[1]);
 		}
 		yield return new WaitForSeconds(0.5f);
 		Clear();
