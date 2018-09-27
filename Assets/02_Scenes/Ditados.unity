@@ -2932,8 +2932,8 @@ MonoBehaviour:
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   incorrectColor: {r: 1, g: 0, b: 0, a: 1}
   clip: {fileID: 0}
-  C_Answer: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  W_Answer: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
+  C_Answer: {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
+  W_Answer: {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
   txtTutorial:
   - "Bem vindo ao Jogo de ditados e express\xF5es"
   - "Nesse jogo devemos observar a figura que est\xE1 do lado esquerdo da tela"

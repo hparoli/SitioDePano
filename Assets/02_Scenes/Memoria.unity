@@ -9949,8 +9949,8 @@ MonoBehaviour:
   gameOver: {fileID: 1194923160}
   stopClick: {fileID: 103086518}
   shuffleCards: {fileID: 8300000, guid: 1bdf821592c60d148b2ca5d2b23e508b, type: 3}
-  CardMatch: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  WrongMatch: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
+  CardMatch: {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
+  WrongMatch: {fileID: 8300000, guid: 6c4cdd363a818e64ea98606a796e111b, type: 3}
   cardAnim:
   - Abelha
   - Cavalo

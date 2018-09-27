@@ -428,7 +428,7 @@ MonoBehaviour:
   - {fileID: 398670252}
   - {fileID: 436006486}
   sons:
-  - {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
+  - {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
   - {fileID: 8300000, guid: ab12981d47e863e4f955b630bbf39bc5, type: 3}
   manager: {fileID: 63721251}
   eggsCollected:
