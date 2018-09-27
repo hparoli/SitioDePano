@@ -15,7 +15,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	private GameObject[] formasPergunta,formasResposta,formasEscolha;
 
 	[SerializeField]
-	private GameObject forma; 
+	private GameObject forma, destaque; 
 
 	[SerializeField]
 	private Transform pos, posR;
@@ -107,6 +107,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			}
 			formasPergunta [i].gameObject.tag = "Pergunta";
 			formasResposta [i].gameObject.tag = "Resposta";
+			GameObject.Instantiate(destaque, formasPergunta[i].transform);
 		}
 		//Embaralha("P");
 		yield return new WaitForSeconds(5f);
