@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2331,6 +2331,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339590969}
+--- !u!95 &1339730771 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95364102976334938, guid: f804872c91690524598a9910f7133b5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 241951092}
 --- !u!1 &1357885096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,6 +3004,11 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &1672238651 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95172099226340536, guid: f804872c91690524598a9910f7133b5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 241951092}
 --- !u!1 &1741946609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,8 +3347,8 @@ MonoBehaviour:
   - {fileID: 1463181546548954, guid: a44ece115ce48f44184888824812f67d, type: 2}
   standard: {r: 0, g: 0, b: 0, a: 1}
   barnAnims:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1339730771}
+  - {fileID: 1672238651}
   ExitBoard: {fileID: 255310772}
 --- !u!224 &2070146777
 RectTransform:
