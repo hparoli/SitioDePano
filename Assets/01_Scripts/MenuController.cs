@@ -89,7 +89,8 @@ public class MenuController : MonoBehaviour {
 		MudaBotoes(idGame);
 	}
 
-	public void Exit(){
+	public void Exit()
+	{
 		PlayerPrefs.SetInt ("NoJogo", 0);
 		Application.Quit();
 	}

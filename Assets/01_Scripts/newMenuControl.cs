@@ -74,5 +74,10 @@ public class newMenuControl : MonoBehaviour
 		 SceneManager.LoadScene (gameValue);	
 	 }
 
+	 public void ExitGame()
+	 {
+		Application.Quit();
+	 }
+
 
 }
