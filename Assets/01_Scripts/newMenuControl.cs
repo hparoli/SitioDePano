@@ -11,8 +11,7 @@ public class newMenuControl : MonoBehaviour
 	public Image fade;
 	[SerializeField]
 	int prafabsScale;
-	[SerializeField]
-	GameObject StartPos;
+	
 	
 
 	float duration = 2.5f;
@@ -64,7 +63,10 @@ public class newMenuControl : MonoBehaviour
 			if (menuManagerScripti[i].roonId == RoomName)
 			{
 				menuManagerScripti[i].roonPrefab.SetActive(true);
-				
+			}
+			else 
+			{
+				menuManagerScripti[i].roonPrefab.SetActive(false);
 			}
 		}
 	 }
