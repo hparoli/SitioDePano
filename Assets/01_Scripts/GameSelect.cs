@@ -19,10 +19,11 @@ public class GameSelect : MonoBehaviour {
 		PlayerPrefs.SetInt ("idTema", idTema);
 	}
 
-	public void StartGame(){
-		menuController.GetComponent<MenuController> ().playConfirmation.SetActive (false);
+	public void StartGame()
+	{
+		menuController.GetComponent<newMenuControl> ().playConfirmation.SetActive (false);
 		LoadingScreenManager.LoadScene(idTema);
-		PlayerPrefs.SetInt ("NoJogo", 1);
+		
 	}
 	
 	// Update is called once per frame

@@ -8,9 +8,18 @@ using UnityEngine.SceneManagement;
 public class newMenuControl : MonoBehaviour 
 {
 	[SerializeField]
+	GameObject minigame;
+	 int idGame, idTema, noJogo;
+
+	[SerializeField]
 	public Image fade;
 	[SerializeField]
 	int prafabsScale;
+
+	
+
+	[SerializeField]
+	public GameObject exitConfirmation, playConfirmation;
 	
 	
 
@@ -21,6 +30,8 @@ public class newMenuControl : MonoBehaviour
 
 	 void Start() 
 	 {
+
+		
 		 if (fade != null)
 		 {
 			 fade.color = Color.black;
@@ -70,6 +81,27 @@ public class newMenuControl : MonoBehaviour
 			}
 		}
 	 }
+
+	 public void ExitConfirmation()
+	 {
+		if(!exitConfirmation.activeSelf){
+			exitConfirmation.SetActive(true);
+		} else {
+			exitConfirmation.SetActive(false);
+		}
+	}
+	
+	public void PlayConfirmation(int game)
+	{
+		if(!playConfirmation.activeSelf){
+			playConfirmation.SetActive(true);
+		} 
+		else {
+			playConfirmation.SetActive(false);
+		}
+		
+		minigame.GetComponent<GameSelect>().MiniGameSelected(game);
+	}
 
 	 public void playGame(int gameValue)
 	 {
