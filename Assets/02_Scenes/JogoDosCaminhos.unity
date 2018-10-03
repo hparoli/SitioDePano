@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -887,6 +887,16 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
+        type: 2}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b235ff69737180b4ea1eb03132aa8a48, type: 2}
@@ -1585,7 +1595,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328924527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.81, y: -3.2600002, z: 91.75234}
+  m_LocalPosition: {x: -4.73, y: -2.86, z: 91.75234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045571016}
@@ -1667,12 +1677,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numColunas: 0
   numLinhas: 0
-  level: 5
+  level: 1
   resp: 0
+  waypoint: 0
+  btn: 0
   seta: {fileID: 1933986463719316, guid: 0aa007dbd4586324fb8056c62b1d4046, type: 2}
-  btn: {fileID: 1851199364514688, guid: f0e70186abe38804ca62ac3ba83f0bbf, type: 2}
+  abelha: {fileID: 1247596682357184, guid: 4be97d02a50b1b74da838f19b7e534b8, type: 2}
+  ab: {fileID: 0}
   setas: []
   botoes: []
+  caminhoA: []
+  caminhoB: []
+  caminhoC: []
+  caminhoD: []
   pos: {fileID: 1681032305}
   img: {fileID: 21300000, guid: b5da62b484fe6234e98e3e88a32a9396, type: 3}
   marg: 0
@@ -1682,6 +1699,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
   - {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
   standard: {r: 0, g: 0, b: 0, a: 0}
+  respondeu: 0
+  fimCaminho: 0
+  moveSpeed: 2
 --- !u!114 &1332464061
 MonoBehaviour:
   m_ObjectHideFlags: 0
