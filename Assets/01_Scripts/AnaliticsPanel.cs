@@ -7,6 +7,9 @@ public class AnaliticsPanel : MonoBehaviour
  {
 	 [SerializeField]
 	 Text[] timeOutput;
+
+	 [SerializeField]
+	 AnalitcsSystem[] analitcsSystem;
 	  
 	// Use this for initialization
 	void Start () 
@@ -26,6 +29,22 @@ public class AnaliticsPanel : MonoBehaviour
 		Application.LoadLevel(2);
 	}
 
+	public void GameInfoSelected(string IDgame)
+	{
+		for (int i = 0; i < analitcsSystem.Length; i++)
+		{
+			if (analitcsSystem[i].Id == IDgame)
+			{
+				analitcsSystem[i].analiticsGameObject.SetActive(true);
+			}
+			else
+			{
+				analitcsSystem[i].analiticsGameObject.SetActive(false);
+			}
+		}
+	}
+
+	#region  Save Information all games
 	void ditadosTime()
 	{
 		int seconds = (int)AnaliticsControl.ditadosTime;
@@ -82,6 +101,8 @@ public class AnaliticsPanel : MonoBehaviour
 		seconds = seconds % 60;
 		timeOutput[7].text = string.Format("{0}:{1}", minutes.ToString("00"), seconds.ToString("00"));
 	}
+#endregion
+
 	
 	
 	

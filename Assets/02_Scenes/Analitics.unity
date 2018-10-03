@@ -675,6 +675,7 @@ MonoBehaviour:
   - {fileID: 2072336211}
   - {fileID: 175641219}
   - {fileID: 66433607}
+  analitcsSystem: []
 --- !u!1 &374214070
 GameObject:
   m_ObjectHideFlags: 0
