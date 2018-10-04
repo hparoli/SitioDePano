@@ -26,7 +26,7 @@ public class AnaliticsPanel : MonoBehaviour
 
 	public void GoToMenu()
 	{
-		Application.LoadLevel(2);
+		Application.LoadLevel("newMenu");
 	}
 
 	public void GameInfoSelected(string IDgame)
