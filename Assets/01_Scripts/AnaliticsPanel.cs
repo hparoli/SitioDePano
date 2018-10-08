@@ -44,6 +44,9 @@ public class AnaliticsPanel : MonoBehaviour
 		}
 	}
 
+	
+
+
 	#region  Save Information all games
 	void ditadosTime()
 	{

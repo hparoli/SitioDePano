@@ -33,7 +33,9 @@ public class AninhaPastoreira : MonoBehaviour {
 	[SerializeField]
 	GameObject[] imagesTutorial;
 
-	void Start () {
+	void Start ()
+	 {
+		
 		pontuacao = 0;
 		countSpawn = 20;
 		countDestroy = 20;
