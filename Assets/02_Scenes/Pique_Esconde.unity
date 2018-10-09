@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1798,8 +1798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipList:
-    DollClick: {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-    MissClick: {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
+    DollClick: {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
+    MissClick: {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
   playerSource:
   - {fileID: 1055143146}
   - {fileID: 1943816264}
