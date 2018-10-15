@@ -66,7 +66,7 @@ public class HortaController : MonoBehaviour {
 			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem13",4);});
 			buttons[2].GetComponentInChildren<Text>().text = "R$4,00";
 			saldoInicial = saldo = 37;
-			saldoTxt.text = "R" + saldoInicial.ToString("C2");
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
 		} else if (level == 2){
 			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem21",2);});
@@ -78,8 +78,9 @@ public class HortaController : MonoBehaviour {
 			buttons[3].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem24",10);});
 			buttons[3].GetComponentInChildren<Text>().text = "R$10,00";
 			saldoInicial = saldo = 31;
-			saldoTxt.text = "R" + saldoInicial.ToString("C2");
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 		} else if (level == 3){
 			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem21",2.25f);});
 			buttons[0].GetComponentInChildren<Text>().text = "R$2,25";
@@ -88,8 +89,9 @@ public class HortaController : MonoBehaviour {
 			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem23",1.75f);});
 			buttons[2].GetComponentInChildren<Text>().text = "R$1,75";
 			saldoInicial = saldo = 14.50f;
-			saldoTxt.text = "R" + saldoInicial.ToString("C2");
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 		}
 	}
 
@@ -109,8 +111,9 @@ public class HortaController : MonoBehaviour {
 				} 
 				legumes[i].GetComponent<LegumesControl>().plantou = true;
 				saldo -= vlr;
-				saldoTxt.text = "R$" + saldo.ToString("C2");
+				saldoTxt.text = "R$" + saldo.ToString("F2");
 				saldoTxt.text = saldoTxt.text.Replace(".",",");
+				saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 				break;
 			}
 		}
@@ -124,8 +127,9 @@ public class HortaController : MonoBehaviour {
 			legumes[i].GetComponent<LegumesControl>().plantou = false;
 		}
 		saldo = saldoInicial;
-		saldoTxt.text = "R$" + saldo.ToString("C2");
+		saldoTxt.text = "R$" + saldo.ToString("F2");
 		saldoTxt.text = saldoTxt.text.Replace(".",",");
+		saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 		gameover = false;
 		podeJogar = true;
 	}
