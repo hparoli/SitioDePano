@@ -35,7 +35,12 @@ public class Spawn : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 
-
+	[Header("DificultControl")]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
 
 	void Start () 
 	{
@@ -47,12 +52,30 @@ public class Spawn : MonoBehaviour {
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
 	}
 
-
-
 	void Update()
 	{
 		Cronometro ();
 	}
+
+	public void GameDificultControl(int GameDificultValue)
+	{	
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+
+			}
+			else
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
+			}
+
+			DificultGameObject.SetActive(false);
+		}
+		
+	}
+
 	public void ChangeTextTutorialForward(){
 		indexTutorial++;
 		infoTutorial.text = txtTutorial [indexTutorial];
