@@ -14,6 +14,9 @@ public class Spawn : MonoBehaviour {
 	public GameObject dollObj; // prefab da boneca
 	public Transform[] spawnPoints; // Array c/ Spawn Points
 
+	[SerializeField]
+	Transform[] spawnpointsGame2;
+
 	private int spawnAnterior;
 	public int dollCount;
 	public int notaFinal;
@@ -118,37 +121,71 @@ public class Spawn : MonoBehaviour {
 
 
 
-	public void StartGame()
+	public void StartGame(int Value)
 	{
-			tutorial.SetActive (false);
-			CreatDoll ();
+			if (tutorial)
+			{
+				tutorial.SetActive (false);
+			}
+			if (Value == 1)
+			{
+				CreatDoll ();
+			}
+			if (Value == 2)
+			{
+				CreatDoll2();
+			}
+			dollCount=0;
+			
 			Time.timeScale = 1;
 	}
 
 	public void CreatDoll() 
 	{
 		
-			if (dollCount < 3) {
+			if (dollCount < 5) 
+			{
 				dollCount++;
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 				if(spawnAnterior == spawnPointIndex)
 				{
 					spawnPointIndex++;	
 				}
-				
 				GameObject aninha = Instantiate (dollObj, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation) as GameObject;	
 				aninha.transform.parent = spawnPoints [spawnPointIndex].transform;	
 				spawnAnterior = spawnPointIndex;
 				
 			}
-
-			else 
+		else 
 			{
 				BarnAnin ();
 				StartCoroutine ("StartGameOver");
 			}
 
-		} 
+	} 
+		public void CreatDoll2() 
+	{
+		
+			if (dollCount < 5) 
+			{
+				dollCount++;
+				int spawnPointIndex = Random.Range (0, spawnpointsGame2.Length);
+				if(spawnAnterior == spawnPointIndex)
+				{
+					spawnPointIndex++;	
+				}
+				GameObject aninha = Instantiate (dollObj, spawnpointsGame2 [spawnPointIndex].position, spawnpointsGame2 [spawnPointIndex].rotation) as GameObject;	
+				aninha.transform.parent = spawnpointsGame2 [spawnPointIndex].transform;	
+				spawnAnterior = spawnPointIndex;
+				
+			}
+		else 
+			{
+				BarnAnin ();
+				StartCoroutine ("StartGameOver");
+			}
+
+	} 
 	
 	void Cronometro()
 	{
