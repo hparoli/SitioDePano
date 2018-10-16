@@ -40,10 +40,15 @@ public class Spawn : MonoBehaviour {
 
 	[Header("DificultControl")]
 	[SerializeField]
+	GameObject[] stars;
+    [Space(10)]
+	[SerializeField]
 	GameDificultScripting[] gamedificultScripiting;
 	[Space(10)]
 	[SerializeField]
 	GameObject DificultGameObject;
+	
+	
 
 	void Start () 
 	{
@@ -58,6 +63,7 @@ public class Spawn : MonoBehaviour {
 	void Update()
 	{
 		Cronometro ();
+		StarsPointsControl();
 	}
 
 	public void GameDificultControl(int GameDificultValue)
@@ -77,6 +83,36 @@ public class Spawn : MonoBehaviour {
 			DificultGameObject.SetActive(false);
 		}
 		
+	}
+
+	public void StarsPointsControl()
+	{
+		for (int i = 0; i < stars.Length; i++)
+		{
+			stars[i].SetActive(false);
+		}
+		
+		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
+		Debug.Log(notaFinal);
+
+		if (notaFinal == 10)
+		{
+			stars[0].SetActive(true);
+			stars[1].SetActive(true);
+			stars[2].SetActive(true);
+		}
+		if (notaFinal == 7)
+		{
+			stars[0].SetActive(true);
+			stars[1].SetActive(true);
+		}
+		if (notaFinal == 5)
+		{
+			stars[0].SetActive(true);
+		}
+		
+		
+
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -232,7 +268,7 @@ public class Spawn : MonoBehaviour {
 		}
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-		Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
+		//Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
 		SceneManager.LoadScene ("Score");
 	}
 }
