@@ -549,7 +549,7 @@ Prefab:
     - target: {fileID: 114776371689291864, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b235ff69737180b4ea1eb03132aa8a48, type: 2}
@@ -723,7 +723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1632581034423124, guid: b235ff69737180b4ea1eb03132aa8a48, type: 2}
       propertyPath: m_Name
-      value: Game Difcult (1)
+      value: Game Difcult 2
       objectReference: {fileID: 0}
     - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
@@ -738,7 +738,7 @@ Prefab:
     - target: {fileID: 114776371689291864, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114776371689291864, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
@@ -5334,12 +5334,23 @@ MonoBehaviour:
   - {fileID: 655569275}
   - {fileID: 898123150}
   - {fileID: 544639989}
-  scoresTargets: 0400000005000000070000000a00000014000000
+  stars2:
+  - {fileID: 205311459}
+  - {fileID: 59595545}
+  - {fileID: 492900676}
   gamedificultScripiting:
-  - gameValue: 1
+  - gameValue: 0
     gamePrefabDificult: {fileID: 1408195671}
-  - gameValue: 2
+    stars:
+    - {fileID: 655569275}
+    - {fileID: 898123150}
+    - {fileID: 544639989}
+  - gameValue: 1
     gamePrefabDificult: {fileID: 391599662}
+    stars:
+    - {fileID: 205311459}
+    - {fileID: 59595545}
+    - {fileID: 492900676}
   DificultGameObject: {fileID: 765915353}
 --- !u!4 &1788257619
 Transform:
@@ -5942,7 +5953,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1632581034423124, guid: b235ff69737180b4ea1eb03132aa8a48, type: 2}
       propertyPath: m_Name
-      value: Game Difcult (2)
+      value: Game Difcult 3
       objectReference: {fileID: 0}
     - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}

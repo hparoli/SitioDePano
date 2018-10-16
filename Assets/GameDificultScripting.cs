@@ -6,6 +6,8 @@ public class GameDificultScripting
 {
 	public int gameValue;
 	public GameObject gamePrefabDificult;
+
+	public GameObject[] stars;
 	
 }
 

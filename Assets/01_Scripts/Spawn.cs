@@ -41,6 +41,8 @@ public class Spawn : MonoBehaviour {
 	[Header("DificultControl")]
 	[SerializeField]
 	GameObject[] stars;
+	[SerializeField]
+	GameObject[] stars2;
     [Space(10)]
 	[SerializeField]
 	GameDificultScripting[] gamedificultScripiting;
@@ -91,25 +93,35 @@ public class Spawn : MonoBehaviour {
 		{
 			stars[i].SetActive(false);
 		}
-		
-		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
-		Debug.Log(notaFinal);
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
 
-		if (notaFinal == 10)
-		{
-			stars[0].SetActive(true);
-			stars[1].SetActive(true);
-			stars[2].SetActive(true);
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+			 if (notaFinal == 5 && j > 1)
+				{
+					break;
+				}
+			
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
 		}
-		if (notaFinal == 7)
-		{
-			stars[0].SetActive(true);
-			stars[1].SetActive(true);
-		}
-		if (notaFinal == 5)
-		{
-			stars[0].SetActive(true);
-		}
+		
+
+
 		
 		
 
@@ -199,7 +211,7 @@ public class Spawn : MonoBehaviour {
 			}
 
 	} 
-		public void CreatDoll2() 
+	public void CreatDoll2() 
 	{
 		
 			if (dollCount < 5) 
@@ -268,6 +280,9 @@ public class Spawn : MonoBehaviour {
 		}
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+		PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+		PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+		PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
 		//Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
 		SceneManager.LoadScene ("Score");
 	}
