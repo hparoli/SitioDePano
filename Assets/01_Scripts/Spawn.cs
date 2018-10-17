@@ -72,8 +72,8 @@ public class Spawn : MonoBehaviour {
 	public void OpenLevel()
 	{
 		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
-		Debug.Log(PlayerPrefs.GetString("dificuldade"+idTema));
-		if (dif == "F" || dif == null)
+		
+		if (dif == "F" ||  dif == "")
 		{
 			gameButtons[1].interactable = false;
 			gameButtons[2].interactable = false;
@@ -300,7 +300,7 @@ public class Spawn : MonoBehaviour {
 			{
 				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
 			}
-			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == null)
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
 			{
 				PlayerPrefs.SetString("dificuldade" + idTema, "M");
 			}
