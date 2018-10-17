@@ -49,8 +49,11 @@ public class Spawn : MonoBehaviour {
 	[Space(10)]
 	[SerializeField]
 	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
 	
-	
+	int gamelevel;
 
 	void Start () 
 	{
@@ -60,6 +63,25 @@ public class Spawn : MonoBehaviour {
 		infoTutorial.text = txtTutorial [indexTutorial];
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
+		OpenLevel();
+		//PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), 0);
+		//PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), 0);
+		//PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), 0);
+	}
+
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		Debug.Log(PlayerPrefs.GetString("dificuldade"+idTema));
+		if (dif == "F" || dif == null)
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
 	}
 
 	void Update()
@@ -70,6 +92,8 @@ public class Spawn : MonoBehaviour {
 
 	public void GameDificultControl(int GameDificultValue)
 	{	
+
+		gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
 			if(gamedificultScripiting[i].gameValue == GameDificultValue)
@@ -84,15 +108,11 @@ public class Spawn : MonoBehaviour {
 
 			DificultGameObject.SetActive(false);
 		}
-		
 	}
 
 	public void StarsPointsControl()
 	{
-		for (int i = 0; i < stars.Length; i++)
-		{
-			stars[i].SetActive(false);
-		}
+		
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
 			if(i == 0)
@@ -111,20 +131,13 @@ public class Spawn : MonoBehaviour {
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
 			{
-			 if (notaFinal == 5 && j > 1)
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
 				{
 					break;
 				}
-			
 				gamedificultScripiting[i].stars[j].SetActive(true);
 			}
 		}
-		
-
-
-		
-		
-
 	}
 
 	public void ChangeTextTutorialForward(){
@@ -260,7 +273,7 @@ public class Spawn : MonoBehaviour {
 
 	void ToScore()
 	{
-
+		notaFinal = 0;
 		if (tempo <= 5f) 
 		{
 			notaFinal = 20;
@@ -280,9 +293,41 @@ public class Spawn : MonoBehaviour {
 		}
 
 		PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-		PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
-		PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
-		PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+		
+		if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == null)
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
+	
 		//Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
 		SceneManager.LoadScene ("Score");
 	}
