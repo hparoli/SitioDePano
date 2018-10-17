@@ -49,12 +49,17 @@ public class HortaController : MonoBehaviour {
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				if(i < 3) buttons[i].SetActive(true);
+				else buttons[i].SetActive(false);
+
+				buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
 			}
+
 		}
 		else if(level == 2){
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				buttons[i].SetActive(true);
+				buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
 			}
 		}
 		
@@ -138,7 +143,26 @@ public class HortaController : MonoBehaviour {
 		gameover = true;
 		if (saldo != 0){
 			//som de erro
-			yield return new WaitForSeconds(2f);
+			mensagem.text = "Que pena, você errou, tente novamente!";
+			for (float f = 0f; f <= 1; f += 0.02f){
+                Color c = mensagem.color;
+		    	c.a = f;
+		    	mensagem.color = c;
+		    	new WaitForSeconds(.5f);
+                yield return null;
+			}
+			
+			yield return new WaitForSeconds(1f);
+
+			for (float f = 1f; f > 0; f -= 0.02f){
+					Color c = mensagem.color;
+					c.a = f;
+					mensagem.color = c;
+					new WaitForSeconds(.5f);
+					yield return null;
+			}
+
+			yield return new WaitForSeconds(0.5f);
 			Resetar();
 			StopCoroutine("GameOver");
 		} else if (saldo == 0 && legumes[5].GetComponent<LegumesControl>().plantou){
@@ -161,7 +185,12 @@ public class HortaController : MonoBehaviour {
 					yield return null;
 			}
 
-			SceneManager.LoadScene("Score");
+			if(level < 3){
+				Resetar();
+				level++;
+				StartGame();
+
+			} else SceneManager.LoadScene("Score");
 		}
 	}
 }
