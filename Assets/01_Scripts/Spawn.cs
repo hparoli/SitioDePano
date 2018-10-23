@@ -39,11 +39,7 @@ public class Spawn : MonoBehaviour {
 	public GameObject ExitBoard;
 
 	[Header("DificultControl")]
-	[SerializeField]
-	GameObject[] stars;
-	[SerializeField]
-	GameObject[] stars2;
-    [Space(10)]
+	[Space(10)]
 	[SerializeField]
 	GameDificultScripting[] gamedificultScripiting;
 	[Space(10)]
@@ -68,22 +64,6 @@ public class Spawn : MonoBehaviour {
 		//PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), 0);
 		//PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), 0);
 	}
-
-	public void OpenLevel()
-	{
-		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
-		
-		if (dif == "F" ||  dif == "")
-		{
-			gameButtons[1].interactable = false;
-			gameButtons[2].interactable = false;
-		}
-		else if (dif == "M") 
-		{
-			gameButtons[2].interactable = false;
-		}
-	}
-
 	void Update()
 	{
 		Cronometro ();
@@ -107,6 +87,20 @@ public class Spawn : MonoBehaviour {
 			}
 
 			DificultGameObject.SetActive(false);
+		}
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
 		}
 	}
 
