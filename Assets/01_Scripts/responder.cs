@@ -60,17 +60,26 @@ public class responder : MonoBehaviour {
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
 	public Text statickText;
-
-
-
 	Coroutine feedbackCorout;
-
-
 	int QuestionsAmount { get { return questions.Length; } }
 	QuestionData CurrentQuestion { get { return shuffledQuestions [questionIndex]; } } 
 
+	[Header("DificultControl")]
+	[Space(10)]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	
+	int gamelevel;
+
 	void Start () 
 	{
+		OpenLevel();
 		Time.timeScale = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 
@@ -88,6 +97,70 @@ public class responder : MonoBehaviour {
 	 {
 		 Cronometro();
 	 }
+
+	 public void GameDificultControl(int GameDificultValue)
+	{	
+
+		gamelevel = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+
+			}
+			else
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
+			}
+
+			DificultGameObject.SetActive(false);
+		}
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
+				{
+					break;
+				}
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
+		}
+	}
 	 void Cronometro()
 	{
 	    tempo += 1 * Time.deltaTime;
@@ -235,6 +308,39 @@ public class responder : MonoBehaviour {
 			}
 			AnaliticsControl.ditadosTime = tempo;
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+			if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
 //			PlayerPrefs.SetInt ("acertosTemp" + idTema.ToString (), (int) acertos);
 //			Score.infoValue = string.Format ("Você acertou {0} questões de {1}, sua nota final é {2}!", acertos, QuestionsAmount, notaFinal);
 			BarnAnin ();
@@ -258,12 +364,6 @@ public class responder : MonoBehaviour {
 		}
 		statickText.text = "";
 		infoResposta.text = "";
-	}
-
-
-	public void Comecar()
-	{
-		tutorial.SetActive (false);
 	}
 
 	IEnumerator PromptAnswer_Routine(int index)
