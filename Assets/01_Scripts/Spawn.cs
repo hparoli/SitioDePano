@@ -186,7 +186,7 @@ public class Spawn : MonoBehaviour {
 			{
 				CreatDoll ();
 			}
-			if (Value == 2)
+			else if (Value == 2)
 			{
 				CreatDoll2();
 			}

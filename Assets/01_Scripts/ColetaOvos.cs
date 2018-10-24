@@ -59,6 +59,8 @@ public class ColetaOvos : MonoBehaviour {
 		{
 			eggs2[i].SetActive (false);
 		}
+
+		 OpenLevel();
 	}
 	
 	// Update is called once per frame
