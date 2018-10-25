@@ -60,9 +60,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 	GameObject ExitBoard;
 	[SerializeField]
 	GameObject TutorialPrefab;
-	[Space(10)]
-	[SerializeField]
-	AudioSource Speek;
+	
+	
 
 
 	void Start () 

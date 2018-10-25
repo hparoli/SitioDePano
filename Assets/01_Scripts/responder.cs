@@ -349,7 +349,8 @@ public class responder : MonoBehaviour {
 
 	}
 
-	public IEnumerator StartScore(){
+	public IEnumerator StartScore()
+	{
 		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene("Score");
 	}
