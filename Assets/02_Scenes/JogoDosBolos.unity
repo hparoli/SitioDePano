@@ -2455,7 +2455,6 @@ MonoBehaviour:
   - {fileID: 1117117673}
   ExitBoard: {fileID: 1778629655}
   TutorialPrefab: {fileID: 1606605730}
-  Speek: {fileID: 8300000, guid: ab12981d47e863e4f955b630bbf39bc5, type: 3}
 --- !u!4 &1784916557
 Transform:
   m_ObjectHideFlags: 0
@@ -2609,7 +2608,7 @@ Prefab:
         type: 2}
       propertyPath: clipList.speekBolos
       value: 
-      objectReference: {fileID: 8300000, guid: b3e92be78c8e7e74cbf020c0f73ff0ca, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114108008987153078, guid: 88b7b19ce3b1cc945bacadf07f07d6db,
         type: 2}
       propertyPath: clipList.teste
