@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class HortaController : MonoBehaviour {
 	private int idTema;
 	public int level;
+
+	public GameObject trilha;
 	
 	public float saldoInicial,saldo;
 
@@ -79,6 +81,7 @@ public class HortaController : MonoBehaviour {
 		TutorialPrefab.SetActive(false);
 		ControladorPrefab.SetActive(true);
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
+		trilha.SetActive (true);
 		if(level == 0 || level == 2){
 			for (int i = 0; i < buttons.Length; i++)
 			{
@@ -136,7 +139,7 @@ public class HortaController : MonoBehaviour {
 
 	public void GameDificultControl(int GameDificultValue)
 	{	
-
+		trilha.SetActive (false);
 		level = gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
@@ -247,7 +250,7 @@ public class HortaController : MonoBehaviour {
 		if (saldo != 0){
 			//som de erro
 			fonteAudio.PlayOneShot(sons[2]);
-			mensagem.text = "Que pena, você errou, tente novamente!";
+			mensagem.text = "Que pena...";
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
