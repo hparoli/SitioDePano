@@ -25,8 +25,6 @@ public class SoundManager : MonoBehaviour
 		}
 
 }
-	
-
 	void Update () 
 	{
 		
