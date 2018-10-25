@@ -46,6 +46,9 @@ public class HortaController : MonoBehaviour {
 	GameObject TutorialPrefab;
 	[SerializeField]
 	GameObject ControladorPrefab;
+
+	private AudioSource fonteAudio;
+	public AudioClip[] sons;
 	
 	int gamelevel;
 	int notaFinal;
@@ -57,6 +60,7 @@ public class HortaController : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		podeJogar = true;
 		gameover = false;
+		fonteAudio = GetComponent<AudioSource>();
 		
 	}
 	
@@ -217,6 +221,7 @@ public class HortaController : MonoBehaviour {
 				saldoTxt.text = "R$" + saldo.ToString("F2");
 				saldoTxt.text = saldoTxt.text.Replace(".",",");
 				saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+				fonteAudio.PlayOneShot(sons[0]);
 				break;
 			}
 		}
@@ -241,6 +246,7 @@ public class HortaController : MonoBehaviour {
 		gameover = true;
 		if (saldo != 0){
 			//som de erro
+			fonteAudio.PlayOneShot(sons[2]);
 			mensagem.text = "Que pena, você errou, tente novamente!";
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
@@ -265,6 +271,7 @@ public class HortaController : MonoBehaviour {
 			StopCoroutine("GameOver");
 		} else if (saldo == 0 && legumes[5].GetComponent<LegumesControl>().plantou){
 			mensagem.text = "Parabéns! Você acertou!";
+			fonteAudio.PlayOneShot(sons[1]);
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
