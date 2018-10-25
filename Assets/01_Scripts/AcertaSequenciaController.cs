@@ -7,6 +7,7 @@ using System;
 
 public class AcertaSequenciaController : MonoBehaviour {
 
+	private int idTema;
 
 	[SerializeField]
 	private Formas[] formas;
@@ -41,35 +42,125 @@ public class AcertaSequenciaController : MonoBehaviour {
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
 
-	void Start () {
-		level = 1;
+	[Header("DificultControl")]
+	[Space(10)]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	
+	int gamelevel;
+	int notaFinal;
+
+	[SerializeField]
+	GameObject ExitBoard;
+	[SerializeField]
+	GameObject TutorialPrefab;
+
+
+	void Start () 
+	{
+		idTema = PlayerPrefs.GetInt ("idTema");
+		OpenLevel();
 		ind = 1;
-		StartGame();
 		fonteAudio = GetComponent<AudioSource> ();
 	}
 	
-	void Update () {
+	void Update () 
+	{
 		EscolherForma();
 	}
+	public void GameDificultControl(int GameDificultValue)
+	{	
 
-	public void StartGame(){
-		if (level == 1){
+		level = gamelevel = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+
+			}
+			else
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
+			}
+
+			DificultGameObject.SetActive(false);
+			ExitBoard.SetActive(false);
+		}
+
+		Debug.Log(level);
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
+				{
+					break;
+				}
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
+		}
+	}
+	public void StartGame()
+	{
+		ExitBoard.SetActive(true);
+		TutorialPrefab.SetActive(false);
+		if (level == 0){
 			qtdFormas = 3;
+			tipos = 3;
+		} else if(level == 1){
+			qtdFormas = 4;
 			tipos = 3;
 		} else if(level == 2){
 			qtdFormas = 4;
-			tipos = 3;
-		} else if(level == 3){
-			qtdFormas = 4;
 			tipos = 4;
-		} else if (level == 4){
+		} else if (level == 3){
 			qtdFormas = 5;
 			tipos = 4;
-		} else if(level == 5){
+		} else if(level == 6){
 			qtdFormas = 5;
 			tipos = 4;
 			qtdExtra = 2;
-		} else if(level == 6){
+		} else if(level == 7){
 			qtdFormas = 6;
 			tipos = 4;
 			qtdExtra = 2;
@@ -332,7 +423,43 @@ public class AcertaSequenciaController : MonoBehaviour {
 				yield return new WaitForSeconds(2f);
 				StartGame();
 				StopCoroutine("C_Compara");
-			} else {
+			} 
+			else // Escrever Sistema de Score aqui !! 
+			{	
+			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+			if (gamelevel == 0)
+			{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+			}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
 				yield return new WaitForSeconds(2f);
 				SceneManager.LoadScene ("Score");
 			}
