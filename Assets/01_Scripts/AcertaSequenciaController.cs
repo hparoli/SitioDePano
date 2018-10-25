@@ -60,11 +60,15 @@ public class AcertaSequenciaController : MonoBehaviour {
 	GameObject ExitBoard;
 	[SerializeField]
 	GameObject TutorialPrefab;
+	[Space(10)]
+	[SerializeField]
+	AudioSource Speek;
 
 
 	void Start () 
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
+		
 		OpenLevel();
 		ind = 1;
 		fonteAudio = GetComponent<AudioSource> ();
@@ -93,6 +97,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
 		}
+		if (gamelevel == 0)
+		{
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekBolos);
+		}
 
 		Debug.Log(level);
 	}
@@ -118,6 +126,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		{
 			if(i == 0)
 			{
+
 				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
 			}
 			else if(i == 1)
@@ -144,7 +153,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 	{
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
-		if (level == 0){
+		 
+		if (level == 0)
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekBolos);
 			qtdFormas = 3;
 			tipos = 3;
 		} else if(level == 1){

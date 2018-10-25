@@ -60,6 +60,34 @@ public class SoundManager : MonoBehaviour
 		tempSourcer.clip = clip; 
 		tempSourcer.Play ();
 	}
+
+	public void Stop (string channel, AudioClip clip)
+	{	
+		AudioSource tempSourcer = null;
+		int index = 0;
+		if (channel == "Player")
+		{
+			for (index = 0; index < playerSource.Length; index++)
+			{
+				if (playerSource[index].isPlaying)
+				{
+					break;
+				}
+			}
+			if (index == playerSource.Length)
+			{
+				index = 0;
+			}
+			tempSourcer = playerSource[index]; 
+			tempSourcer.clip = playerSource[index].clip;
+		}
+
+		if (clip == tempSourcer.clip)
+		{
+			tempSourcer.Stop ();
+		}
+		
+	}
 }
 
 [System.Serializable]
@@ -68,5 +96,7 @@ public class ClipList
 	
 	public AudioClip   DollClick;
     public AudioClip   MissClick;
+	public AudioClip   speekBolos;
+	public AudioClip   speekHorta;
 
 }
