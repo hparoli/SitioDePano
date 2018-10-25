@@ -9,6 +9,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private int idTema;
 
+	public GameObject trilha;
+
 	[SerializeField]
 	private Formas[] formas;
 
@@ -79,7 +81,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
-
+		trilha.SetActive (false);
 		level = gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
@@ -152,6 +154,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	{
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
+		trilha.SetActive (true);
 		 
 		if (level == 0)
 		{
