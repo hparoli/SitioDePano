@@ -384,8 +384,7 @@ MonoBehaviour:
   clipList:
     DollClick: {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
     MissClick: {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
-    speekBolos: {fileID: 8300000, guid: 81ed35c9ebe6858488c2fd9fb9ba7386, type: 3}
-    speekHorta: {fileID: 8300000, guid: be747f4823af545448b69a1ec81ef763, type: 3}
+    speekBolos: {fileID: 8300000, guid: ab12981d47e863e4f955b630bbf39bc5, type: 3}
   playerSource:
   - {fileID: 82898100292500974}
   - {fileID: 82557352149528946}
