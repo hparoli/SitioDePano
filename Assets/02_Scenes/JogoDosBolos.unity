@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2182,13 +2182,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 54fa5a06a81604b4cad1dc0e95c2ec49, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.594
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2497,7 +2497,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2608,7 +2608,7 @@ Prefab:
         type: 2}
       propertyPath: clipList.speekBolos
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 81ed35c9ebe6858488c2fd9fb9ba7386, type: 3}
     - target: {fileID: 114108008987153078, guid: 88b7b19ce3b1cc945bacadf07f07d6db,
         type: 2}
       propertyPath: clipList.teste
