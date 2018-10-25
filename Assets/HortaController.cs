@@ -44,6 +44,8 @@ public class HortaController : MonoBehaviour {
 	Button[] gameButtons;
 	[SerializeField]
 	GameObject TutorialPrefab;
+	[SerializeField]
+	GameObject ControladorPrefab;
 	
 	int gamelevel;
 	int notaFinal;
@@ -71,6 +73,7 @@ public class HortaController : MonoBehaviour {
 	{	
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
+		ControladorPrefab.SetActive(true);
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
 		if(level == 0 || level == 2){
 			for (int i = 0; i < buttons.Length; i++)
@@ -142,7 +145,7 @@ public class HortaController : MonoBehaviour {
 			{
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
 			}
-			if (gamelevel == 1)
+			if (gamelevel == 0)
 			{
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
 			}
