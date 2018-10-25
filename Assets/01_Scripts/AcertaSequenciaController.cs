@@ -369,12 +369,12 @@ public class AcertaSequenciaController : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		if(count == formasPergunta.Length){
 			Txt.text = "Parabéns! Você acertou!";
-			bolo.sprite = bolosBons[level-1];
+			bolo.sprite = bolosBons[level];
 			//acerto
 			fonteAudio.PlayOneShot(sons[0]);
 		} else {
 			Txt.text = "Ahh... que pena";
-			bolo.sprite = bolosRuins[level-1];
+			bolo.sprite = bolosRuins[level];
 			//erro
 			fonteAudio.PlayOneShot(sons[1]);
 		}

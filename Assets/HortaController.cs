@@ -78,7 +78,7 @@ public class HortaController : MonoBehaviour {
 		if(level == 0 || level == 2){
 			for (int i = 0; i < buttons.Length; i++)
 			{
-				if(i < 2) buttons[i].SetActive(true);
+				if(i < 3) buttons[i].SetActive(true);
 				else buttons[i].SetActive(false);
 
 				buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
