@@ -8,6 +8,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	public Transform animal, spawn;
 	float tempo;
+	[SerializeField]
 	private int countSpawn, idTema, countDestroy;
 	public int notaFinal;
 
@@ -48,6 +49,7 @@ public class AninhaPastoreira : MonoBehaviour {
 	 {
 		
 		OpenLevel();
+		StarsPointsControl();
 		notaFinal = 0;
 		countSpawn = 20;
 		countDestroy = 20;
@@ -127,7 +129,7 @@ public class AninhaPastoreira : MonoBehaviour {
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
 			{
-			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 )) 
 				{
 					break;
 				}
@@ -135,8 +137,6 @@ public class AninhaPastoreira : MonoBehaviour {
 			}
 		}
 	}
-
-
 	void Cronometro()
 	{
 	   tempo += 1 * Time.deltaTime;
@@ -283,7 +283,8 @@ public class AninhaPastoreira : MonoBehaviour {
 		}
 	}
 
-	public void Pontua(int ponto){
+	public void Pontua(int ponto)
+	{
 		notaFinal += ponto;
 	}
 
@@ -292,7 +293,8 @@ public class AninhaPastoreira : MonoBehaviour {
 	}
 
 	public void BarnAnin(){
-		for (int i = 0; i < barnAnims.Length; i++) {
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
 			barnAnims [i].SetBool ("Active", true);
 		}
 		ExitBoard.SetActive (false);

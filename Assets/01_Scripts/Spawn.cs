@@ -60,6 +60,7 @@ public class Spawn : MonoBehaviour {
 		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
 		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
 		OpenLevel();
+		StarsPointsControl();
 		//PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), 0);
 		//PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), 0);
 		//PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), 0);
@@ -67,7 +68,7 @@ public class Spawn : MonoBehaviour {
 	void Update()
 	{
 		Cronometro ();
-		StarsPointsControl();
+	
 	}
 
 	public void GameDificultControl(int GameDificultValue)

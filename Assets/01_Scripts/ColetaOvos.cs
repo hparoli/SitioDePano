@@ -10,18 +10,11 @@ public class ColetaOvos : MonoBehaviour {
 	[Header("Game Check Dificult")]
 	public GameObject[] galinhas;
 	public GameObject[] eggsCollected;
-
-	public GameObject[] galinhasG2;
-	public GameObject[] eggs2;
-
 	public static bool work;
-
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
 	
 	public GameObject manager;
-
-
 	private int idTema;
 	private int notaFinal;
 
@@ -55,28 +48,15 @@ public class ColetaOvos : MonoBehaviour {
 			eggsCollected[i].SetActive (false);
 		}
 
-		for (int i = 0; i < eggs2.Length; i++) 
-		{
-			eggs2[i].SetActive (false);
-		}
-
 		 OpenLevel();
+		 StarsPointsControl();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (gamelevel == 0)
-		{
-			Game1();
-		}
-
-		else if (gamelevel == 1)
-		{
-			Game2();
-		}
-	
-
+		Game1();
+		Score();
 	}
 
 	public void Game1()
@@ -99,38 +79,6 @@ public class ColetaOvos : MonoBehaviour {
 							} else {
 								erros++;
 								galinhas[i].GetComponent<Animator>().SetTrigger("Erro");
-								//feedback negativo
-								Debug.Log("ERROU");
-								fonteAudio.PlayOneShot(sons[1]);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	public void Game2()
-	{
-		
-		if(work)
-		{
-			RaycastHit galinhaClick = new RaycastHit();
-			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out galinhaClick);
-			if (Input.GetMouseButtonDown (0)) {
-				if (hit) {
-					for(int i = 0; i < galinhasG2.Length; i++){
-						if (galinhaClick.transform.gameObject.name == galinhasG2[i].name){
-							if(galinhasG2[i].GetComponent<ApareceOvo>().temOvo){
-								pegouOvos++;
-								eggFeedback ();
-								galinhasG2[i].GetComponent<ApareceOvo>().Desaparece();
-								//feedback positivo
-								Debug.Log("ACERTOU");
-								fonteAudio.PlayOneShot(sons[0]);
-							} else {
-								erros++;
-								galinhasG2[i].GetComponent<Animator>().SetTrigger("Erro");
 								//feedback negativo
 								Debug.Log("ERROU");
 								fonteAudio.PlayOneShot(sons[1]);
@@ -196,7 +144,7 @@ public class ColetaOvos : MonoBehaviour {
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
 			{
-			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) ||( notaFinal == 20 && j > 3 )) 
 				{
 					break;
 				}
@@ -218,7 +166,6 @@ public class ColetaOvos : MonoBehaviour {
 
 		}
 	}
-
 	public void Score()
 	{
 		if(pegouOvos == 3)

@@ -29,14 +29,13 @@ public class ComportamentoGalinha : MonoBehaviour {
 	GameObject[] imagesTutorial;
 
 	float tempo;
-	int GameValue;
-
+	float tempo2;
 	
+	int GameValue;
 
 	// Use this for initialization
 	void Start () 
 	{	
-		int GameValue = ColetaOvosControl.GetComponent<ColetaOvos>().gamelevel;
 		Debug.Log(GameValue);
 		Time.timeScale = 0;
 		min = 1.5f;
@@ -51,6 +50,8 @@ public class ComportamentoGalinha : MonoBehaviour {
     void Update() 
 	{
 		Cronometro();	
+		GameValue = ColetaOvosControl.GetComponent<ColetaOvos>().gamelevel;
+		Debug.Log(GameValue);
 	}
 
 	
@@ -117,53 +118,42 @@ public class ComportamentoGalinha : MonoBehaviour {
 			StartCoroutine("Comportamento");
 		}
 		else if (GameValue == 1)
-		{
-			int galinha = Random.Range(0, animatorG2.Length);
+        {
+			int galinha = Random.Range(0, animator.Length);
+			int galinha2 = Random.Range(0, animator.Length);
 			float tempo = Random.Range(min, max);
-			yield return new WaitForSeconds(tempo);
-			animatorG2[galinha].SetBool("Levantando",true);
-			yield return new WaitForSeconds(delayGalinha);
-			animatorG2[galinha].SetBool("Sentando",true);
-			animatorG2[galinha].SetBool("Levantando",false);
-			yield return new WaitForSeconds(0.5f);
-			animatorG2[galinha].SetBool("Sentando",false);
+			yield return new WaitForSeconds (tempo);
+			animator [galinha].SetBool ("Levantando", true);
+			animator [galinha2].SetBool ("Levantando", true);
+			yield return new WaitForSeconds (delayGalinha);
+			animator [galinha].SetBool ("Sentando", true);
+			animator [galinha2].SetBool ("Sentando", true);
+			animator [galinha2].SetBool ("Levantando", false);
+			animator [galinha].SetBool ("Levantando", false);
+			yield return new WaitForSeconds (0.5f);
+			animator [galinha].SetBool ("Sentando", false);
+			animator [galinha2].SetBool ("Sentando", false);
 			StartCoroutine("Comportamento");
-		}
-		
-		
+       }
 	}
 	
 	public void EndGame()
 	{
-		if (GameValue == 0)
+		
+		for(int i = 0; i < animator.Length; i++)
 		{
-			for(int i = 0; i < animator.Length; i++)
-			{
 			animator[i].SetBool("Levantando",false);
 			animator[i].SetBool("Sentando",false);
 			animator[i].enabled = false;
 			BarnAnin ();
 			StartCoroutine("GameOver");
-			}
 		}
-		else if (GameValue == 1)
-		{
-			for(int i = 0; i < animatorG2.Length; i++)
-			{
-			animatorG2[i].SetBool("Levantando",false);
-			animatorG2[i].SetBool("Sentando",false);
-			animatorG2[i].enabled = false;
-			BarnAnin ();
-			StartCoroutine("GameOver");
-			}
-		}
-		
 	}
 
 	void Cronometro()
 	{
 	    tempo += 1 * Time.deltaTime;
-		Debug.Log (tempo);
+	
 	}
 
 	public void BarnAnin(){
