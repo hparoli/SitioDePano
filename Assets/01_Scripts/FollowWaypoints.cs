@@ -25,10 +25,16 @@ public class FollowWaypoints : MonoBehaviour {
 	public AudioClip[] sons;
 	private AudioSource AudioSRC;
 
+	
+
+
+
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		
 		AudioSRC = GetComponent<AudioSource> ();
 
 		waypointIndex = 0;

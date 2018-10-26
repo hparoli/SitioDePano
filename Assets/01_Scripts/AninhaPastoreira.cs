@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class AninhaPastoreira : MonoBehaviour {
-
-	public Transform animal, spawn;
+	public GameObject animal;
+	public Transform  spawn;
 	float tempo;
 	[SerializeField]
 	private int countSpawn, idTema, countDestroy;
@@ -44,6 +44,10 @@ public class AninhaPastoreira : MonoBehaviour {
 	Button[] gameButtons;
 	
 	int gamelevel;
+
+	public Transform Game1;
+
+	
 
 	void Start ()
 	 {
@@ -274,15 +278,17 @@ public class AninhaPastoreira : MonoBehaviour {
 		StartCoroutine("AnimalSpawn");
 	}
 
-	public IEnumerator AnimalSpawn(){
-		Instantiate(animal, spawn.position, spawn.rotation);
+	public IEnumerator AnimalSpawn()
+	{
+	    GameObject animalObjs =  Instantiate (animal, spawn.position, spawn.rotation) as GameObject;
+		animalObjs.transform.parent = Game1.transform;
+
 		yield return new WaitForSeconds(6f);
 		countSpawn--;
 		if(countSpawn > 0){
 		StartCoroutine("AnimalSpawn");
 		}
 	}
-
 	public void Pontua(int ponto)
 	{
 		notaFinal += ponto;
