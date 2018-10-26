@@ -8,8 +8,6 @@ public class ComportamentoGalinha : MonoBehaviour {
 	public GameObject ColetaOvosControl;
 	private float min,max,delayGalinha;
 	public Animator[] animator;
-	public Animator[] animatorG2;
-
 	[SerializeField]
 	ApareceOvo ApareceOvo;
 
