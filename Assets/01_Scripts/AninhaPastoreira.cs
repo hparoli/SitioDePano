@@ -280,8 +280,10 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	public IEnumerator AnimalSpawn()
 	{
-	    GameObject animalObjs =  Instantiate (animal, spawn.position, spawn.rotation) as GameObject;
-		animalObjs.transform.parent = Game1.transform;
+		Vector3 pos = new Vector3 (spawn.position.x, spawn.position.y, -0.13f);
+		GameObject animalObjs =  Instantiate (animal, pos, spawn.rotation, Game1.transform) as GameObject;
+//		animalObjs.transform.parent = Game1.transform;
+
 
 		yield return new WaitForSeconds(6f);
 		countSpawn--;
