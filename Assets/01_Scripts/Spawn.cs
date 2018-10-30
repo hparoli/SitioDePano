@@ -126,7 +126,7 @@ public class Spawn : MonoBehaviour {
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
 			{
-			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 )) 
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 
 				{
 					break;
 				}
