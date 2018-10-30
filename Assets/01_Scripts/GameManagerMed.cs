@@ -43,6 +43,19 @@ public class GameManagerMed : MonoBehaviour {
 	[SerializeField]
 	GameObject[] imagesTutorial;
 
+	[Header("DificultControl")]
+	[Space(10)]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	
+	int gamelevel;
+
 
 	void Start ()
 	{
