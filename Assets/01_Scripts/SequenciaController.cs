@@ -65,6 +65,7 @@ public class SequenciaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+        PlayerPrefs.SetString("dificuldade" + idTema, "");
 		idTema = PlayerPrefs.GetInt ("idTema");
         OpenLevel();
 		StarsPointsControl();
@@ -96,7 +97,7 @@ public class SequenciaController : MonoBehaviour {
 			{
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
 			}
-
+            Debug.Log("Set Fase");
 			DificultGameObject.SetActive(false);
 		}
 	}
@@ -147,7 +148,7 @@ public class SequenciaController : MonoBehaviour {
     void Cronometro()
 	{
 	    tempo += 1 * Time.deltaTime;
-		Debug.Log (tempo);
+		
 	}
 
 	public IEnumerator StartGame()
