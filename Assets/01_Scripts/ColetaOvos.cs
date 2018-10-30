@@ -100,12 +100,7 @@ public class ColetaOvos : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
-
-			DificultGameObject.SetActive(false);
+				DificultGameObject.SetActive(false);
 		}
 	}
 	public void OpenLevel()

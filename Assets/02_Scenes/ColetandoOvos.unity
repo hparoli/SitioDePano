@@ -374,10 +374,6 @@ MonoBehaviour:
   - {fileID: 2119682937}
   - {fileID: 398670253}
   - {fileID: 436006487}
-  animatorG2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   ApareceOvo: {fileID: 0}
   barnAnims:
   - {fileID: 1032084237}
