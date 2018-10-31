@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class AlimentosManager : MonoBehaviour {
 
-	private int countR, countG, level, acertos, tip;
+	private int btnsCertos,contaBtn, countR, countG, level, acertos, tip;
 
 	private float tempo;
 
@@ -28,6 +28,7 @@ public class AlimentosManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		contaBtn = 0;
 		countG = 0;
 		countR = 0;
 		acertos = 0;
@@ -44,10 +45,12 @@ public class AlimentosManager : MonoBehaviour {
 
 	void Cronometro(){
 		if (conta) {
-			Debug.Log (tempo);
 			tempo -= Time.deltaTime;
 			if (tempo <= 0) {
 				conta = false;
+				for (int i = 0; i < botoes.Length; i++) {
+					botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
+				}
 				if (countR < 3) {
 					countR++;
 					StartCoroutine ("MudaAlimentos");
@@ -132,6 +135,7 @@ public class AlimentosManager : MonoBehaviour {
 			new WaitForSeconds(.5f);
 			yield return null;
 		}
+		Debug.Log ("Game: " + countG);
 		StartCoroutine("MudaAlimentos");
 	}
 
@@ -158,6 +162,8 @@ public class AlimentosManager : MonoBehaviour {
 			yield return null;
 		}
 
+		btnsCertos = 0;
+		contaBtn = 0;
 		for (int i = 0; i < botoes.Length; i++) {
 			rnd = Random.Range (0, 3);
 			if (rnd2 == i) {
@@ -165,15 +171,19 @@ public class AlimentosManager : MonoBehaviour {
 				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
 					PegaItem (true);
 				});
+				btnsCertos++;
 			} else {
 				botoes [i].GetComponent<Image> ().sprite = alimentos [rnd].sprite;
 				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
-					PegaItem (tip == rnd ? true : false);
+					if (tip == rnd) PegaItem (true);
+					else PegaItem(false);
 				});
+				if (tip == rnd) btnsCertos++;
 			}
 
 		}
-
+		tempo = tempoInicial;
+		Debug.Log ("Rodada: " + countR + ", botoes certos: " + btnsCertos + " , tempo: " + tempo);
 
 		for (float f = 0f; f <= 1; f += 0.05f){
 			Color c = botoes [0].GetComponent<Image> ().color;
@@ -192,33 +202,55 @@ public class AlimentosManager : MonoBehaviour {
 			yield return null;
 		}
 
-		tempo = tempoInicial;
+
 		conta = true;
 
 	}
 
 
 	public void PegaItem(bool pega){
-		conta = false;
+		Debug.Log (contaBtn + "Pega: " + pega);
 		for (int i = 0; i < botoes.Length; i++) {
-			botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
-		}
-		if (pega)
-			acertos++;
-
-		Debug.Log (acertos);
-		if (countR < 3) {
-			countR++;
-			StartCoroutine ("MudaAlimentos");
-		} else {
-			if (countG < 2) {
-				countG++;
-				countR = 0;
-				StartCoroutine ("IniciaRodada");
-			} else {
-				SceneManager.LoadScene ("Score");
+			if (EventSystem.current.currentSelectedGameObject.name == botoes [i].name) {
+				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
+				StartCoroutine(ApagaBotao(i));
 			}
 		}
 
+
+		if (pega)
+			contaBtn++;
+
+		if (btnsCertos == contaBtn) {
+			acertos++;
+			conta = false;
+			for (int i = 0; i < botoes.Length; i++) {
+				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
+			}
+			Debug.Log ("acertou os itens");
+			if (countR < 3) {
+				countR++;
+				StartCoroutine ("MudaAlimentos");
+			} else {
+				if (countG < 2) {
+					countG++;
+					countR = 0;
+					StartCoroutine ("IniciaRodada");
+				} else {
+					SceneManager.LoadScene ("Score");
+				}
+			}
+		}
+		
+	}
+
+	IEnumerator ApagaBotao(int i){
+		for (float f = 1f; f > 0; f -= 0.05f){
+			Color c = botoes [i].GetComponent<Image> ().color;
+			c.a = f;
+			botoes[i].GetComponent<Image>().color = c;
+			new WaitForSeconds(.5f);
+			yield return null;
+		}
 	}
 }
