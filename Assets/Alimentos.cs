@@ -9,5 +9,4 @@ public class Alimentos {
 
 	public Sprite sprite;
 
-	public string mensagem;
 }

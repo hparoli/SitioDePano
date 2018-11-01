@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class AlimentosManager : MonoBehaviour {
 
-	private int btnsCertos,contaBtn, countR, countG, level, acertos, tip;
+	private int btnsCertos,contaBtn, countR, countG, level, acertos, tip, tip2;
 
 	private float tempo;
 
@@ -24,7 +24,7 @@ public class AlimentosManager : MonoBehaviour {
 	[SerializeField]
 	private GameObject[] botoes;
 
-	private string[] tipos = { "carne", "legume", "vegetal", "fruta" };
+	private string[] tipos = { "carnes", "legumes", "vegetais", "frutas" };
 
 	// Use this for initialization
 	void Start () {
@@ -111,13 +111,36 @@ public class AlimentosManager : MonoBehaviour {
 		}
 		yield return new WaitForSeconds(.5f);
 		StartCoroutine ("IniciaRodada");
-		StopCoroutine ("StartGame");
+
 	}
 
 
 	IEnumerator IniciaRodada(){
-		tip = Random.Range (0, 3);
-		texto.text = alimentos [tip].mensagem;
+		
+		if (level == 1) {
+			tip = tip2 = Random.Range (0, alimentos.Length);
+			texto.text = string.Format("Colete os {0}" , alimentos[tip].tipo);
+		} else {
+			tip = Random.Range (0, alimentos.Length);
+			tip2 = Random.Range (0, alimentos.Length);
+			if (level == 2) {
+				if (tip == tip2) {
+					texto.text = string.Format ("Colete os {0}", alimentos [tip].tipo);
+				} else {
+					texto.text = string.Format("Colete os {0} e os {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
+				}
+			} 
+
+			if (level == 3) {
+				if (tip == tip2) {
+					texto.text = string.Format ("Não colete os {0}", alimentos [tip].tipo);
+				} else {
+					texto.text = string.Format("Colete os {0} e os {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
+				}
+			}
+		}
+
+
 		for (float f = 0f; f <= 1; f += 0.02f){
 			Color c = texto.color;
 			c.a = f;
@@ -164,21 +187,40 @@ public class AlimentosManager : MonoBehaviour {
 
 		btnsCertos = 0;
 		contaBtn = 0;
+
 		for (int i = 0; i < botoes.Length; i++) {
 			rnd = Random.Range (0, 3);
 			if (rnd2 == i) {
-				botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+				if (level == 1) {
+					botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+				} else if (level == 2) {
+					if (tip == tip2) {
+						botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+					} else {
+						if (Random.value < 0.5f) {
+							botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+						} else {
+							botoes [i].GetComponent<Image> ().sprite = alimentos [tip2].sprite;
+						}
+					}
+				}
 				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
 					PegaItem (true);
 				});
 				btnsCertos++;
 			} else {
 				botoes [i].GetComponent<Image> ().sprite = alimentos [rnd].sprite;
+				bool parametro;
+				if (tip == rnd) { 
+					parametro = true;
+					btnsCertos++;
+				} else {
+					parametro = false;
+				}
 				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
-					if (tip == rnd) PegaItem (true);
-					else PegaItem(false);
+					PegaItem (parametro);
 				});
-				if (tip == rnd) btnsCertos++;
+
 			}
 
 		}
@@ -209,7 +251,7 @@ public class AlimentosManager : MonoBehaviour {
 
 
 	public void PegaItem(bool pega){
-		Debug.Log (contaBtn + "Pega: " + pega);
+		Debug.Log (contaBtn + ", Pega: " + pega);
 		for (int i = 0; i < botoes.Length; i++) {
 			if (EventSystem.current.currentSelectedGameObject.name == botoes [i].name) {
 				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
