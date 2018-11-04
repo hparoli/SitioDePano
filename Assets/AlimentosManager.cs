@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class AlimentosManager : MonoBehaviour {
 
-	private int btnsCertos,contaBtn, countR, countG, level, acertos, tip, tip2;
+	private int btnsCertos,contaBtn, countR, countG, acertos, tip, tip2;
+
+	public int level;
 
 	private float tempo;
 
@@ -32,7 +34,6 @@ public class AlimentosManager : MonoBehaviour {
 		countG = 0;
 		countR = 0;
 		acertos = 0;
-		level = 1;
 		tempo = tempoInicial;
 		StartCoroutine ("StartGame");
 	}
@@ -125,17 +126,17 @@ public class AlimentosManager : MonoBehaviour {
 			tip2 = Random.Range (0, alimentos.Length);
 			if (level == 2) {
 				if (tip == tip2) {
-					texto.text = string.Format ("Colete os {0}", alimentos [tip].tipo);
+					texto.text = string.Format ("Colete {0}", alimentos [tip].tipo);
 				} else {
-					texto.text = string.Format("Colete os {0} e os {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
+					texto.text = string.Format("Colete {0} e {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
 				}
 			} 
 
 			if (level == 3) {
 				if (tip == tip2) {
-					texto.text = string.Format ("Não colete os {0}", alimentos [tip].tipo);
+					texto.text = string.Format ("Não colete {0}", alimentos [tip].tipo);
 				} else {
-					texto.text = string.Format("Colete os {0} e os {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
+					texto.text = string.Format("Colete {0} e {1}", alimentos[tip].tipo, alimentos[tip2].tipo);
 				}
 			}
 		}
@@ -203,19 +204,62 @@ public class AlimentosManager : MonoBehaviour {
 							botoes [i].GetComponent<Image> ().sprite = alimentos [tip2].sprite;
 						}
 					}
+				} else if (level == 3) {
+					if (tip == tip2) {
+						botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+					} else {
+						if (Random.value < 0.5f) {
+							botoes [i].GetComponent<Image> ().sprite = alimentos [tip].sprite;
+						} else {
+							botoes [i].GetComponent<Image> ().sprite = alimentos [tip2].sprite;
+						}
+					}
 				}
-				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
-					PegaItem (true);
-				});
-				btnsCertos++;
+
+				if (level == 3 && tip == tip2) {
+					botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
+						PegaItem (false);
+					});
+				} else {
+					botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
+						PegaItem (true);
+					});
+					btnsCertos++;
+				}
 			} else {
 				botoes [i].GetComponent<Image> ().sprite = alimentos [rnd].sprite;
-				bool parametro;
-				if (tip == rnd) { 
-					parametro = true;
-					btnsCertos++;
-				} else {
-					parametro = false;
+				bool parametro = false;
+
+				if (level == 1) {
+					if (tip == rnd) { 
+						parametro = true;
+						btnsCertos++;
+					} else {
+						parametro = false;
+					}
+				} else if (level == 2) {
+					if (tip == rnd || tip2 == rnd) {
+						parametro = true;
+						btnsCertos++;
+					} else {
+						parametro = false;
+					}
+				} else if (level == 3) {
+					if (tip != tip2) {
+						if (tip == rnd || tip2 == rnd) {
+							parametro = true;
+							btnsCertos++;
+						} else {
+							parametro = false;
+						}
+					} else if (tip == tip2) {
+						if (tip == rnd) {
+							parametro = false;
+						} else {
+							parametro = true;
+							btnsCertos++;
+						}
+					}
 				}
 				botoes [i].GetComponent<Button> ().onClick.AddListener (delegate {
 					PegaItem (parametro);
@@ -260,16 +304,35 @@ public class AlimentosManager : MonoBehaviour {
 		}
 
 
-		if (pega)
+		if (pega) {
 			contaBtn++;
 
-		if (btnsCertos == contaBtn) {
-			acertos++;
+			if (btnsCertos == contaBtn) {
+				acertos++;
+				conta = false;
+				for (int i = 0; i < botoes.Length; i++) {
+					botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
+				}
+				Debug.Log ("acertou os itens");
+				if (countR < 3) {
+					countR++;
+					StartCoroutine ("MudaAlimentos");
+				} else {
+					if (countG < 2) {
+						countG++;
+						countR = 0;
+						StartCoroutine ("IniciaRodada");
+					} else {
+						SceneManager.LoadScene ("Score");
+					}
+				}
+			}
+		} else {
 			conta = false;
 			for (int i = 0; i < botoes.Length; i++) {
 				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 			}
-			Debug.Log ("acertou os itens");
+			Debug.Log ("errou os itens");
 			if (countR < 3) {
 				countR++;
 				StartCoroutine ("MudaAlimentos");

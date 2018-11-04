@@ -3012,20 +3012,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b5b972323c43d40a2fdae5d3ec6ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 3
   tempoInicial: 10
   alimentos:
-  - tipo: carne
+  - tipo: as CARNES
     sprite: {fileID: 21300000, guid: f407dcd0181544149ab229ab7fcc1fbe, type: 3}
-    mensagem: Colete as CARNES
-  - tipo: legumes
+  - tipo: os LEGUMES
     sprite: {fileID: 21300000, guid: 426ca7f93a3e439408e8ab30313d5152, type: 3}
-    mensagem: Colete os LEGUMES
-  - tipo: vegetal
+  - tipo: os VEGETAIS
     sprite: {fileID: 21300000, guid: d8565f34426acd643b4e6cfcd206e4fc, type: 3}
-    mensagem: Colete os VEGETAIS
-  - tipo: fruta
+  - tipo: as FRUTAS
     sprite: {fileID: 21300000, guid: 75bc3a012b4d1b64da40e8e98bd3d305, type: 3}
-    mensagem: Colete as FRUTAS
   texto: {fileID: 2093066871}
   botoes:
   - {fileID: 39608556}
