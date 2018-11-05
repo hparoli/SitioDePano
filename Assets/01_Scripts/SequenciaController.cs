@@ -60,6 +60,9 @@ public class SequenciaController : MonoBehaviour {
 	
 	int gamelevel;
 
+    [SerializeField]
+    GameObject TutorialPrefab;
+
 
 
 	// Use this for initialization
@@ -80,6 +83,11 @@ public class SequenciaController : MonoBehaviour {
     private void Update() 
     {
         Cronometro();
+        if (gamelevel == 1)
+        {
+            TutorialPrefab.SetActive(false);
+        }
+			
     }
 
     public void GameDificultControl(int GameDificultValue)
@@ -91,13 +99,9 @@ public class SequenciaController : MonoBehaviour {
 			if(gamedificultScripiting[i].gameValue == GameDificultValue)
 			{
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+            }
 
-			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
-            Debug.Log("Set Fase");
+         
 			DificultGameObject.SetActive(false);
 		}
 	}

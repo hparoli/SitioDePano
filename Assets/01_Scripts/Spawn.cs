@@ -82,10 +82,7 @@ public class Spawn : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
+			
 
 			DificultGameObject.SetActive(false);
 		}

@@ -61,6 +61,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		
 		OpenLevel();
 		StarsPointsControl();
 		Time.timeScale = 0;
@@ -105,11 +106,6 @@ public class ContandoOsBichos : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
-
 			DificultGameObject.SetActive(false);
 		}
 	}
