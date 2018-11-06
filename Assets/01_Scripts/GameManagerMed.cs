@@ -53,9 +53,11 @@ public class GameManagerMed : MonoBehaviour {
 
 	void Start ()
 	{
+		gamelevel = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		OpenLevel();
 		StarsPointsControl();
+		ExitBoard.SetActive(false);
 		
 
 	}
@@ -93,7 +95,7 @@ public class GameManagerMed : MonoBehaviour {
 			{
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialMemoria);
 			}
-			ExitBoard.SetActive(false);
+			
 			DificultGameObject.SetActive(false);
 			source = GetComponent<AudioSource> ();
 		}

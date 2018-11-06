@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 473367263}
   - component: {fileID: 473367265}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: SoundManager Interno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2795,7 +2795,6 @@ GameObject:
   - component: {fileID: 777335991}
   - component: {fileID: 777335990}
   - component: {fileID: 777335989}
-  - component: {fileID: 777335988}
   - component: {fileID: 777335987}
   - component: {fileID: 777335986}
   m_Layer: 5
@@ -2919,17 +2918,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &777335988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 777335984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &777335989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3451,7 +3439,6 @@ GameObject:
   - component: {fileID: 928164661}
   - component: {fileID: 928164660}
   - component: {fileID: 928164659}
-  - component: {fileID: 928164658}
   - component: {fileID: 928164657}
   - component: {fileID: 928164656}
   m_Layer: 5
@@ -3575,17 +3562,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &928164658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 928164654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &928164659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3750,7 +3726,6 @@ GameObject:
   - component: {fileID: 934308564}
   - component: {fileID: 934308563}
   - component: {fileID: 934308562}
-  - component: {fileID: 934308561}
   - component: {fileID: 934308560}
   - component: {fileID: 934308559}
   m_Layer: 5
@@ -3874,17 +3849,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &934308561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 934308557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &934308562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5883,7 +5847,6 @@ GameObject:
   - component: {fileID: 1256342423}
   - component: {fileID: 1256342422}
   - component: {fileID: 1256342421}
-  - component: {fileID: 1256342420}
   - component: {fileID: 1256342419}
   - component: {fileID: 1256342418}
   m_Layer: 5
@@ -6007,17 +5970,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1256342420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1256342416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1256342421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6687,7 +6639,6 @@ GameObject:
   - component: {fileID: 1539631350}
   - component: {fileID: 1539631349}
   - component: {fileID: 1539631348}
-  - component: {fileID: 1539631347}
   - component: {fileID: 1539631346}
   - component: {fileID: 1539631345}
   m_Layer: 5
@@ -6811,17 +6762,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1539631347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1539631343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1539631348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7009,7 +6949,6 @@ GameObject:
   - component: {fileID: 1586042154}
   - component: {fileID: 1586042153}
   - component: {fileID: 1586042155}
-  - component: {fileID: 1586042156}
   - component: {fileID: 1586042157}
   - component: {fileID: 1586042158}
   m_Layer: 5
@@ -7123,17 +7062,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1586042156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1586042151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1586042157
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7515,7 +7443,6 @@ GameObject:
   - component: {fileID: 1725227803}
   - component: {fileID: 1725227802}
   - component: {fileID: 1725227801}
-  - component: {fileID: 1725227800}
   - component: {fileID: 1725227799}
   - component: {fileID: 1725227798}
   m_Layer: 5
@@ -7639,17 +7566,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1725227800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1725227796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1725227801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8447,6 +8363,52 @@ Transform:
   m_Father: {fileID: 296689323}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1829858563
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414812423082512, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356809401632934, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+      propertyPath: m_Name
+      value: 'Sound Manager '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1841997519
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,7 +8980,6 @@ GameObject:
   - component: {fileID: 1994336937}
   - component: {fileID: 1994336936}
   - component: {fileID: 1994336935}
-  - component: {fileID: 1994336934}
   - component: {fileID: 1994336933}
   - component: {fileID: 1994336932}
   m_Layer: 5
@@ -9142,17 +9103,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1994336934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1994336930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1994336935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9846,7 +9796,6 @@ GameObject:
   - component: {fileID: 2052249954}
   - component: {fileID: 2052249953}
   - component: {fileID: 2052249952}
-  - component: {fileID: 2052249951}
   - component: {fileID: 2052249950}
   - component: {fileID: 2052249949}
   m_Layer: 5
@@ -9970,17 +9919,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &2052249951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2052249947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2052249952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10206,7 +10144,6 @@ GameObject:
   - component: {fileID: 2099614236}
   - component: {fileID: 2099614235}
   - component: {fileID: 2099614234}
-  - component: {fileID: 2099614233}
   - component: {fileID: 2099614232}
   - component: {fileID: 2099614231}
   m_Layer: 5
@@ -10330,17 +10267,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &2099614233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099614229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44541ed676851ca4496b6895249fa15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2099614234
 MonoBehaviour:
   m_ObjectHideFlags: 0
