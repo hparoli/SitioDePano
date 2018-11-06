@@ -33,15 +33,9 @@ public class GameManagerMed : MonoBehaviour {
 	public GameObject ExitBoard;
 
 	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
-	[SerializeField]
-	GameObject[] boardsTutorial;
-	[SerializeField]
-	GameObject[] imagesTutorial;
+	
 
 	[Header("DificultControl")]
 	[Space(10)]
@@ -62,10 +56,7 @@ public class GameManagerMed : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		OpenLevel();
 		StarsPointsControl();
-		tutorial.SetActive (true);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);imagesTutorial [4].SetActive (false);
+		
 
 	}
 
@@ -98,6 +89,11 @@ public class GameManagerMed : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
+				if (gamelevel == 0)
+			{
+				SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialMemoria);
+			}
+			ExitBoard.SetActive(false);
 			DificultGameObject.SetActive(false);
 			source = GetComponent<AudioSource> ();
 		}
@@ -147,92 +143,12 @@ public class GameManagerMed : MonoBehaviour {
 		}
 	}
 
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
 
-		if (indexTutorial >= 1){
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-		}
-
-		if (indexTutorial >= 2) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-		}
-		if (indexTutorial >= 3) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (true);
-			boardsTutorial [0].SetActive (false);
-			boardsTutorial [1].SetActive (true);
-			boardsTutorial [2].SetActive (true);
-
-		}
-	}
-
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (false);
-
-		}
-			
-		if (indexTutorial >= 1){
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-
-		}
-
-		if (indexTutorial >= 2) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-		}
-		if (indexTutorial >= 3) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (true);
-			boardsTutorial [1].SetActive (false);
-			boardsTutorial [0].SetActive (false);
-			boardsTutorial [1].SetActive (true);
-			boardsTutorial [2].SetActive (true);
-		}
-	}
 
 	public void StartGame()
 	{
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
+		ExitBoard.SetActive(true);
 		tutorial.SetActive(false);
 	}
 

@@ -67,7 +67,7 @@ public class SequenciaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        PlayerPrefs.SetString("dificuldade" + idTema, "M");
+        
 		idTema = PlayerPrefs.GetInt ("idTema");
         OpenLevel();
 		StarsPointsControl();
