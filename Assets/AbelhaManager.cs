@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class AbelhaManager : MonoBehaviour {
 
 	[SerializeField]
-	private int numColunas,numLinhas,level,resp,waypoint,btn;
+	private int numColunas,numLinhas,level,resp,waypoint,btn, movimentos;
 
 	[SerializeField]
 	private GameObject seta,abelha,ab;
@@ -37,8 +37,10 @@ public class AbelhaManager : MonoBehaviour {
 	private Color standard;
 
 	public bool respondeu,fimCaminho;
+	public bool work,click;
 
 	public float moveSpeed;
+	
 
 	void Start(){
 		level = 1;
@@ -46,10 +48,12 @@ public class AbelhaManager : MonoBehaviour {
 		waypoint = 0;
 		InicializaLevel(level);
 		fonteAudio = GetComponent<AudioSource> ();
+		click = work = true;
+		
 	}
 
 	void Update(){
-		
+		Comportamento();
 	}
 
 	private void InicializaLevel(int lvl){
@@ -57,16 +61,19 @@ public class AbelhaManager : MonoBehaviour {
 			numColunas = 4;
 			numLinhas = 2;
 			marg = 1.5f;
+			movimentos = 4;
 		}
 		else if (lvl == 2){
 			numColunas = 4;
 			numLinhas = 3;
 			marg = 1.5f;
+			movimentos = 5;
 		}
 		else if (lvl == 3){
 			numColunas = 5;
 			numLinhas = 3;
 			marg = 1.5f;
+			movimentos = 6;
 		}
 	
 
@@ -81,6 +88,7 @@ public class AbelhaManager : MonoBehaviour {
 				setas[index].GetComponent<SetaBehavior>().dir = 0;
 				setas[index].GetComponent<SetaBehavior>().cor = Color.white;
 				setas[index].GetComponent<SetaBehavior>().tipoSeta = "normal";
+				setas[index].gameObject.name = "seta"+index;
 				index++;
 			}
 		}
@@ -197,5 +205,36 @@ public class AbelhaManager : MonoBehaviour {
 
 	public void GameOver(){
 		SceneManager.LoadScene("Score");
+	}
+
+	void Comportamento(){
+		if(work)
+		{
+			RaycastHit setaClick = new RaycastHit();
+			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out setaClick);
+			if (Input.GetMouseButtonDown (0)) {
+				Debug.Log("clicou");
+				if (hit) {
+					if(click){
+						click = false;
+						Debug.Log("acertou");
+						if(movimentos > 0){
+							movimentos--;
+							Debug.Log("movimentos: " + movimentos);
+
+							for (int i = 0; i < setas.Count; i++)
+							{
+								if(setas[i].transform.gameObject.name == setaClick.transform.gameObject.name){
+										StartCoroutine(setas[i].GetComponent<SetaBehavior>().Rotate());
+										Debug.Log("girou");
+								}
+							}
+						}
+					}
+				
+				}
+			}
+			
+		}
 	}
 }
