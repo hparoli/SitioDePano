@@ -33,28 +33,37 @@ public class GameManagerMed : MonoBehaviour {
 	public GameObject ExitBoard;
 
 	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
+	
+
+	[Header("DificultControl")]
+	[Space(10)]
 	[SerializeField]
-	GameObject[] boardsTutorial;
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
 	[SerializeField]
-	GameObject[] imagesTutorial;
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	
+	int gamelevel;
 
 
 	void Start ()
 	{
+		gamelevel = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
-		tutorial.SetActive (true);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);imagesTutorial [4].SetActive (false);
+		OpenLevel();
+		StarsPointsControl();
+		ExitBoard.SetActive(false);
+		
 
 	}
 
-	void Update () {
+	void Update () 
+	{
 
 		if (stopClick.activeSelf) {
 			StartCoroutine (CardCooldown ());
@@ -71,101 +80,81 @@ public class GameManagerMed : MonoBehaviour {
 		Cronometro ();
 	}
 
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
+	public void GameDificultControl(int GameDificultValue)
+	{	
 
-		if (indexTutorial >= 1){
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-		}
+		gamelevel = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
-		if (indexTutorial >= 2) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-		}
-		if (indexTutorial >= 3) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (true);
-			boardsTutorial [0].SetActive (false);
-			boardsTutorial [1].SetActive (true);
-			boardsTutorial [2].SetActive (true);
-
-		}
-	}
-
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (false);
-
-		}
+			}
+				if (gamelevel == 0)
+			{
+				SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialMemoria);
+			}
 			
-		if (indexTutorial >= 1){
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
-
+			DificultGameObject.SetActive(false);
+			source = GetComponent<AudioSource> ();
 		}
-
-		if (indexTutorial >= 2) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (true);
-			imagesTutorial [4].SetActive (false);
-			boardsTutorial [0].SetActive (true);
-			boardsTutorial [1].SetActive (true);
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
 		}
-		if (indexTutorial >= 3) {
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-			imagesTutorial [4].SetActive (true);
-			boardsTutorial [1].SetActive (false);
-			boardsTutorial [0].SetActive (false);
-			boardsTutorial [1].SetActive (true);
-			boardsTutorial [2].SetActive (true);
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+			 if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 
+				{
+					break;
+				}
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
 		}
 	}
 
 
-	void Awake () {
 
-		source = GetComponent<AudioSource> ();
-
-	}
-
-	public void StartGame(){
-	
+	public void StartGame()
+	{
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
+		ExitBoard.SetActive(true);
 		tutorial.SetActive(false);
 	}
+
+
 
 	void InitializeCards(){
 
@@ -248,7 +237,40 @@ public class GameManagerMed : MonoBehaviour {
 
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				Score.infoValue = string.Format ("Parabéns, levou {0} segundos e tirou nota {1}!", tempo.ToString ("0.0"), notaFinal);
-				BarnAnin ();
+				BarnAnin (); 
+				if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
 				StartCoroutine ("StartGameOver");
 
 			}
@@ -269,7 +291,8 @@ public class GameManagerMed : MonoBehaviour {
 		ExitBoard.SetActive (false);
 	}
 
-	public IEnumerator StartGameOver(){
+	public IEnumerator StartGameOver()
+	{
 
 		AnaliticsControl.memoriaTime = tempo;
 		yield return new WaitForSeconds (2);
