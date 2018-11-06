@@ -605,12 +605,12 @@ Prefab:
     - target: {fileID: 224129094309913150, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 705
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 224129094309913150, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 271
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 224129094309913150, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
@@ -665,7 +665,7 @@ Prefab:
     - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_FontData.m_BestFit
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114345735555576672, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
@@ -685,22 +685,22 @@ Prefab:
     - target: {fileID: 224324058812214846, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224324058812214846, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224324058812214846, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224324058812214846, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -71.93964
+      value: -9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b235ff69737180b4ea1eb03132aa8a48, type: 2}
@@ -922,6 +922,7 @@ MonoBehaviour:
   resp: 0
   waypoint: 0
   btn: 0
+  movimentos: 0
   seta: {fileID: 1672777223288186, guid: 4b497ecb55bddf34cbf934ccf9b956fb, type: 2}
   abelha: {fileID: 1247596682357184, guid: 4be97d02a50b1b74da838f19b7e534b8, type: 2}
   ab: {fileID: 0}
@@ -936,6 +937,8 @@ MonoBehaviour:
   standard: {r: 0, g: 0, b: 0, a: 0}
   respondeu: 0
   fimCaminho: 0
+  work: 0
+  click: 0
   moveSpeed: 0
 --- !u!4 &1332464062
 Transform:
