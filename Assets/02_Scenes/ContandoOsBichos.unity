@@ -5357,17 +5357,17 @@ Prefab:
     - target: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.64884174
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.6488419
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.6488419
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114405994096826412, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
@@ -5397,32 +5397,32 @@ Prefab:
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 323
+      value: 371
       objectReference: {fileID: 0}
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8083
+      value: -1.488
       objectReference: {fileID: 0}
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 5.551617
+      value: 3.9416485
       objectReference: {fileID: 0}
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 5.5516195
+      value: 3.9416502
       objectReference: {fileID: 0}
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 5.5516195
+      value: 3.9416502
       objectReference: {fileID: 0}
     - target: {fileID: 224343930622577520, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000089376
+      value: 0.0000099831
       objectReference: {fileID: 0}
     - target: {fileID: 114373323123027524, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
@@ -5446,7 +5446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1609801399097056, guid: 656e787d249d8d54782e9783e4420b49, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 656e787d249d8d54782e9783e4420b49, type: 2}

@@ -57,8 +57,7 @@ public class SequenciaController : MonoBehaviour {
 
 	[SerializeField]
 	Button[] gameButtons;
-	
-	int gamelevel;
+    public int gamelevel;
 
     [SerializeField]
     GameObject TutorialPrefab;
@@ -68,7 +67,7 @@ public class SequenciaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        PlayerPrefs.SetString("dificuldade" + idTema, "");
+        PlayerPrefs.SetString("dificuldade" + idTema, "M");
 		idTema = PlayerPrefs.GetInt ("idTema");
         OpenLevel();
 		StarsPointsControl();
@@ -100,9 +99,13 @@ public class SequenciaController : MonoBehaviour {
 			{
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
             }
-
-         
+       
+            ExitBoard.SetActive(false);
 			DificultGameObject.SetActive(false);
+		}
+         if (gamelevel == 0)
+		{
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialSequencia);
 		}
 	}
 	public void OpenLevel()

@@ -7,84 +7,31 @@ public class StartGame : MonoBehaviour {
 
     public SequenciaController gameController;
 	[Space(10)]
-	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
 	[SerializeField]
-	GameObject[] boardsTutorial;
-	[SerializeField]
-	GameObject[] imagesTutorial;
+	GameObject ExitBoardPrefab;
 
 
 
-	void Start () {
-
-		tutorial.SetActive (true);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);
+	void Start () 
+	{
+		
 	}
 
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-
-		}
-
-		if (indexTutorial == 1){
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-
-		}
-		if (indexTutorial == 2){
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-
-		}
-
+	private void Update() 
+	{
+		
+		if (gameController.gamelevel == 1)
+		{
+			tutorial.SetActive (false);
+			ExitBoardPrefab.SetActive(true);
+		}	
 	}
-
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-		}
-
-		if (indexTutorial == 1){
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-
-		}
-		if (indexTutorial == 2){
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-
-		}
-	}
-
-	public void Comecar(){
+	public void Comecar()
+	{	
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialSequencia);
+		ExitBoardPrefab.SetActive(true);
 		tutorial.SetActive (false);
 	}
     private void OnMouseDown()

@@ -96,5 +96,18 @@ public class ClipList
     public AudioClip   MissClick;
 	public AudioClip   speekBolos;
 	public AudioClip   speekHorta;
+	public AudioClip   TutorialSequencia;
+	public AudioClip   TutorialPique;
+	public AudioClip   TutorialPastoreira;
+	public AudioClip   TutorialOvo;
+	public AudioClip   TutorialDitados;
+	public AudioClip   TutorialMemoria;
+	public AudioClip   TutorialOlhoLobo;
+	public AudioClip   TutorialContandoBicho;
+	public AudioClip   TutorialCaminhos;
+	public AudioClip   TutorialAlimentos;
+
+
+	
 
 }
