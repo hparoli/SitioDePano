@@ -16,15 +16,9 @@ public class ComportamentoGalinha : MonoBehaviour {
 	public GameObject ExitBoard;
 
 	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
-	[SerializeField]
-	GameObject[] boardsTutorial;
-	[SerializeField]
-	GameObject[] imagesTutorial;
+	
 
 	float tempo;
 	float tempo2;
@@ -40,10 +34,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 		max = 3.5f;
 		delayGalinha = 2.5f;
 		ApareceOvo = FindObjectOfType <ApareceOvo> ();
-		tutorial.SetActive (true);
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
+		
 	}
     void Update() 
 	{
@@ -52,48 +43,11 @@ public class ComportamentoGalinha : MonoBehaviour {
 		Debug.Log(GameValue);
 	}
 
-	
-
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-		}
-		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-
-		}
-
-	}
-
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) 
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-
-		}
-		if (indexTutorial == 1) 
-		{
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-
-		}
-	}
 	public void StartGame()
 	{
-		tutorial.SetActive (false);
+        ExitBoard.SetActive(true);
+        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOvo);
+        tutorial.SetActive (false);
 		Time.timeScale = 1;
 		ColetaOvos.work = true;
 		StartCoroutine("Comportamento");

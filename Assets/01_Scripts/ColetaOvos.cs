@@ -32,6 +32,9 @@ public class ColetaOvos : MonoBehaviour {
 	[HideInInspector]
 	public int gamelevel;
 
+    [SerializeField]
+    GameObject ExitBoard;
+
 
 	// Use this for initialization
 	void Start () 
@@ -102,6 +105,12 @@ public class ColetaOvos : MonoBehaviour {
 			}
 				DificultGameObject.SetActive(false);
 		}
+        if (gamelevel == 0)
+        {
+            ExitBoard.SetActive(false);
+            SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
+
+        }
 	}
 	public void OpenLevel()
 	{
