@@ -22,6 +22,8 @@ public class GameManagerMed : MonoBehaviour {
 	public Text matchText;
 
 	private bool _init = false;
+
+	private bool comeca = false;
 	private int _matches = 9;
 
 	private int idTema;
@@ -65,6 +67,7 @@ public class GameManagerMed : MonoBehaviour {
 	void Update () 
 	{
 
+		if(comeca){
 		if (stopClick.activeSelf) {
 			StartCoroutine (CardCooldown ());
 
@@ -78,6 +81,7 @@ public class GameManagerMed : MonoBehaviour {
 		}
 
 		Cronometro ();
+		}
 	}
 
 	public void GameDificultControl(int GameDificultValue)
@@ -98,6 +102,7 @@ public class GameManagerMed : MonoBehaviour {
 			
 			DificultGameObject.SetActive(false);
 			source = GetComponent<AudioSource> ();
+			
 		}
 	}
 	public void OpenLevel()
@@ -152,6 +157,7 @@ public class GameManagerMed : MonoBehaviour {
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
 		ExitBoard.SetActive(true);
 		tutorial.SetActive(false);
+		comeca = true;
 	}
 
 

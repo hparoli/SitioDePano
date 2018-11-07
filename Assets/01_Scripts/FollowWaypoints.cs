@@ -104,7 +104,9 @@ public class FollowWaypoints : MonoBehaviour {
 
 	void OnTriggerStay(Collider col){
 		if(col.gameObject.name == porteirasWaypoints[porteiraIndex].name){
-			if(this.transform.position == waypoints[waypointIndex].transform.position){
+			float posx = Mathf.Abs(this.transform.position.x - waypoints[waypointIndex].transform.position.x);
+			float posy = Mathf.Abs(this.transform.position.y - waypoints[waypointIndex].transform.position.y);
+			if(posx <= 0.1f && posy <= 0.1f){
 				porteiras[porteiraIndex].GetComponent<Porteira>().canMove = false;
 				if(porteiras[porteiraIndex].GetComponent<Porteira>().fechada)
 					waypointIndex++;
