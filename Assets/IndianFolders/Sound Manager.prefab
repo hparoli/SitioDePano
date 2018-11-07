@@ -386,6 +386,18 @@ MonoBehaviour:
     MissClick: {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
     speekBolos: {fileID: 8300000, guid: 81ed35c9ebe6858488c2fd9fb9ba7386, type: 3}
     speekHorta: {fileID: 8300000, guid: be747f4823af545448b69a1ec81ef763, type: 3}
+    TutorialSequencia: {fileID: 8300000, guid: d8f96ac96d49f7d4c8034604b365ade5, type: 3}
+    TutorialPique: {fileID: 8300000, guid: dce646b99dcc0f949b21467c6a482a00, type: 3}
+    TutorialPastoreira: {fileID: 8300000, guid: 82bce63cc3b8b3b4a90529b345e48edd,
+      type: 3}
+    TutorialOvo: {fileID: 8300000, guid: 506fde0e28b7db741b07b4ca37d397bb, type: 3}
+    TutorialDitados: {fileID: 8300000, guid: e2cd03833510e93479045f3f5aa597d4, type: 3}
+    TutorialMemoria: {fileID: 8300000, guid: 904775a391e8d034da05eeed248e0564, type: 3}
+    TutorialOlhoLobo: {fileID: 8300000, guid: 539d47d48cdf36e458394e95741ed8d2, type: 3}
+    TutorialContandoBicho: {fileID: 8300000, guid: 9c398051df09e4641a3ae35a3ea35cef,
+      type: 3}
+    TutorialCaminhos: {fileID: 8300000, guid: 02369d8daad0e5c4f873be56873799be, type: 3}
+    TutorialAlimentos: {fileID: 8300000, guid: 1e2345d961fe46244986ac4e2f46ad58, type: 3}
   playerSource:
   - {fileID: 82898100292500974}
   - {fileID: 82557352149528946}
