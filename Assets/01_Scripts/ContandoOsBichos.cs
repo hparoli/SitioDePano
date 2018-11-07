@@ -31,16 +31,9 @@ public class ContandoOsBichos : MonoBehaviour {
 	int notaFinal;
 
 	[Space(10)]
-	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
-	[SerializeField]
-	GameObject[] boardsTutorial;
-	[SerializeField]
-	GameObject[] imagesTutorial;
+	
 
 	float tempo;
 
@@ -77,10 +70,7 @@ public class ContandoOsBichos : MonoBehaviour {
 		countDestroy = etapa[indexEtapa];
 		texto.GetComponent<Text>().text = "";
 		idTema = PlayerPrefs.GetInt ("idTema");
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);imagesTutorial [2].SetActive (false);imagesTutorial [3].SetActive (false);
-
+		
 		
 	}
 	
@@ -106,9 +96,14 @@ public class ContandoOsBichos : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
-			DificultGameObject.SetActive(false);
+            DificultGameObject.SetActive(false);
 		}
-	}
+        if (gamelevel == 0)
+        {
+            ExitBoard.SetActive(false);
+            SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialContandoBicho);
+        }
+    }
 	public void OpenLevel()
 	{
 		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
@@ -153,91 +148,18 @@ public class ContandoOsBichos : MonoBehaviour {
 			}
 		}
 	}
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial == 0)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-
-		}
-		if (indexTutorial == 1)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-		}
-		if (indexTutorial == 2)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-		}
-		if (indexTutorial == 3)
-		{
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (true);
-		}
-	}
-
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-		if (indexTutorial == 0)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-
-		}
-		if (indexTutorial == 1)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (false);
-		}
-		if (indexTutorial == 2)
-		{
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (true);
-			imagesTutorial [3].SetActive (false);
-		}
-		if (indexTutorial == 3)
-		{
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (false);
-			imagesTutorial [2].SetActive (false);
-			imagesTutorial [3].SetActive (true);
-		}
 	
-	}
 	
 	public void StartGame()
 	{
 		tutorial.SetActive (false);
+        ExitBoard.SetActive(true);
 		Time.timeScale = 1;
 		StartCoroutine("ConteOAnimal");
 		button.SetActive (false);
+        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
 
-	}
+    }
 	void Cronometro()
 	{
 	    tempo += 1 * Time.deltaTime;

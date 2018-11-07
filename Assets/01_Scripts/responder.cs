@@ -105,16 +105,15 @@ public class responder : MonoBehaviour {
 			//{
 			//	gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
 			//}
-			if (gamelevel == 0)
-			{
-				tutorial.SetActive (true);
-				SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialDitados);
-			}
-			
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
 		}
-	}
+        if (gamelevel == 0)
+        {
+            tutorial.SetActive(true);
+            SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialDitados);
+        }
+    }
 	public void OpenLevel()
 	{
 		string dif = PlayerPrefs.GetString("dificuldade" + idTema);

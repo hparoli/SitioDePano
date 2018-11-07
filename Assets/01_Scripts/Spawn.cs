@@ -23,15 +23,9 @@ public class Spawn : MonoBehaviour {
 	public float tempo;
 
 	[Header("Tutorial")]
-	public string [] txtTutorial;
-	public Text infoTutorial;
-	int indexTutorial = 0;
 	[SerializeField]
 	GameObject tutorial;
-	[SerializeField]
-	GameObject[] boardsTutorial;
-	[SerializeField]
-	GameObject[] imagesTutorial;
+	
 
 
 	[Header("Celeiro")]
@@ -56,9 +50,7 @@ public class Spawn : MonoBehaviour {
 		spawnAnterior = 99;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
-		infoTutorial.text = txtTutorial [indexTutorial];
-		boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-		imagesTutorial [0].SetActive (true);imagesTutorial [1].SetActive (false);
+		
 		OpenLevel();
 		StarsPointsControl();
 		//PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), 0);
@@ -86,6 +78,12 @@ public class Spawn : MonoBehaviour {
 
 			DificultGameObject.SetActive(false);
 		}
+
+        if (gamelevel == 0)
+        {
+            SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPique);
+            ExitBoard.SetActive(false);
+        }
 	}
 	public void OpenLevel()
 	{
@@ -132,51 +130,11 @@ public class Spawn : MonoBehaviour {
 		}
 	}
 
-	public void ChangeTextTutorialForward(){
-		indexTutorial++;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-		if (indexTutorial == 0) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-		
-		}
-		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-
-		}
-
-
-	}
-	public void ChangeTextTutorialBack(){
-		indexTutorial--;
-		infoTutorial.text = txtTutorial [indexTutorial];
-
-
-		if (indexTutorial == 0) {
-			boardsTutorial [0].SetActive (true);boardsTutorial [1].SetActive (false);boardsTutorial [2].SetActive (false);
-			imagesTutorial [0].SetActive (true);
-			imagesTutorial [1].SetActive (false);
-
-		}
-		if (indexTutorial == 1) {
-			boardsTutorial [0].SetActive (false);boardsTutorial [1].SetActive (true);boardsTutorial [2].SetActive (true);
-			imagesTutorial [0].SetActive (false);
-			imagesTutorial [1].SetActive (true);
-		
-		}
-
-
-	}
-
-
-
 	public void StartGame(int Value)
 	{
-			if (tutorial)
+        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPique);
+        ExitBoard.SetActive(true);
+        if (tutorial)
 			{
 				tutorial.SetActive (false);
 			}
