@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4851eb9784ea3d14485e2ec90588f7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
+  audio: {fileID: 1307086883}
   pergunta: {fileID: 800514251}
   answerButtons:
   - {fileID: 1114182003}
