@@ -9,7 +9,7 @@ public class AlimentosManager : MonoBehaviour {
 
 	private int btnsCertos,contaBtn, countR, countG, acertos, tip, tip2;
 
-	public int level;
+	public int level = 0;
 
 	private float tempo;
 
@@ -28,19 +28,124 @@ public class AlimentosManager : MonoBehaviour {
 
 	private string[] tipos = { "carnes", "legumes", "vegetais", "frutas" };
 
+	[Header("DificultControl")]
+	[Space(10)]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	int notaFinal;
+
+	[SerializeField]
+	GameObject ExitBoard;
+	[SerializeField]
+	GameObject TutorialPrefab;
+
+	int gamelevel;
+	int idTema;
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	 {
+	 	idTema = PlayerPrefs.GetInt ("idTema");
+	    OpenLevel();
+		StarsPointsControl();
 		contaBtn = 0;
 		countG = 0;
 		countR = 0;
 		acertos = 0;
 		tempo = tempoInicial;
-		StartCoroutine ("StartGame");
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		ExitBoard.SetActive(false);
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		Cronometro ();
+	}
+	public void GameDificultControl(int GameDificultValue)
+	{	
+		level = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+			}
+			else
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
+			}
+
+			DificultGameObject.SetActive(false);
+			ExitBoard.SetActive(false);
+		}
+		if (level == 1)
+		{
+			TutorialPrefab.SetActive(true);
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		}
+
+		Debug.Log(level);
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+ 				if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 				{
+					break;
+				}
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
+		}
+	}
+
+	public void StartGameButton()
+	{
+		ExitBoard.SetActive(true);
+		TutorialPrefab.SetActive(false);
+		StartCoroutine ("StartGame");
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		level = 1;
 	}
 
 
