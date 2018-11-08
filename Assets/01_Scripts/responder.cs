@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class responder : MonoBehaviour {
 
+	//TrilhaSonora
+	public AudioSource audio;
+
 	private int idTema;
 
 	[SerializeField]
@@ -74,6 +77,7 @@ public class responder : MonoBehaviour {
 
 	void Start () 
 	{
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		Time.timeScale = 0;
@@ -173,6 +177,7 @@ public class responder : MonoBehaviour {
 		UpdateQuestionOutput ();
 		ExitBoard.SetActive(true);
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialDitados);
+		audio.Play ();
 	}
 
 	void SetShuffledQuestions()

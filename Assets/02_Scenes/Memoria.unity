@@ -1705,7 +1705,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 883a21319a4c8184193a6831b5635de8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.651
   m_Pitch: 1
   Loop: 1
@@ -9343,6 +9343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bd366107ed1fa42a99e71e73553893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 473367263}
   gameOver: {fileID: 1194923160}
   stopClick: {fileID: 103086518}
   shuffleCards: {fileID: 8300000, guid: 1bdf821592c60d148b2ca5d2b23e508b, type: 3}

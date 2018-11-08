@@ -12,6 +12,9 @@ public class AninhaPastoreira : MonoBehaviour {
 	private int countSpawn, idTema, countDestroy;
 	public int notaFinal;
 
+	//TrilhaSonora
+	public AudioSource audio;
+
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
@@ -43,7 +46,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	void Start ()
 	 {
-		
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		notaFinal = 0;
@@ -142,6 +145,7 @@ public class AninhaPastoreira : MonoBehaviour {
     public void StartGame()
 	{
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPastoreira);
+		audio.Play ();
         ExitBoard.SetActive(true);
         tutorial.SetActive (false);
 		Time.timeScale = 1;

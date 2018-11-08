@@ -13,7 +13,8 @@ public class ColetaOvos : MonoBehaviour {
 	public static bool work;
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
-	
+
+
 	public GameObject manager;
 	private int idTema;
 	private int notaFinal;
@@ -94,7 +95,6 @@ public class ColetaOvos : MonoBehaviour {
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
-
 		gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ContandoOsBichos : MonoBehaviour {
 
+	//TrilhaSonora
+	public AudioSource audio;
+
 	public GameObject Placa;
 
 	public Transform[]  spawn;
@@ -54,7 +57,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		Time.timeScale = 0;
@@ -158,6 +161,7 @@ public class ContandoOsBichos : MonoBehaviour {
 		StartCoroutine("ConteOAnimal");
 		button.SetActive (false);
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
+		audio.Pause ();
 
     }
 	void Cronometro()

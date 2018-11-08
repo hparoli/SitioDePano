@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class DeOlhoNoLobo : MonoBehaviour {
 
+	//TrilhaSonora
+	public AudioSource audio;
+
 	[SerializeField]
 	private GameObject[] spawns, arbustos;
 
@@ -53,6 +56,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		Time.timeScale = 0;
@@ -186,6 +190,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		Time.timeScale = 1;
 		StartCoroutine("SpawnLobo");
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOlhoLobo);
+		audio.Play ();
         ExitBoard.SetActive(true);
     }
 

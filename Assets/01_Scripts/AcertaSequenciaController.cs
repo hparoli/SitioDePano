@@ -9,7 +9,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private int idTema;
 
-	public GameObject trilha;
+	//TrilhaSonora
+	public AudioSource audio;
 
 	[SerializeField]
 	private Formas[] formas;
@@ -69,7 +70,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 	void Start () 
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
-		
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		ind = 1;
@@ -82,7 +83,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
-		trilha.SetActive (false);
 		level = gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
@@ -154,11 +154,11 @@ public class AcertaSequenciaController : MonoBehaviour {
 	{
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
-		trilha.SetActive (true);
 		 
 		if (level == 0)
 		{
 			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekBolos);
+			audio.Play ();
 			qtdFormas = 3;
 			tipos = 3;
 		} else if(level == 1){

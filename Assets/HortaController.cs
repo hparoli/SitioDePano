@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 
 public class HortaController : MonoBehaviour {
+
+	//TrilhaSonora
+	public AudioSource audio;
+
 	private int idTema;
 	public int level;
-
-	public GameObject trilha;
 	
 	public float saldoInicial,saldo;
 
@@ -58,6 +60,7 @@ public class HortaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{	
+		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
 		idTema = PlayerPrefs.GetInt ("idTema");
@@ -81,7 +84,7 @@ public class HortaController : MonoBehaviour {
 		TutorialPrefab.SetActive(false);
 		ControladorPrefab.SetActive(true);
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
-		trilha.SetActive (true);
+		audio.Play ();
 		if(level == 0 || level == 2){
 			for (int i = 0; i < buttons.Length; i++)
 			{
@@ -139,7 +142,6 @@ public class HortaController : MonoBehaviour {
 
 	public void GameDificultControl(int GameDificultValue)
 	{	
-		trilha.SetActive (false);
 		level = gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Spawn : MonoBehaviour {
 
+	//TrilhaSonora
+	public AudioSource audio;
 
 	//B: Random Spawn Point toda vez que rodar o jogo
 
@@ -47,6 +49,7 @@ public class Spawn : MonoBehaviour {
 
 	void Start () 
 	{
+		audio.Pause ();
 		spawnAnterior = 99;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
@@ -133,6 +136,7 @@ public class Spawn : MonoBehaviour {
 	public void StartGame(int Value)
 	{
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPique);
+		audio.Play ();
         ExitBoard.SetActive(true);
         if (tutorial)
 			{

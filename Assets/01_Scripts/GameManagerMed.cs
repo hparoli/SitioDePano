@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 public class GameManagerMed : MonoBehaviour {
 
+	//TrilhaSonora
+	public AudioSource audio;
+
 	public GameObject gameOver;
 
 	public GameObject stopClick;
@@ -55,6 +58,7 @@ public class GameManagerMed : MonoBehaviour {
 
 	void Start ()
 	{
+		audio.Pause ();
 		gamelevel = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		OpenLevel();
@@ -155,6 +159,7 @@ public class GameManagerMed : MonoBehaviour {
 	public void StartGame()
 	{
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
+		audio.Play ();
 		ExitBoard.SetActive(true);
 		tutorial.SetActive(false);
 		comeca = true;

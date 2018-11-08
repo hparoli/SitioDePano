@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ComportamentoGalinha : MonoBehaviour {
+	//TrilhaSonora
+	public AudioSource audio;
+
 	public GameObject ColetaOvosControl;
 	private float min,max,delayGalinha;
 	public Animator[] animator;
@@ -28,6 +31,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{	
+		audio.Pause ();
 		Debug.Log(GameValue);
 		Time.timeScale = 0;
 		min = 1.5f;
@@ -47,6 +51,7 @@ public class ComportamentoGalinha : MonoBehaviour {
 	{
         ExitBoard.SetActive(true);
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOvo);
+		audio.Play ();
         tutorial.SetActive (false);
 		Time.timeScale = 1;
 		ColetaOvos.work = true;
