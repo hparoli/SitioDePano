@@ -10,10 +10,10 @@ public class AbelhaManager : MonoBehaviour {
 	private int numColunas,numLinhas,level,resp,waypoint,btn, movimentos;
 
 	[SerializeField]
-	private GameObject seta,abelha,ab;
+	private GameObject seta,abelha,ab,cm,es,colmeia,estrela;
 
 	[SerializeField]
-	public List<GameObject> setas,botoes;
+	public List<GameObject> setas,caminho;
 
 	[SerializeField]
 	private Transform pos;
@@ -28,7 +28,7 @@ public class AbelhaManager : MonoBehaviour {
 	private Vector3 tam;
 
 	[SerializeField]
-	private Text texto;
+	private Text texto, moviTxt;
 
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
@@ -36,59 +36,66 @@ public class AbelhaManager : MonoBehaviour {
 	[SerializeField]
 	private Color standard;
 
-	public bool respondeu,fimCaminho;
+	public bool respondeu,fimCaminho,acertouCaminho,destino;
 	public bool work,click;
 
 	public float moveSpeed;
-	
+
+	private string[] ladoLvl;
 
 	void Start(){
-		level = 1;
 		respondeu = false;
 		waypoint = 0;
 		InicializaLevel(level);
 		fonteAudio = GetComponent<AudioSource> ();
 		click = work = true;
-		
+		fimCaminho = false;
+		destino = true;
 	}
 
 	void Update(){
 		Comportamento();
+		if(!destino){
+			ab.GetComponent<CaminhosManager>().Move(caminho);
+		}
 	}
 
 	private void InicializaLevel(int lvl){
 		if (lvl == 1){
 			numColunas = 4;
 			numLinhas = 2;
-			marg = 1.5f;
+			marg = 1.7f;
 			movimentos = 4;
+			ladoLvl = new string[] {"left","left","down","right","down","down","right","left"};
 		}
 		else if (lvl == 2){
 			numColunas = 4;
 			numLinhas = 3;
-			marg = 1.5f;
+			marg = 1.7f;
 			movimentos = 5;
+			ladoLvl = new string[] {"left","down","right","up","down","right","down","left","right","up","left","left"};
 		}
 		else if (lvl == 3){
 			numColunas = 5;
 			numLinhas = 3;
-			marg = 1.5f;
-			movimentos = 6;
+			marg = 1.7f;
+			movimentos = 7;
+			ladoLvl = new string[] {"up","right","up","right","right","left","up","up","right","up","down","right","left","down","up"};
 		}
 	
 
 		int index = 0;
-		for (int i = 0; i < numColunas; i++)
+		for (int i = 0; i < numLinhas; i++)
 		{
-			for (int j = 0; j < numLinhas; j++)
+			for (int j = 0; j < numColunas; j++)
 			{
-				setas.Add(GameObject.Instantiate(seta, new Vector3(pos.position.x - (i*marg), pos.position.y - (j*marg), pos.position.z) ,pos.rotation));
+				setas.Add(GameObject.Instantiate(seta, new Vector3(pos.position.x + (numColunas/2) - (j*marg)
+				                                                 , pos.position.y + (numLinhas/2) - (i*marg)
+																 , pos.position.z) ,pos.rotation));
 				setas[index].GetComponent<SetaBehavior>().x = j;
 				setas[index].GetComponent<SetaBehavior>().y = i;
-				setas[index].GetComponent<SetaBehavior>().dir = 0;
-				setas[index].GetComponent<SetaBehavior>().cor = Color.white;
-				setas[index].GetComponent<SetaBehavior>().tipoSeta = "normal";
-				setas[index].gameObject.name = "seta"+index;
+				setas[index].GetComponent<SetaBehavior>().tipoSeta = "flor";
+				setas[index].gameObject.name = i+""+j;
 				index++;
 			}
 		}
@@ -97,69 +104,207 @@ public class AbelhaManager : MonoBehaviour {
 	}
 
 	private void OrganizaSetas(int lvl){
+		
+		for(int i = 0; i < setas.Count; i++){
+				if(ladoLvl[i] == "up"){
+					setas[i].transform.eulerAngles = new Vector3(0,0,90);
+				} else if (ladoLvl[i] == "down"){
+					setas[i].transform.eulerAngles = new Vector3(0,0,270);
+				} else if (ladoLvl[i] == "right"){
+					setas[i].transform.eulerAngles = new Vector3(0,0,0);
+				} else if (ladoLvl[i] == "left"){
+					setas[i].transform.eulerAngles = new Vector3(0,0,180);
+				}
+				setas[i].GetComponent<SetaBehavior>().lado = ladoLvl[i];
+			}
+		
 		if (lvl == 1){
-			setas[0].transform.eulerAngles = new Vector3(0,0,180);
-			setas[1].transform.eulerAngles = new Vector3(0,0,180);
-			setas[2].transform.eulerAngles = new Vector3(0,0,270);
-			setas[3].transform.eulerAngles = new Vector3(0,0,0);
-			setas[4].transform.eulerAngles = new Vector3(0,0,270);
-			setas[5].transform.eulerAngles = new Vector3(0,0,270);
-			setas[6].transform.eulerAngles = new Vector3(0,0,0);
-			setas[7].transform.eulerAngles = new Vector3(0,0,180);
+			Vector3 pos1;
+			pos1 = setas[4].transform.position;
+			ab = GameObject.Instantiate(abelha, new Vector3(pos1.x + marg
+				                                                 , pos1.y
+																 , pos1.z) ,Quaternion.EulerAngles(0,0,0));
+			
+			Vector3 pos2;
+			pos2 = setas[3].transform.position;
+			es = GameObject.Instantiate(estrela, new Vector3(pos2.x  - 0.25f
+				                                                 , pos2.y + 0.25f
+																 , pos2.z) ,Quaternion.EulerAngles(0,0,0));
+
+			Vector3 pos3;
+			pos3 = setas[7].transform.position;
+			cm = GameObject.Instantiate(colmeia, new Vector3(pos3.x  - marg
+				                                                 , pos3.y
+																 , pos3.z) ,Quaternion.EulerAngles(0,0,0));
+			cm.GetComponent<SetaBehavior>().tipoSeta = "colmeia";
+			cm.GetComponent<SetaBehavior>().x = setas[7].GetComponent<SetaBehavior>().x+1;
+			cm.GetComponent<SetaBehavior>().y = setas[7].GetComponent<SetaBehavior>().y;
+			cm.name = cm.GetComponent<SetaBehavior>().y+""+cm.GetComponent<SetaBehavior>().x;
+
 		}
 		else if (lvl == 2){
-			setas[0].transform.eulerAngles = new Vector3(0,0,180);
-			setas[1].transform.eulerAngles = new Vector3(0,0,270);
-			setas[2].transform.eulerAngles = new Vector3(0,0,0);
-			setas[3].transform.eulerAngles = new Vector3(0,0,90);
-			setas[4].transform.eulerAngles = new Vector3(0,0,270);
-			setas[5].transform.eulerAngles = new Vector3(0,0,0);
-			setas[6].transform.eulerAngles = new Vector3(0,0,270);
-			setas[7].transform.eulerAngles = new Vector3(0,0,180);
-			setas[8].transform.eulerAngles = new Vector3(0,0,0);
-			setas[9].transform.eulerAngles = new Vector3(0,0,90);
-			setas[10].transform.eulerAngles = new Vector3(0,0,180);
-			setas[11].transform.eulerAngles = new Vector3(0,0,180);
+			Vector3 pos1 = setas[4].transform.position;
+			ab = GameObject.Instantiate(abelha, new Vector3(pos1.x + marg
+				                                                 , pos1.y
+																 , pos1.z) ,Quaternion.EulerAngles(0,0,0));
+			
+			setas[5].GetComponent<SetaBehavior>().tipoSeta = "barreira";
+			setas[5].GetComponent<SpriteRenderer>().sprite = img;
+			setas[5].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
+			
+			Vector3 pos2 = setas[7].transform.position;
+			
+			cm = GameObject.Instantiate(colmeia, new Vector3(pos2.x  - marg
+				                                                 , pos2.y
+																 , pos2.z) ,Quaternion.EulerAngles(0,0,0));
+			cm.GetComponent<SetaBehavior>().tipoSeta = "colmeia";
+			cm.GetComponent<SetaBehavior>().x = setas[7].GetComponent<SetaBehavior>().x+1;
+			cm.GetComponent<SetaBehavior>().y = setas[7].GetComponent<SetaBehavior>().y;
+			cm.name = cm.GetComponent<SetaBehavior>().y+""+cm.GetComponent<SetaBehavior>().x;
+			
+			Vector3 pos3 = setas[11].transform.position;
+			es = GameObject.Instantiate(estrela, new Vector3(pos3.x  - 0.25f
+				                                                 , pos3.y + 0.25f 
+																 , pos3.z) ,Quaternion.EulerAngles(0,0,0));
+																 
 		}
 		else if (lvl == 3){
-			setas[0].transform.eulerAngles = new Vector3(0,0,90);
-			setas[1].transform.eulerAngles = new Vector3(0,0,0);
-			setas[2].transform.eulerAngles = new Vector3(0,0,90);
-			setas[3].transform.eulerAngles = new Vector3(0,0,0);
-			setas[4].transform.eulerAngles = new Vector3(0,0,0);
-			setas[5].transform.eulerAngles = new Vector3(0,0,180);
-			setas[6].transform.eulerAngles = new Vector3(0,0,90);
-			setas[7].transform.eulerAngles = new Vector3(0,0,90);
-			setas[8].transform.eulerAngles = new Vector3(0,0,0);
-			setas[9].transform.eulerAngles = new Vector3(0,0,90);
-			setas[10].transform.eulerAngles = new Vector3(0,0,270);
-			setas[11].transform.eulerAngles = new Vector3(0,0,0);
-			setas[12].transform.eulerAngles = new Vector3(0,0,180);
-			setas[13].transform.eulerAngles = new Vector3(0,0,270);
-			setas[14].transform.eulerAngles = new Vector3(0,0,90);			
+			Vector3 pos1 = setas[4].transform.position;
+			es = GameObject.Instantiate(estrela, new Vector3(pos1.x  - 0.25f
+				                                                 , pos1.y + 0.25f
+																 , pos1.z) ,Quaternion.EulerAngles(0,0,0));
+			
+			Vector3 pos2 = setas[5].transform.position;
+			ab = GameObject.Instantiate(abelha, new Vector3(pos2.x + marg
+				                                                 , pos2.y
+																 , pos2.z) ,Quaternion.EulerAngles(0,0,0));
+
+			Vector3 pos3 = setas[8].transform.position;
+			cm = GameObject.Instantiate(colmeia, new Vector3(pos3.x
+				                                      , pos3.y
+													  , pos3.z) ,Quaternion.EulerAngles(0,0,0));
+			cm.GetComponent<SetaBehavior>().tipoSeta = "colmeia";
+			setas[8].GetComponent<SetaBehavior>().tipoSeta = "colmeia";
+			setas[8].name = "colmeia";
+			cm.GetComponent<SetaBehavior>().x = setas[8].GetComponent<SetaBehavior>().x;
+			cm.GetComponent<SetaBehavior>().y = setas[8].GetComponent<SetaBehavior>().y;
+			cm.name = cm.GetComponent<SetaBehavior>().y+""+cm.GetComponent<SetaBehavior>().x;
+			setas[8].GetComponent<SpriteRenderer>().sprite = null;
+			setas[8].GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
+			setas[8].GetComponent<BoxCollider>().enabled = false;
+
 		}
-		
+		moviTxt.text = string.Format("{0}",movimentos);
 	}
 
-	public void Responde(int resposta){
-		btn = resposta;
-		if(resp == resposta){
-			texto.text = "Parabéns! Você acertou!";
-			fonteAudio.PlayOneShot(sons[0]);
-		} 
-		else{
-			texto.text = "Que pena, você errou!";
-			fonteAudio.PlayOneShot(sons[1]);
+	public void Responde(){
+		if(!respondeu){
+			respondeu = true;
+			if(level == 1 || level == 2){
+				caminho.Add(setas[4]);
+			} else if(level == 3) {
+				caminho.Add(setas[5]);
+			}
+			int idx = 0;
+			string tipo;
+			while(!fimCaminho){
+				Debug.Log(caminho[idx].GetComponent<SetaBehavior>().lado);
+				Debug.Log("Ultima Posição: " + caminho[idx].name + " posicao: " + idx);
+				tipo = caminho[idx].GetComponent<SetaBehavior>().tipoSeta;
+				if(tipo == "flor"){
+					if(caminho[idx].GetComponent<SetaBehavior>().lado == "up"){
+						if(caminho[idx].GetComponent<SetaBehavior>().y == 0){
+							fimCaminho = true;
+						} else{
+							caminho.Add(GameObject.Find((caminho[idx].GetComponent<SetaBehavior>().y-1)+
+														""+caminho[idx].GetComponent<SetaBehavior>().x));
+							idx++;
+							for (int i = 0; i < caminho.Count-1; i++)
+							{
+								if(caminho[i] == caminho[idx]){
+									fimCaminho = true;
+									break;
+								}
+							}
+						}
+					} else if(caminho[idx].GetComponent<SetaBehavior>().lado == "down"){
+						if(caminho[idx].GetComponent<SetaBehavior>().y == numLinhas-1){
+							fimCaminho = true;
+						} else{
+							caminho.Add(GameObject.Find((caminho[idx].GetComponent<SetaBehavior>().y+1)+
+														""+caminho[idx].GetComponent<SetaBehavior>().x));
+							idx++;
+							for (int i = 0; i < caminho.Count-1; i++)
+							{
+								if(caminho[i] == caminho[idx]){
+									fimCaminho = true;
+									break;
+								}
+							}
+							
+						}
+					} else if(caminho[idx].GetComponent<SetaBehavior>().lado == "right"){
+						if(caminho[idx].GetComponent<SetaBehavior>().x == 0){
+							fimCaminho = true;
+						} else{
+							caminho.Add(GameObject.Find((caminho[idx].GetComponent<SetaBehavior>().y)+
+														""+(caminho[idx].GetComponent<SetaBehavior>().x-1)));
+							idx++;
+							for (int i = 0; i < caminho.Count-1; i++)
+							{
+								if(caminho[i] == caminho[idx]){
+									fimCaminho = true;
+									break;
+								}
+							}
+						}
+					} else if(caminho[idx].GetComponent<SetaBehavior>().lado == "left"){
+						if(caminho[idx].GetComponent<SetaBehavior>().x == numColunas-1){
+							if((level == 1 || level == 2) && caminho[idx].GetComponent<SetaBehavior>().y == 1){
+								caminho.Add(GameObject.Find((caminho[idx].GetComponent<SetaBehavior>().y)+
+														""+(caminho[idx].GetComponent<SetaBehavior>().x+1)));
+								idx++;
+							}
+							fimCaminho = true;
+						} else{
+							caminho.Add(GameObject.Find((caminho[idx].GetComponent<SetaBehavior>().y)+
+														""+(caminho[idx].GetComponent<SetaBehavior>().x+1)));
+							idx++;
+							for (int i = 0; i < caminho.Count-1; i++)
+							{
+								if(caminho[i] == caminho[idx]){
+									fimCaminho = true;
+									break;
+								}
+							}
+						}
+					}
+					
+				} else {
+					fimCaminho = true;
+				}
+			} //fim while
+			if(caminho[idx].GetComponent<SetaBehavior>().tipoSeta != "colmeia"){
+						acertouCaminho = false;
+					} else {
+						acertouCaminho = true;
+					}
+			
+			if(acertouCaminho){
+				texto.text = "Parabéns! Você acertou!";
+				//fonteAudio.PlayOneShot(sons[0]);
+			} 
+			else{
+				texto.text = "Que pena, você errou!";
+				//fonteAudio.PlayOneShot(sons[1]);
+			}
 		}
 		//som de click do botão
-		respondeu = true;
-		ab = GameObject.Instantiate(abelha);
-		
+		destino = false;
 	}
 
 
-	void Move(){
-	}
+	
 
 	public IEnumerator FeedBack(){
 
@@ -181,7 +326,7 @@ public class AbelhaManager : MonoBehaviour {
 			new WaitForSeconds(.2f);
 			yield return null;
 		}
-		if(/*level == 1 || level == 3 || level == 5 || level == 7*/level < 6){
+		if(/*level == 1 || level == 3 || level == 5 || level == 7*/level < 3){
 			level++;
 			Clear();
 			InicializaLevel(level);
@@ -197,10 +342,14 @@ public class AbelhaManager : MonoBehaviour {
 		{
 			Destroy(setas[i]);
 		}
-		setas.Clear();
-		resp = -1;
 		Destroy(ab);
-
+		Destroy(cm);
+		Destroy(es);
+		setas.Clear();
+		caminho.Clear();
+		fimCaminho = false;
+		click = true;
+		destino = true;
 	}
 
 	public void GameOver(){
@@ -215,18 +364,24 @@ public class AbelhaManager : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				Debug.Log("clicou");
 				if (hit) {
-					if(click){
-						click = false;
-						Debug.Log("acertou");
-						if(movimentos > 0){
-							movimentos--;
-							Debug.Log("movimentos: " + movimentos);
-
-							for (int i = 0; i < setas.Count; i++)
-							{
-								if(setas[i].transform.gameObject.name == setaClick.transform.gameObject.name){
-										StartCoroutine(setas[i].GetComponent<SetaBehavior>().Rotate());
-										Debug.Log("girou");
+					if(setaClick.transform.gameObject.GetComponent<SetaBehavior>().tipoSeta == "flor"){
+						if(click){
+							click = false;
+							Debug.Log("acertou");
+							if(movimentos > 0){
+								movimentos--;
+								moviTxt.text = string.Format("{0}",movimentos); 
+								
+								if(movimentos == 0){
+									moviTxt.color = Color.red;
+								}
+								for (int i = 0; i < setas.Count; i++)
+								{
+									if(setas[i].transform.gameObject.name == setaClick.transform.gameObject.name){
+											
+												StartCoroutine(setas[i].GetComponent<SetaBehavior>().Rotate());
+												Debug.Log("girou");
+									}
 								}
 							}
 						}

@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class SetaBehavior : MonoBehaviour{
 
-	public int x, y, dir;
+	public int x, y;
 
-	public string tipoSeta;
+	public string tipoSeta, lado;
 
-	public Color cor;
-
-	
+		
 
 	public AbelhaManager abelhaManager;
 
@@ -33,7 +31,10 @@ public class SetaBehavior : MonoBehaviour{
 		
 		Quaternion startingRotation = this.transform.rotation;
 		Quaternion finalRotation = Quaternion.Euler( 0, 0, -90 ) * this.transform.rotation;
-
+		if(lado == "left") lado = "up";
+		else if(lado == "up") lado = "right";
+		else if(lado == "right") lado = "down";
+		else if(lado == "down") lado = "left";
 		while(this.transform.rotation != finalRotation){
 			this.transform.rotation = Quaternion.Lerp(this.transform.rotation, finalRotation, Time.deltaTime*speed);
 			yield return 0;

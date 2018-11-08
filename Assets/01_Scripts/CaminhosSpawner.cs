@@ -105,8 +105,7 @@ public class CaminhosSpawner : MonoBehaviour {
 				setas.Add(GameObject.Instantiate(seta, new Vector3(pos.position.x - (j*marg), pos.position.y - (i*marg), pos.position.z) ,pos.rotation));
 				setas[index].GetComponent<SetaBehavior>().x = i;
 				setas[index].GetComponent<SetaBehavior>().y = j;
-				setas[index].GetComponent<SetaBehavior>().dir = 0;
-				setas[index].GetComponent<SetaBehavior>().cor = Color.white;
+				
 				setas[index].GetComponent<SetaBehavior>().tipoSeta = "normal";
 				index++;
 			}

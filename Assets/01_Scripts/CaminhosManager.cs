@@ -28,17 +28,17 @@ public class CaminhosManager : MonoBehaviour {
 			                                            caminho[waypoint].transform.position,
 														moveSpeed * Time.deltaTime);
 
-			if(Mathf.Abs(transform.position.x - caminho[waypoint].transform.position.x) < 0.1 && Mathf.Abs(transform.position.y - caminho[waypoint].transform.position.y) < 0.1){
+			if(Mathf.Abs(transform.position.x - caminho[waypoint].transform.position.x) < 0.05 && Mathf.Abs(transform.position.y - caminho[waypoint].transform.position.y) < 0.05){
 				waypoint++;
 			}
 
 			if(waypoint == caminho.Count){
-				game.GetComponent<CaminhosSpawner>().fimCaminho = true;
+				game.GetComponent<AbelhaManager>().destino = true;
 			}
 		
-		if(game.GetComponent<CaminhosSpawner>().fimCaminho){
-			game.GetComponent<CaminhosSpawner>().respondeu = false;
-			game.GetComponent<CaminhosSpawner>().StartCoroutine("FeedBack");
+		if(game.GetComponent<AbelhaManager>().destino){
+			game.GetComponent<AbelhaManager>().respondeu = false;
+			game.GetComponent<AbelhaManager>().StartCoroutine("FeedBack");
 		}
 		
 	}
