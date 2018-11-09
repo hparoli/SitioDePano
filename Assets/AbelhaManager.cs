@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class AbelhaManager : MonoBehaviour {
+public class AbelhaManager : MonoBehaviour 
+{
 
 	[SerializeField]
 	private int numColunas,numLinhas,level,resp,waypoint,btn, movimentos;
@@ -43,21 +44,116 @@ public class AbelhaManager : MonoBehaviour {
 
 	private string[] ladoLvl;
 
-	void Start(){
+	[Header("DificultControl")]
+	[Space(10)]
+	[SerializeField]
+	GameDificultScripting[] gamedificultScripiting;
+	[Space(10)]
+	[SerializeField]
+	GameObject DificultGameObject;
+
+	[SerializeField]
+	Button[] gameButtons;
+	int notaFinal;
+
+	[SerializeField]
+	GameObject ExitBoard;
+	[SerializeField]
+	GameObject TutorialPrefab;
+	int idTema;
+	int gamelevel;
+
+	void Start()
+	{
+		idTema = PlayerPrefs.GetInt ("idTema");
+	    OpenLevel();
+		StarsPointsControl();
 		respondeu = false;
 		waypoint = 0;
-		InicializaLevel(level);
 		fonteAudio = GetComponent<AudioSource> ();
 		click = work = true;
 		fimCaminho = false;
 		destino = true;
 	}
 
-	void Update(){
+	void Update()
+	{
 		Comportamento();
 		if(!destino){
 			ab.GetComponent<CaminhosManager>().Move(caminho);
 		}
+	}
+	public void GameDificultControl(int GameDificultValue)
+	{	
+		level = gamelevel = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
+
+			}
+			DificultGameObject.SetActive(false);
+			ExitBoard.SetActive(false);
+		}
+		if (gamelevel == 1)
+		{
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialCaminhos);
+		}
+		InicializaLevel(level);
+		
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+ 				if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 				{
+					break;
+				}
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
+		}
+	}
+
+	public void StartGameButton()
+	{
+		
+		ExitBoard.SetActive(true);
+		TutorialPrefab.SetActive(false);
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialCaminhos);
 	}
 
 	private void InicializaLevel(int lvl){

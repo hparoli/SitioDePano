@@ -134,7 +134,7 @@ public class AlimentosManager : MonoBehaviour {
 
 	public void StartGameButton()
 	{
-		gamelevel = level;
+		
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
 		StartCoroutine ("StartGame");
