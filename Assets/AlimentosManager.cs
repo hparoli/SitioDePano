@@ -82,7 +82,7 @@ public class AlimentosManager : MonoBehaviour {
 		}
 		if (gamelevel == 1)
 		{
-			SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekBolos);
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
 		}
 
 		Debug.Log(level);
