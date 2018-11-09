@@ -44,9 +44,8 @@ public class AlimentosManager : MonoBehaviour {
 	GameObject ExitBoard;
 	[SerializeField]
 	GameObject TutorialPrefab;
-
-	int gamelevel;
 	int idTema;
+	int gamelevel;
 
 	// Use this for initialization
 	void Start ()
@@ -59,8 +58,7 @@ public class AlimentosManager : MonoBehaviour {
 		countR = 0;
 		acertos = 0;
 		tempo = tempoInicial;
-		SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
-		ExitBoard.SetActive(false);
+		
 		
 	}
 	
@@ -71,25 +69,20 @@ public class AlimentosManager : MonoBehaviour {
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
-		level = GameDificultValue;
+		level = gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
 			if(gamedificultScripiting[i].gameValue == GameDificultValue)
 			{
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
-			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
 
+			}
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
 		}
-		if (level == 1)
+		if (gamelevel == 1)
 		{
-			TutorialPrefab.SetActive(true);
-			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekBolos);
 		}
 
 		Debug.Log(level);
@@ -141,11 +134,12 @@ public class AlimentosManager : MonoBehaviour {
 
 	public void StartGameButton()
 	{
+		gamelevel = level;
 		ExitBoard.SetActive(true);
 		TutorialPrefab.SetActive(false);
 		StartCoroutine ("StartGame");
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialAlimentos);
-		level = 1;
+		
 	}
 
 
