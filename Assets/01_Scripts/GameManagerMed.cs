@@ -99,15 +99,13 @@ public class GameManagerMed : MonoBehaviour {
 				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
 			}
-				if (gamelevel == 0)
+			DificultGameObject.SetActive(false);
+			source = GetComponent<AudioSource> ();
+		}
+		if (gamelevel == 0)
 			{
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialMemoria);
 			}
-			
-			DificultGameObject.SetActive(false);
-			source = GetComponent<AudioSource> ();
-			
-		}
 	}
 	public void OpenLevel()
 	{
