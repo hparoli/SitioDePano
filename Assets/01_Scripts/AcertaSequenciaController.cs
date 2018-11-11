@@ -62,6 +62,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[SerializeField]
 	GameObject ExitBoard;
 	[SerializeField]
+	GameObject ExitBoard2;
+	[SerializeField]
 	GameObject TutorialPrefab;
 	
 	
@@ -98,6 +100,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
+			ExitBoard2.SetActive(false);
 		}
 		if (gamelevel == 0)
 		{

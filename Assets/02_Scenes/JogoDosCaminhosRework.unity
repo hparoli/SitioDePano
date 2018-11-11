@@ -200,8 +200,8 @@ RectTransform:
   m_Children:
   - {fileID: 1194640169}
   - {fileID: 889433299}
-  - {fileID: 1744845245}
   - {fileID: 1840812122}
+  - {fileID: 1744845245}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,7 +260,7 @@ Prefab:
     - target: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
         type: 2}
@@ -1557,6 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitGameObject: {fileID: 1744845244}
+  ExitGameObject2: {fileID: 0}
 --- !u!1 &1369696378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1923,7 @@ Prefab:
     - target: {fileID: 224030022833659944, guid: bbde9586d3391e948b774c37ad569692,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224030022833659944, guid: bbde9586d3391e948b774c37ad569692,
         type: 2}

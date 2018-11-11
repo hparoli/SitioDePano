@@ -63,7 +63,7 @@ public class GameManagerMed : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		OpenLevel();
 		StarsPointsControl();
-		ExitBoard.SetActive(false);
+		
 		
 
 	}
@@ -100,6 +100,7 @@ public class GameManagerMed : MonoBehaviour {
 
 			}
 			DificultGameObject.SetActive(false);
+			ExitBoard.SetActive(false);
 			source = GetComponent<AudioSource> ();
 		}
 		if (gamelevel == 0)

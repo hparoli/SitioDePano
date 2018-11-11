@@ -8,9 +8,13 @@ public class ExitConfirmation : MonoBehaviour {
 
 	[SerializeField]
 	GameObject ExitGameObject;
+	[SerializeField]
+	GameObject ExitGameObject2;
 
-	void Start () {
+	void Start ()
+	 {
 		ExitGameObject.SetActive (false);
+	
 	}
 	
 	// Update is called once per frame
@@ -18,19 +22,38 @@ public class ExitConfirmation : MonoBehaviour {
 		
 	}
 
-	public void openExit(){
+	public void openExit()
+	{
 		ExitGameObject.SetActive(true);
 		ColetaOvos.work = false;
 		Time.timeScale = 0;
 	}
-	public void yesExit(){
+	public void open2()
+	{
+		ExitGameObject2.SetActive(true);
+		Time.timeScale = 0;
+	}
+	public void yesExit()
+	{
 		ExitGameObject.SetActive (false);
 		Time.timeScale = 1;
 		SceneManager.LoadScene("newMenu");
 	}
-	public void noExit(){
+	public void yesExit2()
+	{
+		ExitGameObject2.SetActive (false);
+		Time.timeScale = 1;
+		SceneManager.LoadScene("newMenu");
+	}
+	public void noExit()
+	{
 		ExitGameObject.SetActive (false);
 		ColetaOvos.work = true;
         Time.timeScale = 1;
+    }
+	public void noExit2()
+	{
+		ExitGameObject2.SetActive (false);
+		 Time.timeScale = 1;
     }
 }
