@@ -7,6 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class AlimentosManager : MonoBehaviour {
 
+
+	private AlimentosData alimentosData = new AlimentosData();
+
+	[SerializeField]
+	private AllAlimentosData gameData;
+
+	[SerializeField]
+	private DataController dataController;
+
 	private int btnsCertos,contaBtn, countR, countG, acertos, tip, tip2;
 
 	public int level = 0;
@@ -50,6 +59,9 @@ public class AlimentosManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	 {
+		dataController = GameObject.Find("DataController").GetComponent<DataController>();
+		gameData.alimentosDatas = dataController.GetAlimentosDatas();
+		alimentosData = new AlimentosData();
 	 	idTema = PlayerPrefs.GetInt ("idTema");
 	    OpenLevel();
 		StarsPointsControl();
@@ -58,7 +70,6 @@ public class AlimentosManager : MonoBehaviour {
 		countR = 0;
 		acertos = 0;
 		tempo = tempoInicial;
-		
 		
 	}
 	
@@ -70,6 +81,8 @@ public class AlimentosManager : MonoBehaviour {
 	public void GameDificultControl(int GameDificultValue)
 	{	
 		level = gamelevel = GameDificultValue;
+		
+
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
 			if(gamedificultScripiting[i].gameValue == GameDificultValue)
@@ -83,20 +96,36 @@ public class AlimentosManager : MonoBehaviour {
 		if (gamelevel == 1)
 		{
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
+			alimentosData.level = "F";
+		} else if (gamelevel == 2){
+			alimentosData.level = "M";
+		} else if (gamelevel == 3){
+			alimentosData.level = "D";
 		}
 
 		Debug.Log(level);
 	}
 	public void OpenLevel()
 	{
-		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		bool hasF = false;
+		bool hasM = false;
+		for (int i = 0; i < gameData.alimentosDatas.Count; i++)
+		{
+			if(gameData.alimentosDatas[i].level == "F") {
+				hasF = true;
+			}
+			if(gameData.alimentosDatas[i].level == "M"){
+				hasM = true;
+			}
+		}
 		
-		if (dif == "F" ||  dif == "")
+		if (!hasF)
 		{
 			gameButtons[1].interactable = false;
 			gameButtons[2].interactable = false;
 		}
-		else if (dif == "M") 
+		
+		if (!hasM) 
 		{
 			gameButtons[2].interactable = false;
 		}
@@ -148,6 +177,8 @@ public class AlimentosManager : MonoBehaviour {
 			tempo -= Time.deltaTime;
 			if (tempo <= 0) {
 				conta = false;
+				alimentosData.tempoResposta.Add(tempoInicial);
+				alimentosData.erros++;
 				for (int i = 0; i < botoes.Length; i++) {
 					botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 				}
@@ -160,7 +191,11 @@ public class AlimentosManager : MonoBehaviour {
 						countR = 0;
 						StartCoroutine ("IniciaRodada");
 					} else {
-						
+					for (int i = 0; i < alimentosData.tempoResposta.Count; i++)
+						{
+							alimentosData.tempoJogo += alimentosData.tempoResposta[i];
+						}
+						dataController.SetAlimentosData(alimentosData);
 						SceneManager.LoadScene ("Score");
 					}
 				}
@@ -409,6 +444,8 @@ public class AlimentosManager : MonoBehaviour {
 			if (btnsCertos == contaBtn) {
 				acertos++;
 				conta = false;
+				alimentosData.tempoResposta.Add(tempoInicial - tempo);
+				alimentosData.acertos++;
 				for (int i = 0; i < botoes.Length; i++) {
 					botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 				}
@@ -422,12 +459,19 @@ public class AlimentosManager : MonoBehaviour {
 						countR = 0;
 						StartCoroutine ("IniciaRodada");
 					} else {
+						for (int i = 0; i < alimentosData.tempoResposta.Count; i++)
+						{
+							alimentosData.tempoJogo += alimentosData.tempoResposta[i];
+						}
+						dataController.SetAlimentosData(alimentosData);
 						SceneManager.LoadScene ("Score");
 					}
 				}
 			}
 		} else {
 			conta = false;
+			alimentosData.tempoResposta.Add(tempoInicial - tempo);
+			alimentosData.erros++;
 			for (int i = 0; i < botoes.Length; i++) {
 				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 			}
@@ -441,6 +485,11 @@ public class AlimentosManager : MonoBehaviour {
 					countR = 0;
 					StartCoroutine ("IniciaRodada");
 				} else {
+					for (int i = 0; i < alimentosData.tempoResposta.Count; i++)
+					{
+						alimentosData.tempoJogo += alimentosData.tempoResposta[i];
+					}
+					dataController.SetAlimentosData(alimentosData);
 					SceneManager.LoadScene ("Score");
 				}
 			}
