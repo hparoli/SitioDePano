@@ -63,6 +63,10 @@ public class AbelhaManager : MonoBehaviour
 	int idTema;
 	int gamelevel;
 
+	[Space(10)]
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+
 	void Start()
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
@@ -74,6 +78,14 @@ public class AbelhaManager : MonoBehaviour
 		click = work = true;
 		fimCaminho = false;
 		destino = true;
+		
+	}
+	public void BarnAnin()
+	{
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
+			barnAnims [i].SetBool ("Active", true);
+		}
 	}
 
 	void Update()
@@ -428,6 +440,7 @@ public class AbelhaManager : MonoBehaviour
 			InicializaLevel(level);
 		} 
 		else{
+			BarnAnin();
 			new WaitForSeconds(.2f);
 			GameOver();
 		} 
@@ -448,7 +461,8 @@ public class AbelhaManager : MonoBehaviour
 		destino = true;
 	}
 
-	public void GameOver(){
+	public void GameOver()
+	{
 		SceneManager.LoadScene("Score");
 	}
 
