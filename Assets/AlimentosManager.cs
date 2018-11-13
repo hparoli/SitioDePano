@@ -56,9 +56,16 @@ public class AlimentosManager : MonoBehaviour {
 	int idTema;
 	int gamelevel;
 
+	[Space(10)]
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
+	
+
+
 	// Use this for initialization
 	void Start ()
 	 {
+		
 		dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData.alimentosDatas = dataController.GetAlimentosDatas();
 		alimentosData = new AlimentosData();
@@ -71,6 +78,15 @@ public class AlimentosManager : MonoBehaviour {
 		acertos = 0;
 		tempo = tempoInicial;
 		
+		
+	}
+
+	public void BarnAnin()
+	{
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
+			barnAnims [i].SetBool ("Active", true);
+		}
 	}
 	
 	// Update is called once per frame
@@ -204,7 +220,8 @@ public class AlimentosManager : MonoBehaviour {
 
 	}
 
-	IEnumerator StartGame(){
+	IEnumerator StartGame()
+	{
 		texto.text = "Prepare-se...";
 		for (float f = 0f; f <= 1; f += 0.02f){
 			Color c = texto.color;
@@ -490,6 +507,7 @@ public class AlimentosManager : MonoBehaviour {
 						alimentosData.tempoJogo += alimentosData.tempoResposta[i];
 					}
 					dataController.SetAlimentosData(alimentosData);
+					StartCoroutine("BarnEnumerator");
 					SceneManager.LoadScene ("Score");
 				}
 			}
@@ -505,5 +523,12 @@ public class AlimentosManager : MonoBehaviour {
 			new WaitForSeconds(.5f);
 			yield return null;
 		}
+	}
+
+	public IEnumerator BarnEnumerator()
+	{
+		 BarnAnin();
+		 yield return new WaitForSeconds(2);
+
 	}
 }
