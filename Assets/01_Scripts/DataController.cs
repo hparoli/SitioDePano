@@ -14,6 +14,7 @@ public class DataController : MonoBehaviour {
 	private List<string> save;
 
 	private string gameDataAlimentos = "/StreamingAssets/alimentosSave.json";
+	private string gameDataPique = "/StreamingAssets/piqueSave.json";
 	// Use this for initialization
 	void Start () {
 		save = new List<string>();
