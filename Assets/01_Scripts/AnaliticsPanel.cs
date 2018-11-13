@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class AnaliticsPanel : MonoBehaviour
  {
+	 [Header("Celeiro")]
+	public Animator[] barnAnims;
+	public GameObject ExitBoard; 
+
 	 [SerializeField]
 	 Text[] timeOutput;
 
@@ -14,6 +18,8 @@ public class AnaliticsPanel : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+
+		BarnAnin();
 		ditadosTime();
 		memoriaTime();
 		sequenciaTime();
@@ -27,6 +33,14 @@ public class AnaliticsPanel : MonoBehaviour
 	public void GoToMenu()
 	{
 		Application.LoadLevel("newMenu");
+	}
+
+	public void BarnAnin()
+	{
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
+			barnAnims [i].SetBool ("Open", true);
+		}
 	}
 
 	public void GameInfoSelected(string IDgame)

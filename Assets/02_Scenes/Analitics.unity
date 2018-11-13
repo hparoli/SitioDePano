@@ -4307,6 +4307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc26f34ab9d2b24eac9d7cb5152841d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barnAnims:
+  - {fileID: 1652597543}
+  - {fileID: 1494063914}
+  ExitBoard: {fileID: 680914365}
   timeOutput:
   - {fileID: 970610108}
   - {fileID: 1057318941}
@@ -6657,6 +6661,11 @@ RectTransform:
   m_AnchoredPosition: {x: -286.99988, y: 29.999935}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &680914365 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1857375340872894, guid: a9c7448973b0b2c4eb5dd1c62ad66551,
+    type: 2}
+  m_PrefabInternal: {fileID: 1727513549}
 --- !u!1 &681039260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14382,6 +14391,11 @@ RectTransform:
   m_AnchoredPosition: {x: -311, y: 213}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1494063914 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95172099226340536, guid: f804872c91690524598a9910f7133b5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1920820500}
 --- !u!1 &1569190899
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,6 +15245,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1641965954}
+--- !u!95 &1652597543 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95364102976334938, guid: f804872c91690524598a9910f7133b5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1920820500}
 --- !u!1 &1654560418
 GameObject:
   m_ObjectHideFlags: 0
@@ -16399,6 +16418,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857375340872894, guid: a9c7448973b0b2c4eb5dd1c62ad66551, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9c7448973b0b2c4eb5dd1c62ad66551, type: 2}

@@ -114,7 +114,8 @@ public class ComportamentoGalinha : MonoBehaviour {
 	}
 
 	public void BarnAnin(){
-		for (int i = 0; i < barnAnims.Length; i++) {
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
 			barnAnims [i].SetBool ("Active", true);
 		}
 		ExitBoard.SetActive (false);
