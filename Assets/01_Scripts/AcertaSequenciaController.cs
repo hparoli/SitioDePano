@@ -65,6 +65,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 	GameObject ExitBoard2;
 	[SerializeField]
 	GameObject TutorialPrefab;
+
+	[Space(10)]
+	[Header("Celeiro")]
+	public Animator[] barnAnims;
 	
 	
 
@@ -77,6 +81,14 @@ public class AcertaSequenciaController : MonoBehaviour {
 		StarsPointsControl();
 		ind = 1;
 		fonteAudio = GetComponent<AudioSource> ();
+	}
+
+	public void BarnAnin()
+	{
+		for (int i = 0; i < barnAnims.Length; i++) 
+		{
+			barnAnims [i].SetBool ("Active", true);
+		}
 	}
 	
 	void Update () 
@@ -477,6 +489,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			}
 			
 		}
+				BarnAnin();
 				yield return new WaitForSeconds(2f);
 				SceneManager.LoadScene ("Score");
 			}
