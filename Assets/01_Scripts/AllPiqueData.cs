@@ -1,16 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+[Serializable]
 
-public class AllPiqueData : MonoBehaviour {
+public class AllPiqueData  {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+public List <PiqueData> piqueDatas;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

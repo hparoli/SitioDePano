@@ -116,7 +116,7 @@ public class DataController : MonoBehaviour {
 
 	public void SetMemoriaData(MemoriaData memoriaData){
 		memoriaDatas.memoriaDatas.Add(memoriaData);
-		SaveAlimentosData();
+		SaveMemoriaData();
 	}
 
 	public List<MemoriaData> GetMemoriaDatas(){
@@ -124,4 +124,222 @@ public class DataController : MonoBehaviour {
 		return memoriaDatas.memoriaDatas;		
 	}
 	#endregion 
+
+	#region  PiqueEsconde
+	private void LoadPiqueData()
+	{
+		string filePath = Application.dataPath + gameDataPique;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllPiqueData loadedData = (JsonUtility.FromJson<AllPiqueData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) piqueDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+
+	private void SavePiqueData(){
+		string dataAsJson = JsonUtility.ToJson(piqueDatas);
+		string filePath = Application.dataPath + gameDataPique;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+
+	public void SetPiqueData(PiqueData piqueData){
+		piqueDatas.piqueDatas.Add(piqueData);
+		SavePiqueData();
+	}
+	public List<PiqueData> GetPiqueData(){
+		LoadPiqueData();
+		return piqueDatas.piqueDatas;		
+	}
+
+
+	#endregion
+
+	#region Horta
+	private void LoadHortaData()
+	{
+		string filePath = Application.dataPath + gameDataHorta;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllHortaData loadedData = (JsonUtility.FromJson<AllHortaData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) hortaDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveHortaData(){
+		string dataAsJson = JsonUtility.ToJson(hortaDatas);
+		string filePath = Application.dataPath + gameDataHorta;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetHortaData(HortaData hortaData){
+		hortaDatas.hortaDatas.Add(hortaData);
+		SaveHortaData();
+	}
+	public List<HortaData> GetHortaData(){
+		LoadHortaData();
+		return hortaDatas.hortaDatas;		
+	}
+	#endregion
+	
+	#region Olho nos Lobos
+	private void LoadOlhoLoboData()
+	{
+		string filePath = Application.dataPath + gameDataOlhoNosLobos;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllOlhoNoLoboData loadedData = (JsonUtility.FromJson<AllOlhoNoLoboData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) olhoNoLoboDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveOlhoLobosData(){
+		string dataAsJson = JsonUtility.ToJson(olhoNoLoboDatas);
+		string filePath = Application.dataPath + gameDataOlhoNosLobos;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetOlhoLobosData(OlhoNoLoboData olhoNoLoboData){
+		olhoNoLoboDatas.olhoNoLoboDatas.Add(olhoNoLoboData);
+		SaveOlhoLobosData();
+	}
+	public List<OlhoNoLoboData> GetOlhoLobosData(){
+		LoadOlhoLoboData();
+		return olhoNoLoboDatas.olhoNoLoboDatas;		
+	}
+
+
+#endregion
+
+	#region Bolos
+	private void LoadBolosData()
+	{
+		string filePath = Application.dataPath + gameDataBolos;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllBolosData loadedData = (JsonUtility.FromJson<AllBolosData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) bolosDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveBolosData(){
+		string dataAsJson = JsonUtility.ToJson(bolosDatas);
+		string filePath = Application.dataPath + gameDataBolos;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetBolosDara(BolosData bolosData){
+		bolosDatas.bolosDatas.Add(bolosData);
+		SaveBolosData();
+	}
+	public List<BolosData> GetBolosData(){
+		LoadOlhoLoboData();
+		return bolosDatas.bolosDatas;		
+	}
+
+	#endregion
+
+	#region Pastoreia
+	private void LoadPastoreiraData()
+	{
+		string filePath = Application.dataPath + gameDataPastoreira;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllPastoreiraData loadedData = (JsonUtility.FromJson<AllPastoreiraData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) pastoreiraDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SavePastoreiraData(){
+		string dataAsJson = JsonUtility.ToJson(pastoreiraDatas);
+		string filePath = Application.dataPath + gameDataPastoreira;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetPastoreiraDatas(PastoreiraData pastoreiraData){
+		pastoreiraDatas.pastoreiraDatas.Add(pastoreiraData);
+		SavePastoreiraData();
+	}
+	public List<PastoreiraData> GetPastoreiraData(){
+		LoadOlhoLoboData();
+		return pastoreiraDatas.pastoreiraDatas;		
+	}
+	#endregion
+	
+	#region Contando os Bichos
+	private void LoadContandoBichosData()
+	{
+		string filePath = Application.dataPath + gameDataContandoBixos;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllContandoBixosData loadedData = (JsonUtility.FromJson<AllContandoBixosData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) contandoBixosDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveContandoBichosData(){
+		string dataAsJson = JsonUtility.ToJson(contandoBixosDatas);
+		string filePath = Application.dataPath + gameDataContandoBixos;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetContandoBichosData(ContandoBixosData contandoBixosData){
+		contandoBixosDatas.contandoBixosDatas.Add(contandoBixosData);
+		SaveContandoBichosData();
+	}
+	public List<ContandoBixosData> GetContandoBichosData(){
+		LoadContandoBichosData();
+		return contandoBixosDatas.contandoBixosDatas;		
+	}
+	#endregion
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
