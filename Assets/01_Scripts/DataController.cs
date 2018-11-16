@@ -318,28 +318,133 @@ public class DataController : MonoBehaviour {
 	}
 	#endregion
 
-	
+	#region  ColetandoOvos
+	private void LoadColetandoOvosData()
+	{
+		string filePath = Application.dataPath + gameDataColetandoOvos;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllColetandoOvosData loadedData = (JsonUtility.FromJson<AllColetandoOvosData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) coletandoOvosDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveColetandoOvosData(){
+		string dataAsJson = JsonUtility.ToJson(coletandoOvosDatas);
+		string filePath = Application.dataPath + gameDataColetandoOvos;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetColetandOvosData(ColetandoOvosData coletandoOvosData){
+		coletandoOvosDatas.coletandoOvosDatas.Add(coletandoOvosData);
+		SaveColetandoOvosData();
+	}
+	public List<ColetandoOvosData> GetColetandoOvosData(){
+		LoadColetandoOvosData();
+		return coletandoOvosDatas.coletandoOvosDatas;		
+	}
+	#endregion
+
+	#region Caminhos
+	private void LoadCaminhosData()
+	{
+		string filePath = Application.dataPath + gameDataCaminhos;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllCaminhosData loadedData = (JsonUtility.FromJson<AllCaminhosData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) caminhosDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+	private void SaveCaminhosData(){
+		string dataAsJson = JsonUtility.ToJson(caminhosDatas);
+		string filePath = Application.dataPath + gameDataCaminhos;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetCaminhosData(CaminhosData caminhosData){
+		caminhosDatas.caminhosDatas.Add(caminhosData);
+		SaveCaminhosData();
+	}
+	public List<CaminhosData> GetCaminhosData(){
+		LoadCaminhosData();
+		return caminhosDatas.caminhosDatas;		
+	}
+
+	#endregion 
+
+	#region SequenciaSonora
+	private void LoadSequenciaData()
+	{
+		string filePath = Application.dataPath + gameDataSequenciaSonora;
+
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllSequenciaSonoraData loadedData = (JsonUtility.FromJson<AllSequenciaSonoraData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) sequenciaSonoraDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
+
+	private void SaveSequenciData(){
+		string dataAsJson = JsonUtility.ToJson(sequenciaSonoraDatas);
+		string filePath = Application.dataPath + gameDataSequenciaSonora;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetSequenciaData(SequenciaSonoraData sequenciaSonoraData){
+		sequenciaSonoraDatas.sequenciaSonoraDatas.Add(sequenciaSonoraData);
+		SaveSequenciData();
+	}
+	public List<SequenciaSonoraData> GetSequenciData(){
+		LoadSequenciaData();
+		return sequenciaSonoraDatas.sequenciaSonoraDatas;		
+	}
 
 
+	#endregion
 
+	#region  Ditados
+	private void LoadDitadosData()
+	{
+		string filePath = Application.dataPath + gameDataDitados;
 
+		if(File.Exists(filePath)){
+			string dataAsJson = File.ReadAllText(filePath);
+			Debug.Log("Load: " + dataAsJson);
+			AllDitadosData loadedData = (JsonUtility.FromJson<AllDitadosData>(dataAsJson));
+			Debug.Log(loadedData);
+			if(loadedData != null) ditadosDatas = loadedData;
+		} else {
+			Debug.LogError("Não encontrou o save da Memória");
+		}
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private void SaveDitadosData(){
+		string dataAsJson = JsonUtility.ToJson(ditadosDatas);
+		string filePath = Application.dataPath + gameDataDitados;
+		Debug.Log(dataAsJson);
+		File.WriteAllText(filePath, dataAsJson);
+	}
+	public void SetDitadosData(DitadosData ditadosData){
+		ditadosDatas.ditadosDatas.Add(ditadosData);
+		SaveDitadosData();
+	}
+	public List<DitadosData> GetDitadosData(){
+		LoadDitadosData();
+		return ditadosDatas.ditadosDatas;		
+	}
+	#endregion
 
 }
