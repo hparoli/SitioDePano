@@ -21,7 +21,8 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	[Header("Feedback")]
 	public GameObject[] AninhaFeedback;
-
+	public Animator aninhaFeedBacks;
+	
 	[Header("Tutorial")]
 	[SerializeField]
 	GameObject tutorial;

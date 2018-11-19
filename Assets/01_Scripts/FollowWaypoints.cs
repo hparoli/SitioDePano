@@ -125,8 +125,7 @@ public class FollowWaypoints : MonoBehaviour {
 		  (animal == "cavalo" && casasIndex == 2) || animal == "lobo" &&  casasIndex == 3){
 			    aninha.GetComponent<AninhaPastoreira>().Pontua(1);
 			    aninha.GetComponent<AninhaPastoreira>().Conta();
-				aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (true);
-				aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (false);
+				aninha.GetComponent<AninhaPastoreira>().aninhaFeedBacks.SetTrigger("Palma");
 			  //som de acerto
 				AudioSRC.PlayOneShot(sons[0]);
 			    Debug.Log(aninha.GetComponent<AninhaPastoreira>().notaFinal);
@@ -136,8 +135,8 @@ public class FollowWaypoints : MonoBehaviour {
 			AudioSRC.PlayOneShot(sons[1]);
 			aninha.GetComponent<AninhaPastoreira>().Pontua(0);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (false);
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (true);
+			aninha.GetComponent<AninhaPastoreira>().aninhaFeedBacks.SetTrigger("Triste");
+			
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().notaFinal);
 
 			Destroy(this.gameObject, 1f);
@@ -146,15 +145,14 @@ public class FollowWaypoints : MonoBehaviour {
 			AudioSRC.PlayOneShot(sons[1]);
 			aninha.GetComponent<AninhaPastoreira>().Pontua(0);
 			aninha.GetComponent<AninhaPastoreira>().Conta();
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (false);
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (true);
+			aninha.GetComponent<AninhaPastoreira>().aninhaFeedBacks.SetTrigger("Triste");
+			
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().notaFinal);
 
 			Destroy(this.gameObject, 1f);
 		} else if(((animal == "ovelha" && casasIndex != 0) || (animal == "vaca" && casasIndex != 1) || 
 		         (animal == "cavalo" && casasIndex != 2)) && casasIndex != 4){
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [0].SetActive (false);
-			aninha.GetComponent<AninhaPastoreira> ().AninhaFeedback [1].SetActive (true);
+			aninha.GetComponent<AninhaPastoreira>().aninhaFeedBacks.SetTrigger("Triste");
 			//som de erro
 			AudioSRC.PlayOneShot(sons[1]);
 			Debug.Log(aninha.GetComponent<AninhaPastoreira>().notaFinal);
