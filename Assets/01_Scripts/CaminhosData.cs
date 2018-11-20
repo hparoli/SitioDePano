@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+[Serializable]
+public class CaminhosData  
+{
+	public List<float> tempoResposta = new List<float>();
+	public float tempoJogo;
 
-public class CaminhosData : MonoBehaviour {
+	public int acertos;
+	public int  erros;
+	public int tentativas;
+	public int nota;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public string level;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

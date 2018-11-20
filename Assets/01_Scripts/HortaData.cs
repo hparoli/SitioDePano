@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class HortaData : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+using System;
+[Serializable]
+public class HortaData 
+{
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public List<float> tempoResposta = new List<float>();
+	public float tempoJogo;
+
+	public int acertos;
+	public int  erros;
+	
+	public int nota;
+
+	public string level;
+	
 }

@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+[Serializable]
 
-public class MemoriaData : MonoBehaviour {
+public class MemoriaData  
+{
+	public List<float> tempoResposta = new List<float>();
+	public float tempoJogo;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public int acertos;
+	public int  erros;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public int nota;
+
+	public string level;
+	
 }

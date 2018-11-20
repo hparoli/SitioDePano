@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+[Serializable]
+public class PiqueData 
+{
 
-public class PiqueData : MonoBehaviour {
+	public List<float> tempoResposta = new List<float>();
+	public float tempoJogo;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public int acertos;
+	public int  erros;
+
+	public int nota;
+
+	public string level;
 }
