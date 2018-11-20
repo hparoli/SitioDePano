@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: 7b83d90c25731ab46b6118303c1f582e
+timeCreated: 1542723879
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Aninha_Triste_Aruumado_0
+    21300002: Aninha_Triste_Aruumado_1
+    21300004: Aninha_Triste_Aruumado_2
+    21300006: Aninha_Triste_Aruumado_3
+    21300008: Aninha_Triste_Aruumado_4
+    21300010: Aninha_Triste_Aruumado_5
+    21300012: Aninha_Triste_Aruumado_6
+    21300014: Aninha_Triste_Aruumado_7
+    21300016: Aninha_Triste_Aruumado_8
+    21300018: Aninha_Triste_Aruumado_9
+    21300020: Aninha_Triste_Aruumado_10
+    21300022: Aninha_Triste_Aruumado_11
+    21300024: Aninha_Triste_Aruumado_12
+    21300026: Aninha_Triste_Aruumado_13
+    21300028: Aninha_Triste_Aruumado_14
+    21300030: Aninha_Triste_Aruumado_15
+    21300032: Aninha_Triste_Aruumado_16
+    21300034: Aninha_Triste_Aruumado_17
+    21300036: Aninha_Triste_Aruumado_18
+    21300038: Aninha_Triste_Aruumado_19
+    21300040: Aninha_Triste_Aruumado_20
+    21300042: Aninha_Triste_Aruumado_21
+    21300044: Aninha_Triste_Aruumado_22
+    21300046: Aninha_Triste_Aruumado_23
+    21300048: Aninha_Triste_Aruumado_24
+    21300050: Aninha_Triste_Aruumado_25
+    21300052: Aninha_Triste_Aruumado_26
+    21300054: Aninha_Triste_Aruumado_27
+    21300056: Aninha_Triste_Aruumado_28
+    21300058: Aninha_Triste_Aruumado_29
+    21300060: Aninha_Triste_Aruumado_30
+    21300062: Aninha_Triste_Aruumado_31
+    21300064: Aninha_Triste_Aruumado_32
+    21300066: Aninha_Triste_Aruumado_33
+    21300068: Aninha_Triste_Aruumado_34
+    21300070: Aninha_Triste_Aruumado_35
+    21300072: Aninha_Triste_Aruumado_36
+    21300074: Aninha_Triste_Aruumado_37
+    21300076: Aninha_Triste_Aruumado_38
+    21300078: Aninha_Triste_Aruumado_39
+    21300080: Aninha_Triste_Aruumado_40
+    21300082: Aninha_Triste_Aruumado_41
+    21300084: Aninha_Triste_Aruumado_42
+    21300086: Aninha_Triste_Aruumado_43
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 9735
+        width: 647
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_1
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 9740
+        width: 653
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_2
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 9735
+        width: 653
+        height: 1021
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_3
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 9745
+        width: 643
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_4
+      rect:
+        serializedVersion: 2
+        x: 3066
+        y: 9746
+        width: 642
+        height: 1006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 8680
+        width: 653
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_6
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 8680
+        width: 654
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_7
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 8680
+        width: 654
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_8
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 8680
+        width: 658
+        height: 1033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_9
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 8681
+        width: 658
+        height: 1032
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 7631
+        width: 658
+        height: 1033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_11
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 7642
+        width: 659
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_12
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 7642
+        width: 654
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_13
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 7647
+        width: 653
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_14
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 7647
+        width: 653
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_15
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 6566
+        width: 659
+        height: 1039
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_16
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 6566
+        width: 664
+        height: 1039
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_17
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 6561
+        width: 664
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_18
+      rect:
+        serializedVersion: 2
+        x: 2301
+        y: 6561
+        width: 664
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_19
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 6566
+        width: 669
+        height: 1049
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_20
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 5486
+        width: 664
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_21
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 5486
+        width: 664
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_22
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 5486
+        width: 664
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_23
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 5486
+        width: 658
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_24
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 5475
+        width: 669
+        height: 1049
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 4373
+        width: 664
+        height: 1044
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_26
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 4378
+        width: 663
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_27
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 4371
+        width: 664
+        height: 1041
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_28
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 4371
+        width: 664
+        height: 1035
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_29
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 4371
+        width: 653
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_30
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 3188
+        width: 654
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_31
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 3187
+        width: 658
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_32
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 3182
+        width: 658
+        height: 1033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_33
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 3171
+        width: 658
+        height: 1032
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_34
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 3166
+        width: 658
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1974
+        width: 658
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_36
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1974
+        width: 654
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_37
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1974
+        width: 654
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_38
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 1974
+        width: 653
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_39
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 1985
+        width: 643
+        height: 1002
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_40
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 788
+        width: 643
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_41
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 772
+        width: 653
+        height: 1018
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_42
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 767
+        width: 654
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Aninha_Triste_Aruumado_43
+      rect:
+        serializedVersion: 2
+        x: 2602
+        y: 762
+        width: 645
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
