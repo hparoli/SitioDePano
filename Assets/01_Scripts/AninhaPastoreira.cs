@@ -18,9 +18,10 @@ public class AninhaPastoreira : MonoBehaviour {
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
+	public GameObject tutButton;
 
 	[Header("Feedback")]
-	public GameObject[] AninhaFeedback;
+	
 	public Animator aninhaFeedBacks;
 	
 	[Header("Tutorial")]
@@ -43,6 +44,7 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	public Transform Game1;
 
+	bool isgame = false;
 	
 
 	void Start ()
@@ -55,10 +57,6 @@ public class AninhaPastoreira : MonoBehaviour {
 		countDestroy = 20;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
-		
-		for (int i = 0; i < AninhaFeedback.Length; i++) {
-			AninhaFeedback [i].SetActive (false);
-		}
 	}
 	
 	void Update()
@@ -68,6 +66,21 @@ public class AninhaPastoreira : MonoBehaviour {
 			StartCoroutine("FimJogo");
 		}
 		 Cronometro();
+	}
+
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPastoreira);
+		
+	}
+
+	public void CloseTutorial()
+	{
+		isgame = true;
 	}
 
 	public void GameDificultControl(int GameDificultValue)
@@ -90,6 +103,7 @@ public class AninhaPastoreira : MonoBehaviour {
         if (gamelevel == 0)
         {
             ExitBoard.SetActive(false);
+			tutButton.SetActive(false);
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPastoreira);
 
         }
@@ -145,12 +159,25 @@ public class AninhaPastoreira : MonoBehaviour {
 	}
     public void StartGame()
 	{
-        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPastoreira);
+		if (!isgame)
+		{
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPastoreira);
 		audio.Play ();
         ExitBoard.SetActive(true);
+		tutButton.SetActive(true);
         tutorial.SetActive (false);
 		Time.timeScale = 1;
 		StartCoroutine("AnimalSpawn");
+		}
+		else if (isgame)
+		{
+		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPastoreira);
+		ExitBoard.SetActive(true);
+		tutButton.SetActive(true);
+        tutorial.SetActive (false);
+		Time.timeScale = 1;	
+		}
+       
 	}
 
 	public IEnumerator AnimalSpawn()
