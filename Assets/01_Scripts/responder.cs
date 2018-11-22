@@ -52,7 +52,9 @@ public class responder : MonoBehaviour {
 	
 	[SerializeField]
 	GameObject tutorial;
-	
+	[SerializeField]
+	GameObject tutButton;
+	bool isgame = false;	
 
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
@@ -115,6 +117,7 @@ public class responder : MonoBehaviour {
         if (gamelevel == 0)
         {
             tutorial.SetActive(true);
+			tutButton.SetActive(false);
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialDitados);
         }
     }
@@ -167,17 +170,38 @@ public class responder : MonoBehaviour {
 		Debug.Log (tempo);
 	}
 
-	
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialDitados);
+	isgame = true;
+	}
 		
 	public void StartGame()
 	{
-		Time.timeScale = 1;
-		tutorial.SetActive (false);
-		SetShuffledQuestions ();
-		UpdateQuestionOutput ();
-		ExitBoard.SetActive(true);
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialDitados);
-		audio.Play ();
+		if(!isgame)
+		{
+			Time.timeScale = 1;
+			tutorial.SetActive (false);
+			tutButton.SetActive(true);
+			SetShuffledQuestions ();
+			UpdateQuestionOutput ();
+			ExitBoard.SetActive(true);
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialDitados);
+			audio.Play ();
+		}
+		else
+		{
+			Time.timeScale = 1;
+			tutorial.SetActive (false);
+			tutButton.SetActive(true);
+			ExitBoard.SetActive(true);
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialDitados);
+			
+		}
 	}
 
 	void SetShuffledQuestions()

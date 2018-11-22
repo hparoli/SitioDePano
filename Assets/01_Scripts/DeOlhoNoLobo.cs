@@ -28,6 +28,8 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	[Header("Tutorial")]
 	[SerializeField]
 	GameObject tutorial;
+	[SerializeField]
+	GameObject tutButton;
 	
 
 	[Header("Celeiro")]
@@ -51,7 +53,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	Button[] gameButtons;
 	
 	int gamelevel;
-
+	bool isgame = false;
 
 	// Use this for initialization
 	void Start () 
@@ -128,6 +130,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
         if (gamelevel==0)
         {
             ExitBoard.SetActive(false);
+			tutButton.SetActive(false);
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOlhoLobo);
         }
 
@@ -182,16 +185,37 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		}
 		ExitBoard.SetActive (false);
 	}
-
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOlhoLobo);
+	isgame = true;
+	}
  public void StartGame()
  	{
+		if(!isgame)
+		{
 		comeca = true;
 		tutorial.SetActive (false);
+		tutButton.SetActive(true);
 		Time.timeScale = 1;
 		StartCoroutine("SpawnLobo");
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOlhoLobo);
 		audio.Play ();
         ExitBoard.SetActive(true);
+		}
+		else 
+		{
+		
+		tutorial.SetActive (false);
+		tutButton.SetActive(true);
+		Time.timeScale = 1;
+	    SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOlhoLobo);
+		ExitBoard.SetActive(true);
+		}
     }
 
     void Cronometro()

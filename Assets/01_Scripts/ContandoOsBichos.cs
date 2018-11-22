@@ -36,6 +36,8 @@ public class ContandoOsBichos : MonoBehaviour {
 	[Space(10)]
 	[SerializeField]
 	GameObject tutorial;
+	public GameObject tutButton;
+	bool isgame = false;
 	
 
 	float tempo;
@@ -88,6 +90,16 @@ public class ContandoOsBichos : MonoBehaviour {
 		}
 	}
 
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialContandoBicho);
+	isgame = true;
+	}
+
 	public void GameDificultControl(int GameDificultValue)
 	{	
 
@@ -104,6 +116,7 @@ public class ContandoOsBichos : MonoBehaviour {
         if (gamelevel == 0)
         {
             ExitBoard.SetActive(false);
+			tutButton.SetActive(false);
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialContandoBicho);
         }
     }
@@ -155,13 +168,28 @@ public class ContandoOsBichos : MonoBehaviour {
 	
 	public void StartGame()
 	{
-		tutorial.SetActive (false);
-        ExitBoard.SetActive(true);
-		Time.timeScale = 1;
-		StartCoroutine("ConteOAnimal");
-		button.SetActive (false);
-        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
-		audio.Pause ();
+		if (!isgame)
+		{
+			tutorial.SetActive (false);
+        	ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+			Time.timeScale = 1;
+			StartCoroutine("ConteOAnimal");
+			button.SetActive (false);
+        	SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
+			audio.Pause ();
+		}
+
+		else if (isgame)
+		{
+			tutorial.SetActive (false);
+        	ExitBoard.SetActive(true);
+			Time.timeScale = 1;
+			tutButton.SetActive(true);
+			button.SetActive (false);
+        	SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
+			audio.Pause ();
+		}
 
     }
 	void Cronometro()
