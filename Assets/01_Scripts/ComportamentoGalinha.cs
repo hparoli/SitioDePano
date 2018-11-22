@@ -13,20 +13,23 @@ public class ComportamentoGalinha : MonoBehaviour {
 	public Animator[] animator;
 	[SerializeField]
 	ApareceOvo ApareceOvo;
-
+	
+	
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
 	public GameObject ExitBoard;
+	
 
 	[Header("Tutorial")]
 	[SerializeField]
 	GameObject tutorial;
-	
+	public GameObject tutButton;
 
 	float tempo;
 	float tempo2;
 	
 	int GameValue;
+	bool isgame = false;
 
 	// Use this for initialization
 	void Start () 
@@ -47,15 +50,39 @@ public class ComportamentoGalinha : MonoBehaviour {
 		Debug.Log(GameValue);
 	}
 
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
+	isgame = true;
+	}
+
 	public void StartGame()
 	{
-        ExitBoard.SetActive(true);
+		if (!isgame)
+		{
+ 		ExitBoard.SetActive(true);
+		tutButton.SetActive(true);
         SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOvo);
 		audio.Play ();
         tutorial.SetActive (false);
 		Time.timeScale = 1;
 		ColetaOvos.work = true;
 		StartCoroutine("Comportamento");
+		}
+		else if (isgame)
+		{
+			ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+       	 	SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialOvo);
+			
+       		 tutorial.SetActive (false);
+			Time.timeScale = 1;
+		}
+       
 	}
 	
 	IEnumerator Comportamento()

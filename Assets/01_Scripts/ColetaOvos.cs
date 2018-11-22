@@ -35,6 +35,8 @@ public class ColetaOvos : MonoBehaviour {
 
     [SerializeField]
     GameObject ExitBoard;
+	[SerializeField]
+	GameObject tutButton;
 
 
 	// Use this for initialization
@@ -108,6 +110,8 @@ public class ColetaOvos : MonoBehaviour {
         if (gamelevel == 0)
         {
             ExitBoard.SetActive(false);
+			tutButton.SetActive(false);
+
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
 
         }

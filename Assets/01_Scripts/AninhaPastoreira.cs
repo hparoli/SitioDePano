@@ -75,14 +75,9 @@ public class AninhaPastoreira : MonoBehaviour {
 	tutorial.SetActive(true);
 	Time.timeScale = 0;
 	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPastoreira);
-		
+	isgame = true;
 	}
-
-	public void CloseTutorial()
-	{
-		isgame = true;
-	}
-
+	
 	public void GameDificultControl(int GameDificultValue)
 	{	
 
