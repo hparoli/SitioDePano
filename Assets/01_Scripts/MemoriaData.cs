@@ -6,10 +6,9 @@ using System;
 
 public class MemoriaData  
 {
-	public List<float> tempoResposta = new List<float>();
+	public List<float> tempoAcerto = new List<float>();
 	public float tempoJogo;
 
-	public int acertos;
 	public int  erros;
 	
 	public int nota;

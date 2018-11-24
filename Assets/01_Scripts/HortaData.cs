@@ -6,10 +6,9 @@ using System;
 public class HortaData 
 {
 	
-	public List<float> tempoResposta = new List<float>();
 	public float tempoJogo;
 
-	public int acertos;
+	public int tentativas;
 	public int  erros;
 	
 	public int nota;
