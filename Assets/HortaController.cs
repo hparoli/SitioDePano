@@ -60,6 +60,7 @@ public class HortaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{	
+		
 		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
@@ -67,6 +68,7 @@ public class HortaController : MonoBehaviour {
 		podeJogar = true;
 		gameover = false;
 		fonteAudio = GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
@@ -77,7 +79,69 @@ public class HortaController : MonoBehaviour {
 			if(!gameover) StartCoroutine("GameOver");
 		}
 	}
+public void GameDificultControl(int GameDificultValue)
+	{	
+		level = gamelevel = GameDificultValue;
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(gamedificultScripiting[i].gameValue == GameDificultValue)
+			{
+				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
 
+			}
+			DificultGameObject.SetActive(false);
+			ExitBoard.SetActive(false);
+		}
+
+		if (gamelevel == 0)
+			{
+				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
+			}
+	}
+	public void OpenLevel()
+	{
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+	}
+
+	public void StarsPointsControl()
+	{
+		
+		for (int i = 0; i < gamedificultScripiting.Length; i++)
+		{
+			if(i == 0)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+			}
+			else if(i == 1)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+			}
+
+			else if (i == 2)
+			{
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+			}
+			
+			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
+			{
+ 				if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 				
+				 {
+					break;
+			     }
+				gamedificultScripiting[i].stars[j].SetActive(true);
+			}
+		}
+	}
 	public void StartGame()
 	{	
 		ExitBoard.SetActive(true);
@@ -140,72 +204,7 @@ public class HortaController : MonoBehaviour {
 		}
 	}
 
-	public void GameDificultControl(int GameDificultValue)
-	{	
-		level = gamelevel = GameDificultValue;
-		for (int i = 0; i < gamedificultScripiting.Length; i++)
-		{
-			if(gamedificultScripiting[i].gameValue == GameDificultValue)
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(true);
-
-			}
-			else
-			{
-				gamedificultScripiting[i].gamePrefabDificult.SetActive(false);	
-			}
-			if (gamelevel == 0)
-			{
-				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
-			}
-			DificultGameObject.SetActive(false);
-			ExitBoard.SetActive(false);
-		}
-	}
-	public void OpenLevel()
-	{
-		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
-		
-		if (dif == "F" ||  dif == "")
-		{
-			gameButtons[1].interactable = false;
-			gameButtons[2].interactable = false;
-		}
-		else if (dif == "M") 
-		{
-			gameButtons[2].interactable = false;
-		}
-	}
-
-	public void StarsPointsControl()
-	{
-		
-		for (int i = 0; i < gamedificultScripiting.Length; i++)
-		{
-			if(i == 0)
-			{
-				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
-			}
-			else if(i == 1)
-			{
-				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
-			}
-
-			else if (i == 2)
-			{
-				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
-			}
-			
-			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
-			{
- 				if ((notaFinal == 0 || notaFinal == null) || ( notaFinal == 5 && j > 0 ) || ( notaFinal == 7 && j > 1 ) || ( notaFinal == 10 && j > 2 ) || ( notaFinal == 20 && j > 3 ) ) 				
-				 {
-					break;
-			     }
-				gamedificultScripiting[i].stars[j].SetActive(true);
-			}
-		}
-	}
+	
 
 	public void CompraSemente(string sem, float vlr){
 		if(podeJogar){
@@ -295,16 +294,21 @@ public class HortaController : MonoBehaviour {
 					yield return null;
 			}
 
-			if(level < 3){
+			  /*
+			  if(level < 3){
 				Resetar();
 				level++;
 				StartGame();
+				}
+			
+			   */
+			  	 
 
-			} // Sistema de Pontução / Save 
+			 // Sistema de Pontução / Save 
 
 			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 			if (gamelevel == 0)
-		{
+			{
 			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
 			{
 				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
@@ -336,13 +340,10 @@ public class HortaController : MonoBehaviour {
 			}
 			
 		}
-			
-			else
-			{
 			BarnAnin(); 
 			yield return new WaitForSeconds (2);
 			SceneManager.LoadScene("Score");
-			} 
+			
 		}
 	}
 
@@ -354,4 +355,5 @@ public class HortaController : MonoBehaviour {
 		}
 		ExitBoard.SetActive (false);
 	}
+
 }
