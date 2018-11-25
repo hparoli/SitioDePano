@@ -6,4 +6,10 @@ using System;
 public class AllBolosData 
 {
 	public List <BolosData> bolosDatas;	
+	
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

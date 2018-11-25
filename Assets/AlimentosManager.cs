@@ -68,17 +68,18 @@ public class AlimentosManager : MonoBehaviour {
 		
 		dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData.alimentosDatas = dataController.GetAlimentosDatas();
+		gameData.notaFacil = dataController.GetAlimentosFacil();
+		gameData.notaMedio = dataController.GetAlimentosMedio();
+		gameData.notaDificil = dataController.GetAlimentosDificil();
 		alimentosData = new AlimentosData();
 	 	idTema = PlayerPrefs.GetInt ("idTema");
-	    OpenLevel();
-		StarsPointsControl();
-		contaBtn = 0;
+	    contaBtn = 0;
 		countG = 0;
 		countR = 0;
 		acertos = 0;
 		tempo = tempoInicial;
-		
-		
+		OpenLevel();
+		StarsPointsControl();
 	}
 
 	public void BarnAnin()
@@ -119,7 +120,7 @@ public class AlimentosManager : MonoBehaviour {
 			alimentosData.level = "D";
 		}
 
-		Debug.Log(level);
+	
 	}
 	public void OpenLevel()
 	{
@@ -155,16 +156,16 @@ public class AlimentosManager : MonoBehaviour {
 			if(i == 0)
 			{
 
-				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());
+				notaFinal = gameData.notaFacil;
 			}
 			else if(i == 1)
 			{
-				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());
+				notaFinal = gameData.notaMedio;
 			}
 
 			else if (i == 2)
 			{
-				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());
+				notaFinal = gameData.notaDificil;
 			}
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
@@ -211,8 +212,8 @@ public class AlimentosManager : MonoBehaviour {
 						{
 							alimentosData.tempoJogo += alimentosData.tempoResposta[i];
 						}
-						dataController.SetAlimentosData(alimentosData);
-						SceneManager.LoadScene ("Score");
+						StartCoroutine("BarnEnumerator");
+						StartCoroutine("GameOver");
 					}
 				}
 			}
@@ -310,7 +311,7 @@ public class AlimentosManager : MonoBehaviour {
 			new WaitForSeconds(.5f);
 			yield return null;
 		}
-		Debug.Log ("Game: " + countG);
+		
 		StartCoroutine("MudaAlimentos");
 	}
 
@@ -420,7 +421,7 @@ public class AlimentosManager : MonoBehaviour {
 
 		}
 		tempo = tempoInicial;
-		Debug.Log ("Rodada: " + countR + ", botoes certos: " + btnsCertos + " , tempo: " + tempo);
+
 
 		for (float f = 0f; f <= 1; f += 0.05f){
 			Color c = botoes [0].GetComponent<Image> ().color;
@@ -446,7 +447,6 @@ public class AlimentosManager : MonoBehaviour {
 
 
 	public void PegaItem(bool pega){
-		Debug.Log (contaBtn + ", Pega: " + pega);
 		for (int i = 0; i < botoes.Length; i++) {
 			if (EventSystem.current.currentSelectedGameObject.name == botoes [i].name) {
 				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
@@ -466,7 +466,6 @@ public class AlimentosManager : MonoBehaviour {
 				for (int i = 0; i < botoes.Length; i++) {
 					botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 				}
-				Debug.Log ("acertou os itens");
 				if (countR < 3) {
 					countR++;
 					StartCoroutine ("MudaAlimentos");
@@ -480,8 +479,8 @@ public class AlimentosManager : MonoBehaviour {
 						{
 							alimentosData.tempoJogo += alimentosData.tempoResposta[i];
 						}
-						dataController.SetAlimentosData(alimentosData);
-						SceneManager.LoadScene ("Score");
+						StartCoroutine("BarnEnumerator");
+						StartCoroutine("GameOver");
 					}
 				}
 			}
@@ -492,7 +491,6 @@ public class AlimentosManager : MonoBehaviour {
 			for (int i = 0; i < botoes.Length; i++) {
 				botoes [i].GetComponent<Button> ().onClick.RemoveAllListeners ();
 			}
-			Debug.Log ("errou os itens");
 			if (countR < 3) {
 				countR++;
 				StartCoroutine ("MudaAlimentos");
@@ -506,9 +504,8 @@ public class AlimentosManager : MonoBehaviour {
 					{
 						alimentosData.tempoJogo += alimentosData.tempoResposta[i];
 					}
-					dataController.SetAlimentosData(alimentosData);
 					StartCoroutine("BarnEnumerator");
-					SceneManager.LoadScene ("Score");
+					StartCoroutine("GameOver");
 				}
 			}
 		}
@@ -530,5 +527,22 @@ public class AlimentosManager : MonoBehaviour {
 		 BarnAnin();
 		 yield return new WaitForSeconds(2);
 
+	}
+
+	public IEnumerator GameOver(){
+		if (acertos == 12) {
+			notaFinal = 20;
+		} else if (acertos <= 11 && acertos >= 8) {
+			notaFinal = 10;
+		} else if (acertos <= 7 && acertos >= 4) {
+			notaFinal = 7;
+		} else if (acertos < 4) {
+			notaFinal = 5;
+		}
+		PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
+		alimentosData.nota = notaFinal;
+		dataController.SetAlimentosData(alimentosData);
+		yield return new WaitForSeconds (2);
+		SceneManager.LoadScene ("Score");
 	}
 }

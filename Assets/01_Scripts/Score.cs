@@ -22,7 +22,6 @@ public class Score : MonoBehaviour {
 
 	[Space(10)]
 	private int notaFinal;
-	private int acertos;
 
 	[Header("Debug Values")]
 	[SerializeField]
@@ -44,8 +43,6 @@ public class Score : MonoBehaviour {
 
 		idTema = PlayerPrefs.GetInt ("idTema");
 		notaFinal = PlayerPrefs.GetInt ("notaFinalTemp" + idTema.ToString ());
-		acertos = PlayerPrefs.GetInt ("acertosTemp" + idTema.ToString ());
-//		txtInfotema.text = infoValue;
 		#if UNITY_EDITOR
 		if (useDebug)
 		notaFinal = debug_score;

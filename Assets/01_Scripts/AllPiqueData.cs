@@ -6,6 +6,11 @@ using System;
 
 public class AllPiqueData  {
 
-public List <PiqueData> piqueDatas;
+    public List <PiqueData> piqueDatas;
+    public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 	
 }

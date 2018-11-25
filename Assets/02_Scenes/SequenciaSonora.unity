@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -249,6 +249,74 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701749074669148, guid: bbde9586d3391e948b774c37ad569692, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212448741102500164, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212611946541863734, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212915378933521490, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212115047165548302, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722882047610722, guid: bbde9586d3391e948b774c37ad569692, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212312736930649206, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212420732597673656, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212311482232382446, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212832176408807924, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212765074279549930, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212639814851162474, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212023828206668378, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212030112160411320, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbde9586d3391e948b774c37ad569692, type: 2}
@@ -2498,6 +2566,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67994fbf29a11ad468c6da1289a7a7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData:
+    sequenciaSonoraDatas: []
+    notaFacil: 0
+    notaMedio: 0
+    notaDificil: 0
+  dataController: {fileID: 0}
   gameState: 0
   roundTxt: {fileID: 980028134}
   tutorialTxt: {fileID: 0}

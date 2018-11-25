@@ -6,6 +6,11 @@ using System;
 
 public class AllSequenciaSonoraData  {
 
-	
 	public List<SequenciaSonoraData> sequenciaSonoraDatas;
+
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

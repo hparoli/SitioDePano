@@ -8,4 +8,10 @@ using System;
 public class AllAlimentosData {
 
 	public List<AlimentosData> alimentosDatas;
+
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

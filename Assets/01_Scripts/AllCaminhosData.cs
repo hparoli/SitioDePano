@@ -7,4 +7,9 @@ using System;
 public class AllCaminhosData  
 {
 	public List <CaminhosData> caminhosDatas;	
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

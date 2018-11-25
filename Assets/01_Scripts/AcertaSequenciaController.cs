@@ -9,6 +9,14 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private int idTema;
 
+	private BolosData bolosData = new BolosData();
+
+	[SerializeField]
+	private AllBolosData gameData;
+
+	[SerializeField]
+	private DataController dataController;
+
 	//TrilhaSonora
 	public AudioSource audio;
 

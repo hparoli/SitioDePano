@@ -6,4 +6,9 @@ using System;
 public class AllContandoBixosData  {
 
 	public List <ContandoBixosData> contandoBixosDatas;
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

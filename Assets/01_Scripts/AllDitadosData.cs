@@ -6,4 +6,9 @@ using System;
 public class AllDitadosData  {
 
 	public List<DitadosData> ditadosDatas;
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }

@@ -5,6 +5,12 @@ using System;
 [Serializable]
 
 public class AllOlhoNoLoboData  {
-public List <OlhoNoLoboData> olhoNoLoboDatas;
+    public List <OlhoNoLoboData> olhoNoLoboDatas;
+
+    public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil; 
 	
 }

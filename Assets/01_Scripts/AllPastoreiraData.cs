@@ -6,4 +6,9 @@ using System;
 public class AllPastoreiraData  {
 
 	public List <PastoreiraData> pastoreiraDatas; 
+	public int notaFacil;
+
+	public int notaMedio;
+
+	public int notaDificil;
 }
