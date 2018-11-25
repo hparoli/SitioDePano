@@ -42,6 +42,7 @@ public class ColetaOvos : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		
 		work = false;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		fonteAudio = GetComponent<AudioSource> ();
@@ -107,14 +108,13 @@ public class ColetaOvos : MonoBehaviour {
 			}
 				DificultGameObject.SetActive(false);
 		}
-        if (gamelevel == 0)
-        {
+        
             ExitBoard.SetActive(false);
 			tutButton.SetActive(false);
 
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
 
-        }
+        
 	}
 	public void OpenLevel()
 	{

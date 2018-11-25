@@ -119,6 +119,29 @@ public class ComportamentoGalinha : MonoBehaviour {
 			animator [galinha2].SetBool ("Sentando", false);
 			StartCoroutine("Comportamento");
        }
+	   else if (GameValue == 2)
+	   {
+		 	 int galinha = Random.Range(0, animator.Length);
+			int galinha2 = Random.Range(0, animator.Length);
+			int galinha3 = Random.Range(0, animator.Length);
+			float tempo = Random.Range(min, max);
+			yield return new WaitForSeconds (tempo);
+			animator [galinha].SetBool ("Levantando", true);
+			animator [galinha2].SetBool ("Levantando", true);
+			animator[galinha3].SetBool("Levantando",true);
+			yield return new WaitForSeconds (delayGalinha);
+			animator [galinha].SetBool ("Sentando", true);
+			animator [galinha2].SetBool ("Sentando", true);
+			animator[galinha3].SetBool("Sentando",true);
+			animator[galinha3].SetBool("Levantando",false);
+			animator [galinha2].SetBool ("Levantando", false);
+			animator [galinha].SetBool ("Levantando", false);
+			yield return new WaitForSeconds (0.5f);
+			animator [galinha].SetBool ("Sentando", false);
+			animator [galinha2].SetBool ("Sentando", false);
+			animator[galinha3].SetBool("Sentando",false);
+			StartCoroutine("Comportamento"); 
+	   }
 	}
 	
 	public void EndGame()
