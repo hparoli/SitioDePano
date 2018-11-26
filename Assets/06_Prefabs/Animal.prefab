@@ -205,8 +205,8 @@ MonoBehaviour:
   animal: 
   aninha: {fileID: 0}
   sons:
-  - {fileID: 8300000, guid: 7123faf5f9f7e9b4e9f3dcb4b5a7d23a, type: 3}
-  - {fileID: 8300000, guid: a32fba393c624da4da156448653ae655, type: 3}
+  - {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
+  - {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
 --- !u!114 &114447376704483462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,7 +257,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1299416717
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
