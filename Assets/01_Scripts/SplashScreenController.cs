@@ -16,7 +16,7 @@ public class SplashScreenController : MonoBehaviour {
 	}
 	public void gotoPreMenu()
 	{
-		//SceneManager.LoadScene("PreMenu");
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene("PreMenu");
+		//SceneManager.LoadScene(1);
 	}
 }
