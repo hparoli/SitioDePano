@@ -51,9 +51,6 @@ public class DataController : MonoBehaviour {
 		pastoreiraDatas = new AllPastoreiraData();
 		piqueDatas = new AllPiqueData();
 		sequenciaSonoraDatas = new AllSequenciaSonoraData();
-
-
-		LoadAlimentosData();
 	}
 	
 	#region Jogo dos Alimentos	
@@ -300,7 +297,7 @@ public class DataController : MonoBehaviour {
 		Debug.Log(dataAsJson);
 		File.WriteAllText(filePath, dataAsJson);
 	}
-	public void SetBolosDara(BolosData bolosData){
+	public void SetBolosData(BolosData bolosData){
 		bolosDatas.bolosDatas.Add(bolosData);
 		if(bolosData.level == "F"){
 			if(bolosData.nota > bolosDatas.notaFacil) bolosDatas.notaFacil = bolosData.nota;
@@ -312,7 +309,7 @@ public class DataController : MonoBehaviour {
 		SaveBolosData();
 	}
 	public List<BolosData> GetBolosData(){
-		LoadOlhoLoboData();
+		LoadBolosData();
 		return bolosDatas.bolosDatas;		
 	}
 
