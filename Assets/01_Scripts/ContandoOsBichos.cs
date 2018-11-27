@@ -177,7 +177,7 @@ public class ContandoOsBichos : MonoBehaviour {
 			StartCoroutine("ConteOAnimal");
 			button.SetActive (false);
         	SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
-			audio.Pause ();
+			audio.Play ();
 		}
 
 		else if (isgame)
@@ -188,7 +188,7 @@ public class ContandoOsBichos : MonoBehaviour {
 			tutButton.SetActive(true);
 			button.SetActive (false);
         	SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialContandoBicho);
-			audio.Pause ();
+			
 		}
 
     }
