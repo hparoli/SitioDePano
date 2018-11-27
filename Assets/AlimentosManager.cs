@@ -272,7 +272,7 @@ public class AlimentosManager : MonoBehaviour {
 		
 		if (level == 1) {
 			tip = tip2 = Random.Range (0, alimentos.Length);
-			texto.text = string.Format("Colete os {0}" , alimentos[tip].tipo);
+			texto.text = string.Format("Colete {0}" , alimentos[tip].tipo);
 		} else {
 			tip = Random.Range (0, alimentos.Length);
 			tip2 = Random.Range (0, alimentos.Length);
