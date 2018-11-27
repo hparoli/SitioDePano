@@ -8,9 +8,7 @@ public class ExitConfirmation : MonoBehaviour {
 
 	[SerializeField]
 	GameObject ExitGameObject;
-	[SerializeField]
-	GameObject ExitGameObject2;
-
+	
 	void Start ()
 	 {
 		ExitGameObject.SetActive (false);
@@ -28,32 +26,19 @@ public class ExitConfirmation : MonoBehaviour {
 		ColetaOvos.work = false;
 		Time.timeScale = 0;
 	}
-	public void open2()
-	{
-		ExitGameObject2.SetActive(true);
-		Time.timeScale = 0;
-	}
+	
 	public void yesExit()
 	{
 		ExitGameObject.SetActive (false);
 		Time.timeScale = 1;
 		SceneManager.LoadScene("newMenu");
 	}
-	public void yesExit2()
-	{
-		ExitGameObject2.SetActive (false);
-		Time.timeScale = 1;
-		SceneManager.LoadScene("newMenu");
-	}
+	
 	public void noExit()
 	{
 		ExitGameObject.SetActive (false);
 		ColetaOvos.work = true;
         Time.timeScale = 1;
     }
-	public void noExit2()
-	{
-		ExitGameObject2.SetActive (false);
-		 Time.timeScale = 1;
-    }
+	
 }
