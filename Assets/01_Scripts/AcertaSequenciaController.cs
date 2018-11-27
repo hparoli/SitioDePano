@@ -75,6 +75,10 @@ public class AcertaSequenciaController : MonoBehaviour {
 	GameObject ExitBoard2;
 	[SerializeField]
 	GameObject TutorialPrefab;
+	[SerializeField]
+	GameObject tutButton;
+	bool isgame = false;
+
 
 	[Space(10)]
 	[Header("Celeiro")]
@@ -100,7 +104,15 @@ public class AcertaSequenciaController : MonoBehaviour {
 		ind = 1;
 		fonteAudio = GetComponent<AudioSource> ();
 	}
-
+	public void OpenTutorial()
+	{
+		ExitBoard.SetActive(false);
+		tutButton.SetActive(false);
+		TutorialPrefab.SetActive(true);
+		Time.timeScale = 0;
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekBolos);
+		isgame = true;
+	}
 	public void BarnAnin()
 	{
 		for (int i = 0; i < barnAnims.Length; i++) 
@@ -129,6 +141,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
 			ExitBoard2.SetActive(false);
+			tutButton.SetActive(false);
 		}
 		if (gamelevel == 0)
 		{
@@ -201,13 +214,9 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	public void StartGame()
 	{
-		ExitBoard.SetActive(true);
-		TutorialPrefab.SetActive(false);
-		 
 		if (level == 0)
 		{
 			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekBolos);
-			audio.Play ();
 			qtdFormas = 3;
 			tipos = 3;
 		} else if(level == 1){
@@ -231,7 +240,24 @@ public class AcertaSequenciaController : MonoBehaviour {
 		formasPergunta = new GameObject[qtdFormas];
 		formasResposta = new GameObject[qtdFormas];
 		btn.gameObject.SetActive(false);
-		StartCoroutine("MostraSequencia");
+		if (!isgame)
+		{
+			ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			Time.timeScale = 1;
+			StartCoroutine("MostraSequencia");
+			audio.Play ();
+		}
+		else
+		{
+			ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			Time.timeScale = 1;
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekBolos);
+		}
+		
 	}
 
 	private IEnumerator MostraSequencia(){
