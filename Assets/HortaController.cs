@@ -81,7 +81,7 @@ public class HortaController : MonoBehaviour {
 	}
 public void GameDificultControl(int GameDificultValue)
 	{	
-		level = gamelevel = GameDificultValue;
+		 gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
 			if(gamedificultScripiting[i].gameValue == GameDificultValue)
@@ -246,7 +246,8 @@ public void GameDificultControl(int GameDificultValue)
 		podeJogar = true;
 	}
 
-	IEnumerator GameOver(){
+	IEnumerator GameOver()
+	{
 		gameover = true;
 		if (saldo != 0){
 			//som de erro
@@ -294,58 +295,55 @@ public void GameDificultControl(int GameDificultValue)
 					yield return null;
 			}
 
-			  /*
-			  if(level < 3){
-				Resetar();
-				level++;
-				StartGame();
+			  
+			  if(level < 3)
+			  {
+					Resetar();
+					level++;
+					StartGame();
+			  }
+			  else
+			  {
+// Sistema de Pontução / Save 
+				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
+				if (gamelevel == 0)
+				{
+					if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+						{
+							PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+						}
+					if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+						{
+							PlayerPrefs.SetString("dificuldade" + idTema, "M");
+						}
+
 				}
-			
-			   */
-			  	 
+				else if (gamelevel == 1)
+				{
+					if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+						{
+							PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+						}
+					if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+						{
+							PlayerPrefs.SetString("dificuldade" + idTema, "D");
+						}
 
-			 // Sistema de Pontução / Save 
+				}
+				else if (gamelevel == 2)
+				{
+					if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+						{
+							PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+						}
+				}
+				BarnAnin(); 
+				yield return new WaitForSeconds (2);
+				SceneManager.LoadScene("Score"); 
+			}
+		}
+}
 
-			PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
-			if (gamelevel == 0)
-			{
-			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
-			{
-				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
-			}
-			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
-			{
-				PlayerPrefs.SetString("dificuldade" + idTema, "M");
-			}
-			
-		}
-		else if (gamelevel == 1)
-		{
-			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
-			{
-				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
-			}
-
-			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
-			{
-				PlayerPrefs.SetString("dificuldade" + idTema, "D");
-			}
-			
-		}
-		else if (gamelevel == 2)
-		{
-			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
-			{
-				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
-			}
-			
-		}
-			BarnAnin(); 
-			yield return new WaitForSeconds (2);
-			SceneManager.LoadScene("Score");
-			
-		}
-	}
 
 	public void BarnAnin()
 	{
