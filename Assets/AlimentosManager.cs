@@ -53,6 +53,10 @@ public class AlimentosManager : MonoBehaviour {
 	GameObject ExitBoard;
 	[SerializeField]
 	GameObject TutorialPrefab;
+	[SerializeField]
+	GameObject tutButton;
+
+	bool isgame = false;
 	int idTema;
 	int gamelevel;
 
@@ -81,7 +85,15 @@ public class AlimentosManager : MonoBehaviour {
 		OpenLevel();
 		StarsPointsControl();
 	}
-
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	TutorialPrefab.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
+	isgame = true;
+	}
 	public void BarnAnin()
 	{
 		for (int i = 0; i < barnAnims.Length; i++) 
@@ -180,11 +192,23 @@ public class AlimentosManager : MonoBehaviour {
 
 	public void StartGameButton()
 	{
-		
-		ExitBoard.SetActive(true);
-		TutorialPrefab.SetActive(false);
-		StartCoroutine ("StartGame");
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		if (!isgame)
+		{
+			ExitBoard.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			tutButton.SetActive(true);
+			StartCoroutine ("StartGame");
+			Time.timeScale = 1;
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		}
+		else
+		{
+			ExitBoard.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			tutButton.SetActive(true);
+			Time.timeScale = 1;
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialAlimentos);
+		}
 		
 	}
 
