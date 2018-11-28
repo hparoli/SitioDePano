@@ -71,7 +71,9 @@ public class AlimentosManager : MonoBehaviour {
 	 {
 		
 		dataController = GameObject.Find("DataController").GetComponent<DataController>();
+		gameData = new AllAlimentosData();
 		gameData.alimentosDatas = dataController.GetAlimentosDatas();
+		Debug.Log(dataController.GetAlimentosDatas());
 		gameData.notaFacil = dataController.GetAlimentosFacil();
 		gameData.notaMedio = dataController.GetAlimentosMedio();
 		gameData.notaDificil = dataController.GetAlimentosDificil();
@@ -138,6 +140,7 @@ public class AlimentosManager : MonoBehaviour {
 	{
 		bool hasF = false;
 		bool hasM = false;
+		
 		for (int i = 0; i < gameData.alimentosDatas.Count; i++)
 		{
 			if(gameData.alimentosDatas[i].level == "F") {

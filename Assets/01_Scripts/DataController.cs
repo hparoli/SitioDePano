@@ -21,7 +21,7 @@ public class DataController : MonoBehaviour {
 	private AllSequenciaSonoraData sequenciaSonoraDatas;
 	
 
-	private string gameDataAlimentos = "/StreamingAssets/alimentosSave.json";
+	private string gameDataAlimentos = "alimentosSave.json";
 	private string gameDataPique = "/StreamingAssets/piqueSave.json";
 	private string gameDataHorta = "/StreamingAssets/hortaSave.json";
 	private string gameDataOlhoNosLobos = "/StreamingAssets/olhoNoLoboSave.json";
@@ -55,8 +55,8 @@ public class DataController : MonoBehaviour {
 	
 	#region Jogo dos Alimentos	
 	private void LoadAlimentosData(){
-		string filePath = Application.dataPath + gameDataAlimentos;
-
+		string filePath = Path.Combine(Application.persistentDataPath, gameDataAlimentos);
+		Debug.Log(filePath);
 		if(File.Exists(filePath)){
 			string dataAsJson = File.ReadAllText(filePath);
 			Debug.Log("Load: " + dataAsJson);
