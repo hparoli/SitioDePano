@@ -60,6 +60,9 @@ public class AbelhaManager : MonoBehaviour
 	GameObject ExitBoard;
 	[SerializeField]
 	GameObject TutorialPrefab;
+	[SerializeField]
+	GameObject tutButton;
+	bool isgame = false;
 	int idTema;
 	int gamelevel;
 
@@ -79,6 +82,15 @@ public class AbelhaManager : MonoBehaviour
 		fimCaminho = false;
 		destino = true;
 		
+	}
+	public void OpenTutorial()
+	{
+		ExitBoard.SetActive(false);
+		tutButton.SetActive(false);
+		TutorialPrefab.SetActive(true);
+		Time.timeScale = 0;
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialCaminhos);
+		isgame = true;
 	}
 	public void BarnAnin()
 	{
@@ -162,10 +174,23 @@ public class AbelhaManager : MonoBehaviour
 
 	public void StartGameButton()
 	{
+		if (!isgame)
+		{
+			ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+			Time.timeScale = 1;
+			TutorialPrefab.SetActive(false);
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialCaminhos);
+		}
+		else
+		{
+			ExitBoard.SetActive(true);
+			tutButton.SetActive(true);
+			Time.timeScale = 1;
+			TutorialPrefab.SetActive(false);
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialCaminhos);
+		}
 		
-		ExitBoard.SetActive(true);
-		TutorialPrefab.SetActive(false);
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialCaminhos);
 	}
 
 	private void InicializaLevel(int lvl){
