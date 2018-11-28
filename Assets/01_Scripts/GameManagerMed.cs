@@ -47,6 +47,9 @@ public class GameManagerMed : MonoBehaviour {
 	[Header("Tutorial")]
 	[SerializeField]
 	GameObject tutorial;
+	[SerializeField]
+	GameObject tutButton;
+	bool isgame = false;
 	
 
 	[Header("DificultControl")]
@@ -77,6 +80,15 @@ public class GameManagerMed : MonoBehaviour {
 		idTema = PlayerPrefs.GetInt ("idTema");
 		OpenLevel();
 		StarsPointsControl();
+	}
+	public void OpenTutorial()
+	{
+	ExitBoard.SetActive(false);
+	tutButton.SetActive(false);
+	tutorial.SetActive(true);
+	Time.timeScale = 0;
+	SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialMemoria);
+	isgame = true;
 	}
 
 	void Update () 
@@ -112,6 +124,7 @@ public class GameManagerMed : MonoBehaviour {
 			}
 			DificultGameObject.SetActive(false);
 			ExitBoard.SetActive(false);
+			tutButton.SetActive(false);
 			source = GetComponent<AudioSource> ();
 		}
 		if (gamelevel == 0)
@@ -183,11 +196,25 @@ public class GameManagerMed : MonoBehaviour {
 
 	public void StartGame()
 	{
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
-		audio.Play ();
-		ExitBoard.SetActive(true);
-		tutorial.SetActive(false);
-		comeca = true;
+		if(!isgame)
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
+			Time.timeScale = 1;
+			audio.Play ();
+			ExitBoard.SetActive(true);
+			tutorial.SetActive(false);
+			tutButton.SetActive(true);
+			comeca = true;
+		}
+		else
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialMemoria);
+			Time.timeScale = 1;
+			ExitBoard.SetActive(true);
+			tutorial.SetActive(false);
+			tutButton.SetActive(true);
+		}
+		
 	}
 
 
