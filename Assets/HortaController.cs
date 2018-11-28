@@ -49,6 +49,11 @@ public class HortaController : MonoBehaviour {
 	[SerializeField]
 	GameObject TutorialPrefab;
 	[SerializeField]
+	GameObject tutButton;
+	[SerializeField]
+	GameObject ButtonControl;
+	bool isgame = false;
+	[SerializeField]
 	GameObject ControladorPrefab;
 
 	private AudioSource fonteAudio;
@@ -70,6 +75,17 @@ public class HortaController : MonoBehaviour {
 		fonteAudio = GetComponent<AudioSource>();
 
 	}
+
+	public void OpenTutorial()
+	{
+		ExitBoard.SetActive(false);
+		tutButton.SetActive(false);
+		TutorialPrefab.SetActive(true);
+		ButtonControl.SetActive(false);
+		Time.timeScale = 0;
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
+		isgame = true;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -90,6 +106,7 @@ public void GameDificultControl(int GameDificultValue)
 
 			}
 			DificultGameObject.SetActive(false);
+			tutButton.SetActive(false);
 			ExitBoard.SetActive(false);
 		}
 
@@ -144,12 +161,18 @@ public void GameDificultControl(int GameDificultValue)
 	}
 	public void StartGame()
 	{	
-		ExitBoard.SetActive(true);
-		TutorialPrefab.SetActive(false);
-		ControladorPrefab.SetActive(true);
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
-		audio.Play ();
-		if(level == 0 || level == 2){
+		if (!isgame)
+		{
+			ExitBoard.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			tutButton.SetActive(true);
+			ControladorPrefab.SetActive(true);
+			ButtonControl.SetActive(true);
+			Time.timeScale = 1;
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
+			audio.Play ();	
+		
+			if(level == 0 || level == 2){
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				if(i < 3) buttons[i].SetActive(true);
@@ -202,6 +225,20 @@ public void GameDificultControl(int GameDificultValue)
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
 			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 		}
+		}
+		else
+		{
+			ExitBoard.SetActive(true);
+			TutorialPrefab.SetActive(false);
+			tutButton.SetActive(true);
+			ControladorPrefab.SetActive(true);
+			ButtonControl.SetActive(true);
+			Time.timeScale = 1;
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
+				
+		}
+		
+		
 	}
 
 	
