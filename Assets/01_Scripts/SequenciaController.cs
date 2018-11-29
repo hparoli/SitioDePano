@@ -76,11 +76,11 @@ public class SequenciaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        dataController = GameObject.Find("DataController").GetComponent<DataController>();
+       /*  dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData.sequenciaSonoraDatas = dataController.GetSequenciData();
 		gameData.notaFacil = dataController.GetSequenciaFacil();
 		gameData.notaMedio = dataController.GetSequenciaMedio();
-		gameData.notaDificil = dataController.GetSequenciaDificil();
+		gameData.notaDificil = dataController.GetSequenciaDificil();*/
 		sequenciaData = new SequenciaSonoraData();
 		idTema = PlayerPrefs.GetInt ("idTema");
         OpenLevel();
@@ -120,16 +120,27 @@ public class SequenciaController : MonoBehaviour {
          if (gamelevel == 0)
 		{
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialSequencia);
-			sequenciaData.level = "F";
+			/* sequenciaData.level = "F";
 		} else if (gamelevel == 1){
 			sequenciaData.level = "M";
 		} else if (gamelevel == 2){
-			sequenciaData.level = "D";
+			sequenciaData.level = "D";*/
 		}
 	}
 	public void OpenLevel()
 	{
-		bool hasF = false;
+        string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+		/* bool hasF = false;
 		bool hasM = false;
 		for (int i = 0; i < gameData.sequenciaSonoraDatas.Count; i++)
 		{
@@ -150,7 +161,7 @@ public class SequenciaController : MonoBehaviour {
 		if (!hasM) 
 		{
 			gameButtons[2].interactable = false;
-		}
+        }*/
 	}
 
 	public void StarsPointsControl()
@@ -160,16 +171,16 @@ public class SequenciaController : MonoBehaviour {
 		{
 			if(i == 0)
 			{
-            	notaFinal = gameData.notaFacil;
+            	notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());//gameData.notaFacil;
 			}
 			else if(i == 1)
 			{
-				notaFinal = gameData.notaMedio;
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());//gameData.notaMedio;
 			}
 
 			else if (i == 2)
 			{
-				notaFinal = gameData.notaDificil;
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());//gameData.notaDificil;
 			}
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
@@ -496,9 +507,43 @@ IEnumerator SequenciaTutorial(int qtd)
 		{
 			notaFinal = 20;
 		}
+        if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
+        PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
         sequenciaData.tempoJogo = tempo;
         sequenciaData.nota = notaFinal;
-        dataController.SetSequenciaData(sequenciaData);
+        //dataController.SetSequenciaData(sequenciaData);
 		BarnAnin ();
 		yield return new WaitForSeconds (2);
 		//Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );

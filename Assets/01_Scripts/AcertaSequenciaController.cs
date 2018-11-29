@@ -88,12 +88,12 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 
 	void Start () 
-	{
+	{/*
 		dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData.bolosDatas = dataController.GetBolosData();
 		gameData.notaFacil = dataController.GetBoloFacil();
 		gameData.notaMedio = dataController.GetBoloMedio();
-		gameData.notaDificil = dataController.GetBoloDificil();
+		gameData.notaDificil = dataController.GetBoloDificil();*/
 		bolosData = new BolosData();
 		idTema = PlayerPrefs.GetInt ("idTema");
 		acerto = 0;
@@ -159,7 +159,18 @@ public class AcertaSequenciaController : MonoBehaviour {
 	}
 	public void OpenLevel()
 	{
-		bool hasF = false;
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+		/* bool hasF = false;
 		bool hasM = false;
 		for (int i = 0; i < gameData.bolosDatas.Count; i++)
 		{
@@ -180,7 +191,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		if (!hasM) 
 		{
 			gameButtons[2].interactable = false;
-		}
+		}*/
 	}
 
 	public void StarsPointsControl()
@@ -191,16 +202,16 @@ public class AcertaSequenciaController : MonoBehaviour {
 			if(i == 0)
 			{
 
-				notaFinal = gameData.notaFacil;
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());//gameData.notaFacil;
 			}
 			else if(i == 1)
 			{
-				notaFinal = gameData.notaMedio;
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());//gameData.notaMedio;
 			}
 
 			else if (i == 2)
 			{
-				notaFinal = gameData.notaDificil;
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());//gameData.notaDificil;
 			}
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
@@ -538,7 +549,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 					PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
 					bolosData.nota = notaFinal;
 					bolosData.tempoJogo = tempo;
-					dataController.SetBolosData(bolosData);
+					//dataController.SetBolosData(bolosData);
 					yield return new WaitForSeconds(2f);
 					SceneManager.LoadScene ("Score");
 				}
@@ -561,6 +572,39 @@ public class AcertaSequenciaController : MonoBehaviour {
 					} else if (acerto == 0) {
 						notaFinal = 5;
 					}
+					if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
 					PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
 					bolosData.nota = notaFinal;
 					bolosData.tempoJogo = tempo;

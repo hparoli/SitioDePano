@@ -70,13 +70,13 @@ public class AlimentosManager : MonoBehaviour {
 	void Start ()
 	 {
 		
-		dataController = GameObject.Find("DataController").GetComponent<DataController>();
+		/* dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData = new AllAlimentosData();
 		gameData.alimentosDatas = dataController.GetAlimentosDatas();
 		Debug.Log(dataController.GetAlimentosDatas());
 		gameData.notaFacil = dataController.GetAlimentosFacil();
 		gameData.notaMedio = dataController.GetAlimentosMedio();
-		gameData.notaDificil = dataController.GetAlimentosDificil();
+		gameData.notaDificil = dataController.GetAlimentosDificil();*/
 		alimentosData = new AlimentosData();
 	 	idTema = PlayerPrefs.GetInt ("idTema");
 	    contaBtn = 0;
@@ -127,18 +127,29 @@ public class AlimentosManager : MonoBehaviour {
 		if (gamelevel == 1)
 		{
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialAlimentos);
-			alimentosData.level = "F";
+		/* 	alimentosData.level = "F";
 		} else if (gamelevel == 2){
 			alimentosData.level = "M";
 		} else if (gamelevel == 3){
-			alimentosData.level = "D";
+			alimentosData.level = "D";*/
 		}
 
 	
 	}
 	public void OpenLevel()
 	{
-		bool hasF = false;
+		string dif = PlayerPrefs.GetString("dificuldade" + idTema);
+		
+		if (dif == "F" ||  dif == "")
+		{
+			gameButtons[1].interactable = false;
+			gameButtons[2].interactable = false;
+		}
+		else if (dif == "M") 
+		{
+			gameButtons[2].interactable = false;
+		}
+		/*bool hasF = false;
 		bool hasM = false;
 		
 		for (int i = 0; i < gameData.alimentosDatas.Count; i++)
@@ -160,7 +171,7 @@ public class AlimentosManager : MonoBehaviour {
 		if (!hasM) 
 		{
 			gameButtons[2].interactable = false;
-		}
+		}*/
 	}
 
 	public void StarsPointsControl()
@@ -171,16 +182,16 @@ public class AlimentosManager : MonoBehaviour {
 			if(i == 0)
 			{
 
-				notaFinal = gameData.notaFacil;
+				notaFinal = PlayerPrefs.GetInt ("piqueFacil" + idTema.ToString ());//gameData.notaFacil;
 			}
 			else if(i == 1)
 			{
-				notaFinal = gameData.notaMedio;
+				notaFinal = PlayerPrefs.GetInt ("piqueMedio" + idTema.ToString ());//gameData.notaMedio;
 			}
 
 			else if (i == 2)
 			{
-				notaFinal = gameData.notaDificil;
+				notaFinal = PlayerPrefs.GetInt ("piqueDificil" + idTema.ToString ());//gameData.notaDificil;
 			}
 			
 			for (int j = 0; j < gamedificultScripiting[i].stars.Length; j++)
@@ -566,9 +577,42 @@ public class AlimentosManager : MonoBehaviour {
 		} else if (acertos < 4) {
 			notaFinal = 5;
 		}
+		if (gamelevel == 0)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), notaFinal);
+			}
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "F" || PlayerPrefs.GetString("dificuldade" + idTema) == "")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "M");
+			}
+			
+		}
+		else if (gamelevel == 1)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueMedio" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), notaFinal);
+			}
+
+			if(PlayerPrefs.GetString("dificuldade" + idTema) == "M")
+			{
+				PlayerPrefs.SetString("dificuldade" + idTema, "D");
+			}
+			
+		}
+		else if (gamelevel == 2)
+		{
+			if (notaFinal > PlayerPrefs.GetInt("piqueDificil" + idTema.ToString()))
+			{
+				PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), notaFinal);
+			}
+			
+		}
 		PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
 		alimentosData.nota = notaFinal;
-		dataController.SetAlimentosData(alimentosData);
+		//dataController.SetAlimentosData(alimentosData);
 		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene ("Score");
 	}
