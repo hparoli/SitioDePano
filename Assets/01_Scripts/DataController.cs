@@ -71,7 +71,7 @@ public class DataController : MonoBehaviour {
 
 	private void SaveAlimentosData(){
 		string dataAsJson = JsonUtility.ToJson(alimentosDatas);
-		string filePath = Application.dataPath + gameDataAlimentos;
+		string filePath = Path.Combine(Application.persistentDataPath, gameDataAlimentos);
 		Debug.Log(dataAsJson);
 		File.WriteAllText(filePath, dataAsJson);
 	}
