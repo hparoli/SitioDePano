@@ -34,7 +34,7 @@ public class SequenciaController : MonoBehaviour {
 	public Animator[] buttons, btnTutorial;
 	public Transform[] birds;
 	
-    public GameObject startButton, startTutorial, sino;
+    public GameObject startButton, sino;
 
     public List<int> colors; //sequencia de cores 
     public int idResp, qtdCores, rodada, pontuacao;
@@ -70,6 +70,9 @@ public class SequenciaController : MonoBehaviour {
 
     [SerializeField]
     GameObject TutorialPrefab;
+    [SerializeField]
+    public GameObject tutButton;
+    public bool isgame = false;
 
 
 
@@ -93,13 +96,22 @@ public class SequenciaController : MonoBehaviour {
 
 	}
 
+    public void OpenTutorial() 
+	{
+		
+		ExitBoard.SetActive(false);
+		tutButton.SetActive(false);
+		TutorialPrefab.SetActive(true);
+		Time.timeScale = 0;
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialSequencia);
+		isgame = true;
+			
+	}
+
     private void Update() 
     {
         Cronometro();
-        if (gamelevel == 1)
-        {
-            TutorialPrefab.SetActive(false);
-        }
+        
 			
     }
 
@@ -120,12 +132,21 @@ public class SequenciaController : MonoBehaviour {
          if (gamelevel == 0)
 		{
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialSequencia);
+            tutButton.SetActive(false);
+            TutorialPrefab.SetActive(true);
 			/* sequenciaData.level = "F";
 		} else if (gamelevel == 1){
 			sequenciaData.level = "M";
 		} else if (gamelevel == 2){
 			sequenciaData.level = "D";*/
 		}
+        else if (gamelevel == 1 || gamelevel == 2)
+        {
+           
+            tutButton.SetActive(true);
+        }
+        
+
 	}
 	public void OpenLevel()
 	{
@@ -353,8 +374,7 @@ public class SequenciaController : MonoBehaviour {
 
 IEnumerator SequenciaTutorial(int qtd)
     {
-        startTutorial.SetActive(false);
-
+        
         for(int i = 0; i < qtd; i++)
         {
             yield return new WaitForSeconds(.8f);

@@ -22,17 +22,30 @@ public class StartGame : MonoBehaviour {
 	private void Update() 
 	{
 		
-		if (gameController.gamelevel == 1)
-		{
-			tutorial.SetActive (false);
-			ExitBoardPrefab.SetActive(true);
-		}	
 	}
 	public void Comecar()
 	{	
-		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialSequencia);
-		ExitBoardPrefab.SetActive(true);
-		tutorial.SetActive (false);
+		if(gameController.isgame == false)
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialSequencia);
+			gameController.tutButton.SetActive(true);
+			tutorial.SetActive (false);
+			ExitBoardPrefab.SetActive(true);
+			Time.timeScale = 1;
+			ExitBoardPrefab.SetActive(true);
+			tutorial.SetActive (false);
+		}
+		else 
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialSequencia);
+			gameController.tutButton.SetActive(true);
+			tutorial.SetActive (false);
+			ExitBoardPrefab.SetActive(true);
+			Time.timeScale = 1;
+			ExitBoardPrefab.SetActive(true);
+			tutorial.SetActive (false);
+		}
+		
 	}
     private void OnMouseDown()
     {
