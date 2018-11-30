@@ -9,6 +9,8 @@ public class ColetaOvos : MonoBehaviour {
 
 	[Header("Game Check Dificult")]
 	public GameObject[] galinhas;
+	public GameObject[] g2;
+	public GameObject[] g1;
 	public GameObject[] eggsCollected;
 	public static bool work;
 	public AudioClip[] sons;
@@ -36,7 +38,9 @@ public class ColetaOvos : MonoBehaviour {
     [SerializeField]
     GameObject ExitBoard;
 	[SerializeField]
-	GameObject tutButton;
+	GameObject[] tutButton;
+	[SerializeField]
+	GameObject[] tutorial;
 
 
 	// Use this for initialization
@@ -62,11 +66,84 @@ public class ColetaOvos : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Game1();
+		if(gamelevel == 0)
+		{
+			Game1();
+		}
+		else if (gamelevel == 1) 
+		{
+			Game2();
+		}
+		
+		else
+		{
+			Game3();
+		}
+		
 		Score();
 	}
-
 	public void Game1()
+	{
+		if(work)
+		{
+			RaycastHit galinhaClick = new RaycastHit();
+			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out galinhaClick);
+			if (Input.GetMouseButtonDown (0)) {
+				if (hit) {
+					for(int i = 0; i < g1.Length; i++){
+						if (galinhaClick.transform.gameObject.name == g1[i].name){
+							if(g1[i].GetComponent<ApareceOvo>().temOvo){
+								pegouOvos++;
+								eggFeedback ();
+								g1[i].GetComponent<ApareceOvo>().Desaparece();
+								//feedback positivo
+								Debug.Log("ACERTOU");
+								fonteAudio.PlayOneShot(sons[0]);
+							} else {
+								erros++;
+								g1[i].GetComponent<Animator>().SetTrigger("Erro");
+								//feedback negativo
+								Debug.Log("ERROU");
+								fonteAudio.PlayOneShot(sons[1]);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public void Game2()
+	{
+		if(work)
+		{
+			RaycastHit galinhaClick = new RaycastHit();
+			bool hit = Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out galinhaClick);
+			if (Input.GetMouseButtonDown (0)) {
+				if (hit) {
+					for(int i = 0; i < g2.Length; i++){
+						if (galinhaClick.transform.gameObject.name == g2[i].name){
+							if(g2[i].GetComponent<ApareceOvo>().temOvo){
+								pegouOvos++;
+								eggFeedback ();
+								g2[i].GetComponent<ApareceOvo>().Desaparece();
+								//feedback positivo
+								Debug.Log("ACERTOU");
+								fonteAudio.PlayOneShot(sons[0]);
+							} else {
+								erros++;
+								g2[i].GetComponent<Animator>().SetTrigger("Erro");
+								//feedback negativo
+								Debug.Log("ERROU");
+								fonteAudio.PlayOneShot(sons[1]);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	public void Game3()
 	{
 		if(work)
 		{
@@ -96,6 +173,8 @@ public class ColetaOvos : MonoBehaviour {
 			}
 		}
 	}
+
+
 	public void GameDificultControl(int GameDificultValue)
 	{	
 		gamelevel = GameDificultValue;
@@ -109,10 +188,20 @@ public class ColetaOvos : MonoBehaviour {
 				DificultGameObject.SetActive(false);
 		}
         
-            ExitBoard.SetActive(false);
-			tutButton.SetActive(false);
+        if(gamelevel == 0)
+		{
+			tutButton[0].SetActive(false);
+			ExitBoard.SetActive(false);
+			tutorial[0].SetActive(true);
+			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
+		}
 
-            SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialOvo);
+		 if(gamelevel == 1 || gamelevel == 2)
+		{
+			tutorial[1].SetActive(false);
+			tutorial[2].SetActive(false);
+		}
+		
 
         
 	}
