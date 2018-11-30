@@ -1,0 +1,713 @@
+fileFormatVersion: 2
+guid: a4e714e5aeca6fe4a8b8f696a205bd46
+timeCreated: 1543615004
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ANIM_JogoContandoBichos_gato_0
+    21300002: ANIM_JogoContandoBichos_gato_1
+    21300004: ANIM_JogoContandoBichos_gato_2
+    21300006: ANIM_JogoContandoBichos_gato_3
+    21300008: ANIM_JogoContandoBichos_gato_4
+    21300010: ANIM_JogoContandoBichos_gato_5
+    21300012: ANIM_JogoContandoBichos_gato_6
+    21300014: ANIM_JogoContandoBichos_gato_7
+    21300016: ANIM_JogoContandoBichos_gato_8
+    21300018: ANIM_JogoContandoBichos_gato_9
+    21300020: ANIM_JogoContandoBichos_gato_10
+    21300022: ANIM_JogoContandoBichos_gato_11
+    21300024: ANIM_JogoContandoBichos_gato_12
+    21300026: ANIM_JogoContandoBichos_gato_13
+    21300028: ANIM_JogoContandoBichos_gato_14
+    21300030: ANIM_JogoContandoBichos_gato_15
+    21300032: ANIM_JogoContandoBichos_gato_16
+    21300034: ANIM_JogoContandoBichos_gato_17
+    21300036: ANIM_JogoContandoBichos_gato_18
+    21300038: ANIM_JogoContandoBichos_gato_19
+    21300040: ANIM_JogoContandoBichos_gato_20
+    21300042: ANIM_JogoContandoBichos_gato_21
+    21300044: ANIM_JogoContandoBichos_gato_22
+    21300046: ANIM_JogoContandoBichos_gato_23
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1859
+        width: 181
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1866
+        width: 249
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1875
+        width: 251
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_3
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1887
+        width: 246
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1700
+        width: 245
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1667
+        width: 205
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1668
+        width: 189
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_7
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1668
+        width: 183
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1476
+        width: 181
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1484
+        width: 249
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_10
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1492
+        width: 251
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_11
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1504
+        width: 246
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1316
+        width: 245
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1284
+        width: 205
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1284
+        width: 189
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_15
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1286
+        width: 183
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1095
+        width: 181
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1102
+        width: 249
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_18
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1111
+        width: 251
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_19
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1123
+        width: 246
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 936
+        width: 245
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 903
+        width: 205
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 904
+        width: 189
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_gato_23
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 904
+        width: 183
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -49, y: -56}
+      - {x: -49, y: 26}
+      - {x: -50, y: 35}
+      - {x: -63, y: 52}
+      - {x: -258, y: 52}
+      - {x: -258, y: -101}
+      - {x: -255, y: -123}
+      - {x: -53, y: -123}
+      - {x: -49, y: -102}
+      - {x: -49, y: -79}
+      - {x: -51, y: -73}
+    - - {x: 158, y: 51}
+      - {x: 32, y: 51}
+      - {x: 25, y: 50}
+      - {x: 0, y: 22}
+      - {x: -2, y: 14}
+      - {x: -2, y: -58}
+      - {x: 35, y: -122}
+      - {x: 175, y: -122}
+      - {x: 191, y: -99}
+      - {x: 191, y: 32}
+      - {x: 173, y: 44}
+    - - {x: 272, y: 50}
+      - {x: 255, y: 44}
+      - {x: 255, y: -54}
+      - {x: 297, y: -122}
+      - {x: 435, y: -122}
+      - {x: 442, y: -74}
+      - {x: 442, y: 43}
+      - {x: 435, y: 50}
+    - - {x: -491, y: 67}
+      - {x: -510, y: 56}
+      - {x: -510, y: -90}
+      - {x: -288, y: -90}
+      - {x: -261, y: -66}
+      - {x: -261, y: -29}
+      - {x: -367, y: 67}
+    - - {x: -431, y: 71}
+      - {x: -427, y: 69}
+      - {x: -371, y: 69}
+      - {x: -325, y: 76}
+      - {x: -325, y: 219}
+      - {x: -363, y: 242}
+      - {x: -496, y: 242}
+      - {x: -510, y: 198}
+      - {x: -510, y: 126}
+      - {x: -476, y: 69}
+      - {x: -444, y: 69}
+      - {x: -432, y: 73}
+      - {x: -434, y: 80}
+      - {x: -434, y: 84}
+      - {x: -434, y: 80}
+    - - {x: -102, y: 242}
+      - {x: -247, y: 242}
+      - {x: -255, y: 228}
+      - {x: -255, y: 82}
+      - {x: -239, y: 76}
+      - {x: -79, y: 76}
+      - {x: -2, y: 152}
+      - {x: -2, y: 181}
+      - {x: -78, y: 185}
+    - - {x: 151, y: 194}
+      - {x: 140, y: 250}
+      - {x: 20, y: 250}
+      - {x: 0, y: 192}
+      - {x: 0, y: 115}
+      - {x: 8, y: 85}
+      - {x: 210, y: 85}
+      - {x: 235, y: 94}
+      - {x: 255, y: 132}
+      - {x: 255, y: 185}
+    - - {x: 411, y: 215}
+      - {x: 399, y: 255}
+      - {x: 268, y: 255}
+      - {x: 255, y: 235}
+      - {x: 255, y: 111}
+      - {x: 263, y: 97}
+      - {x: 456, y: 97}
+      - {x: 469, y: 132}
+      - {x: 505, y: 125}
+      - {x: 505, y: 161}
+    - - {x: -83, y: 427}
+      - {x: -91, y: 398}
+      - {x: -123, y: 426}
+      - {x: -134, y: 435}
+      - {x: -186, y: 435}
+      - {x: -251, y: 427}
+      - {x: -258, y: 420}
+      - {x: -258, y: 293}
+      - {x: -222, y: 258}
+      - {x: -69, y: 258}
+      - {x: -49, y: 275}
+      - {x: -49, y: 409}
+      - {x: -65, y: 428}
+    - - {x: 149, y: 430}
+      - {x: 142, y: 412}
+      - {x: 146, y: 401}
+      - {x: 144, y: 381}
+      - {x: 137, y: 434}
+      - {x: 52, y: 434}
+      - {x: 22, y: 429}
+      - {x: -2, y: 424}
+      - {x: -2, y: 302}
+      - {x: 10, y: 258}
+      - {x: 185, y: 258}
+      - {x: 188, y: 259}
+      - {x: 191, y: 314}
+      - {x: 191, y: 409}
+      - {x: 180, y: 422}
+    - - {x: 428, y: 434}
+      - {x: 313, y: 434}
+      - {x: 270, y: 431}
+      - {x: 255, y: 387}
+      - {x: 255, y: 331}
+      - {x: 287, y: 260}
+      - {x: 422, y: 260}
+      - {x: 427, y: 283}
+      - {x: 442, y: 316}
+      - {x: 442, y: 401}
+    - - {x: -374, y: 450}
+      - {x: -482, y: 450}
+      - {x: -509, y: 410}
+      - {x: -510, y: 399}
+      - {x: -510, y: 295}
+      - {x: -492, y: 290}
+      - {x: -305, y: 290}
+      - {x: -289, y: 300}
+      - {x: -261, y: 325}
+      - {x: -261, y: 345}
+    - - {x: -488, y: 623}
+      - {x: -503, y: 618}
+      - {x: -510, y: 600}
+      - {x: -510, y: 489}
+      - {x: -490, y: 450}
+      - {x: -444, y: 450}
+      - {x: -435, y: 458}
+      - {x: -434, y: 460}
+      - {x: -434, y: 464}
+      - {x: -434, y: 460}
+      - {x: -433, y: 450}
+      - {x: -338, y: 450}
+      - {x: -325, y: 484}
+      - {x: -325, y: 607}
+      - {x: -351, y: 623}
+    - - {x: -2, y: 543}
+      - {x: -2, y: 556}
+      - {x: -3, y: 560}
+      - {x: -21, y: 565}
+      - {x: -80, y: 623}
+      - {x: -241, y: 623}
+      - {x: -250, y: 602}
+      - {x: -255, y: 580}
+      - {x: -255, y: 490}
+      - {x: -241, y: 458}
+      - {x: -90, y: 458}
+      - {x: -79, y: 479}
+      - {x: -79, y: 511}
+      - {x: -5, y: 538}
+    - - {x: 255, y: 529}
+      - {x: 255, y: 598}
+      - {x: 166, y: 630}
+      - {x: 0, y: 630}
+      - {x: 0, y: 470}
+      - {x: 46, y: 466}
+      - {x: 193, y: 466}
+      - {x: 201, y: 472}
+      - {x: 191, y: 512}
+      - {x: 249, y: 525}
+    - - {x: 493, y: 514}
+      - {x: 505, y: 517}
+      - {x: 505, y: 551}
+      - {x: 479, y: 609}
+      - {x: 409, y: 638}
+      - {x: 255, y: 638}
+      - {x: 255, y: 478}
+      - {x: 452, y: 478}
+      - {x: 463, y: 499}
+      - {x: 462, y: 509}
+      - {x: 449, y: 522}
+    - - {x: -79, y: 807}
+      - {x: -92, y: 798}
+      - {x: -134, y: 816}
+      - {x: -249, y: 816}
+      - {x: -258, y: 793}
+      - {x: -258, y: 704}
+      - {x: -221, y: 641}
+      - {x: -52, y: 641}
+      - {x: -49, y: 653}
+      - {x: -49, y: 793}
+      - {x: -50, y: 800}
+    - - {x: 141, y: 790}
+      - {x: 140, y: 797}
+      - {x: 131, y: 815}
+      - {x: 25, y: 815}
+      - {x: 13, y: 814}
+      - {x: -2, y: 770}
+      - {x: -2, y: 697}
+      - {x: 19, y: 642}
+      - {x: 191, y: 642}
+      - {x: 191, y: 809}
+      - {x: 142, y: 808}
+    - - {x: 255, y: 814}
+      - {x: 255, y: 680}
+      - {x: 267, y: 642}
+      - {x: 440, y: 642}
+      - {x: 442, y: 646}
+      - {x: 442, y: 806}
+      - {x: 439, y: 814}
+    - - {x: -261, y: 701}
+      - {x: -261, y: 721}
+      - {x: -266, y: 738}
+      - {x: -345, y: 831}
+      - {x: -510, y: 831}
+      - {x: -510, y: 674}
+      - {x: -291, y: 674}
+      - {x: -302, y: 705}
+      - {x: -312, y: 713}
+      - {x: -263, y: 698}
+    - - {x: -434, y: 844}
+      - {x: -435, y: 833}
+      - {x: -330, y: 833}
+      - {x: -325, y: 838}
+      - {x: -325, y: 994}
+      - {x: -338, y: 1006}
+      - {x: -488, y: 1006}
+      - {x: -506, y: 969}
+      - {x: -510, y: 949}
+      - {x: -510, y: 919}
+      - {x: -509, y: 918}
+      - {x: -499, y: 918}
+      - {x: -475, y: 855}
+      - {x: -466, y: 833}
+      - {x: -448, y: 833}
+      - {x: -435, y: 840}
+      - {x: -434, y: 844}
+      - {x: -434, y: 848}
+    - - {x: -92, y: 1006}
+      - {x: -251, y: 1006}
+      - {x: -253, y: 1005}
+      - {x: -255, y: 995}
+      - {x: -255, y: 841}
+      - {x: -251, y: 840}
+      - {x: -77, y: 840}
+      - {x: -2, y: 912}
+      - {x: -2, y: 941}
+      - {x: -15, y: 946}
+    - - {x: 133, y: 1011}
+      - {x: 121, y: 1014}
+      - {x: 89, y: 1014}
+      - {x: 29, y: 1010}
+      - {x: 0, y: 1003}
+      - {x: 0, y: 853}
+      - {x: 10, y: 849}
+      - {x: 212, y: 849}
+      - {x: 255, y: 878}
+      - {x: 255, y: 925}
+      - {x: 234, y: 936}
+    - - {x: 403, y: 1019}
+      - {x: 280, y: 1019}
+      - {x: 255, y: 1000}
+      - {x: 255, y: 881}
+      - {x: 263, y: 861}
+      - {x: 475, y: 861}
+      - {x: 505, y: 890}
+      - {x: 505, y: 923}
+      - {x: 451, y: 943}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

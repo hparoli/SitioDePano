@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: 8c142c35e61bd8146b9c78d180ee3ed5
+timeCreated: 1543615004
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ANIM_JogoContandoBichos_porco_0
+    21300002: ANIM_JogoContandoBichos_porco_1
+    21300004: ANIM_JogoContandoBichos_porco_2
+    21300006: ANIM_JogoContandoBichos_porco_3
+    21300008: ANIM_JogoContandoBichos_porco_4
+    21300010: ANIM_JogoContandoBichos_porco_5
+    21300012: ANIM_JogoContandoBichos_porco_6
+    21300014: ANIM_JogoContandoBichos_porco_7
+    21300016: ANIM_JogoContandoBichos_porco_8
+    21300018: ANIM_JogoContandoBichos_porco_9
+    21300020: ANIM_JogoContandoBichos_porco_10
+    21300022: ANIM_JogoContandoBichos_porco_11
+    21300024: ANIM_JogoContandoBichos_porco_12
+    21300026: ANIM_JogoContandoBichos_porco_13
+    21300028: ANIM_JogoContandoBichos_porco_14
+    21300030: ANIM_JogoContandoBichos_porco_15
+    21300032: ANIM_JogoContandoBichos_porco_16
+    21300034: ANIM_JogoContandoBichos_porco_17
+    21300036: ANIM_JogoContandoBichos_porco_18
+    21300038: ANIM_JogoContandoBichos_porco_19
+    21300040: ANIM_JogoContandoBichos_porco_20
+    21300042: ANIM_JogoContandoBichos_porco_21
+    21300044: ANIM_JogoContandoBichos_porco_22
+    21300046: ANIM_JogoContandoBichos_porco_23
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 855
+        width: 180
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 856
+        width: 178
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_2
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 856
+        width: 183
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_3
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 856
+        width: 178
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_4
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 855
+        width: 180
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 684
+        width: 174
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 684
+        width: 170
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 684
+        width: 173
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 685
+        width: 178
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_9
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 686
+        width: 177
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 516
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 516
+        width: 180
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_12
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 515
+        width: 178
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_13
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 515
+        width: 174
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_14
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 515
+        width: 170
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 344
+        width: 172
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_16
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 344
+        width: 180
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_17
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 346
+        width: 180
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 346
+        width: 184
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 346
+        width: 180
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 175
+        width: 180
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_21
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 175
+        width: 173
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 175
+        width: 170
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_porco_23
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 175
+        width: 172
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

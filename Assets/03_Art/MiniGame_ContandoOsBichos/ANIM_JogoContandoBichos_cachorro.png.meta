@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 0cdeadf672fb8ff4bb24b27972da7d14
+timeCreated: 1543615004
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ANIM_JogoContandoBichos_cachorro_0
+    21300002: ANIM_JogoContandoBichos_cachorro_1
+    21300004: ANIM_JogoContandoBichos_cachorro_2
+    21300006: ANIM_JogoContandoBichos_cachorro_3
+    21300008: ANIM_JogoContandoBichos_cachorro_4
+    21300010: ANIM_JogoContandoBichos_cachorro_5
+    21300012: ANIM_JogoContandoBichos_cachorro_6
+    21300014: ANIM_JogoContandoBichos_cachorro_7
+    21300016: ANIM_JogoContandoBichos_cachorro_8
+    21300018: ANIM_JogoContandoBichos_cachorro_9
+    21300020: ANIM_JogoContandoBichos_cachorro_10
+    21300022: ANIM_JogoContandoBichos_cachorro_11
+    21300024: ANIM_JogoContandoBichos_cachorro_12
+    21300026: ANIM_JogoContandoBichos_cachorro_13
+    21300028: ANIM_JogoContandoBichos_cachorro_14
+    21300030: ANIM_JogoContandoBichos_cachorro_15
+    21300032: ANIM_JogoContandoBichos_cachorro_16
+    21300034: ANIM_JogoContandoBichos_cachorro_17
+    21300036: ANIM_JogoContandoBichos_cachorro_18
+    21300038: ANIM_JogoContandoBichos_cachorro_19
+    21300040: ANIM_JogoContandoBichos_cachorro_20
+    21300042: ANIM_JogoContandoBichos_cachorro_21
+    21300044: ANIM_JogoContandoBichos_cachorro_22
+    21300046: ANIM_JogoContandoBichos_cachorro_23
+    21300048: ANIM_JogoContandoBichos_cachorro_24
+    21300050: ANIM_JogoContandoBichos_cachorro_25
+    21300052: ANIM_JogoContandoBichos_cachorro_26
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 1846, z: 798, w: 1}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0.05
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1848
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1850
+        width: 186
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1852
+        width: 185
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_3
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1859
+        width: 199
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1651
+        width: 200
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_5
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1647
+        width: 194
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_6
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1640
+        width: 197
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1635
+        width: 194
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1427
+        width: 192
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1434
+        width: 186
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_10
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1432
+        width: 185
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_11
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1436
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1235
+        width: 199
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_13
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1235
+        width: 198
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_14
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1231
+        width: 194
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_15
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1224
+        width: 196
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1010
+        width: 196
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1011
+        width: 193
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_18
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1016
+        width: 185
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_19
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1016
+        width: 185
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 812
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 819
+        width: 200
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_22
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 819
+        width: 200
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_23
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 815
+        width: 196
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_24
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 600
+        width: 195
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_25
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 594
+        width: 196
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ANIM_JogoContandoBichos_cachorro_26
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 595
+        width: 194
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -92, y: -276}
+      - {x: -98, y: -283}
+      - {x: -124, y: -250}
+      - {x: -194, y: -250}
+      - {x: -243, y: -253}
+      - {x: -278, y: -292}
+      - {x: -278, y: -366}
+      - {x: -276, y: -374}
+      - {x: -253, y: -432}
+      - {x: -182, y: -432}
+      - {x: -169, y: -431}
+      - {x: -78, y: -394}
+      - {x: -78, y: -267}
+    - - {x: -3, y: -254}
+      - {x: -34, y: -276}
+      - {x: -55, y: -299}
+      - {x: -56, y: -304}
+      - {x: -56, y: -362}
+      - {x: -55, y: -370}
+      - {x: -34, y: -431}
+      - {x: 69, y: -431}
+      - {x: 142, y: -408}
+      - {x: 142, y: -256}
+      - {x: 130, y: -254}
+    - - {x: -302, y: -266}
+      - {x: -333, y: -250}
+      - {x: -464, y: -250}
+      - {x: -501, y: -293}
+      - {x: -501, y: -371}
+      - {x: -478, y: -426}
+      - {x: -388, y: -426}
+      - {x: -354, y: -416}
+      - {x: -302, y: -384}
+    - - {x: -336, y: -83}
+      - {x: -340, y: -87}
+      - {x: -340, y: -102}
+      - {x: -340, y: -83}
+      - {x: -342, y: -42}
+      - {x: -506, y: -42}
+      - {x: -506, y: -197}
+      - {x: -500, y: -214}
+      - {x: -315, y: -214}
+      - {x: -314, y: -210}
+      - {x: -314, y: -97}
+      - {x: -322, y: -76}
+    - - {x: 369, y: -71}
+      - {x: 318, y: -41}
+      - {x: 210, y: -41}
+      - {x: 174, y: -60}
+      - {x: 174, y: -171}
+      - {x: 189, y: -211}
+      - {x: 341, y: -211}
+      - {x: 372, y: -194}
+      - {x: 374, y: -178}
+      - {x: 374, y: -85}
+    - - {x: -70, y: -91}
+      - {x: -84, y: -96}
+      - {x: -91, y: -57}
+      - {x: -148, y: -28}
+      - {x: -241, y: -28}
+      - {x: -258, y: -30}
+      - {x: -274, y: -67}
+      - {x: -274, y: -153}
+      - {x: -245, y: -193}
+      - {x: -176, y: -207}
+      - {x: -110, y: -207}
+      - {x: -97, y: -201}
+      - {x: -71, y: -141}
+      - {x: -70, y: -134}
+    - - {x: 130, y: -109}
+      - {x: 152, y: -46}
+      - {x: 90, y: -27}
+      - {x: -9, y: -27}
+      - {x: -33, y: -46}
+      - {x: -46, y: -87}
+      - {x: -50, y: -104}
+      - {x: -50, y: -169}
+      - {x: -6, y: -207}
+      - {x: 131, y: -207}
+      - {x: 132, y: -206}
+      - {x: 154, y: -124}
+      - {x: 154, y: -94}
+      - {x: 143, y: -95}
+    - - {x: -323, y: 133}
+      - {x: -352, y: 166}
+      - {x: -424, y: 166}
+      - {x: -490, y: 150}
+      - {x: -502, y: 128}
+      - {x: -502, y: 55}
+      - {x: -500, y: 44}
+      - {x: -491, y: 39}
+      - {x: -479, y: -11}
+      - {x: -465, y: -16}
+      - {x: -354, y: -16}
+      - {x: -302, y: 26}
+      - {x: -302, y: 145}
+      - {x: -319, y: 142}
+    - - {x: -118, y: 162}
+      - {x: -228, y: 162}
+      - {x: -279, y: 129}
+      - {x: -282, y: 123}
+      - {x: -282, y: 48}
+      - {x: -259, y: -15}
+      - {x: -196, y: -15}
+      - {x: -179, y: -12}
+      - {x: -176, y: -1}
+      - {x: -85, y: 23}
+      - {x: -85, y: 143}
+    - - {x: 106, y: 124}
+      - {x: 106, y: 111}
+      - {x: 105, y: 138}
+      - {x: 86, y: 158}
+      - {x: 72, y: 162}
+      - {x: -28, y: 162}
+      - {x: -55, y: 141}
+      - {x: -55, y: 50}
+      - {x: -35, y: -3}
+      - {x: -26, y: -10}
+      - {x: 122, y: -10}
+      - {x: 134, y: -8}
+      - {x: 134, y: 128}
+      - {x: 121, y: 128}
+    - - {x: 346, y: 129}
+      - {x: 331, y: 122}
+      - {x: 333, y: 111}
+      - {x: 331, y: 115}
+      - {x: 329, y: 131}
+      - {x: 330, y: 143}
+      - {x: 315, y: 162}
+      - {x: 191, y: 162}
+      - {x: 170, y: 151}
+      - {x: 170, y: 1}
+      - {x: 176, y: -10}
+      - {x: 284, y: -10}
+      - {x: 349, y: 2}
+      - {x: 359, y: 51}
+      - {x: 359, y: 120}
+    - - {x: 374, y: 264}
+      - {x: 374, y: 372}
+      - {x: 370, y: 374}
+      - {x: 234, y: 374}
+      - {x: 190, y: 362}
+      - {x: 174, y: 332}
+      - {x: 174, y: 224}
+      - {x: 181, y: 202}
+      - {x: 198, y: 198}
+      - {x: 277, y: 198}
+      - {x: 293, y: 211}
+      - {x: 367, y: 224}
+      - {x: 373, y: 249}
+    - - {x: 84, y: 375}
+      - {x: 7, y: 375}
+      - {x: -32, y: 361}
+      - {x: -51, y: 333}
+      - {x: -51, y: 243}
+      - {x: -36, y: 205}
+      - {x: 123, y: 205}
+      - {x: 147, y: 223}
+      - {x: 147, y: 338}
+      - {x: 104, y: 374}
+    - - {x: -313, y: 319}
+      - {x: -314, y: 316}
+      - {x: -328, y: 291}
+      - {x: -333, y: 298}
+      - {x: -321, y: 307}
+      - {x: -311, y: 374}
+      - {x: -374, y: 390}
+      - {x: -483, y: 390}
+      - {x: -499, y: 363}
+      - {x: -499, y: 242}
+      - {x: -470, y: 209}
+      - {x: -328, y: 209}
+      - {x: -296, y: 288}
+      - {x: -296, y: 317}
+      - {x: -300, y: 321}
+    - - {x: -82, y: 323}
+      - {x: -97, y: 364}
+      - {x: -157, y: 389}
+      - {x: -231, y: 389}
+      - {x: -273, y: 368}
+      - {x: -273, y: 281}
+      - {x: -247, y: 227}
+      - {x: -227, y: 209}
+      - {x: -103, y: 209}
+      - {x: -95, y: 222}
+      - {x: -71, y: 298}
+      - {x: -71, y: 318}
+    - - {x: -454, y: 578}
+      - {x: -473, y: 573}
+      - {x: -506, y: 536}
+      - {x: -506, y: 468}
+      - {x: -493, y: 456}
+      - {x: -485, y: 404}
+      - {x: -476, y: 401}
+      - {x: -419, y: 401}
+      - {x: -400, y: 408}
+      - {x: -310, y: 445}
+      - {x: -310, y: 578}
+    - - {x: 131, y: 539}
+      - {x: 115, y: 545}
+      - {x: 106, y: 537}
+      - {x: 106, y: 527}
+      - {x: 105, y: 554}
+      - {x: 86, y: 574}
+      - {x: 72, y: 578}
+      - {x: -29, y: 578}
+      - {x: -55, y: 557}
+      - {x: -55, y: 468}
+      - {x: -31, y: 406}
+      - {x: 76, y: 406}
+      - {x: 129, y: 419}
+      - {x: 134, y: 452}
+      - {x: 134, y: 519}
+    - - {x: -120, y: 537}
+      - {x: -117, y: 522}
+      - {x: -114, y: 512}
+      - {x: -121, y: 532}
+      - {x: -122, y: 555}
+      - {x: -133, y: 573}
+      - {x: -153, y: 578}
+      - {x: -262, y: 578}
+      - {x: -280, y: 553}
+      - {x: -280, y: 417}
+      - {x: -276, y: 408}
+      - {x: -99, y: 408}
+      - {x: -90, y: 457}
+      - {x: -90, y: 531}
+      - {x: -101, y: 547}
+    - - {x: 359, y: 529}
+      - {x: 351, y: 541}
+      - {x: 343, y: 544}
+      - {x: 335, y: 536}
+      - {x: 334, y: 523}
+      - {x: 334, y: 535}
+      - {x: 329, y: 557}
+      - {x: 318, y: 569}
+      - {x: 291, y: 582}
+      - {x: 225, y: 582}
+      - {x: 171, y: 575}
+      - {x: 170, y: 568}
+      - {x: 170, y: 455}
+      - {x: 198, y: 411}
+      - {x: 221, y: 413}
+      - {x: 229, y: 423}
+      - {x: 235, y: 410}
+      - {x: 345, y: 410}
+      - {x: 362, y: 450}
+      - {x: 362, y: 523}
+    - - {x: 333, y: 650}
+      - {x: 347, y: 647}
+      - {x: 371, y: 645}
+      - {x: 371, y: 779}
+      - {x: 345, y: 788}
+      - {x: 187, y: 788}
+      - {x: 173, y: 750}
+      - {x: 173, y: 644}
+      - {x: 199, y: 609}
+      - {x: 268, y: 609}
+      - {x: 278, y: 622}
+      - {x: 321, y: 636}
+      - {x: 331, y: 645}
+    - - {x: 150, y: 769}
+      - {x: 114, y: 790}
+      - {x: -24, y: 790}
+      - {x: -50, y: 760}
+      - {x: -51, y: 757}
+      - {x: -51, y: 675}
+      - {x: -50, y: 668}
+      - {x: -29, y: 622}
+      - {x: -21, y: 614}
+      - {x: 76, y: 614}
+      - {x: 122, y: 640}
+      - {x: 149, y: 660}
+      - {x: 150, y: 668}
+    - - {x: -90, y: 755}
+      - {x: -101, y: 741}
+      - {x: -99, y: 726}
+      - {x: -101, y: 737}
+      - {x: -108, y: 761}
+      - {x: -126, y: 788}
+      - {x: -135, y: 791}
+      - {x: -231, y: 791}
+      - {x: -255, y: 787}
+      - {x: -275, y: 749}
+      - {x: -276, y: 736}
+      - {x: -276, y: 681}
+      - {x: -249, y: 621}
+      - {x: -162, y: 621}
+      - {x: -98, y: 629}
+      - {x: -81, y: 645}
+      - {x: -78, y: 674}
+      - {x: -78, y: 754}
+    - - {x: -315, y: 728}
+      - {x: -322, y: 710}
+      - {x: -320, y: 722}
+      - {x: -316, y: 771}
+      - {x: -371, y: 806}
+      - {x: -474, y: 806}
+      - {x: -498, y: 766}
+      - {x: -498, y: 625}
+      - {x: -308, y: 625}
+      - {x: -294, y: 701}
+      - {x: -294, y: 733}
+      - {x: -307, y: 738}
+    - - {x: -335, y: 963}
+      - {x: -343, y: 957}
+      - {x: -342, y: 935}
+      - {x: -345, y: 965}
+      - {x: -354, y: 980}
+      - {x: -387, y: 994}
+      - {x: -486, y: 994}
+      - {x: -506, y: 969}
+      - {x: -506, y: 852}
+      - {x: -497, y: 822}
+      - {x: -321, y: 822}
+      - {x: -314, y: 876}
+      - {x: -314, y: 956}
+    - - {x: -120, y: 953}
+      - {x: -117, y: 938}
+      - {x: -114, y: 928}
+      - {x: -121, y: 948}
+      - {x: -122, y: 971}
+      - {x: -133, y: 989}
+      - {x: -153, y: 994}
+      - {x: -262, y: 994}
+      - {x: -280, y: 969}
+      - {x: -280, y: 836}
+      - {x: -274, y: 824}
+      - {x: -95, y: 824}
+      - {x: -90, y: 846}
+      - {x: -90, y: 942}
+      - {x: -99, y: 970}
+    - - {x: 115, y: 960}
+      - {x: 109, y: 953}
+      - {x: 109, y: 935}
+      - {x: 110, y: 965}
+      - {x: 106, y: 998}
+      - {x: -54, y: 998}
+      - {x: -54, y: 850}
+      - {x: -43, y: 826}
+      - {x: 135, y: 826}
+      - {x: 135, y: 942}
+      - {x: 133, y: 954}
+    - - {x: 361, y: 942}
+      - {x: 354, y: 925}
+      - {x: 357, y: 985}
+      - {x: 297, y: 1014}
+      - {x: 183, y: 1014}
+      - {x: 176, y: 1012}
+      - {x: 176, y: 835}
+      - {x: 198, y: 833}
+      - {x: 348, y: 833}
+      - {x: 379, y: 886}
+      - {x: 379, y: 944}
+      - {x: 375, y: 945}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
