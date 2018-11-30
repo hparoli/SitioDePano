@@ -11,10 +11,11 @@ public class DollSelect : MonoBehaviour {
 	private int idTema;
 	private int notaFinal;
 
-
-
 	[SerializeField]
 	Spawn spawn;
+
+	[SerializeField]
+	GameObject sistemControl;
 
 
 	void Start(){
@@ -22,7 +23,7 @@ public class DollSelect : MonoBehaviour {
 
 
 		spawn =  FindObjectOfType <Spawn> ();
-
+		
 		//PASTE TO CREATE DOLLS
 		//spawn.CreateDolls ();
 		//
@@ -47,8 +48,20 @@ public class DollSelect : MonoBehaviour {
                 {
                     Debug.Log("Mouse");
                     SoundManager.instance.Play("Player", SoundManager.instance.clipList.DollClick);
-					spawn.CreatDoll ();
-					spawn.CreatDoll2();
+					if (spawn.gamelevel == 0)
+					{
+						spawn.CreatDoll ();
+					}
+					else if (spawn.gamelevel == 1)
+					{
+						spawn.CreatDoll2();
+					}
+					else if (spawn.gamelevel == 2)
+					{
+						spawn.CreatDoll2();
+					}
+					
+					
 					Destroy (GameObject.Find ("Aninha(Clone)"), 0f);
 						
                 }

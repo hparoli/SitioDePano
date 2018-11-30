@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class Spawn : MonoBehaviour {
+public class Spawn: MonoBehaviour {
 
 	//TrilhaSonora
 	public AudioSource audio;
@@ -28,6 +28,10 @@ public class Spawn : MonoBehaviour {
 	[SerializeField]
 	GameObject tutorial;
 	
+	[SerializeField]
+	GameObject tutButton;
+	bool isgame = false;
+	
 
 
 	[Header("Celeiro")]
@@ -45,7 +49,7 @@ public class Spawn : MonoBehaviour {
 	[SerializeField]
 	Button[] gameButtons;
 	
-	int gamelevel;
+	public int gamelevel;
 
 	void Start () 
 	{
@@ -65,7 +69,17 @@ public class Spawn : MonoBehaviour {
 		Cronometro ();
 	
 	}
-
+	public void OpenTutorial() 
+	{
+		
+		ExitBoard.SetActive(false);
+		tutButton.SetActive(false);
+		tutorial.SetActive(true);
+		Time.timeScale = 0;
+		SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPique);
+		isgame = true;
+			
+	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
 
@@ -85,8 +99,11 @@ public class Spawn : MonoBehaviour {
         if (gamelevel == 0)
         {
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPique);
+			tutorial.SetActive(true);
             ExitBoard.SetActive(false);
         }
+
+		tutButton.SetActive(false);
 	}
 	public void OpenLevel()
 	{
@@ -135,13 +152,22 @@ public class Spawn : MonoBehaviour {
 
 	public void StartGame(int Value)
 	{
-        SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPique);
-		audio.Play ();
-        ExitBoard.SetActive(true);
-        if (tutorial)
-			{
-				tutorial.SetActive (false);
-			}
+		if (!isgame)
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPique);
+			tutorial.SetActive(false);
+			tutButton.SetActive(true);
+			audio.Play ();
+        	ExitBoard.SetActive(true);
+		}
+		else
+		{
+			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPique);
+			tutorial.SetActive(false);
+			tutButton.SetActive(true);
+        	ExitBoard.SetActive(true);	
+		}
+        
 			if (Value == 1)
 			{
 				CreatDoll ();
@@ -150,7 +176,11 @@ public class Spawn : MonoBehaviour {
 			{
 				CreatDoll2();
 			}
-			dollCount=0;
+			else if (Value == 3)
+			{
+				CreatDoll2();
+			}
+			dollCount = 0;
 			
 			Time.timeScale = 1;
 	}
@@ -158,7 +188,7 @@ public class Spawn : MonoBehaviour {
 	public void CreatDoll() 
 	{
 		
-			if (dollCount < 5) 
+			if (dollCount < 4) 
 			{
 				dollCount++;
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
