@@ -331,6 +331,31 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224901355850920582, guid: 656e787d249d8d54782e9783e4420b49,
     type: 2}
   m_PrefabInternal: {fileID: 48539957}
+--- !u!1 &48539960 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1001843546893118, guid: 656e787d249d8d54782e9783e4420b49,
+    type: 2}
+  m_PrefabInternal: {fileID: 48539957}
+--- !u!223 &48539961
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48539960}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 1472563455
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &53773063
 GameObject:
   m_ObjectHideFlags: 0
