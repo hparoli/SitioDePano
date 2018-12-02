@@ -32,7 +32,8 @@ public class AnaliticsPanel : MonoBehaviour
 
 	public void GoToMenu()
 	{
-		Application.LoadLevel("newMenu");
+		//Application.LoadLevel("newMenu");
+		LoadingScreenManager.LoadScene(1);
 	}
 
 	public void BarnAnin()
