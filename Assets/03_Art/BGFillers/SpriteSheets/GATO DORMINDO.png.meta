@@ -3,7 +3,19 @@ guid: 3618493c7181c7749a156d47b076bae2
 timeCreated: 1543771124
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: GATO DORMINDO_0
+    21300002: GATO DORMINDO_1
+    21300004: GATO DORMINDO_2
+    21300006: GATO DORMINDO_3
+    21300008: GATO DORMINDO_4
+    21300010: GATO DORMINDO_5
+    21300012: GATO DORMINDO_6
+    21300014: GATO DORMINDO_7
+    21300016: GATO DORMINDO_8
+    21300018: GATO DORMINDO_9
+    21300020: GATO DORMINDO_10
+    21300022: GATO DORMINDO_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +100,175 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GATO DORMINDO_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 3341
+        width: 925
+        height: 702
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_1
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 3341
+        width: 925
+        height: 702
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_2
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 3341
+        width: 925
+        height: 702
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_3
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3341
+        width: 925
+        height: 707
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2574
+        width: 925
+        height: 707
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 2574
+        width: 925
+        height: 706
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_6
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 2574
+        width: 925
+        height: 707
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_7
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 2574
+        width: 925
+        height: 707
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1808
+        width: 925
+        height: 705
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_9
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1808
+        width: 925
+        height: 705
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_10
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1808
+        width: 925
+        height: 705
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GATO DORMINDO_11
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1807
+        width: 925
+        height: 706
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

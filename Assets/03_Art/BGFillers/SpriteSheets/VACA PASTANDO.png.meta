@@ -3,7 +3,48 @@ guid: 2f25957496b88294dbd5c7df65258a02
 timeCreated: 1543771122
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: VACA PASTANDO_0
+    21300002: VACA PASTANDO_1
+    21300004: VACA PASTANDO_2
+    21300006: VACA PASTANDO_3
+    21300008: VACA PASTANDO_4
+    21300010: VACA PASTANDO_5
+    21300012: VACA PASTANDO_6
+    21300014: VACA PASTANDO_7
+    21300016: VACA PASTANDO_8
+    21300018: VACA PASTANDO_9
+    21300020: VACA PASTANDO_10
+    21300022: VACA PASTANDO_11
+    21300024: VACA PASTANDO_12
+    21300026: VACA PASTANDO_13
+    21300028: VACA PASTANDO_14
+    21300030: VACA PASTANDO_15
+    21300032: VACA PASTANDO_16
+    21300034: VACA PASTANDO_17
+    21300036: VACA PASTANDO_18
+    21300038: VACA PASTANDO_19
+    21300040: VACA PASTANDO_20
+    21300042: VACA PASTANDO_21
+    21300044: VACA PASTANDO_22
+    21300046: VACA PASTANDO_23
+    21300048: VACA PASTANDO_24
+    21300050: VACA PASTANDO_25
+    21300052: VACA PASTANDO_26
+    21300054: VACA PASTANDO_27
+    21300056: VACA PASTANDO_28
+    21300058: VACA PASTANDO_29
+    21300060: VACA PASTANDO_30
+    21300062: VACA PASTANDO_31
+    21300064: VACA PASTANDO_32
+    21300066: VACA PASTANDO_33
+    21300068: VACA PASTANDO_34
+    21300070: VACA PASTANDO_35
+    21300072: VACA PASTANDO_36
+    21300074: VACA PASTANDO_37
+    21300076: VACA PASTANDO_38
+    21300078: VACA PASTANDO_39
+    21300080: VACA PASTANDO_40
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +129,581 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: VACA PASTANDO_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7312
+        width: 1170
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_1
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 7310
+        width: 1170
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_2
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 7310
+        width: 1170
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_3
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 7311
+        width: 1170
+        height: 759
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_4
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 7312
+        width: 1170
+        height: 726
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_5
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 7310
+        width: 1170
+        height: 696
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_6
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6442
+        width: 1170
+        height: 679
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_7
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 6442
+        width: 1170
+        height: 679
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_8
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 6442
+        width: 1170
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_9
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 6442
+        width: 1170
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_10
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 6442
+        width: 1170
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_11
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 6442
+        width: 1170
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_12
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5568
+        width: 1170
+        height: 650
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_13
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 5567
+        width: 1170
+        height: 657
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_14
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 5566
+        width: 1170
+        height: 652
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_15
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 5566
+        width: 1170
+        height: 658
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_16
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 5568
+        width: 1170
+        height: 692
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_17
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 5567
+        width: 1170
+        height: 723
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_18
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4687
+        width: 1170
+        height: 769
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_19
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 4688
+        width: 1170
+        height: 802
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_20
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 4694
+        width: 1170
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_21
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 4687
+        width: 1170
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_22
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 4687
+        width: 1170
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_23
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 4688
+        width: 1170
+        height: 848
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_25
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_26
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_27
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_28
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_29
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 3822
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_30
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2944
+        width: 1170
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_31
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 2950
+        width: 1170
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_32
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 2944
+        width: 1170
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_33
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 2944
+        width: 1170
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_34
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 2944
+        width: 1170
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_35
+      rect:
+        serializedVersion: 2
+        x: 6107
+        y: 2950
+        width: 1170
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_36
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2078
+        width: 1170
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_37
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 2078
+        width: 1170
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_38
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 2078
+        width: 1170
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_39
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 2078
+        width: 1170
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VACA PASTANDO_40
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 2078
+        width: 1170
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
