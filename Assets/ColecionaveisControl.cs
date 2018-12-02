@@ -34,4 +34,9 @@ public class ColecionaveisControl : MonoBehaviour {
 			colect.SetActive(true);
 		}
 	}
+
+	public void Return()
+	{
+		LoadingScreenManager.LoadScene(1);
+	}
 }
