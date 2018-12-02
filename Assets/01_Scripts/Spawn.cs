@@ -313,6 +313,7 @@ public class Spawn: MonoBehaviour {
 		}
 	
 		//Score.infoValue = string.Format ("Parabéns, você me achou em {0} segundos e tirou {1}!", tempo.ToString ("0.0"), notaFinal);
-		SceneManager.LoadScene ("Score");
+		//SceneManager.LoadScene ("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 }

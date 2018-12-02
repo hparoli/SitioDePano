@@ -488,7 +488,8 @@ public class AbelhaManager : MonoBehaviour
 
 	public void GameOver()
 	{
-		SceneManager.LoadScene("Score");
+		//SceneManager.LoadScene("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 
 	void Comportamento(){

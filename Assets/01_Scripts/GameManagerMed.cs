@@ -374,7 +374,8 @@ public class GameManagerMed : MonoBehaviour {
 		memoriaData.tempoJogo = tempo;
 		//dataController.SetMemoriaData(memoriaData);
 		yield return new WaitForSeconds (2);
-		SceneManager.LoadScene ("Score");
+		//SceneManager.LoadScene ("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 
 	void Cronometro()

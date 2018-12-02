@@ -567,7 +567,8 @@ IEnumerator SequenciaTutorial(int qtd)
 		BarnAnin ();
 		yield return new WaitForSeconds (2);
 		//Score.infoValue = string.Format ("Você acertou {0} rodadas !", rodada );
-		SceneManager.LoadScene ("Score");   
+		//SceneManager.LoadScene ("Score");  
+        LoadingScreenManager.LoadScene(10); 
     }
 
 

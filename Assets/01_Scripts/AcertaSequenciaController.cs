@@ -612,7 +612,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 					//bolosData.tempoJogo = tempo;
 					//dataController.SetBolosData(bolosData);
 					yield return new WaitForSeconds(2f);
-					SceneManager.LoadScene ("Score");
+					//SceneManager.LoadScene ("Score");
+					LoadingScreenManager.LoadScene(10);
 				}
 			}
 	}
