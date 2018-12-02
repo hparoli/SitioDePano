@@ -461,6 +461,7 @@ public class ContandoOsBichos : MonoBehaviour {
 
 	public IEnumerator WaitGameOver(){
 		yield return new WaitForSeconds (2);
-		SceneManager.LoadScene ("Score");	
+		//SceneManager.LoadScene ("Score");
+		LoadingScreenManager.LoadScene(10);	
 	}
 }

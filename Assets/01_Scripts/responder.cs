@@ -346,7 +346,8 @@ public class responder : MonoBehaviour {
 	public IEnumerator StartScore()
 	{
 		yield return new WaitForSeconds (2);
-		SceneManager.LoadScene("Score");
+		//SceneManager.LoadScene("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 
 	public void BarnAnin(){

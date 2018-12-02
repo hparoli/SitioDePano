@@ -614,6 +614,7 @@ public class AlimentosManager : MonoBehaviour {
 		alimentosData.nota = notaFinal;
 		//dataController.SetAlimentosData(alimentosData);
 		yield return new WaitForSeconds (2);
-		SceneManager.LoadScene ("Score");
+		//SceneManager.LoadScene ("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 }

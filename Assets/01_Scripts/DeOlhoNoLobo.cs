@@ -300,7 +300,8 @@ public class DeOlhoNoLobo : MonoBehaviour {
 		}
 		BarnAnin ();
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene("Score");
+		//SceneManager.LoadScene("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 
 	public void SetOvelhas(){

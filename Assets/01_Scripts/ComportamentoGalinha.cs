@@ -191,7 +191,8 @@ public class ComportamentoGalinha : MonoBehaviour {
 	{
 		AnaliticsControl.ovosTime = tempo;
 		yield return new WaitForSeconds(2);
-		SceneManager.LoadScene("Score");
+		//SceneManager.LoadScene("Score");
+		LoadingScreenManager.LoadScene(10);
 	}
 
 }
