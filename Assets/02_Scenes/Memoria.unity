@@ -3523,7 +3523,7 @@ Prefab:
     - target: {fileID: 198181136596539614, guid: cbd7eda341205dd4bb3c9d080953400c,
         type: 2}
       propertyPath: randomSeed
-      value: -1121481163
+      value: 1645169948
       objectReference: {fileID: 0}
     - target: {fileID: 198957579080254772, guid: cbd7eda341205dd4bb3c9d080953400c,
         type: 2}
@@ -3533,7 +3533,7 @@ Prefab:
     - target: {fileID: 198957579080254772, guid: cbd7eda341205dd4bb3c9d080953400c,
         type: 2}
       propertyPath: randomSeed
-      value: 565798437
+      value: -205856709
       objectReference: {fileID: 0}
     - target: {fileID: 198769895441708984, guid: cbd7eda341205dd4bb3c9d080953400c,
         type: 2}
@@ -3543,7 +3543,7 @@ Prefab:
     - target: {fileID: 198769895441708984, guid: cbd7eda341205dd4bb3c9d080953400c,
         type: 2}
       propertyPath: randomSeed
-      value: -358561013
+      value: -1517768249
       objectReference: {fileID: 0}
     - target: {fileID: 4370845340094018, guid: cbd7eda341205dd4bb3c9d080953400c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3642,6 +3642,25 @@ Prefab:
         type: 2}
       propertyPath: InitialModule.startSize.scalar
       value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911263978448092, guid: cbd7eda341205dd4bb3c9d080953400c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198957579080254772, guid: cbd7eda341205dd4bb3c9d080953400c,
+        type: 2}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198769895441708984, guid: cbd7eda341205dd4bb3c9d080953400c,
+        type: 2}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198181136596539614, guid: cbd7eda341205dd4bb3c9d080953400c,
+        type: 2}
+      propertyPath: stopAction
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd7eda341205dd4bb3c9d080953400c, type: 2}
