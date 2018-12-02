@@ -101,17 +101,20 @@ public class Score : MonoBehaviour {
 
 	public void GoToMenu()
 	{
-		SceneManager.LoadScene ("newMenu");
+		//SceneManager.LoadScene ("newMenu");
+		LoadingScreenManager.LoadScene(1);
 	}
 	public void Analitics()
 	{
-		SceneManager.LoadScene ("Analitics");
+		//SceneManager.LoadScene ("Analitics");
+		LoadingScreenManager.LoadScene(12);
 	}
 
 	public void restart()
 	{
 
-		SceneManager.LoadScene(idTema);
+		//SceneManager.LoadScene(idTema);
+		LoadingScreenManager.LoadScene(idTema);
 	}
 }
 	
