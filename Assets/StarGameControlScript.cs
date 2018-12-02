@@ -7,7 +7,8 @@ public class StarGameControlScript : MonoBehaviour
 {
 	public void StartGame()
 	{
-		SceneManager.LoadScene(1);
+		LoadingScreenManager.LoadScene(1);
+
 	}
 	
 }

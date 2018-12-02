@@ -136,6 +136,8 @@ public class GameManagerMed : MonoBehaviour {
 		} else if (gamelevel == 2){
 			memoriaData.level = "D";*/
 		}
+
+		
 	}
 	public void OpenLevel()
 	{

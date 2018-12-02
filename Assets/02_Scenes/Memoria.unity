@@ -752,6 +752,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 440817814}
     m_Modifications:
+    - target: {fileID: 114451451174743716, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224030022833659944, guid: bbde9586d3391e948b774c37ad569692,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -890,6 +895,16 @@ Prefab:
     - target: {fileID: 1939545500546556, guid: bbde9586d3391e948b774c37ad569692, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451451174743716, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451451174743716, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbde9586d3391e948b774c37ad569692, type: 2}
@@ -3200,6 +3215,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777335984}
+--- !u!1 &784008736 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1874550778903344, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 252882653}
 --- !u!1 &796955006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6304,6 +6324,11 @@ RectTransform:
   m_AnchoredPosition: {x: 292.41376, y: 241}
   m_SizeDelta: {x: 92.02546, y: 31.339024}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1330644093 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1049631204488992, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 252882653}
 --- !u!1 &1333076360 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1609801399097056, guid: 656e787d249d8d54782e9783e4420b49,
@@ -8613,6 +8638,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!1 &1819249125 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1351613247784934, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 252882653}
 --- !u!1 &1824992028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9091,6 +9121,11 @@ Transform:
   m_Father: {fileID: 296689323}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1897958467 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1314686191356968, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 252882653}
 --- !u!1 &1898773626
 GameObject:
   m_ObjectHideFlags: 0
@@ -9833,6 +9868,13 @@ MonoBehaviour:
     - {fileID: 252882658}
     - {fileID: 252882657}
     - {fileID: 252882656}
+  - gameValue: 2
+    gamePrefabDificult: {fileID: 296689322}
+    stars:
+    - {fileID: 1897958467}
+    - {fileID: 1819249125}
+    - {fileID: 784008736}
+    - {fileID: 1330644093}
   DificultGameObject: {fileID: 252882666}
   gameButtons:
   - {fileID: 252882665}

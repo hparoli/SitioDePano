@@ -95,7 +95,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		gameData.notaDificil = dataController.GetBoloDificil();*/
 		
 		idTema = PlayerPrefs.GetInt ("idTema");
-		PlayerPrefs.SetString("dificuldade" + idTema, "D");
+		
 		acerto = 0;
 		tempo = 0;
 		audio.Pause ();
