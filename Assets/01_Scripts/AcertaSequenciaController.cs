@@ -9,13 +9,11 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 	private int idTema, acerto;
 
-	private BolosData bolosData = new BolosData();
+	//[SerializeField]
+	//private AllBolosData gameData;
 
-	[SerializeField]
-	private AllBolosData gameData;
 
-	[SerializeField]
-	private DataController dataController;
+	//private DataController dataController;
 
 	//TrilhaSonora
 	public AudioSource audio;
@@ -88,19 +86,20 @@ public class AcertaSequenciaController : MonoBehaviour {
 
 
 	void Start () 
-	{/*
+	{
+		/*
 		dataController = GameObject.Find("DataController").GetComponent<DataController>();
 		gameData.bolosDatas = dataController.GetBolosData();
 		gameData.notaFacil = dataController.GetBoloFacil();
 		gameData.notaMedio = dataController.GetBoloMedio();
 		gameData.notaDificil = dataController.GetBoloDificil();*/
-		bolosData = new BolosData();
+		
 		idTema = PlayerPrefs.GetInt ("idTema");
+		PlayerPrefs.SetString("dificuldade" + idTema, "D");
 		acerto = 0;
 		tempo = 0;
 		audio.Pause ();
-		OpenLevel();
-		StarsPointsControl();
+		
 		ind = 1;
 		fonteAudio = GetComponent<AudioSource> ();
 	}
@@ -125,6 +124,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 	{
 		EscolherForma();
 		Cronometro();
+		OpenLevel();
+		StarsPointsControl();
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
@@ -146,13 +147,13 @@ public class AcertaSequenciaController : MonoBehaviour {
 		if (gamelevel == 0)
 		{
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekBolos);
-			bolosData.level = "F";
+			
 			level = 0;
 		} else if (gamelevel == 1){
-			bolosData.level = "M";
+			
 			level = 3;
 		} else if (gamelevel == 2){
-			bolosData.level = "D";
+			level = 5;
 		}
 
 		Debug.Log(level);
@@ -266,6 +267,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 			tutButton.SetActive(true);
 			TutorialPrefab.SetActive(false);
 			Time.timeScale = 1;
+			
 			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekBolos);
 		}
 		
@@ -463,7 +465,7 @@ public class AcertaSequenciaController : MonoBehaviour {
 		} else {
 			Txt.text = "Ahh... que pena";
 			bolo.sprite = bolosRuins[level];
-			bolosData.erros++;
+			//bolosData.erros++;
 			//erro
 			fonteAudio.PlayOneShot(sons[1]);
 		}
@@ -547,8 +549,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 						notaFinal = 5;
 					}
 					PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
-					bolosData.nota = notaFinal;
-					bolosData.tempoJogo = tempo;
+					//bolosData.nota = notaFinal;
+					//bolosData.tempoJogo = tempo;
 					//dataController.SetBolosData(bolosData);
 					yield return new WaitForSeconds(2f);
 					SceneManager.LoadScene ("Score");
@@ -606,9 +608,9 @@ public class AcertaSequenciaController : MonoBehaviour {
 			
 		}
 					PlayerPrefs.SetInt("notaFinalTemp" + idTema.ToString (), notaFinal);
-					bolosData.nota = notaFinal;
-					bolosData.tempoJogo = tempo;
-					dataController.SetBolosData(bolosData);
+					//bolosData.nota = notaFinal;
+					//bolosData.tempoJogo = tempo;
+					//dataController.SetBolosData(bolosData);
 					yield return new WaitForSeconds(2f);
 					SceneManager.LoadScene ("Score");
 				}

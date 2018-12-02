@@ -11,7 +11,7 @@ public class ExitConfirmation : MonoBehaviour {
 	
 	void Start ()
 	 {
-		ExitGameObject.SetActive (false);
+		
 	
 	}
 	
