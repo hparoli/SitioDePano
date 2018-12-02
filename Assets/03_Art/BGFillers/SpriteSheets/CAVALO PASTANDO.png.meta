@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 1a9558839e6b98149b91c502676f067a
+timeCreated: 1543771118
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CAVALO PASTANDO_0
+    21300002: CAVALO PASTANDO_1
+    21300004: CAVALO PASTANDO_2
+    21300006: CAVALO PASTANDO_3
+    21300008: CAVALO PASTANDO_4
+    21300010: CAVALO PASTANDO_5
+    21300012: CAVALO PASTANDO_6
+    21300014: CAVALO PASTANDO_7
+    21300016: CAVALO PASTANDO_8
+    21300018: CAVALO PASTANDO_9
+    21300020: CAVALO PASTANDO_10
+    21300022: CAVALO PASTANDO_11
+    21300024: CAVALO PASTANDO_12
+    21300026: CAVALO PASTANDO_13
+    21300028: CAVALO PASTANDO_14
+    21300030: CAVALO PASTANDO_15
+    21300032: CAVALO PASTANDO_16
+    21300034: CAVALO PASTANDO_17
+    21300036: CAVALO PASTANDO_18
+    21300038: CAVALO PASTANDO_19
+    21300040: CAVALO PASTANDO_20
+    21300042: CAVALO PASTANDO_21
+    21300044: CAVALO PASTANDO_22
+    21300046: CAVALO PASTANDO_23
+    21300048: CAVALO PASTANDO_24
+    21300050: CAVALO PASTANDO_25
+    21300052: CAVALO PASTANDO_26
+    21300054: CAVALO PASTANDO_27
+    21300056: CAVALO PASTANDO_28
+    21300058: CAVALO PASTANDO_29
+    21300060: CAVALO PASTANDO_30
+    21300062: CAVALO PASTANDO_31
+    21300064: CAVALO PASTANDO_32
+    21300066: CAVALO PASTANDO_33
+    21300068: CAVALO PASTANDO_34
+    21300070: CAVALO PASTANDO_35
+    21300072: CAVALO PASTANDO_36
+    21300074: CAVALO PASTANDO_37
+    21300076: CAVALO PASTANDO_38
+    21300078: CAVALO PASTANDO_39
+    21300080: CAVALO PASTANDO_40
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 7311
+        width: 1055
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_1
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 7311
+        width: 1055
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_2
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 7310
+        width: 1055
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_3
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 7310
+        width: 940
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_4
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 7312
+        width: 1055
+        height: 738
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_5
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 7311
+        width: 1055
+        height: 651
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_6
+      rect:
+        serializedVersion: 2
+        x: 6902
+        y: 7310
+        width: 1055
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 6442
+        width: 1055
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_8
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 6442
+        width: 1055
+        height: 592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_9
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 6442
+        width: 1055
+        height: 598
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_10
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 6442
+        width: 1055
+        height: 592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_11
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 6442
+        width: 1055
+        height: 598
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_12
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 6442
+        width: 1055
+        height: 598
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_13
+      rect:
+        serializedVersion: 2
+        x: 6902
+        y: 6442
+        width: 1055
+        height: 598
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_14
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 5567
+        width: 1055
+        height: 595
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_15
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 5567
+        width: 1055
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_16
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 5566
+        width: 1055
+        height: 658
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_17
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 5566
+        width: 1055
+        height: 740
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_18
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 5568
+        width: 1055
+        height: 802
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_19
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 5567
+        width: 1055
+        height: 833
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_20
+      rect:
+        serializedVersion: 2
+        x: 6902
+        y: 5566
+        width: 1055
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_21
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 4698
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_22
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 4698
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_23
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 4698
+        width: 1055
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_24
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 4698
+        width: 1055
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_25
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 4698
+        width: 1055
+        height: 839
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_26
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 4698
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_27
+      rect:
+        serializedVersion: 2
+        x: 6902
+        y: 4698
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_28
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 3823
+        width: 1055
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_29
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 3823
+        width: 1055
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_30
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 3822
+        width: 1055
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_31
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 3822
+        width: 1055
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_32
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 3824
+        width: 1055
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_33
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 3823
+        width: 1055
+        height: 835
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_34
+      rect:
+        serializedVersion: 2
+        x: 6902
+        y: 3822
+        width: 1055
+        height: 836
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_35
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2954
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_36
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 2954
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_37
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 2954
+        width: 1055
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_38
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 2954
+        width: 1055
+        height: 832
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_39
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 2954
+        width: 1055
+        height: 839
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CAVALO PASTANDO_40
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 2954
+        width: 1055
+        height: 838
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
