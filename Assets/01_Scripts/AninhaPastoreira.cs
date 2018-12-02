@@ -251,6 +251,8 @@ public class AninhaPastoreira : MonoBehaviour {
 		BarnAnin ();
 		
 		yield return new WaitForSeconds (2f);
-		SceneManager.LoadScene("Score");
+		//SceneManager.LoadScene("Score");
+		LoadingScreenManager.LoadScene(10);
+
 	}
 }
