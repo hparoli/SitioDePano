@@ -1,0 +1,982 @@
+fileFormatVersion: 2
+guid: 4a342c04b5c0b20419656b1e674fb96b
+timeCreated: 1543782240
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: elefante exp_0
+    21300002: elefante exp_1
+    21300004: elefante exp_2
+    21300006: elefante exp_3
+    21300008: elefante exp_4
+    21300010: elefante exp_5
+    21300012: elefante exp_6
+    21300014: elefante exp_7
+    21300016: elefante exp_8
+    21300018: elefante exp_9
+    21300020: elefante exp_10
+    21300022: elefante exp_11
+    21300024: elefante exp_12
+    21300026: elefante exp_13
+    21300028: elefante exp_14
+    21300030: elefante exp_15
+    21300032: elefante exp_16
+    21300034: elefante exp_17
+    21300036: elefante exp_18
+    21300038: elefante exp_19
+    21300040: elefante exp_20
+    21300042: elefante exp_21
+    21300044: elefante exp_22
+    21300046: elefante exp_23
+    21300048: elefante exp_24
+    21300050: elefante exp_25
+    21300052: elefante exp_26
+    21300054: elefante exp_27
+    21300056: elefante exp_28
+    21300058: elefante exp_29
+    21300060: elefante exp_30
+    21300062: elefante exp_31
+    21300064: elefante exp_32
+    21300066: elefante exp_33
+    21300068: elefante exp_34
+    21300070: elefante exp_35
+    21300072: elefante exp_36
+    21300074: elefante exp_37
+    21300076: elefante exp_38
+    21300078: elefante exp_39
+    21300080: elefante exp_40
+    21300082: elefante exp_41
+    21300084: elefante exp_42
+    21300086: elefante exp_43
+    21300088: elefante exp_44
+    21300090: elefante exp_45
+    21300092: elefante exp_46
+    21300094: elefante exp_47
+    21300096: elefante exp_48
+    21300098: elefante exp_49
+    21300100: elefante exp_50
+    21300102: elefante exp_51
+    21300104: elefante exp_52
+    21300106: elefante exp_53
+    21300108: elefante exp_54
+    21300110: elefante exp_55
+    21300112: elefante exp_56
+    21300114: elefante exp_57
+    21300116: elefante exp_58
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elefante exp_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_1
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_2
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_3
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_4
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_5
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_6
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_7
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_9
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_10
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_11
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_12
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_13
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_14
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_15
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_17
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_18
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_19
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_20
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_21
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_22
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_23
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_25
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_26
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_27
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_28
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_29
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_30
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_31
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_32
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_33
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_34
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_35
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_36
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_37
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_38
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_39
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_40
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_41
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_42
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_43
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_44
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_45
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_46
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_47
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_48
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_49
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_50
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_51
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_52
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_53
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_54
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_55
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_56
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_57
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: elefante exp_58
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

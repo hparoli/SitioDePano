@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 49e3c06913f01124b818217435a16934
+timeCreated: 1543782236
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tvdoggo exp_0
+    21300002: tvdoggo exp_1
+    21300004: tvdoggo exp_2
+    21300006: tvdoggo exp_3
+    21300008: tvdoggo exp_4
+    21300010: tvdoggo exp_5
+    21300012: tvdoggo exp_6
+    21300014: tvdoggo exp_7
+    21300016: tvdoggo exp_8
+    21300018: tvdoggo exp_9
+    21300020: tvdoggo exp_10
+    21300022: tvdoggo exp_11
+    21300024: tvdoggo exp_12
+    21300026: tvdoggo exp_13
+    21300028: tvdoggo exp_14
+    21300030: tvdoggo exp_15
+    21300032: tvdoggo exp_16
+    21300034: tvdoggo exp_17
+    21300036: tvdoggo exp_18
+    21300038: tvdoggo exp_19
+    21300040: tvdoggo exp_20
+    21300042: tvdoggo exp_21
+    21300044: tvdoggo exp_22
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tvdoggo exp_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_1
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_2
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_3
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_5
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_6
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_7
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_9
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_10
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_11
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_12
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_13
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_14
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_15
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_17
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_18
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_19
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_20
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_21
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tvdoggo exp_22
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

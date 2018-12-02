@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 5d256616cad891b49b4f7b249e020bfd
+timeCreated: 1543782244
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: macacos exp_0
+    21300002: macacos exp_1
+    21300004: macacos exp_2
+    21300006: macacos exp_3
+    21300008: macacos exp_4
+    21300010: macacos exp_5
+    21300012: macacos exp_6
+    21300014: macacos exp_7
+    21300016: macacos exp_8
+    21300018: macacos exp_9
+    21300020: macacos exp_10
+    21300022: macacos exp_11
+    21300024: macacos exp_12
+    21300026: macacos exp_13
+    21300028: macacos exp_14
+    21300030: macacos exp_15
+    21300032: macacos exp_16
+    21300034: macacos exp_17
+    21300036: macacos exp_18
+    21300038: macacos exp_19
+    21300040: macacos exp_20
+    21300042: macacos exp_21
+    21300044: macacos exp_22
+    21300046: macacos exp_23
+    21300048: macacos exp_24
+    21300050: macacos exp_25
+    21300052: macacos exp_26
+    21300054: macacos exp_27
+    21300056: macacos exp_28
+    21300058: macacos exp_29
+    21300060: macacos exp_30
+    21300062: macacos exp_31
+    21300064: macacos exp_32
+    21300066: macacos exp_33
+    21300068: macacos exp_34
+    21300070: macacos exp_35
+    21300072: macacos exp_36
+    21300074: macacos exp_37
+    21300076: macacos exp_38
+    21300078: macacos exp_39
+    21300080: macacos exp_40
+    21300082: macacos exp_41
+    21300084: macacos exp_42
+    21300086: macacos exp_43
+    21300088: macacos exp_44
+    21300090: macacos exp_45
+    21300092: macacos exp_46
+    21300094: macacos exp_47
+    21300096: macacos exp_48
+    21300098: macacos exp_49
+    21300100: macacos exp_50
+    21300102: macacos exp_51
+    21300104: macacos exp_52
+    21300106: macacos exp_53
+    21300108: macacos exp_54
+    21300110: macacos exp_55
+    21300112: macacos exp_56
+    21300114: macacos exp_57
+    21300116: macacos exp_58
+    21300118: macacos exp_59
+    21300120: macacos exp_60
+    21300122: macacos exp_61
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: macacos exp_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_1
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_2
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_3
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_4
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_5
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_6
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_7
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_9
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_10
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_11
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_12
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_13
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_14
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_15
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_17
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_18
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_19
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_20
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_21
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_22
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_23
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_25
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_26
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_27
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_28
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_29
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_30
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_31
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_32
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_33
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_34
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_35
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_36
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_37
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_38
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_39
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_40
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_41
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_42
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_43
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_44
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_45
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_46
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_47
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_48
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_49
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_50
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_51
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_52
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_53
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_54
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_55
+      rect:
+        serializedVersion: 2
+        x: 6486
+        y: 962
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_56
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_57
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_58
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_59
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_60
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: macacos exp_61
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 0
+        width: 872
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 9e8fc02cdfa593849a051baa91beeb78
+timeCreated: 1543782256
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: espiritoporco exp_0
+    21300002: espiritoporco exp_1
+    21300004: espiritoporco exp_2
+    21300006: espiritoporco exp_3
+    21300008: espiritoporco exp_4
+    21300010: espiritoporco exp_5
+    21300012: espiritoporco exp_6
+    21300014: espiritoporco exp_7
+    21300016: espiritoporco exp_8
+    21300018: espiritoporco exp_9
+    21300020: espiritoporco exp_10
+    21300022: espiritoporco exp_11
+    21300024: espiritoporco exp_12
+    21300026: espiritoporco exp_13
+    21300028: espiritoporco exp_14
+    21300030: espiritoporco exp_15
+    21300032: espiritoporco exp_16
+    21300034: espiritoporco exp_17
+    21300036: espiritoporco exp_18
+    21300038: espiritoporco exp_19
+    21300040: espiritoporco exp_20
+    21300042: espiritoporco exp_21
+    21300044: espiritoporco exp_22
+    21300046: espiritoporco exp_23
+    21300048: espiritoporco exp_24
+    21300050: espiritoporco exp_25
+    21300052: espiritoporco exp_26
+    21300054: espiritoporco exp_27
+    21300056: espiritoporco exp_28
+    21300058: espiritoporco exp_29
+    21300060: espiritoporco exp_30
+    21300062: espiritoporco exp_31
+    21300064: espiritoporco exp_32
+    21300066: espiritoporco exp_33
+    21300068: espiritoporco exp_34
+    21300070: espiritoporco exp_35
+    21300072: espiritoporco exp_36
+    21300074: espiritoporco exp_37
+    21300076: espiritoporco exp_38
+    21300078: espiritoporco exp_39
+    21300080: espiritoporco exp_40
+    21300082: espiritoporco exp_41
+    21300084: espiritoporco exp_42
+    21300086: espiritoporco exp_43
+    21300088: espiritoporco exp_44
+    21300090: espiritoporco exp_45
+    21300092: espiritoporco exp_46
+    21300094: espiritoporco exp_47
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: espiritoporco exp_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_1
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_2
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_3
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_4
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_5
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_6
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_7
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_9
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_10
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_11
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_12
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_13
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_14
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_15
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_17
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_18
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_19
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_20
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_21
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_22
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_23
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_25
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_26
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_27
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_28
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_29
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_30
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_31
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_32
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_33
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_34
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_35
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_36
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_37
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_38
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_39
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 3026
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_40
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_41
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_42
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_43
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_44
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_45
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_46
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espiritoporco exp_47
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 1994
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

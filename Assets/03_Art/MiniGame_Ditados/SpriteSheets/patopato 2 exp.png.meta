@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: fad0baa6faf77014ab94b9d9e94bee7c
+timeCreated: 1543782265
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: patopato 2 exp_0
+    21300002: patopato 2 exp_1
+    21300004: patopato 2 exp_2
+    21300006: patopato 2 exp_3
+    21300008: patopato 2 exp_4
+    21300010: patopato 2 exp_5
+    21300012: patopato 2 exp_6
+    21300014: patopato 2 exp_7
+    21300016: patopato 2 exp_8
+    21300018: patopato 2 exp_9
+    21300020: patopato 2 exp_10
+    21300022: patopato 2 exp_11
+    21300024: patopato 2 exp_12
+    21300026: patopato 2 exp_13
+    21300028: patopato 2 exp_14
+    21300030: patopato 2 exp_15
+    21300032: patopato 2 exp_16
+    21300034: patopato 2 exp_17
+    21300036: patopato 2 exp_18
+    21300038: patopato 2 exp_19
+    21300040: patopato 2 exp_20
+    21300042: patopato 2 exp_21
+    21300044: patopato 2 exp_22
+    21300046: patopato 2 exp_23
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: patopato 2 exp_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 7146
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_1
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 7146
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_2
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 7146
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_3
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 7146
+        width: 876
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 6106
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_5
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 6106
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_6
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 6106
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_7
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 6106
+        width: 882
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 5062
+        width: 872
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_9
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 5062
+        width: 872
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_10
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 5062
+        width: 872
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_11
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 5062
+        width: 876
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_12
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 4022
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_13
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 4022
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_14
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 4022
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_15
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 4016
+        width: 876
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_16
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2982
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_17
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 2982
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_18
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 2982
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_19
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 2982
+        width: 876
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_20
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1942
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_21
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1942
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_22
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1942
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patopato 2 exp_23
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 1942
+        width: 876
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

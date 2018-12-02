@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: 9448c74f6dd4e7347b35f5c06c46935c
+timeCreated: 1543782248
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: carrocaboi exp_0
+    21300002: carrocaboi exp_1
+    21300004: carrocaboi exp_2
+    21300006: carrocaboi exp_3
+    21300008: carrocaboi exp_4
+    21300010: carrocaboi exp_5
+    21300012: carrocaboi exp_6
+    21300014: carrocaboi exp_7
+    21300016: carrocaboi exp_8
+    21300018: carrocaboi exp_9
+    21300020: carrocaboi exp_10
+    21300022: carrocaboi exp_11
+    21300024: carrocaboi exp_12
+    21300026: carrocaboi exp_13
+    21300028: carrocaboi exp_14
+    21300030: carrocaboi exp_15
+    21300032: carrocaboi exp_16
+    21300034: carrocaboi exp_17
+    21300036: carrocaboi exp_18
+    21300038: carrocaboi exp_19
+    21300040: carrocaboi exp_20
+    21300042: carrocaboi exp_21
+    21300044: carrocaboi exp_22
+    21300046: carrocaboi exp_23
+    21300048: carrocaboi exp_24
+    21300050: carrocaboi exp_25
+    21300052: carrocaboi exp_26
+    21300054: carrocaboi exp_27
+    21300056: carrocaboi exp_28
+    21300058: carrocaboi exp_29
+    21300060: carrocaboi exp_30
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carrocaboi exp_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_1
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_2
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_3
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_4
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_5
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_6
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_7
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 7154
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_9
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_10
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_11
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_12
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_13
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_14
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_15
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 6122
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_17
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_18
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_19
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_20
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_21
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_22
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_23
+      rect:
+        serializedVersion: 2
+        x: 6430
+        y: 5090
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_25
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_26
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_27
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_28
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_29
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrocaboi exp_30
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 4058
+        width: 872
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
