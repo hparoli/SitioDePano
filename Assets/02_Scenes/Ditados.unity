@@ -766,7 +766,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1bf82ff057286e643bea628ea4d12979, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32ecbd20a4f330b44abd9dad5e67388b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1041,8 +1041,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761900168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 197.48906, y: 129.16876, z: -1639.0642}
-  m_LocalScale: {x: 42.427216, y: 39.46718, z: 39.46718}
+  m_LocalPosition: {x: 204.94, y: 131.93, z: -1639.0642}
+  m_LocalScale: {x: 68.71487, y: 118.53412, z: 39.46718}
   m_Children: []
   m_Father: {fileID: 1389274142}
   m_RootOrder: 5
@@ -1081,7 +1081,7 @@ SpriteRenderer:
   m_SortingLayerID: 1299416717
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 545dca2e821b6e74096101d6d86e3c0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bf82ff057286e643bea628ea4d12979, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1bf82ff057286e643bea628ea4d12979, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32ecbd20a4f330b44abd9dad5e67388b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2219,7 +2219,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1bf82ff057286e643bea628ea4d12979, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32ecbd20a4f330b44abd9dad5e67388b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
