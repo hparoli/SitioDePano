@@ -62,6 +62,9 @@ public class HortaController : MonoBehaviour {
 	int gamelevel;
 	int notaFinal;
 
+	[Header("FeedBack Aninha")]
+	[SerializeField]
+	public Animator aninha;
 	// Use this for initialization
 	void Start () 
 	{	
@@ -290,6 +293,7 @@ public void GameDificultControl(int GameDificultValue)
 			//som de erro
 			fonteAudio.PlayOneShot(sons[2]);
 			mensagem.text = "Que pena...";
+			aninha.SetTrigger("Triste");
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
 		    	c.a = f;
@@ -313,6 +317,7 @@ public void GameDificultControl(int GameDificultValue)
 			StopCoroutine("GameOver");
 		} else if (saldo == 0 && legumes[5].GetComponent<LegumesControl>().plantou){
 			mensagem.text = "Parabéns! Você acertou!";
+			aninha.SetTrigger("Palma");
 			fonteAudio.PlayOneShot(sons[1]);
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3200,6 +3200,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1508644472 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95566232793332028, guid: a1ec41e6dab702744b0015e15ef232d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 328057044}
 --- !u!95 &1553429655 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95172099226340536, guid: f804872c91690524598a9910f7133b5a,
@@ -4641,7 +4646,7 @@ SpriteRenderer:
   m_SortingLayerID: 1299416717
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 16481ce2eb4f8d84f86093bade46f55a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33b7149e7df576149b0a7e1983f06438, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5010,6 +5015,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 714a101cb2e556847a6b458a929d90a0, type: 3}
   - {fileID: 8300000, guid: 5f2c3bd6bbf9f3b4bb93cf6c1e2219b2, type: 3}
   - {fileID: 8300000, guid: 71abb0e1ace3ab4429735549ed98d583, type: 3}
+  aninha: {fileID: 1508644472}
 --- !u!4 &2044866508
 Transform:
   m_ObjectHideFlags: 0
