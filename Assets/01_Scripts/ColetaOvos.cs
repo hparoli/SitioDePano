@@ -12,6 +12,8 @@ public class ColetaOvos : MonoBehaviour {
 	public GameObject[] g2;
 	public GameObject[] g1;
 	public GameObject[] eggsCollected;
+	public GameObject[] eggs1;
+	public GameObject[] eggs2;
 	public static bool work;
 	public AudioClip[] sons;
 	private AudioSource fonteAudio;
@@ -252,7 +254,50 @@ public class ColetaOvos : MonoBehaviour {
 
 	public void eggFeedback()
 	{
-			if (pegouOvos >= 1) {
+		if (gamelevel == 0)
+		{
+			if (pegouOvos >= 1) 
+			{
+				eggs1 [0].SetActive (true);
+			}
+			if (pegouOvos >= 2){
+				eggs1 [1].SetActive (true);	
+			}
+			if (pegouOvos >= 3){
+				eggs1 [2].SetActive (true);
+			}
+			if (pegouOvos >= 4){
+				eggs1 [3].SetActive (true);
+			}
+			if (pegouOvos >= 5){
+				eggs1 [4].SetActive (true);
+			}
+		}
+
+		else if (gamelevel == 1)
+		{
+			if (pegouOvos >= 1) 
+			{
+				eggs2 [0].SetActive (true);
+			}
+			if (pegouOvos >= 2){
+				eggs2 [1].SetActive (true);	
+			}
+			if (pegouOvos >= 3){
+				eggs2 [2].SetActive (true);
+			}
+			if (pegouOvos >= 4){
+				eggs2 [3].SetActive (true);
+			}
+			if (pegouOvos >= 5){
+				eggs2 [4].SetActive (true);
+			}
+		}
+
+		else if  (gamelevel == 2)
+		{
+			if (pegouOvos >= 1) 
+			{
 				eggsCollected [0].SetActive (true);
 			}
 			if (pegouOvos >= 2){
@@ -260,12 +305,19 @@ public class ColetaOvos : MonoBehaviour {
 			}
 			if (pegouOvos >= 3){
 				eggsCollected [2].SetActive (true);
-
+			}
+			if (pegouOvos >= 4){
+				eggsCollected [3].SetActive (true);
+			}
+			if (pegouOvos >= 5){
+				eggsCollected [4].SetActive (true);
+			}
 		}
+			
 	}
 	public void Score()
 	{
-		if(pegouOvos == 3)
+		if(pegouOvos >= 5)
 		{
 
 			if (erros == 0) 
