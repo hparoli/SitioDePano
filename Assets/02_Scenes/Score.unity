@@ -2208,7 +2208,7 @@ Prefab:
     - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
         type: 2}
       propertyPath: debug_score
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114599340709879904, guid: 7b0e79a0753ff1348827d0f7d92330c6,
         type: 2}
@@ -3372,6 +3372,28 @@ Transform:
   m_PrefabParentObject: {fileID: 4834060829339568, guid: ff11012232193a849983817161899a51,
     type: 2}
   m_PrefabInternal: {fileID: 1420556808}
+--- !u!1 &1798290469 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1204007773757006, guid: ce42eccdf62589c4d8100e55e0511000,
+    type: 2}
+  m_PrefabInternal: {fileID: 462340493}
+--- !u!95 &1798290470
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798290469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2d043382cf5788449e567d19e4ad14d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1802521121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3591,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825401327}
+--- !u!1 &1929109641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1042688986960956, guid: 777ad8a99ba2cb447b49ddbe129e76a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 937273494}
+--- !u!95 &1929109642
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929109641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0527aa0dd50edf4fbbb69138dbc9929, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1990734223
 GameObject:
   m_ObjectHideFlags: 0
