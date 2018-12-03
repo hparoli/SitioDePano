@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1001,6 +1001,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 300402257}
+--- !u!1 &305982830 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1351613247784934, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 91500996}
 --- !u!1001 &426619832
 Prefab:
   m_ObjectHideFlags: 0
@@ -1195,6 +1200,11 @@ Transform:
   m_Father: {fileID: 812632458}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &531494794 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1314686191356968, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 91500996}
 --- !u!1 &545676347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1619,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &880031851 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1874550778903344, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 91500996}
 --- !u!1 &977631801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1802,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5cb13bedb1629949ab80abdf04606f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1070242720 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1049631204488992, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 91500996}
 --- !u!1 &1221782271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,10 +2925,10 @@ MonoBehaviour:
   - gameValue: 2
     gamePrefabDificult: {fileID: 812632457}
     stars:
-    - {fileID: 91501002}
-    - {fileID: 91501001}
-    - {fileID: 91501000}
-    - {fileID: 91500999}
+    - {fileID: 531494794}
+    - {fileID: 305982830}
+    - {fileID: 880031851}
+    - {fileID: 1070242720}
   DificultGameObject: {fileID: 91501009}
   gameButtons:
   - {fileID: 91501008}

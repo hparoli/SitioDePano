@@ -86,6 +86,7 @@ public class SequenciaController : MonoBehaviour {
 		gameData.notaDificil = dataController.GetSequenciaDificil();*/
 		sequenciaData = new SequenciaSonoraData();
 		idTema = PlayerPrefs.GetInt ("idTema");
+        PlayerPrefs.SetString("dificuldade" + idTema, "D");
         OpenLevel();
 		StarsPointsControl();
         fonteAudio = GetComponent<AudioSource>();
