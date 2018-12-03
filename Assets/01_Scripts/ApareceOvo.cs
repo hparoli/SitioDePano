@@ -11,7 +11,8 @@ public class ApareceOvo : MonoBehaviour {
 
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	 {
 		ovo.SetActive(false);
 		pintinho.SetActive(false);
 		temOvo = false;
