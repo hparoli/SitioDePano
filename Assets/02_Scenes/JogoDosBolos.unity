@@ -1461,6 +1461,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1351613247784934, guid: bbde9586d3391e948b774c37ad569692,
     type: 2}
   m_PrefabInternal: {fileID: 1645409}
+--- !u!95 &1060480472 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95566232793332028, guid: a1ec41e6dab702744b0015e15ef232d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1516843696}
 --- !u!1 &1139966936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,6 +2801,7 @@ MonoBehaviour:
   barnAnims:
   - {fileID: 1217097643}
   - {fileID: 1217097642}
+  aninha: {fileID: 1060480472}
 --- !u!4 &1784916557
 Transform:
   m_ObjectHideFlags: 0

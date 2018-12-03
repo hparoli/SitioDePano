@@ -82,7 +82,8 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[Header("Celeiro")]
 	public Animator[] barnAnims;
 	
-	
+	[Header("Feedback Aninha")]
+	public Animator aninha;
 
 
 	void Start () 
@@ -458,12 +459,14 @@ public class AcertaSequenciaController : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		if(count == formasPergunta.Length){
 			Txt.text = "Parabéns! Você acertou!";
+			aninha.SetTrigger("Palma");
 			acerto++;
 			bolo.sprite = bolosBons[level];
 			//acerto
 			fonteAudio.PlayOneShot(sons[0]);
 		} else {
 			Txt.text = "Ahh... que pena";
+			aninha.SetTrigger("Triste");
 			bolo.sprite = bolosRuins[level];
 			//bolosData.erros++;
 			//erro
