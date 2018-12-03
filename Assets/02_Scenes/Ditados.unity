@@ -1275,6 +1275,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812561744}
+--- !u!1 &828490492 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1049631204488992, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 1349175285}
 --- !u!1 &875040126 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1889134870261778, guid: 71d4ef7ef41b7074fa9e4b566c71202c,
@@ -1564,6 +1569,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b7b19ce3b1cc945bacadf07f07d6db, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1287140178 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1351613247784934, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 1349175285}
 --- !u!82 &1307086883 stripped
 AudioSource:
   m_PrefabParentObject: {fileID: 82159359363337122, guid: a5cb13bedb1629949ab80abdf04606f6,
@@ -1723,6 +1733,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 329144049}
     m_Modifications:
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224030022833659944, guid: bbde9586d3391e948b774c37ad569692,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1852,6 +1867,41 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834947942}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameDificultControl
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1834947942}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422456627489452, guid: bbde9586d3391e948b774c37ad569692,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbde9586d3391e948b774c37ad569692, type: 2}
   m_IsPrefabParent: 0
@@ -1921,6 +1971,16 @@ MonoBehaviour:
 --- !u!1 &1349175298 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1939545500546556, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 1349175285}
+--- !u!1 &1361276329 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1314686191356968, guid: bbde9586d3391e948b774c37ad569692,
+    type: 2}
+  m_PrefabInternal: {fileID: 1349175285}
+--- !u!1 &1368718978 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1874550778903344, guid: bbde9586d3391e948b774c37ad569692,
     type: 2}
   m_PrefabInternal: {fileID: 1349175285}
 --- !u!1 &1389274141
@@ -2753,6 +2813,13 @@ MonoBehaviour:
     - {fileID: 1349175290}
     - {fileID: 1349175289}
     - {fileID: 1349175288}
+  - gameValue: 2
+    gamePrefabDificult: {fileID: 1389274141}
+    stars:
+    - {fileID: 1361276329}
+    - {fileID: 1287140178}
+    - {fileID: 1368718978}
+    - {fileID: 828490492}
   DificultGameObject: {fileID: 1349175298}
   gameButtons:
   - {fileID: 1349175297}
