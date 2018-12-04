@@ -60,7 +60,7 @@ public class HortaController : MonoBehaviour {
 	public AudioClip[] sons;
 	
 	int gamelevel;
-	int notaFinal;
+	int notaFinal,erros,tentativas;
 
 	[Header("FeedBack Aninha")]
 	[SerializeField]
@@ -68,7 +68,8 @@ public class HortaController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{	
-		
+		erros = 0;
+		tentativas = 0;
 		audio.Pause ();
 		OpenLevel();
 		StarsPointsControl();
@@ -100,6 +101,7 @@ public class HortaController : MonoBehaviour {
 	}
 public void GameDificultControl(int GameDificultValue)
 	{	
+		level =  GameDificultValue;
 		 gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
@@ -286,6 +288,11 @@ public void GameDificultControl(int GameDificultValue)
 		podeJogar = true;
 	}
 
+	public void ClicaResetar(){
+		tentativas++;
+		Resetar();
+	}
+
 	IEnumerator GameOver()
 	{
 		gameover = true;
@@ -293,6 +300,7 @@ public void GameDificultControl(int GameDificultValue)
 			//som de erro
 			fonteAudio.PlayOneShot(sons[2]);
 			mensagem.text = "Que pena...";
+			erros++;
 			aninha.SetTrigger("Triste");
 			for (float f = 0f; f <= 1; f += 0.02f){
                 Color c = mensagem.color;
@@ -337,15 +345,24 @@ public void GameDificultControl(int GameDificultValue)
 					yield return null;
 			}
 
-			  
-			  if(level < 3)
-			  {
-					Resetar();
-					level++;
-					StartGame();
-			  }
-			  else
-			  {
+			
+			if (erros + tentativas == 0) {
+					notaFinal = 20;
+				} else if (erros + tentativas <= 2) {
+					notaFinal = 10;
+				} else if (erros + tentativas <= 5 && erros + tentativas > 2) {
+					notaFinal = 7;
+				} else if (erros + tentativas > 5) {
+					notaFinal = 5;
+				}
+			//   if(level < 3)
+			//   {
+			// 		Resetar();
+			// 		level++;
+			// 		StartGame();
+			//   }
+			//   else
+			//   {
 // Sistema de Pontução / Save 
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				if (gamelevel == 0)
@@ -383,7 +400,7 @@ public void GameDificultControl(int GameDificultValue)
 				yield return new WaitForSeconds (2);
 				//SceneManager.LoadScene("Score"); 
 				LoadingScreenManager.LoadScene(10);
-			}
+		// 	}
 		}
 }
 
