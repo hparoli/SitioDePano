@@ -91,7 +91,7 @@ public class HortaController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		OpenLevel();
 		StarsPointsControl();	
@@ -124,12 +124,12 @@ public void GameDificultControl(int GameDificultValue)
 			}
 		else if (gamelevel == 1)
 			{
-				level = 0;
+				level = 3;
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
 			}
 		else if (gamelevel == 2)
 			{
-				level = 0;
+				level = 6;
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
 			}
 	}
@@ -190,7 +190,7 @@ public void GameDificultControl(int GameDificultValue)
 			SoundManager.instance.Stop("Player", SoundManager.instance.clipList.speekHorta);
 			audio.Play ();	
 		
-			if(level == 0 || level == 2){
+			if(level == 0 || level == 2 || level == 3 || level == 6){
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				if(i < 3) buttons[i].SetActive(true);
@@ -200,7 +200,7 @@ public void GameDificultControl(int GameDificultValue)
 			}
 
 		}
-		else if(level == 1){
+		else if(level == 1 || level == 4 || level == 5 || level == 7 || level == 8){
 			for (int i = 0; i < buttons.Length; i++)
 			{
 				buttons[i].SetActive(true);
@@ -232,13 +232,87 @@ public void GameDificultControl(int GameDificultValue)
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
 			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
 		} else if (level == 2){
-			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem21",2.25f);});
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem31",5.25f);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$5,25";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem32",4);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$4,00";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem33",7);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$7,00";
+			saldoInicial = saldo = 32f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 3){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem41",2.25f);});
 			buttons[0].GetComponentInChildren<Text>().text = "R$2,25";
-			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem22",3.25f);});
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem42",3.25f);});
 			buttons[1].GetComponentInChildren<Text>().text = "R$3,25";
-			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem23",1.75f);});
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem43",1.75f);});
 			buttons[2].GetComponentInChildren<Text>().text = "R$1,75";
 			saldoInicial = saldo = 14.50f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 4){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem51",4);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$4,00";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem52",3.60f);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$3,60";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem53",2.50f);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$2,50";
+			buttons[3].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem54",3);});
+			buttons[3].GetComponentInChildren<Text>().text = "R$3,00";
+			saldoInicial = saldo = 18.60f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 5){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem61",5);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$5,00";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem62",4.55f);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$4,55";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem63",3.90f);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$3,90";
+			buttons[3].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem64",5.50f);});
+			buttons[3].GetComponentInChildren<Text>().text = "R$5,50";
+			saldoInicial = saldo = 29f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 6){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem71",2.17f);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$2,17";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem72",4.18f);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$4,18";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem73",3.36f);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$3,36";
+			saldoInicial = saldo = 18.60f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 7){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem81",3.75f);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$3,75";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem82",7.36f);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$7,36";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem83",9.91f);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$9,91";
+			buttons[3].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem84",6.87f);});
+			buttons[3].GetComponentInChildren<Text>().text = "R$6,87";
+			saldoInicial = saldo = 42.12f;
+			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
+			saldoTxt.text = saldoTxt.text.Replace(".",",");
+			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
+		} else if (level == 8){
+			buttons[0].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem91",7.75f);});
+			buttons[0].GetComponentInChildren<Text>().text = "R$7,75";
+			buttons[1].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem92",7.25f);});
+			buttons[1].GetComponentInChildren<Text>().text = "R$7,25";
+			buttons[2].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem93",6.85f);});
+			buttons[2].GetComponentInChildren<Text>().text = "R$6,85";
+			buttons[3].GetComponent<Button>().onClick.AddListener(delegate{CompraSemente("sem94",8.15f);});
+			buttons[3].GetComponentInChildren<Text>().text = "R$8,15";
+			saldoInicial = saldo = 45.50f;
 			saldoTxt.text = "R$" + saldoInicial.ToString("F2");
 			saldoTxt.text = saldoTxt.text.Replace(".",",");
 			saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
@@ -266,17 +340,23 @@ public void GameDificultControl(int GameDificultValue)
 		for (int i = 0; i < legumes.Length; i++)
 		{
 			if(!legumes[i].GetComponent<LegumesControl>().plantou){
-				if(sem == "sem11" || sem == "sem21" || sem == "sem31"){
+				if(sem == "sem11" || sem == "sem21" || sem == "sem31" || sem == "sem41" || sem == "sem51" || sem == "sem61" || sem == "sem71" || sem == "sem81" || sem == "sem91"){
 					legumes[i].sprite = imagens[0];
-				} else if(sem == "sem12" || sem == "sem22" || sem == "sem32"){
+					legumes[i].color = new Color(255,255,255,1);
+				} else if(sem == "sem12" || sem == "sem22" || sem == "sem32" || sem == "sem42" || sem == "sem52" || sem == "sem62" || sem == "sem72" || sem == "sem82" || sem == "sem92"){
 					legumes[i].sprite = imagens[1];
-				} else if(sem == "sem13" || sem == "sem23" || sem == "sem33"){
+					legumes[i].color = new Color(255,255,255,1);
+				} else if(sem == "sem13" || sem == "sem23" || sem == "sem33" || sem == "sem43" || sem == "sem53" || sem == "sem63" || sem == "sem73" || sem == "sem83" || sem == "sem93"){
 					legumes[i].sprite = imagens[2];
-				} else if(sem == "sem24" || sem == "sem34"){
+					legumes[i].color = new Color(255,255,255,1);
+				} else if(sem == "sem24" || sem == "sem54" || sem == "sem64" || sem == "sem84" || sem == "sem94"){
 					legumes[i].sprite = imagens[3];
+					legumes[i].color = new Color(255,255,255,1);
 				} 
 				legumes[i].GetComponent<LegumesControl>().plantou = true;
-				saldo -= vlr;
+				Debug.Log("Valor: " + vlr + " Saldo Anterior: " + saldo + " Saldo Posterior: " + (saldo-vlr));
+				saldo = Mathf.Round((saldo-vlr) * 100f) / 100f;
+				Debug.Log(saldo);
 				saldoTxt.text = "R$" + saldo.ToString("F2");
 				saldoTxt.text = saldoTxt.text.Replace(".",",");
 				saldoTxt.text = saldoTxt.text.Replace("R$-","-R$");
@@ -292,6 +372,7 @@ public void GameDificultControl(int GameDificultValue)
 		{
 			legumes[i].sprite = null;
 			legumes[i].GetComponent<LegumesControl>().plantou = false;
+			legumes[i].color = new Color(255,255,255,0);
 		}
 		saldo = saldoInicial;
 		saldoTxt.text = "R$" + saldo.ToString("F2");
@@ -309,6 +390,8 @@ public void GameDificultControl(int GameDificultValue)
 	IEnumerator GameOver()
 	{
 		gameover = true;
+		Debug.Log(saldo);
+		yield return new WaitForSeconds(0.5f);
 		if (saldo != 0){
 			//som de erro
 			fonteAudio.PlayOneShot(sons[2]);
@@ -368,7 +451,7 @@ public void GameDificultControl(int GameDificultValue)
 				} else if (erros + tentativas > 5) {
 					notaFinal = 5;
 				}
-			  if(level < 2)
+			  if((gamelevel == 0 && level < 2) || (gamelevel == 1 && level < 5) || (gamelevel == 2 && level < 8))
 			  {
 			 		Resetar();
 			 		level++;
