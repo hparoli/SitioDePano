@@ -192,7 +192,7 @@ MonoBehaviour:
   waypointIndex: 0
   porteiraIndex: 0
   casasIndex: 0
-  moveSpeed: 1
+  moveSpeed: 0
   porteirasWaypoints:
   - {fileID: 0}
   - {fileID: 0}

@@ -40,13 +40,15 @@ public class AninhaPastoreira : MonoBehaviour {
 	[SerializeField]
 	Button[] gameButtons;
 	
-	int gamelevel;
+	public int gamelevel;
 
 	public Transform Game1;
 
 	bool isgame = false;
 	
 	bool fim;
+
+  
 
 	void Start ()
 	 {

@@ -25,6 +25,7 @@ public class FollowWaypoints : MonoBehaviour {
 	public AudioClip[] sons;
 	private AudioSource AudioSRC;
 
+
 	
 
 
@@ -68,6 +69,7 @@ public class FollowWaypoints : MonoBehaviour {
 		
 		animal = this.gameObject.GetComponent<AnimalDisplay>().anim;
 		aninha = GameObject.Find("GameManager");
+        
 
 
 	
@@ -80,8 +82,22 @@ public class FollowWaypoints : MonoBehaviour {
 		Move();
 	}
 
-	public void Move(){
-		this.transform.position = Vector2.MoveTowards(this.transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
+	public void Move()
+    {
+        if (aninha.GetComponent<AninhaPastoreira>().gamelevel == 0)
+        {
+            moveSpeed = 2;
+        }
+        else if (aninha.GetComponent<AninhaPastoreira>().gamelevel == 1)
+        {
+            moveSpeed = 3;
+        }
+        else if (aninha.GetComponent<AninhaPastoreira>().gamelevel == 2)
+        {
+            moveSpeed = 4;
+        }
+
+            this.transform.position = Vector2.MoveTowards(this.transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 	}
 
 	void OnTriggerEnter(Collider col){
