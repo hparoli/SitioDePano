@@ -1812,7 +1812,7 @@ Prefab:
     - target: {fileID: 224129094309913150, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 3
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 224129094309913150, guid: b235ff69737180b4ea1eb03132aa8a48,
         type: 2}
@@ -2690,7 +2690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 298.40933}
+  m_AnchoredPosition: {x: -442, y: 25}
   m_SizeDelta: {x: 769.6, y: 238.2}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1784916555
@@ -2802,6 +2802,7 @@ MonoBehaviour:
   - {fileID: 1217097643}
   - {fileID: 1217097642}
   aninha: {fileID: 1060480472}
+  btnCompara: {fileID: 0}
 --- !u!4 &1784916557
 Transform:
   m_ObjectHideFlags: 0
@@ -3216,7 +3217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 97, y: 94}
+  m_AnchoredPosition: {x: 111, y: 71}
   m_SizeDelta: {x: 65.4, y: 48.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086376318

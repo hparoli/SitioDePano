@@ -85,7 +85,6 @@ public class AcertaSequenciaController : MonoBehaviour {
 	[Header("Feedback Aninha")]
 	public Animator aninha;
 
-
 	void Start () 
 	{
 		/*
