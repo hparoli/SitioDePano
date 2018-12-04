@@ -60,8 +60,7 @@ public class ContandoOsBichos : MonoBehaviour {
 	void Start () 
 	{
 		audio.Pause ();
-		OpenLevel();
-		StarsPointsControl();
+		
 		Time.timeScale = 0;
 		Placa.SetActive (false);
 		contador = 0;
@@ -82,7 +81,9 @@ public class ContandoOsBichos : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Cronometro();
+        OpenLevel();
+        StarsPointsControl();
+        Cronometro();
 		if(countDestroy <= 0 && countSpawn == 0){
 			StartCoroutine("Responde");
 			countDestroy = 99;

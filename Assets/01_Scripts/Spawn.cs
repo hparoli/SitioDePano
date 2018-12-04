@@ -59,15 +59,17 @@ public class Spawn: MonoBehaviour {
 		
 		Time.timeScale = 0;
 		
-		OpenLevel();
-		StarsPointsControl();
+		
 		//PlayerPrefs.SetInt ("piqueFacil" + idTema.ToString (), 0);
 		//PlayerPrefs.SetInt ("piqueMedio" + idTema.ToString (), 0);
 		//PlayerPrefs.SetInt ("piqueDificil" + idTema.ToString (), 0);
 	}
 	void Update()
 	{
-		Cronometro ();
+        OpenLevel();
+        StarsPointsControl();
+
+        Cronometro ();
 	
 	}
 	public void OpenTutorial() 

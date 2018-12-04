@@ -59,8 +59,7 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	void Start () 
 	{
 		audio.Pause ();
-		OpenLevel();
-		StarsPointsControl();
+		
 		Time.timeScale = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		time = 45f;
@@ -75,7 +74,10 @@ public class DeOlhoNoLobo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Cronometro();
+        OpenLevel();
+        StarsPointsControl();
+
+        Cronometro();
 		if (comeca) 
 		{
 			if (time > 0) {

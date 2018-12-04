@@ -93,7 +93,10 @@ public class responder : MonoBehaviour {
 
 	 void Update() 
 	 {
-		 Cronometro();
+        OpenLevel();
+        StarsPointsControl();
+
+        Cronometro();
 	 }
 
 	 public void GameDificultControl(int GameDificultValue)

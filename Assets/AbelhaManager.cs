@@ -73,8 +73,7 @@ public class AbelhaManager : MonoBehaviour
 	void Start()
 	{
 		idTema = PlayerPrefs.GetInt ("idTema");
-	    OpenLevel();
-		StarsPointsControl();
+	    
 		respondeu = false;
 		waypoint = 0;
 		fonteAudio = GetComponent<AudioSource> ();
@@ -102,7 +101,10 @@ public class AbelhaManager : MonoBehaviour
 
 	void Update()
 	{
-		Comportamento();
+        OpenLevel();
+        StarsPointsControl();
+
+        Comportamento();
 		if(!destino){
 			ab.GetComponent<CaminhosManager>().Move(caminho);
 		}

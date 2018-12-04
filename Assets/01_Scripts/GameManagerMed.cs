@@ -78,8 +78,7 @@ public class GameManagerMed : MonoBehaviour {
 		tempoAcerto = 0;
 		tempo = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
-		OpenLevel();
-		StarsPointsControl();
+		
 	}
 	public void OpenTutorial()
 	{
@@ -93,8 +92,10 @@ public class GameManagerMed : MonoBehaviour {
 
 	void Update () 
 	{
+        OpenLevel();
+        StarsPointsControl();
 
-		if(comeca){
+        if (comeca){
 		if (stopClick.activeSelf) {
 			StartCoroutine (CardCooldown ());
 

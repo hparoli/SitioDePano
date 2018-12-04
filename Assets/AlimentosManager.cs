@@ -84,8 +84,7 @@ public class AlimentosManager : MonoBehaviour {
 		countR = 0;
 		acertos = 0;
 		tempo = tempoInicial;
-		OpenLevel();
-		StarsPointsControl();
+		
 	}
 	public void OpenTutorial()
 	{
@@ -107,7 +106,10 @@ public class AlimentosManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Cronometro ();
+        OpenLevel();
+        StarsPointsControl();
+
+        Cronometro ();
 	}
 	public void GameDificultControl(int GameDificultValue)
 	{	
