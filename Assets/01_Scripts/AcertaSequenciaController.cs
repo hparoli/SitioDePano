@@ -89,15 +89,8 @@ public class AcertaSequenciaController : MonoBehaviour
 
     void Start()
     {
-        /*
-		dataController = GameObject.Find("DataController").GetComponent<DataController>();
-		gameData.bolosDatas = dataController.GetBolosData();
-		gameData.notaFacil = dataController.GetBoloFacil();
-		gameData.notaMedio = dataController.GetBoloMedio();
-		gameData.notaDificil = dataController.GetBoloDificil();*/
-
-        idTema = PlayerPrefs.GetInt("idTema");
-
+	    idTema = PlayerPrefs.GetInt("idTema");
+		
         acerto = 0;
         tempo = 0;
         audio.Pause();
@@ -167,38 +160,16 @@ public class AcertaSequenciaController : MonoBehaviour
     public void OpenLevel()
     {
         string dif = PlayerPrefs.GetString("dificuldade" + idTema);
-
-        if (dif == "F" || dif == "")
-        {
-            gameButtons[1].interactable = false;
-            gameButtons[2].interactable = false;
-        }
-        else if (dif == "M")
-        {
-            gameButtons[2].interactable = false;
-        }
-        /* bool hasF = false;
-		bool hasM = false;
-		for (int i = 0; i < gameData.bolosDatas.Count; i++)
-		{
-			if(gameData.bolosDatas[i].level == "F") {
-				hasF = true;
-			}
-			if(gameData.bolosDatas[i].level == "M"){
-				hasM = true;
-			}
-		}
 		
-		if (!hasF)
+		if (dif == "F" ||  dif == "")
 		{
 			gameButtons[1].interactable = false;
 			gameButtons[2].interactable = false;
 		}
-		
-		if (!hasM) 
+		else if (dif == "M") 
 		{
 			gameButtons[2].interactable = false;
-		}*/
+		}
     }
 
     public void StarsPointsControl()
@@ -767,4 +738,5 @@ public class AcertaSequenciaController : MonoBehaviour
     {
         tempo += 1 * Time.deltaTime;
     }
+
 }

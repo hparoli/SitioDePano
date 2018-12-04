@@ -56,6 +56,7 @@ public class Spawn: MonoBehaviour {
 		audio.Pause ();
 		spawnAnterior = 99;
 		idTema = PlayerPrefs.GetInt ("idTema");
+		
 		Time.timeScale = 0;
 		
 		OpenLevel();
