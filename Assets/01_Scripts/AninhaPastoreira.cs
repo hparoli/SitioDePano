@@ -46,27 +46,29 @@ public class AninhaPastoreira : MonoBehaviour {
 
 	bool isgame = false;
 	
+	bool fim;
 
 	void Start ()
 	 {
+		fim = false;
 		audio.Pause ();
+		notaFinal = 0;
 		OpenLevel();
 		StarsPointsControl();
-		notaFinal = 0;
-		countSpawn = 20;
-		countDestroy = 20;
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
+		countDestroy = 1;
 	}
 	
 	void Update()
 	{
 		if(countDestroy == 0)
 		{
-			StartCoroutine("FimJogo");
+			if(!fim) StartCoroutine("FimJogo");
 		}
 		 Cronometro();
 	}
+
 
 	public void OpenTutorial()
 	{
@@ -102,6 +104,7 @@ public class AninhaPastoreira : MonoBehaviour {
             SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialPastoreira);
 
         }
+		
     }
 	public void OpenLevel()
 	{
@@ -154,6 +157,17 @@ public class AninhaPastoreira : MonoBehaviour {
 	}
     public void StartGame()
 	{
+		if(gamelevel == 0){
+			countSpawn = 12;
+			countDestroy = 12;
+		} else if (gamelevel == 1){
+			countSpawn = 20;
+			countDestroy = 20;
+		} else if (gamelevel == 2){
+			countSpawn = 30;
+			countDestroy = 30;
+		}
+
 		if (!isgame)
 		{
 		SoundManager.instance.Stop("Player", SoundManager.instance.clipList.TutorialPastoreira);
@@ -185,7 +199,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		yield return new WaitForSeconds(6f);
 		countSpawn--;
 		if(countSpawn > 0){
-		StartCoroutine("AnimalSpawn");
+			StartCoroutine("AnimalSpawn");
 		}
 	}
 	public void Pontua(int ponto)
@@ -206,6 +220,7 @@ public class AninhaPastoreira : MonoBehaviour {
 	}
 
 	public IEnumerator FimJogo(){
+		fim = true;
 		AnaliticsControl.pastoreiraTime = tempo;
 		yield return new WaitForSeconds(1f);
 		if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
