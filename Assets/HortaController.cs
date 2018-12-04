@@ -72,6 +72,7 @@ public class HortaController : MonoBehaviour {
 		tentativas = 0;
 		audio.Pause ();
 		idTema = PlayerPrefs.GetInt ("idTema");
+		
 		podeJogar = true;
 		gameover = false;
 		fonteAudio = GetComponent<AudioSource>();
@@ -93,7 +94,7 @@ public class HortaController : MonoBehaviour {
 	void Update () 
 	{
 		OpenLevel();
-		StarsPointsControl();
+		StarsPointsControl();	
 		if(saldo < 0 || legumes[5].GetComponent<LegumesControl>().plantou)
 		{
 			podeJogar = false;
