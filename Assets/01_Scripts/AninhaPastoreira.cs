@@ -167,8 +167,8 @@ public class AninhaPastoreira : MonoBehaviour {
 			countSpawn = 20;
 			countDestroy = 20;
 		} else if (gamelevel == 2){
-			countSpawn = 30;
-			countDestroy = 30;
+			countSpawn = 25;
+			countDestroy = 25;
 		}
 
 		if (!isgame)
@@ -226,6 +226,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		fim = true;
 		AnaliticsControl.pastoreiraTime = tempo;
 		yield return new WaitForSeconds(1f);
+        notaFinal = 10;
 		if (notaFinal > PlayerPrefs.GetInt("notaFinal" + idTema.ToString()))
 		{
 			PlayerPrefs.SetInt ("notaFinal" + idTema.ToString (), notaFinal);
