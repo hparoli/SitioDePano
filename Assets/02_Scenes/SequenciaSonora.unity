@@ -2891,7 +2891,7 @@ MonoBehaviour:
   sino: {fileID: 1221782271}
   colors: 
   idResp: 0
-  qtdCores: 3
+  qtdCores: 0
   rodada: 0
   pontuacao: 0
   qtdTutorial: 2

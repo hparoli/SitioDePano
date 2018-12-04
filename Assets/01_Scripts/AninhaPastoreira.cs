@@ -54,6 +54,7 @@ public class AninhaPastoreira : MonoBehaviour {
 		audio.Pause ();
 		notaFinal = 0;
 		idTema = PlayerPrefs.GetInt ("idTema");
+		
 		Time.timeScale = 0;
 		countDestroy = 1;
 	}

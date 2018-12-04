@@ -14,7 +14,8 @@ public enum GameState
 }
 
 
-public class SequenciaController : MonoBehaviour {
+public class SequenciaController : MonoBehaviour 
+{
 
     private SequenciaSonoraData sequenciaData = new SequenciaSonoraData();
 
@@ -87,8 +88,6 @@ public class SequenciaController : MonoBehaviour {
 		sequenciaData = new SequenciaSonoraData();
 		idTema = PlayerPrefs.GetInt ("idTema");
         
-        OpenLevel();
-		StarsPointsControl();
         fonteAudio = GetComponent<AudioSource>();
         gameState = GameState.NOVA;
         NovaRodada();
@@ -111,9 +110,9 @@ public class SequenciaController : MonoBehaviour {
 
     private void Update() 
     {
-        Cronometro();
-        
-			
+        OpenLevel();
+		StarsPointsControl();
+        Cronometro();	
     }
 
     public void GameDificultControl(int GameDificultValue)
@@ -135,15 +134,17 @@ public class SequenciaController : MonoBehaviour {
 			SoundManager.instance.Play("Player", SoundManager.instance.clipList.TutorialSequencia);
             tutButton.SetActive(false);
             TutorialPrefab.SetActive(true);
-			/* sequenciaData.level = "F";
-		} else if (gamelevel == 1){
-			sequenciaData.level = "M";
-		} else if (gamelevel == 2){
-			sequenciaData.level = "D";*/
+            qtdCores = 3;
+
 		}
-        else if (gamelevel == 1 || gamelevel == 2)
+        else if (gamelevel == 1)
         {
-           
+            qtdCores = 5;
+            tutButton.SetActive(true);
+        }
+        else if ( gamelevel == 2)
+        {
+            qtdCores = 7;
             tutButton.SetActive(true);
         }
         
@@ -162,28 +163,7 @@ public class SequenciaController : MonoBehaviour {
 		{
 			gameButtons[2].interactable = false;
 		}
-		/* bool hasF = false;
-		bool hasM = false;
-		for (int i = 0; i < gameData.sequenciaSonoraDatas.Count; i++)
-		{
-			if(gameData.sequenciaSonoraDatas[i].level == "F") {
-				hasF = true;
-			}
-			if(gameData.sequenciaSonoraDatas[i].level == "M"){
-				hasM = true;
-			}
-		}
 		
-		if (!hasF)
-		{
-			gameButtons[1].interactable = false;
-			gameButtons[2].interactable = false;
-		}
-		
-		if (!hasM) 
-		{
-			gameButtons[2].interactable = false;
-        }*/
 	}
 
 	public void StarsPointsControl()
@@ -441,12 +421,30 @@ IEnumerator SequenciaTutorial(int qtd)
             roundTxt.text = "Aperte o sino novamente para iniciar a nova sequência";
             gameState = GameState.NOVA;
             sequenciaData.acertos++;
+          //RODADAS 
             rodada++;
             if(rodada > 6) pontuacao += 10;
             else if(rodada > 3) pontuacao += 7;
             else if(rodada <= 3) pontuacao += 5;
-            //Debug.Log(pontuacao);
-            NovaRodada();
+            if (gamelevel == 0 && rodada >= 3)
+            {
+              notaFinal = 20;
+              StartCoroutine("TerminaGame");
+            }
+            if (gamelevel == 1 && rodada >= 5)
+            {
+              notaFinal = 20;
+              StartCoroutine("TerminaGame");
+            }
+            if (gamelevel == 2 && rodada >= 7)
+            {
+              notaFinal = 20;
+              StartCoroutine("TerminaGame");
+            }
+            
+            else
+            {
+                 NovaRodada();
             for (float f = 0f; f <= standard.a; f += 0.02f)
             {
                 Color c = roundTxt.color;
@@ -464,11 +462,11 @@ IEnumerator SequenciaTutorial(int qtd)
                 new WaitForSeconds(.2f);
                 yield return null;
             }
-            
-        
         }
-
-        yield return new WaitForSeconds(0.2f);
+           
+            //Debug.Log(pontuacao);
+     }
+     yield return new WaitForSeconds(0.2f);
         buttons[idBtn].SetBool("canta", false);
     }
 
@@ -511,8 +509,14 @@ IEnumerator SequenciaTutorial(int qtd)
             idB++; 
             if(idB > 3) { idB = 0; }
         }
+    //Sistema de Save 
+            StartCoroutine("TerminaGame");
+    }
 
-		if (rodada <= 2)
+    IEnumerator TerminaGame()
+    {
+        /*
+             if (rodada <= 2)
 		{
 			notaFinal = 5;
 		}
@@ -528,6 +532,8 @@ IEnumerator SequenciaTutorial(int qtd)
 		{
 			notaFinal = 20;
 		}
+         */
+       
         if (gamelevel == 0)
 		{
 			if (notaFinal > PlayerPrefs.GetInt("piqueFacil" + idTema.ToString()))
@@ -571,6 +577,4 @@ IEnumerator SequenciaTutorial(int qtd)
 		//SceneManager.LoadScene ("Score");  
         LoadingScreenManager.LoadScene(10); 
     }
-
-
 }
