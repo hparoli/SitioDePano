@@ -71,8 +71,6 @@ public class HortaController : MonoBehaviour {
 		erros = 0;
 		tentativas = 0;
 		audio.Pause ();
-		OpenLevel();
-		StarsPointsControl();
 		idTema = PlayerPrefs.GetInt ("idTema");
 		podeJogar = true;
 		gameover = false;
@@ -92,7 +90,10 @@ public class HortaController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		OpenLevel();
+		StarsPointsControl();
 		if(saldo < 0 || legumes[5].GetComponent<LegumesControl>().plantou)
 		{
 			podeJogar = false;
@@ -101,7 +102,7 @@ public class HortaController : MonoBehaviour {
 	}
 public void GameDificultControl(int GameDificultValue)
 	{	
-		level =  GameDificultValue;
+		
 		 gamelevel = GameDificultValue;
 		for (int i = 0; i < gamedificultScripiting.Length; i++)
 		{
@@ -117,6 +118,17 @@ public void GameDificultControl(int GameDificultValue)
 
 		if (gamelevel == 0)
 			{
+				level = 0;
+				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
+			}
+		else if (gamelevel == 1)
+			{
+				level = 0;
+				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
+			}
+		else if (gamelevel == 2)
+			{
+				level = 0;
 				SoundManager.instance.Play("Player", SoundManager.instance.clipList.speekHorta);
 			}
 	}
@@ -355,14 +367,14 @@ public void GameDificultControl(int GameDificultValue)
 				} else if (erros + tentativas > 5) {
 					notaFinal = 5;
 				}
-			//   if(level < 3)
-			//   {
-			// 		Resetar();
-			// 		level++;
-			// 		StartGame();
-			//   }
-			//   else
-			//   {
+			  if(level < 2)
+			  {
+			 		Resetar();
+			 		level++;
+			 		StartGame();
+			   }
+			   else
+			   {
 // Sistema de Pontução / Save 
 				PlayerPrefs.SetInt ("notaFinalTemp" + idTema.ToString (), notaFinal);
 				if (gamelevel == 0)
@@ -400,7 +412,7 @@ public void GameDificultControl(int GameDificultValue)
 				yield return new WaitForSeconds (2);
 				//SceneManager.LoadScene("Score"); 
 				LoadingScreenManager.LoadScene(10);
-		// 	}
+		 	}
 		}
 }
 

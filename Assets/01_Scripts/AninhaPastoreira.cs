@@ -53,8 +53,6 @@ public class AninhaPastoreira : MonoBehaviour {
 		fim = false;
 		audio.Pause ();
 		notaFinal = 0;
-		OpenLevel();
-		StarsPointsControl();
 		idTema = PlayerPrefs.GetInt ("idTema");
 		Time.timeScale = 0;
 		countDestroy = 1;
@@ -62,6 +60,8 @@ public class AninhaPastoreira : MonoBehaviour {
 	
 	void Update()
 	{
+		OpenLevel();
+		StarsPointsControl();
 		if(countDestroy == 0)
 		{
 			if(!fim) StartCoroutine("FimJogo");
